@@ -1,5 +1,5 @@
 --[[
-Description: This plugin is part of the "Titan Panel [Currencies] Multi" addon. It shows your amount of Coalescing Visions.
+Description: This plugin is part of the "Titan Panel [Currencies] Multi" addon. It shows your amount of Medallion of Service.
 Site: http://www.curse.com/addons/wow/titan-panel-currencies-multi
 Author: Canettieri
 Special Thanks to Eliote.
@@ -7,7 +7,7 @@ Special Thanks to Eliote.
 
 local ADDON_NAME, L = ...;
 local version = GetAddOnMetadata(ADDON_NAME, "Version")
-local ID = "TITAN_COAVSM"
+local ID = "TITAN_MDLSVM"
 local ICON = "Interface\\Icons\\spell_mage_focusingcrystal"
 local CURRENCY_ID = 1819
 local currencyCount = 0.0
@@ -32,7 +32,8 @@ local function GetCharTable()
 	return TitanCurrenciesMultiDb[ID].charTable
 end
 local function GetAndSaveCurrency()
-	local name, amount, texturePath, earnedThisWeek, weeklyMax, totalMax, isDiscovered = GetCurrencyInfo(CURRENCY_ID)
+	local info = C_CurrencyInfo.GetCurrencyInfo(CURRENCY_ID)
+	local amount = info.quantity
 	if not PLAYER_KEY then return amount end
 
 	local charTable = GetCharTable()
@@ -86,7 +87,7 @@ local function GetButtonText(self, id)
 		end
 	end
 
-	return L["AlhpaLabel"], currencyCountText .. BarBalanceText
+	return currencyCountText .. BarBalanceText
 end
 -----------------------------------------------
 local function GetTooltipText(self, id)
@@ -122,7 +123,7 @@ local function GetTooltipText(self, id)
 		ValueText = ValueText .. "\n \n" .. L["AltChars"] .. "\n" .. charTable[PLAYER_KEY].name .. "\t" .. "|cFFFFFFFF" .. (currencyCount) .. "\n|r"
 
 		for k, v in pairs(charTable) do
-			if k ~= PLAYER_KEY and PLAYER_FACTION == v.faction and v.currency > 0 then
+			if k ~= PLAYER_KEY and PLAYER_FACTION == v.faction and (v.currency or 0) > 0 then
 				ValueText = ValueText .. v.name .. "\t" .. "|cFFFFFFFF" .. (v.currency) .. "\n|r"
 				total = total + v.currency
 			end
@@ -131,13 +132,13 @@ local function GetTooltipText(self, id)
 		ValueText = ValueText .. "\n"..L["TotalAlt"].."\t" .. total
 	end
 
-	return L["AlhpaDescription"] .. "\r\r" .. ValueText
+	return L["SLCurrency04Description"] .. "\r\r" .. ValueText
 end
 -----------------------------------------------
 L.Elib({
 	id = ID,
-	name = L["mShadowlands"] .. " Titan|cFF66b1ea " .. L["AlphaTitle"] .. "|r",
-	tooltip = L["AlphaTitle"],
+	name = L["mShadowlands"] .. " Titan|cFF66b1ea " .. L["SLCurrency04Title"] .. "|r",
+	tooltip = L["SLCurrency04Title"],
 	icon = ICON,
 	category = "CATEGORY_SHADOWLANDS",
 	version = version,

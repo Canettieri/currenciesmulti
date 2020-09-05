@@ -1,10 +1,10 @@
-## Interface: 80300
-## Title: Titan Panel [|cff336699Currencies|r] Multi! |cff00aa00@project-version@|r
+## Interface: 90001
+## Title: Titan Panel [|cff336699Currencies|r] Multi! |cff00aa00v7.1 beta|r
 ## Notes: Track a lot of currencies! Right-click on Titan Panel, go to "Information" tab and enjoy.
 ## Notes-ptBR: Rastreie várias moedas! Clique com o botão direito no Painel Titan, vá na aba "Informação" e aproveite.
 ## Notes-esES: Sigue un monton de monedas! Click-Dcho en Titan Panel, para ir a ventana de "Información" y disfruta.
 ## Author: Canettieri
-## Version: @project-version@
+## Version: 7.1 beta
 ## Dependencies: Titan
 ## SavedVariables: TitanCurrenciesMultiDb
 Core\languages\enUS-default.lua
@@ -69,11 +69,11 @@ c.Misc\TitanShinyPetCharm.lua
 c.Misc\TitanTimewarpedBadge.lua
 c.Misc\TitanMarkofHonor.lua
 c.Misc\TitanTolBaradComm.lua
-#c.Shadowlands\TitanFreedSoul.lua
-#c.Shadowlands\TitanInfusedRuby.lua
-#c.Shadowlands\TitanMedallionofService.lua
-#c.Shadowlands\TitanPvPHonor.lua
-#c.Shadowlands\TitanPvPWeeklyReward.lua
-#c.Shadowlands\TitanSinstoneFragments.lua
-#c.Shadowlands\TitanSoulAsh.lua
-#c.Shadowlands\TitanStygia.lua
+c.Shadowlands\TitanArgentCommendation.lua
+c.Shadowlands\TitanHonor.lua
+c.Shadowlands\TitanInfusedRuby.lua
+c.Shadowlands\TitanMedallionofService.lua
+c.Shadowlands\TitanPvPWeeklyReward.lua
+c.Shadowlands\TitanSinstoneFragments.lua
+c.Shadowlands\TitanSoulAsh.lua
+c.Shadowlands\TitanStygia.lua

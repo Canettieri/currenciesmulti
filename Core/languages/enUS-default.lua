@@ -7,10 +7,31 @@
 local _, L = ...;
 ------ Shadowlands pack
 --- Alpha Test (default)
-L["AlphaLabel"] = "Alpha: "
-L["AlphaTitle"] = "Alpha"
-L["AlphaDescription"] = "Alpha"
-L["AplhaOnly"] = "Alpha"
+L["AplhaOnly"] = "Beta Version"
+--- Argent Commendation
+L["SLCurrency01Title"] = "Argent Commendation"
+L["SLCurrency01Description"] = "Commendation from the Argent\rCrusade for actions taken against\rthe invading forces of the\rShadowlands."
+--- Honor
+L["SLCurrency02Title"] = "Honor"
+L["SLCurrency02Description"] = "Used to purchase Unrated\rPvP equipment in Oribos,\rand to upgrade Rated and\rUnrated PvP equipment."
+--- Infused Ruby
+L["SLCurrency03Title"] = "Infused Ruby"
+L["SLCurrency03Description"] = "Used to power shrines and\rdevices that run on anima in\rRevendreth. With the drought\rvarious dredgers have begun\rtrading goods for them as well."
+--- Medallion of Service
+L["SLCurrency04Title"] = "Medallion of Service"
+L["SLCurrency04Description"] = "A mark of service to Bastion. Used\rto enter the Path of Ascension."
+--- Shadowlands PvP Weekly Reward Progress
+L["SLCurrency05Title"] = "PvP Weekly Reward Progress"
+L["SLCurrency05Description"] = "Acquire this currency to attain\rrewards from the weekly chest\rin Oribos."
+--- Sinstone Fragments
+L["SLCurrency06Title"] = "Sinstone Fragments"
+L["SLCurrency06Description"] = "The Avowed and their adherents\rhave an immense archive with\rknowledge to piece back together\rsinstones. This makes fragments\rhighly valuable to them as well as\rsome less scrupulous."
+--- Soul Ash
+L["SLCurrency07Title"] = "Soul Ash"
+L["SLCurrency07Description"] = "A raw source of power found\rwithin Torghast. Used to fuel\rthe Runecarver's Chamber."
+--- Stygia
+L["SLCurrency08Title"] = "Stygia"
+L["SLCurrency08Description"] = "The byproduct of the violent\rdestruction of a Soul within\rthe Maw."
 
 ------ BfA pack
 --- A&H Service Medal (default)
@@ -45,7 +66,7 @@ L["richJ"] = "|cff0070ddRich Jelly|r"
 L["royalJ"] = "|cffa335eeRoyal Jelly|r"
 L["JellyLabel"] = "Jelly: "
 L["JellyTitle"] = "Jelly"
-L["NoJelly"] = "Alliance Only!\rNeed reputation with Honeyback Hive."
+L["NoJelly"] = "Alliance Only! Need reputation\rwith Honeyback Hive."
 --- Prismatic Manapearl (default)
 L["PpearlLabel"] = "Manapearl: "
 L["PpearlTitle"] = "Prismatic Manapearl"

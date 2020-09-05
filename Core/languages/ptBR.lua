@@ -40,7 +40,7 @@ L["richJ"] = "|cff0070ddGeleia Rica|r"
 L["royalJ"] = "|cffa335eeGeleia Real|r"
 L["JellyLabel"] = "Geleia: "
 L["JellyTitle"] = "Geleia"
-L["NoJelly"] = "Apenas Aliança!\rNecessário reputação com Colmeia Meleira."
+L["NoJelly"] = "Apenas Aliança! Necessário reputação\rcom Colmeia Meleira."
 --- Prismatic Manapearl
 L["PpearlLabel"] = "M. Prismática: "
 L["PpearlTitle"] = "Pérola de Mana Prismática"
@@ -120,7 +120,7 @@ L["NoLove"] = "Disponível através do evento\r'O Amor Está No Ar'."
 --- Spooky Supplies
 L["SpookyLabel"] = "Suprimentos: "
 L["SpookyTitle"] = "Suprimentos Assustadores"
-L["SpookyDescription"] = "Pode ser trocado com o\rcoordenador de eventos da\rsua guarnição."
+L["SpookyDescription"] = "Pode ser trocado com o\rcoordenador de eventos\rda sua guarnição."
 L["HallowEnd"] = "Disponível através do\revento 'Noturnália'."
 --- Tricky Treat
 L["TrickyLabel"] = "Doces: "

@@ -83,7 +83,7 @@ end
 -----------------------------------------------
 local function GetTooltipText(self, id)
 
-	local thinBag = L["thinJ"].."\r"..L["totalbag"]..TitanUtils_GetHighlightText(GetItemCount(168822)).."\r"
+	local thinBag = "\r"..L["thinJ"].."\r"..L["totalbag"]..TitanUtils_GetHighlightText(GetItemCount(168822)).."\r"
 	local thinBank = L["totalbank"]..TitanUtils_GetHighlightText(GetItemCount(168822, true) - GetItemCount(168822))
 
 	local richBag = L["richJ"].."\r"..L["totalbag"]..TitanUtils_GetHighlightText(GetItemCount(168825)).."\r"
@@ -94,7 +94,7 @@ local function GetTooltipText(self, id)
 
 	local valueText = "" -- Difere com e sem geleia
 	if thinJelly == 0 and richJelly == 0 and royalJelly == 0 then
-		valueText = "\r"..L["info"].."\r|cFFFF2e2e"..L["nojelly"]
+		valueText = "\r"..L["info"].."\r|cFFFF2e2e"..L["NoJelly"]
 	else
 		valueText = "\r"..L["info"]..thinBag..thinBank.."\r\r"..richBag..richBank.."\r\r"..royalBag..royalBank
 	end

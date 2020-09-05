@@ -36,8 +36,6 @@ end
 
 function L.PrepareCurrenciesMenu(self, id)
 	TitanPanelRightClickMenu_AddTitle(TitanPlugins[id].menuText)
-	TitanPanelRightClickMenu_AddToggleIcon(id)
-	TitanPanelRightClickMenu_AddToggleLabelText(id)
 
 	info = {};
 	info.text = L["showbb"];
