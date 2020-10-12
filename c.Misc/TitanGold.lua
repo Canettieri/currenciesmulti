@@ -136,22 +136,32 @@ local function PrepareMenu(self, id)
 	info.text = L["HigherOnly"];
 	info.func = function() TitanToggleVar(id, "ShowHigherOnly"); TitanPanelButton_UpdateButton(id); end
 	info.checked = TitanGetVar(id, "ShowHigherOnly");
+	info.keepShownOnClick = true
 	L_UIDropDownMenu_AddButton(info);
 
 	local info = UIDropDownMenu_CreateInfo();
 	info.text = L["showbb"];
 	info.func = function() TitanToggleVar(id, "ShowBarBalance"); TitanPanelButton_UpdateButton(id); end
 	info.checked = TitanGetVar(id, "ShowBarBalance");
+	info.keepShownOnClick = true
 	L_UIDropDownMenu_AddButton(info);
 
 	local info = UIDropDownMenu_CreateInfo();
 	info.text = ACE["TITAN_CLOCK_MENU_DISPLAY_ON_RIGHT_SIDE"];
 	info.func = function() TitanToggleVar(id, "DisplayOnRightSide"); TitanPanel_InitPanelButtons(id); end
 	info.checked = TitanGetVar(id, "DisplayOnRightSide");
+	info.keepShownOnClick = true
 	L_UIDropDownMenu_AddButton(info);
 
 	TitanPanelRightClickMenu_AddSpacer()
 	TitanPanelRightClickMenu_AddCommand(ACE["TITAN_PANEL_MENU_HIDE"], id, TITAN_PANEL_MENU_FUNC_HIDE);
+	L_UIDropDownMenu_AddSeparator()
+
+	info = {};
+	info.text = CLOSE;
+	info.notCheckable = true
+	info.keepShownOnClick = false
+	L_UIDropDownMenu_AddButton(info);
 end
 
 local eventsTable = {

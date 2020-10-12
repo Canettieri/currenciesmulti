@@ -83,20 +83,20 @@ end
 -----------------------------------------------
 local function GetTooltipText(self, id)
 
-	local thinBag = "\r"..L["thinJ"].."\r"..L["totalbag"]..TitanUtils_GetHighlightText(GetItemCount(168822)).."\r"
-	local thinBank = L["totalbank"]..TitanUtils_GetHighlightText(GetItemCount(168822, true) - GetItemCount(168822))
+	local thinBag = " \n|TInterface\\Icons\\inv_cooking_80_choralhoney1:0|t "..L["thinJ"].."\n"..L["totalbag"].."\t"..TitanUtils_GetHighlightText(GetItemCount(168822))
+	local thinBank = "\n"..L["totalbank"].."\t"..TitanUtils_GetHighlightText(GetItemCount(168822, true) - GetItemCount(168822))
 
-	local richBag = L["richJ"].."\r"..L["totalbag"]..TitanUtils_GetHighlightText(GetItemCount(168825)).."\r"
-	local richBank = L["totalbank"]..TitanUtils_GetHighlightText(GetItemCount(168825, true) - GetItemCount(168825))
+	local richBag = "\n \n|TInterface\\Icons\\inv_cooking_80_choralhoney:0|t "..L["richJ"].."\n"..L["totalbag"].."\t"..TitanUtils_GetHighlightText(GetItemCount(168825))
+	local richBank = "\n"..L["totalbank"].."\t"..TitanUtils_GetHighlightText(GetItemCount(168825, true) - GetItemCount(168825))
 
-	local royalBag = L["royalJ"].."\r"..L["totalbag"]..TitanUtils_GetHighlightText(GetItemCount(168828)).."\r"
-	local royalBank = L["totalbank"]..TitanUtils_GetHighlightText(GetItemCount(168828, true) - GetItemCount(168828))
+	local royalBag = "\n \n|TInterface\\Icons\\inv_cooking_80_choralhoney3:0|t "..L["royalJ"].."\n"..L["totalbag"].."\t"..TitanUtils_GetHighlightText(GetItemCount(168828))
+	local royalBank = "\n"..L["totalbank"].."\t"..TitanUtils_GetHighlightText(GetItemCount(168828, true) - GetItemCount(168828))
 
 	local valueText = "" -- Difere com e sem geleia
 	if thinJelly == 0 and richJelly == 0 and royalJelly == 0 then
 		valueText = "\r"..L["info"].."\r|cFFFF2e2e"..L["NoJelly"]
 	else
-		valueText = "\r"..L["info"]..thinBag..thinBank.."\r\r"..richBag..richBank.."\r\r"..royalBag..royalBank
+		valueText = thinBag..thinBank..richBag..richBank..royalBag..royalBank
 	end
 
 	return valueText
@@ -142,16 +142,25 @@ local function PrepareMenu(self, id)
 	info.text = L["showbb"];
 	info.func = function() TitanToggleVar(id, "ShowBarBalance"); TitanPanelButton_UpdateButton(id); end
 	info.checked = TitanGetVar(id, "ShowBarBalance");
+	info.keepShownOnClick = true
 	L_UIDropDownMenu_AddButton(info);
 
 	local info = UIDropDownMenu_CreateInfo();
 	info.text = ACE["TITAN_CLOCK_MENU_DISPLAY_ON_RIGHT_SIDE"];
 	info.func = function() TitanToggleVar(id, "DisplayOnRightSide"); TitanPanel_InitPanelButtons(id); end
 	info.checked = TitanGetVar(id, "DisplayOnRightSide");
+	info.keepShownOnClick = true
 	L_UIDropDownMenu_AddButton(info);
 
 	TitanPanelRightClickMenu_AddSpacer()
 	TitanPanelRightClickMenu_AddCommand(ACE["TITAN_PANEL_MENU_HIDE"], id, TITAN_PANEL_MENU_FUNC_HIDE);
+	L_UIDropDownMenu_AddSeparator()
+
+	info = {};
+	info.text = CLOSE;
+	info.notCheckable = true
+	info.keepShownOnClick = false
+	L_UIDropDownMenu_AddButton(info);
 end
 -----------------------------------------------
 L.Elib({

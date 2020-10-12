@@ -43,10 +43,18 @@ function L.PrepareCurrenciesMaxMenu(self, id)
 	TitanPanelRightClickMenu_AddTitle(TitanPlugins[id].menuText)
 
 	info = {};
+	info.text = L["buttonText"];
+	info.notClickable = true
+	info.notCheckable = true
+	info.isTitle = true
+	L_UIDropDownMenu_AddButton(info);
+
+	info = {};
 	info.text = L["showbb"];
 	info.func = ToggleShowBarBalance;
 	info.arg1 = id
 	info.checked = TitanGetVar(id, "ShowBarBalance");
+	info.keepShownOnClick = true
 	L_UIDropDownMenu_AddButton(info);
 
 	info = {};
@@ -54,13 +62,7 @@ function L.PrepareCurrenciesMaxMenu(self, id)
 	info.func = ToggleMaxBar;
 	info.arg1 = id
 	info.checked = TitanGetVar(id, "MaxBar");
-	L_UIDropDownMenu_AddButton(info);
-
-	info = {};
-	info.text = L["showAltText"];
-	info.func = ToggleShowAltText;
-	info.arg1 = id
-	info.checked = TitanGetVar(id, "ShowAltText");
+	info.keepShownOnClick = true
 	L_UIDropDownMenu_AddButton(info);
 
 	info = {};
@@ -68,8 +70,31 @@ function L.PrepareCurrenciesMaxMenu(self, id)
 	info.func = ToggleRightSideDisplay;
 	info.arg1 = id
 	info.checked = TitanGetVar(id, "DisplayOnRightSide");
+	info.keepShownOnClick = true
+	L_UIDropDownMenu_AddButton(info);
+
+	info = {};
+	info.text = L["tooltip"];
+	info.notClickable = true
+	info.notCheckable = true
+	info.isTitle = true
+	L_UIDropDownMenu_AddButton(info);
+
+	info = {};
+	info.text = L["showAltText"];
+	info.func = ToggleShowAltText;
+	info.arg1 = id
+	info.checked = TitanGetVar(id, "ShowAltText");
+	info.keepShownOnClick = true
 	L_UIDropDownMenu_AddButton(info);
 
 	TitanPanelRightClickMenu_AddSpacer();
 	TitanPanelRightClickMenu_AddCommand(ACE["TITAN_PANEL_MENU_HIDE"], id, TITAN_PANEL_MENU_FUNC_HIDE);
+	L_UIDropDownMenu_AddSeparator()
+
+	info = {};
+	info.text = CLOSE;
+	info.notCheckable = true
+	info.keepShownOnClick = false
+	L_UIDropDownMenu_AddButton(info);
 end

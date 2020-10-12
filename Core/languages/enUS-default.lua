@@ -329,6 +329,8 @@ L["simpleText"] = "Show Simple Text"
 L["showAltText"] = "Show Alts"
 L["TotalAlt"] = "Currency Total:"
 L["AltChars"] = "|cFFFFFFFF[All Characters]|r"
+L["buttonText"] = "Bar Text"
+L["tooltip"] = "Tooltip"
 
 --- Menus (default)
 L["bfa"] = "Currency [BfA]"
