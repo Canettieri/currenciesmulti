@@ -1,5 +1,5 @@
 --[[
-Description: This plugin is part of the "Titan Panel [Currencies] Multi" addon. It shows your amount of Honor.
+Description: This plugin is part of the "Titan Panel [Currencies] Multi" addon. It shows your amount of Conquest.
 Site: http://www.curse.com/addons/wow/titan-panel-currencies-multi
 Author: Canettieri
 Special Thanks to Eliote.
@@ -7,10 +7,11 @@ Special Thanks to Eliote.
 
 local ADDON_NAME, L = ...;
 local version = GetAddOnMetadata(ADDON_NAME, "Version")
-local ID = "TITAN_PVHNRM"
-local ICON = "Interface\\Icons\\achievement_legionpvp6tier2"
-local CURRENCY_ID = 1792
+local ID = "TITAN_CONQTM"
+local ICON = "Interface\\Icons\\achievement_legionpvp2tier3"
+local CURRENCY_ID = 1602
 local currencyCount = 0.0
+local currencyMaximum
 local startcurrency
 
 local PLAYER_NAME, PLAYER_REALM
@@ -34,6 +35,7 @@ end
 local function GetAndSaveCurrency()
 	local info = C_CurrencyInfo.GetCurrencyInfo(CURRENCY_ID)
 	local amount = info.quantity
+	local totalMax = info.maxQuantity
 	if not PLAYER_KEY then return amount end
 
 	local charTable = GetCharTable()
@@ -43,12 +45,13 @@ local function GetAndSaveCurrency()
 	charTable[PLAYER_KEY].name = PLAYER_CLASS_COLOR .. PLAYER_NAME
 	charTable[PLAYER_KEY].faction = PLAYER_FACTION
 
-	return amount
+	return amount, totalMax
 end
 local function Update(self)
-	local amount = GetAndSaveCurrency(ID)
+	local amount, totalMax = GetAndSaveCurrency(ID)
 
 	currencyCount = amount or 0
+	currencyMaximum = totalMax
 	if amount and not startcurrency then startcurrency = currencyCount end
 
 	TitanPanelButton_UpdateButton(self.registry.id)
@@ -70,47 +73,59 @@ local eventsTable = {
 }
 -----------------------------------------------
 local function GetButtonText(self, id)
-
 	local currencyCountText
 	if not currencyCount then
 		currencyCountText = TitanUtils_GetHighlightText("0")
+	elseif currencyCount > currencyMaximum * 0.4 and currencyCount < currencyMaximum * 0.59 then
+		currencyCountText = "|cFFf6ed12"..currencyCount
+	elseif currencyCount > currencyMaximum * 0.59 and currencyCount < currencyMaximum * 0.79 then
+		currencyCountText = "|cFFf69112"..currencyCount
+	elseif currencyCount > currencyMaximum * 0.79 then
+		currencyCountText = "|cFFFF2e2e"..currencyCount
 	else
 		currencyCountText = TitanUtils_GetHighlightText(currencyCount)
 	end
 
 	local BarBalanceText = ""
-	if TitanGetVar(ID, "ShowBarBalance") then
+	if currencyMaximum and TitanGetVar(ID, "ShowBarBalance") then
 		if (currencyCount - startcurrency) > 0 then
-			BarBalanceText = " |cFF69FF69[" .. (currencyCount - startcurrency) .. "]"
+			BarBalanceText = " |cFF69FF69["..(currencyCount - startcurrency).."]"
 		elseif (currencyCount - startcurrency) < 0 then
-			BarBalanceText = " |cFFFF2e2e[" .. (currencyCount - startcurrency) .. "]"
+			BarBalanceText = " |cFFFF2e2e["..(currencyCount - startcurrency).."]"
 		end
 	end
 
-	return currencyCountText .. BarBalanceText
+	local maxBarText
+	if currencyMaximum and currencyMaximum > 0 and TitanGetVar(ID, "MaxBar") then
+		maxBarText = "|r/|cFFFF2e2e"..currencyMaximum.."|r"
+	else
+		maxBarText = ""
+	end
+
+	return L["OilLabel"], currencyCountText..maxBarText..BarBalanceText
 end
 -----------------------------------------------
 local function GetTooltipText(self, id)
-
 	local ColorValueAccount = "0" -- Cores da conta de valor
 	if currencyCount and startcurrency then
 		local dif = currencyCount - startcurrency
 		if dif == 0 then
 			ColorValueAccount = TitanUtils_GetHighlightText("0")
 		elseif dif > 0 then
-			ColorValueAccount = "|cFF69FF69" .. dif
+			ColorValueAccount = "|cFF69FF69"..dif
 		else
-			ColorValueAccount = "|cFFFF2e2e" .. dif
+			ColorValueAccount = "|cFFFF2e2e"..dif
 		end
 	end
 
 	local valorAtual = TitanUtils_GetHighlightText(Util_StringComDefault(currencyCount, "0"))
+	local valorMaximo = TitanUtils_GetHighlightText(Util_StringComDefault(currencyMaximum, "0"))
 
 	local ValueText = "" -- Difere com e sem moeda
 	if valorAtual == TitanUtils_GetHighlightText("0") then
-		ValueText = L["info"] .. "\n" .. "|cFFFF2e2e" .. L["AplhaOnly"]
+		ValueText = L["info"] .. "\n" .. "|cFFFF2e2e" .. L["NoMaxOil"]
 	else
-		ValueText = L["info"] .. "\n" .. L["totalAcquired"] .. "\t" .. valorAtual .. "\n" .. L["session"] .. "\t" .. ColorValueAccount
+		ValueText = L["info"] .. "\n" .. L["totalAcquired"] .. "\t" .. valorAtual .. "\n" .. L["maxpermitted"] .. "\t" .. valorMaximo .. "\n" .. L["canGet"] .. "\t" .. TitanUtils_GetHighlightText((currencyMaximum - currencyCount)).. "\n" ..L["session"] .. "\t" .. ColorValueAccount
 	end
 
 	if TitanGetVar(ID, "ShowAltText") then
@@ -132,25 +147,26 @@ local function GetTooltipText(self, id)
 		ValueText = ValueText .. "\n"..L["TotalAlt"].."\t" .. total
 	end
 
-	return L["SLCurrency02Description"] .. "\r\r" .. ValueText
+	return L["PvPCurrency02Description"].."\r\r"..ValueText
 end
 -----------------------------------------------
 L.Elib({
 	id = ID,
-	name = L["mShadowlands"] .. " Titan|cFF66b1ea " .. L["SLCurrency02Title"] .. "|r",
-	tooltip = L["SLCurrency02Title"],
+	name = L["mPvP"].." Titan|cFF66b1ea "..L["PvPCurrency02Title"].."|r",
+	tooltip = L["PvPCurrency02Title"],
 	icon = ICON,
-	category = "CATEGORY_SHADOWLANDS",
+	category = "CATEGORY_MISC",
 	version = version,
 	getButtonText = GetButtonText,
 	getTooltipText = GetTooltipText,
 	eventsTable = eventsTable,
-	prepareMenu = L.PrepareCurrenciesMenu,
+	prepareMenu = L.PrepareCurrenciesMaxMenu,
 	savedVariables = {
 		ShowIcon = 1,
 		DisplayOnRightSide = false,
 		ShowBarBalance = false,
 		ShowLabelText = false,
+		MaxBar = false,
 		ShowAltText = true,
 	}
 })

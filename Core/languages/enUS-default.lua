@@ -6,14 +6,9 @@
 
 local _, L = ...;
 ------ Shadowlands pack
---- Alpha Test (default)
-L["AplhaOnly"] = "Beta Version"
 --- Argent Commendation
 L["SLCurrency01Title"] = "Argent Commendation"
 L["SLCurrency01Description"] = "Commendation from the Argent\rCrusade for actions taken against\rthe invading forces of the\rShadowlands."
---- Honor
-L["SLCurrency02Title"] = "Honor"
-L["SLCurrency02Description"] = "Used to purchase Unrated\rPvP equipment in Oribos,\rand to upgrade Rated and\rUnrated PvP equipment."
 --- Infused Ruby
 L["SLCurrency03Title"] = "Infused Ruby"
 L["SLCurrency03Description"] = "Used to power shrines and\rdevices that run on anima in\rRevendreth. With the drought\rvarious dredgers have begun\rtrading goods for them as well."
@@ -290,6 +285,12 @@ L["TBLabel"] = "Commendation: "
 L["TBTitle"] = "Tol Barad Commendation"
 L["TBDescription"] = "Awarded for brave deeds\rperformed on Tol Barad."
 L["NoTB"] = "Available through daily\rquests in Tol Barad."
+--- Honor
+L["PvPCurrency01Title"] = "Honor"
+L["PvPCurrency01Description"] = "Used to purchase Unrated\rPvP equipment in Stormwind\rand Orgrimmar."
+--- Conquest
+L["PvPCurrency02Title"] = "Conquest"
+L["PvPCurrency02Description"] = "Earned from Rated PvP activities."
 
 ------ Eventual pack (will be only available sometimes)
 --- Lovely Charm (default)
@@ -307,6 +308,7 @@ L["LegionOnly"] = "Available in Broken Isles."
 L["PandariaOnly"] = "Available in Pandaria."
 L["BfAOnly"] = "Available in Battle for Azeroth."
 L["VisionsOnly"] = "Available in Visions of N'Zoth content."
+L["SLOnly"] = "Available in Shadowlands."
 L["session"] = "Session balance: "
 L["showbb"] = "Display Session Balance in Bar"
 L["mCata"] = "[|cFF198ae0Cata|r]"

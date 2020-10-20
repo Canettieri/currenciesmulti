@@ -1,5 +1,5 @@
 --[[
-Description: This plugin is part of the "Titan Panel [Currencies] Multi" addon. It shows your amount of Sinstone Fragments.
+Description: This plugin is part of the "Titan Panel [Currencies] Multi" addon. It shows your amount of Honor.
 Site: http://www.curse.com/addons/wow/titan-panel-currencies-multi
 Author: Canettieri
 Special Thanks to Eliote.
@@ -7,9 +7,9 @@ Special Thanks to Eliote.
 
 local ADDON_NAME, L = ...;
 local version = GetAddOnMetadata(ADDON_NAME, "Version")
-local ID = "TITAN_STNFRM"
-local ICON = "Interface\\Icons\\6bf_blackrock_nova"
-local CURRENCY_ID = 1816
+local ID = "TITAN_PVHNRM"
+local ICON = "Interface\\Icons\\achievement_legionpvp6tier2"
+local CURRENCY_ID = 1792
 local currencyCount = 0.0
 local startcurrency
 
@@ -108,7 +108,7 @@ local function GetTooltipText(self, id)
 
 	local ValueText = "" -- Difere com e sem moeda
 	if valorAtual == TitanUtils_GetHighlightText("0") then
-		ValueText = L["info"] .. "\n" .. "|cFFFF2e2e" .. L["SLOnly"]
+		ValueText = L["info"] .. "\n" .. "|cFFFF2e2e" .. L["NoMark"]
 	else
 		ValueText = L["info"] .. "\n" .. L["totalAcquired"] .. "\t" .. valorAtual .. "\n" .. L["session"] .. "\t" .. ColorValueAccount
 	end
@@ -132,15 +132,15 @@ local function GetTooltipText(self, id)
 		ValueText = ValueText .. "\n"..L["TotalAlt"].."\t" .. total
 	end
 
-	return L["SLCurrency06Description"] .. "\r\r" .. ValueText
+	return L["PvPCurrency01Description"] .. "\r\r" .. ValueText
 end
 -----------------------------------------------
 L.Elib({
 	id = ID,
-	name = L["mShadowlands"] .. " Titan|cFF66b1ea " .. L["SLCurrency06Title"] .. "|r",
-	tooltip = L["SLCurrency06Title"],
+	name = L["mPvP"] .. " Titan|cFF66b1ea " .. L["PvPCurrency01Title"] .. "|r",
+	tooltip = L["PvPCurrency01Title"],
 	icon = ICON,
-	category = "CATEGORY_SHADOWLANDS",
+	category = "CATEGORY_MISC",
 	version = version,
 	getButtonText = GetButtonText,
 	getTooltipText = GetTooltipText,

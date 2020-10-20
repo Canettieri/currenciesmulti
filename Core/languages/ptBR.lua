@@ -7,6 +7,29 @@
 
 local _, L = ...;
 if GetLocale() == "ptBR" then
+------ Shadowlands pack
+--- Argent Commendation
+L["SLCurrency01Title"] = "Comenda Argêntea"
+L["SLCurrency01Description"] = "Comenda da Cruzada Argêntea\restacionada no norte da Coroa\rde Gelo por ações tomadas\rcontra as forças invasoras das\rTerras Sombrias."
+--- Infused Ruby
+L["SLCurrency03Title"] = "Rubi Imbuído"
+L["SLCurrency03Description"] = "Usado para energizar santuários e\rdispositivos que funcionam à base\rde ânima em Revendreth. Com a\rseca, vários dragadores passaram\ra aceitá-lo em troca de itens."
+--- Medallion of Service
+L["SLCurrency04Title"] = "Medalhão de Serviço"
+L["SLCurrency04Description"] = "Uma distinção de serviço ao\rBastião. Usado para entrar\rno Caminho da Ascensão."
+--- Shadowlands PvP Weekly Reward Progress
+L["SLCurrency05Title"] = "Progresso da Recompensa Semanal JxJ de Shadowlands"
+L["SLCurrency05Description"] = "Obtenha essa moeda para obter recompensas do baú semanal\rem Oribos."
+--- Sinstone Fragments
+L["SLCurrency06Title"] = "Fragmentos de Pedra de Pecado"
+L["SLCurrency06Description"] = "O Arquivista Fane pode usar isso\rpara recriar Pedras de Pecado do\rInquisidor, que permitirão que\rvocê saia à caça de inquisidores\rnos Salões da Expiação."
+--- Soul Ash
+L["SLCurrency07Title"] = "Cinzas d'Alma"
+L["SLCurrency07Description"] = "Uma fonte de poder bruta\rencontrada no Thanator. Usada\rpara alimentar a Câmara do\rEntalhador de Runas."
+--- Stygia
+L["SLCurrency08Title"] = "Estígia"
+L["SLCurrency08Description"] = "Resíduo da destruição violenta\rde uma alma na Gorja."
+
 ------ BfA pack
 --- A&H Service Medal
 L["SMedalLabel"] = "M. de Serviço: "
@@ -265,6 +288,12 @@ L["TBLabel"] = "Comenda: "
 L["TBTitle"] = "Comenda de Tol Barad"
 L["TBDescription"] = "Concedida por atos de bravura\rem Tol Barad."
 L["NoTB"] = "Disponível através de missões\rdiárias em Tol Barad."
+--- Honor
+L["PvPCurrency01Title"] = "Honra"
+L["PvPCurrency01Description"] = "Serve para comprar equipamento\rde JxJ não ranqueado\rem Ventobravo e Orgrimmar."
+--- Conquest
+L["PvPCurrency02Title"] = "Dominação"
+L["PvPCurrency02Description"] = "Ganha em atividades JxJ Ranqueadas."
 
 ------ Eventual pack (estará disponível apenas algumas vezes)
 --- Lovely Charm
@@ -282,6 +311,7 @@ L["LegionOnly"] = "Disponível nas Ilhas Partidas."
 L["PandariaOnly"] = "Disponível em Pandária."
 L["BfAOnly"] = "Disponível em Battle for Azeroth."
 L["VisionsOnly"] = "Disponível no conteúdo de Visões de N'Zoth."
+L["SLOnly"] = "Disponível em Shadowlands."
 L["session"] = "Saldo da sessão: "
 L["showbb"] = "Exibir Saldo da Sessão na Barra"
 L["mCata"] = "[|cFF198ae0Cata|r]"
