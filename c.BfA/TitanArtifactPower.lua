@@ -15,7 +15,7 @@ local azeritePct
 local azeriteRemaining
 local azeriteCount
 local azeriteMaximum
-local CHARCOLOR = "|c" .. RAID_CLASS_COLORS[select(2, UnitClass("player"))].colorStr
+local CHARCOLOR = "|c" .. RAID_CLASS_COLORS[select(2, UnitClass("player"))].colorStr .. "|r"
 -----------------------------------------------
 local function Util_StringComDefault(v,d)
     if not v then
@@ -30,8 +30,8 @@ local function UpdateAll(self)
         local activeAzeriteItemLocation = C_AzeriteItem.FindActiveAzeriteItem()
         azeriteLevel = C_AzeriteItem.GetPowerLevel(activeAzeriteItemLocation)
         local xp, totalLevelXP = C_AzeriteItem.GetAzeriteItemXPInfo(activeAzeriteItemLocation)
-				azeriteCount = xp
-				azeriteMaximum = totalLevelXP
+        azeriteCount = xp
+        azeriteMaximum = totalLevelXP
         azeriteRemaining = totalLevelXP - xp
         azeritePct = 100 * (xp / totalLevelXP)
 
@@ -47,26 +47,26 @@ local eventsTable = {
 }
 -----------------------------------------------
 local function GetButtonText(self, id)
-  if azeriteMaximum then
-    local lvl = "|cFFFFFFFF[|r"..CHARCOLOR..azeriteLevel.."|cFFFFFFFF]|r "
-    local dif = "|cFFFF2e2e("..azeriteRemaining..")|r "
-    local account = "|cFF69FF69"..azeriteCount.."|r|||cFFFFFFFF"..azeriteMaximum.."|r "
-    local percentage = "|cFFFFFFFF[|r|cFF69FF69"..string.format("%0.1f%%", azeritePct).."|r|cFFFFFFFF]|r"
+    if azeriteMaximum then
+        local lvl = "|cFFFFFFFF[|r" .. CHARCOLOR .. azeriteLevel .. "|cFFFFFFFF]|r "
+        local dif = "|cFFFF2e2e(" .. azeriteRemaining .. ")|r "
+        local account = "|cFF69FF69" .. azeriteCount .. "|r|||cFFFFFFFF" .. azeriteMaximum .. "|r "
+        local percentage = "|cFFFFFFFF[|r|cFF69FF69" .. string.format("%0.1f%%", azeritePct) .. "|r|cFFFFFFFF]|r"
 
-    return L["AzeriteLabel"], lvl..account..dif..percentage
-  else
-    return L["noheart"]
-  end
+        return L["AzeriteLabel"], lvl .. account .. dif .. percentage
+    else
+        return L["noheart"]
+    end
 end
 -----------------------------------------------
 local function GetTooltipText(self, id)
-  if azeriteMaximum then
-    local azeritetooltipText = L["AzeriteDescription"].."\n \n"..L["info"].."\n"..L["AzeriteLevel"].."\t|cFFFFFFFF"..azeriteLevel.."|r\n"..L["AzeriteXP"].."\t|cFFFFFFFF"..azeriteCount.."|r\n"..L["AzeritetoLvL"].."\t|cFFFFFFFF"..azeriteRemaining.."|r\n"..L["AzeritetoMaximum"].."\t|cFFFFFFFF"..azeriteMaximum
+    if azeriteMaximum then
+        local azeritetooltipText = L["AzeriteDescription"] .. "\n \n" .. L["info"] .. "\n" .. L["AzeriteLevel"] .. "\t|cFFFFFFFF" .. azeriteLevel .. "|r\n" .. L["AzeriteXP"] .. "\t|cFFFFFFFF" .. azeriteCount .. "|r\n" .. L["AzeritetoLvL"] .. "\t|cFFFFFFFF" .. azeriteRemaining .. "|r\n" .. L["AzeritetoMaximum"] .. "\t|cFFFFFFFF" .. azeriteMaximum
 
-      return azeritetooltipText
-  else
-    return L["noheart"]
-  end
+        return azeritetooltipText
+    else
+        return L["noheart"]
+    end
 end
 -----------------------------------------------
 local function PrepareMenu(self, id)
@@ -105,7 +105,7 @@ L.Elib({
     icon = ICON,
     category = "CATEGORY_BFA",
     version = version,
-		onClick = OnClick,
+    onClick = OnClick,
     getButtonText = GetButtonText,
     getTooltipText = GetTooltipText,
     eventsTable = eventsTable,
