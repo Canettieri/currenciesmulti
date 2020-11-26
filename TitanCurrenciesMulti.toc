@@ -72,6 +72,7 @@ c.Misc\TitanTimewarpedBadge.lua
 c.Misc\TitanMarkofHonor.lua
 c.Misc\TitanTolBaradComm.lua
 c.Shadowlands\TitanArgentCommendation.lua
+c.Shadowlands\TitanGratefulOffering.lua
 c.Shadowlands\TitanInfusedRuby.lua
 c.Shadowlands\TitanMedallionofService.lua
 c.Shadowlands\TitanPvPWeeklyReward.lua

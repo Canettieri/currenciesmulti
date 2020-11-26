@@ -9,6 +9,9 @@ local _, L = ...;
 --- Argent Commendation
 L["SLCurrency01Title"] = "Argent Commendation"
 L["SLCurrency01Description"] = "Commendation from the Argent\rCrusade for actions taken against\rthe invading forces of the\rShadowlands."
+--- Grateful Offering
+L["SLCurrency02Title"] = "Grateful Offering"
+L["SLCurrency02Description"] = "A gift from the denizens of the\rShadowlands, grateful for the\rreturn of anima. Acquired from\rconducting anima to a location\rand performing activities\rassociated with the inhabitants."
 --- Infused Ruby
 L["SLCurrency03Title"] = "Infused Ruby"
 L["SLCurrency03Description"] = "Used to power shrines and\rdevices that run on anima in\rRevendreth. With the drought\rvarious dredgers have begun\rtrading goods for them as well."

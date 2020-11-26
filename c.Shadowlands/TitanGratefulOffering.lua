@@ -1,5 +1,5 @@
 --[[
-Description: This plugin is part of the "Titan Panel [Currencies] Multi" addon. It shows your amount of Soul Ash.
+Description: This plugin is part of the "Titan Panel [Currencies] Multi" addon. It shows your amount of Grateful Offering.
 Site: http://www.curse.com/addons/wow/titan-panel-currencies-multi
 Author: Canettieri
 Special Thanks to Eliote.
@@ -7,9 +7,9 @@ Special Thanks to Eliote.
 
 local ADDON_NAME, L = ...;
 local version = GetAddOnMetadata(ADDON_NAME, "Version")
-local ID = "TITAN_SOLAHM"
-local ICON = "Interface\\Icons\\inv_soulash"
-local CURRENCY_ID = 1828
+local ID = "TITAN_GRTFFM"
+local ICON = "Interface\\Icons\\inv_misc_ornatebox"
+local CURRENCY_ID = 1885
 local currencyCount = 0.0
 local startcurrency
 
@@ -132,13 +132,13 @@ local function GetTooltipText(self, id)
 		ValueText = ValueText .. "\n"..L["TotalAlt"].."\t" .. total
 	end
 
-	return L["SLCurrency07Description"] .. "\r\r" .. ValueText
+	return L["SLCurrency02Description"] .. "\r\r" .. ValueText
 end
 -----------------------------------------------
 L.Elib({
 	id = ID,
-	name = L["mShadowlands"] .. " Titan|cFF66b1ea " .. L["SLCurrency07Title"] .. "|r",
-	tooltip = L["SLCurrency07Title"],
+	name = L["mShadowlands"] .. " Titan|cFF66b1ea " .. L["SLCurrency02Title"] .. "|r",
+	tooltip = L["SLCurrency02Title"],
 	icon = ICON,
 	category = "CATEGORY_SHADOWLANDS",
 	version = version,

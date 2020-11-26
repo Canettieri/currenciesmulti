@@ -11,6 +11,9 @@ if GetLocale() == "ptBR" then
 --- Argent Commendation
 L["SLCurrency01Title"] = "Comenda Argêntea"
 L["SLCurrency01Description"] = "Comenda da Cruzada Argêntea\restacionada no norte da Coroa\rde Gelo por ações tomadas\rcontra as forças invasoras das\rTerras Sombrias."
+--- Grateful Offering
+L["SLCurrency02Title"] = "Oferenda Agradecida"
+L["SLCurrency02Description"] = "Um presente dos habitantes das\rTerras Sombrias, gratos pelo\rretorno da ânima. Obtido ao se\rconduzir ânima a um local e\rparticipar de atividades\rassociadas aos habitantes."
 --- Infused Ruby
 L["SLCurrency03Title"] = "Rubi Imbuído"
 L["SLCurrency03Description"] = "Usado para energizar santuários e\rdispositivos que funcionam à base\rde ânima em Revendreth. Com a\rseca, vários dragadores passaram\ra aceitá-lo em troca de itens."
