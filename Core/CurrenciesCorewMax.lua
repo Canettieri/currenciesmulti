@@ -1,6 +1,6 @@
 --[[
 	Description: This plugin is part of the "Titan Panel [Currencies] Multi" addon.
-	Site: http://www.curse.com/addons/wow/titan-panel-currencies-multi
+	Site: https://www.curseforge.com/wow/addons/titan-panel-currencies-multi
 	Author: Canettieri
 	Special Thanks to Eliote.
 --]]

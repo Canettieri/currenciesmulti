@@ -1,6 +1,6 @@
 --[[
 Description: This plugin is part of the "Titan Panel [Currencies] Multi" addon. It shows your Artifact Power.
-Site: http://www.curse.com/addons/wow/titan-panel-currencies-multi
+Site: https://www.curseforge.com/wow/addons/titan-panel-currencies-multi
 Author: Canettieri and GrimNotepad [he helped me a lot! :)]
 Special Thanks to Eliote and .
 --]]
