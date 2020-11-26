@@ -26,8 +26,8 @@ local function Util_StringComDefault(v,d)
 end
 -----------------------------------------------
 local function UpdateAll(self)
-    if C_AzeriteItem.FindActiveAzeriteItem() then
-        local activeAzeriteItemLocation = C_AzeriteItem.FindActiveAzeriteItem()
+    local activeAzeriteItemLocation = C_AzeriteItem.FindActiveAzeriteItem()
+    if activeAzeriteItemLocation and activeAzeriteItemLocation:IsValid() then
         azeriteLevel = C_AzeriteItem.GetPowerLevel(activeAzeriteItemLocation)
         local xp, totalLevelXP = C_AzeriteItem.GetAzeriteItemXPInfo(activeAzeriteItemLocation)
         azeriteCount = xp
@@ -42,6 +42,7 @@ end
 local eventsTable = {
     CVAR_UPDATE = UpdateAll,
     PLAYER_ENTERING_WORLD = UpdateAll,
+    PLAYER_EQUIPMENT_CHANGED = UpdateAll,
     AZERITE_ITEM_EXPERIENCE_CHANGED = UpdateAll,
     AZERITE_ITEM_POWER_LEVEL_CHANGED = UpdateAll,
 }
