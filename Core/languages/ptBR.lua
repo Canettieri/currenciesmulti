@@ -38,6 +38,13 @@ L["SLCurrency09Description"] = "Uma alma excepcional que deseja\rcontribuir para
 --- Reservoir Anima
 L["SLCurrency10Title"] = "Ânima-reserva"
 L["SLCurrency10Description"] = "Uma medida da ânima\rdisponível para o seu Pacto."
+--- Renown
+L["SLCurrency11Title"] = "Renome"
+L["SLCurrency11Description"] = "Este é o seu nível de Renome!"
+--- Phantasma
+L["SLCurrency12Title"] = "Fantom"
+L["SLCurrency12Description"] = "Este fragmento de ânima exaurido\rpode ser usado para ganhar poder\rem Thanator. Sair de Thanator\rdestrói todo o fantom."
+L["NoSLCurrency12"] = "Disponível apenas em Thanator."
 
 ------ BfA pack
 --- A&H Service Medal

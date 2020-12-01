@@ -36,6 +36,13 @@ L["SLCurrency09Description"] = "An exceptional soul that wishes\rto contribute t
 --- Reservoir Anima
 L["SLCurrency10Title"] = "Reservoir Anima"
 L["SLCurrency10Description"] = "A measure of the anima your\rcovenant has at its disposal."
+--- Renown
+L["SLCurrency11Title"] = "Renown"
+L["SLCurrency11Description"] = "It's Renown."
+--- Phantasma
+L["SLCurrency12Title"] = "Phantasma"
+L["SLCurrency12Description"] = "This extinguished strand of anima\rcan be used to gain power within\rTorghast. Leaving Torghast will\rdestroy all Phantasma."
+L["NoSLCurrency12"] = "Available only in Torghast."
 
 ------ BfA pack
 --- A&H Service Medal (default)

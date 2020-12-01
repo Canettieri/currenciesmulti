@@ -75,8 +75,10 @@ c.Shadowlands\TitanArgentCommendation.lua
 c.Shadowlands\TitanGratefulOffering.lua
 c.Shadowlands\TitanInfusedRuby.lua
 c.Shadowlands\TitanMedallionofService.lua
+c.Shadowlands\TitanPhantasma.lua
 #c.Shadowlands\TitanPvPWeeklyReward.lua
 c.Shadowlands\TitanRedeemedSoul.lua
+c.Shadowlands\TitanRenown.lua
 c.Shadowlands\TitanReservoirAnima.lua
 c.Shadowlands\TitanSinstoneFragments.lua
 c.Shadowlands\TitanSoulAsh.lua
