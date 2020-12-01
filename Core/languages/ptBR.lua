@@ -32,6 +32,12 @@ L["SLCurrency07Description"] = "Uma fonte de poder bruta\rencontrada no Thanator
 --- Stygia
 L["SLCurrency08Title"] = "Estígia"
 L["SLCurrency08Description"] = "Resíduo da destruição violenta\rde uma alma na Gorja."
+--- Redeemed Soul
+L["SLCurrency09Title"] = "Alma Redimida"
+L["SLCurrency09Description"] = "Uma alma excepcional que deseja\rcontribuir para o fortalecimento\rdo Santuário do Pacto."
+--- Reservoir Anima
+L["SLCurrency10Title"] = "Ânima-reserva"
+L["SLCurrency10Description"] = "Uma medida da ânima\rdisponível para o seu Pacto."
 
 ------ BfA pack
 --- A&H Service Medal

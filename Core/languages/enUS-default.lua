@@ -30,6 +30,12 @@ L["SLCurrency07Description"] = "A raw source of power found\rwithin Torghast. Us
 --- Stygia
 L["SLCurrency08Title"] = "Stygia"
 L["SLCurrency08Description"] = "The byproduct of the violent\rdestruction of a Soul within\rthe Maw."
+--- Redeemed Soul
+L["SLCurrency09Title"] = "Redeemed Soul"
+L["SLCurrency09Description"] = "An exceptional soul that wishes\rto contribute to empowering\ryour Covenant Sanctum."
+--- Reservoir Anima
+L["SLCurrency10Title"] = "Reservoir Anima"
+L["SLCurrency10Description"] = "A measure of the anima your\rcovenant has at its disposal."
 
 ------ BfA pack
 --- A&H Service Medal (default)
