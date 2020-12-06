@@ -127,43 +127,6 @@ local function OnClick(self, button)
 	end
 end
 
-local function PrepareMenu(self, id)
-	TitanPanelRightClickMenu_AddTitle(TitanPlugins[id].menuText)
-	TitanPanelRightClickMenu_AddToggleIcon(id)
-	TitanPanelRightClickMenu_AddToggleLabelText(id)
-
-	local info = UIDropDownMenu_CreateInfo();
-	info.text = L["HigherOnly"];
-	info.func = function() TitanToggleVar(id, "ShowHigherOnly"); TitanPanelButton_UpdateButton(id); end
-	info.checked = TitanGetVar(id, "ShowHigherOnly");
-	info.keepShownOnClick = true
-	L_UIDropDownMenu_AddButton(info);
-
-	local info = UIDropDownMenu_CreateInfo();
-	info.text = L["showbb"];
-	info.func = function() TitanToggleVar(id, "ShowBarBalance"); TitanPanelButton_UpdateButton(id); end
-	info.checked = TitanGetVar(id, "ShowBarBalance");
-	info.keepShownOnClick = true
-	L_UIDropDownMenu_AddButton(info);
-
-	local info = UIDropDownMenu_CreateInfo();
-	info.text = ACE["TITAN_CLOCK_MENU_DISPLAY_ON_RIGHT_SIDE"];
-	info.func = function() TitanToggleVar(id, "DisplayOnRightSide"); TitanPanel_InitPanelButtons(id); end
-	info.checked = TitanGetVar(id, "DisplayOnRightSide");
-	info.keepShownOnClick = true
-	L_UIDropDownMenu_AddButton(info);
-
-	TitanPanelRightClickMenu_AddSpacer()
-	TitanPanelRightClickMenu_AddCommand(ACE["TITAN_PANEL_MENU_HIDE"], id, TITAN_PANEL_MENU_FUNC_HIDE);
-	L_UIDropDownMenu_AddSeparator()
-
-	info = {};
-	info.text = CLOSE;
-	info.notCheckable = true
-	info.keepShownOnClick = false
-	L_UIDropDownMenu_AddButton(info);
-end
-
 local eventsTable = {
 	PLAYER_ENTERING_WORLD = function(self)
 		self:UnregisterEvent("PLAYER_ENTERING_WORLD")
@@ -194,7 +157,11 @@ L.Elib({
 	getTooltipText = GetTooltipText,
 	eventsTable = eventsTable,
 	onClick = OnClick,
-	prepareMenu = PrepareMenu,
+	menus = {
+		{ type = "toggle", text = L["HigherOnly"], var = "ShowHigherOnly", def = true, keepShown = true },
+		{ type = "toggle", text = L["showbb"], var = "ShowBarBalance", def = true, keepShown = true },
+		{ type = "rightSideToggle" }
+	},
 	savedVariables = {
 		ShowIcon = 1,
 		DisplayOnRightSide = false,
