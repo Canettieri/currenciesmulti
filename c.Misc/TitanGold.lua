@@ -41,7 +41,7 @@ local function formatGold(value, cor, somenteMaior)
 	local text = ""
 
 	if not somenteMaior or value >= 10000 then
-		text = text .. (cor or Color.OURO) .. math.floor(value / 10000) .. ICO_OURO .. "|r "
+		text = text .. (cor or Color.OURO) .. FormatLargeNumber(math.floor(value / 10000)) .. ICO_OURO .. "|r "
 	end
 
 	if not somenteMaior or (value >= 100 and value < 10000) then
