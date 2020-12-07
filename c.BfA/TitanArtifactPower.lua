@@ -76,6 +76,40 @@ local function OnClick(self, button)
 	end
 end
 -----------------------------------------------
+function PrepareMenu(eddm, self, id)
+    eddm.UIDropDownMenu_AddButton({
+        text = TitanPlugins[id].menuText,
+        hasArrow = false,
+        isTitle = true,
+        isUninteractable = true,
+        notCheckable = true
+    })
+
+    local info = {};
+    info.text = ACE["TITAN_CLOCK_MENU_DISPLAY_ON_RIGHT_SIDE"];
+    info.func = ToggleRightSideDisplay;
+    info.arg1 = id
+    info.checked = TitanGetVar(id, "DisplayOnRightSide");
+    info.keepShownOnClick = true
+    eddm.UIDropDownMenu_AddButton(info);
+
+    eddm.UIDropDownMenu_AddSpace();
+
+    eddm.UIDropDownMenu_AddButton({
+        notCheckable = true,
+        text = ACE["TITAN_PANEL_MENU_HIDE"],
+        func = function() TitanPanelRightClickMenu_Hide(id) end
+    })
+
+    eddm.UIDropDownMenu_AddSeparator();
+
+    info = {};
+    info.text = CLOSE;
+    info.notCheckable = true
+    info.keepShownOnClick = false
+    eddm.UIDropDownMenu_AddButton(info);
+end
+-----------------------------------------------
 L.Elib({
     id = ID,
     name = L["mBfA"].." Titan|cFF66b1ea "..L["AzeriteTitle"].."|r",
@@ -87,7 +121,7 @@ L.Elib({
     getButtonText = GetButtonText,
     getTooltipText = GetTooltipText,
     eventsTable = eventsTable,
-    menus = { { type = "rightSideToggle" } },
+    prepareMenu = PrepareMenu,
     savedVariables = {
         ShowIcon = 1,
         DisplayOnRightSide = false,
