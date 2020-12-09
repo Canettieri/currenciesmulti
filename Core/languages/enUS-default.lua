@@ -27,6 +27,7 @@ L["SLCurrency06Description"] = "The Avowed and their adherents\rhave an immense 
 --- Soul Ash
 L["SLCurrency07Title"] = "Soul Ash"
 L["SLCurrency07Description"] = "A raw source of power found\rwithin Torghast. Used to fuel\rthe Runecarver's Chamber."
+L["NoSLCurrency07"] = "Acquired in Torghast."
 --- Stygia
 L["SLCurrency08Title"] = "Stygia"
 L["SLCurrency08Description"] = "The byproduct of the violent\rdestruction of a Soul within\rthe Maw."

@@ -1,4 +1,4 @@
-local libName, libVersion = "ElioteDropDownMenu-1.0", 4
+local libName, libVersion = "ElioteDropDownMenu-1.0", 5
 
 --- @class ElioteDropDownMenu
 local lib = LibStub:NewLibrary(libName, libVersion)
@@ -1393,29 +1393,13 @@ function lib.ToggleDropDownMenu(level, value, dropDownFrame, anchorName, xOffset
 
 		--  We just move level 1 enough to keep it on the screen. We don't necessarily change the anchors.
 		if (level == 1) then
-			local offLeft = listFrame:GetLeft() / uiScale;
-			local offRight = (GetScreenWidth() - listFrame:GetRight()) / uiScale;
-			local offTop = (GetScreenHeight() - listFrame:GetTop()) / uiScale;
-			local offBottom = listFrame:GetBottom() / uiScale;
-
-			local xAddOffset, yAddOffset = 0, 0;
-			if (offLeft < 0) then
-				xAddOffset = -offLeft;
-			elseif (offRight < 0) then
-				xAddOffset = offRight;
-			end
-
-			if (offTop < 0) then
-				yAddOffset = offTop;
-			elseif (offBottom < 0) then
-				yAddOffset = -offBottom;
-			end
-
 			listFrame:ClearAllPoints();
+			listFrame:SetClampedToScreen(true)
+			listFrame:SetClampRectInsets(-4, 4, 4, -4)
 			if (anchorName == "cursor") then
-				listFrame:SetPoint(point, relativeTo, relativePoint, xOffset + xAddOffset, yOffset + yAddOffset);
+				listFrame:SetPoint(point, relativeTo, relativePoint, xOffset, yOffset);
 			else
-				listFrame:SetPoint(point, relativeTo, relativePoint, xOffset + xAddOffset, yOffset + yAddOffset);
+				listFrame:SetPoint(point, relativeTo, relativePoint, xOffset, yOffset);
 			end
 		else
 			-- Determine whether the menu is off the screen or not

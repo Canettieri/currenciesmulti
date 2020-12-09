@@ -29,6 +29,7 @@ L["SLCurrency06Description"] = "O Arquivista Fane pode usar isso\rpara recriar P
 --- Soul Ash
 L["SLCurrency07Title"] = "Cinzas d'Alma"
 L["SLCurrency07Description"] = "Uma fonte de poder bruta\rencontrada no Thanator. Usada\rpara alimentar a Câmara do\rEntalhador de Runas."
+L["NoSLCurrency07"] = "Adquirida em Thanator."
 --- Stygia
 L["SLCurrency08Title"] = "Estígia"
 L["SLCurrency08Description"] = "Resíduo da destruição violenta\rde uma alma na Gorja."
