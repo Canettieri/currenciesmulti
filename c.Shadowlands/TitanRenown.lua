@@ -34,8 +34,8 @@ local function GetCharTable()
 end
 local function GetAndSaveCurrency()
 	local info = C_CurrencyInfo.GetCurrencyInfo(CURRENCY_ID)
-	local amount = info.quantity
-	local totalMax = info.maxQuantity
+	local amount = (info.quantity + 1)
+	local totalMax = (info.maxQuantity + 1)
 	if not PLAYER_KEY then return amount end
 
 	local charTable = GetCharTable()
