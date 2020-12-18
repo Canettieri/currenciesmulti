@@ -1,8 +1,8 @@
 --[[
-  Oi para você que é brasileiro (ou português) e está vindo até aqui ler as traduções, HAHA! Se encontrar algum erro, me avise, tá bem?
-  Esse addon foi feito por um cara que não manja nada de programação... Brasileiro é foda, né? Quer se meter em tudo... Um marqueteiro querendo desenvolver addon, vê se pode!
+  Oi para você que é brasileiro (ou português) e está vindo até aqui ler as traduções! Se encontrar algum erro, me avise, tá bem?
+  Esse addon foi feito por um cara que não manja nada de programação, então erros podem aparecer. xD
   Mas enfim, aproveite minhas gambiarras, foram feitas com amor para você. :)
-	Tudo aqui neste arquivo foi traduzido por mim, Paulo Canettieri! (com ajuda do wowhead, claro...)
+  Tudo aqui neste arquivo foi traduzido por mim, Paulo Canettieri! (com ajuda do wowhead, claro...)
 --]]
 
 local _, L = ...;
@@ -46,6 +46,10 @@ L["SLCurrency11Description"] = "Este é o seu nível de Renome!"
 L["SLCurrency12Title"] = "Fantom"
 L["SLCurrency12Description"] = "Este fragmento de ânima exaurido\rpode ser usado para ganhar poder\rem Thanator. Sair de Thanator\rdestrói todo o fantom."
 L["NoSLCurrency12"] = "Disponível apenas em Thanator."
+--- Adventure Campaign Progress
+L["SLCurrency13Title"] = "Progresso na Campanha de Aventura"
+L["SLCurrency13Description"] = "Esse desafio leva a novas aventuras, com\rrecompensas maiores."
+L["NoSLCurrency13"] = "Obtido através da Mesa de Comando."
 
 ------ BfA pack
 --- A&H Service Medal

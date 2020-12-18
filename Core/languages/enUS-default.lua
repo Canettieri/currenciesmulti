@@ -44,6 +44,10 @@ L["SLCurrency11Description"] = "It's Renown."
 L["SLCurrency12Title"] = "Phantasma"
 L["SLCurrency12Description"] = "This extinguished strand of anima\rcan be used to gain power within\rTorghast. Leaving Torghast will\rdestroy all Phantasma."
 L["NoSLCurrency12"] = "Available only in Torghast."
+--- Adventure Campaign Progress
+L["SLCurrency13Title"] = "Adventure Campaign Progress"
+L["SLCurrency13Description"] = "This challenge leads to additional\radventures with greater rewards."
+L["NoSLCurrency13"] = "Obtainable through Command Table."
 
 ------ BfA pack
 --- A&H Service Medal (default)
