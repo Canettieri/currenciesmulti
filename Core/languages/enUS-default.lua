@@ -23,7 +23,7 @@ L["SLCurrency05Title"] = "PvP Weekly Reward Progress"
 L["SLCurrency05Description"] = "Acquire this currency to attain\rrewards from the weekly chest\rin Oribos."
 --- Sinstone Fragments
 L["SLCurrency06Title"] = "Sinstone Fragments"
-L["SLCurrency06Description"] = "The Avowed and their adherents\rhave an immense archive with\rknowledge to piece back together\rsinstones. This makes fragments\rhighly valuable to them as well as\rsome less scrupulous."
+L["SLCurrency06Description"] = "Archivist Fane can use these to\rrecreate Inquisitor Sinstones, which\rwill allow you to hunt inquisitors in\rthe Halls of Atonement."
 --- Soul Ash
 L["SLCurrency07Title"] = "Soul Ash"
 L["SLCurrency07Description"] = "A raw source of power found\rwithin Torghast. Used to fuel\rthe Runecarver's Chamber."

@@ -2,12 +2,112 @@
 	Do you want help us translating to your language?
 	Send your file with translations in: https://www.curseforge.com/wow/addons/titan-panel-currencies-multi
 	Author: Canettieri
-  French translator: Zlandicae
-	Last update: 21/07/2017
+    Translator: Zlandicae
+	Last update: 26/02/2021
 --]]
 
 local _, L = ...;
 if GetLocale() == "frFR" then
+------ Shadowlands pack
+--- Argent Commendation
+L["SLCurrency01Title"] = "Récompense d’argent"
+L["SLCurrency01Description"] = "Récompense de la Croisade d’argent dans le\rnord de la Couronne de glace pour les actions\rentreprises contre les envahisseurs de\rl’Ombreterre."
+--- Grateful Offering
+L["SLCurrency02Title"] = "Offrande reconnaissante"
+L["SLCurrency02Description"] = "Un cadeau des habitants de l’Ombreterre,\rreconnaissants du retour de l’anima. Obtenu\ren conduisant l’anima vers un emplacement\rprécis et en participant à des activités avec les \rhabitants."
+--- Infused Ruby
+L["SLCurrency03Title"] = "Rubis infusé"
+L["SLCurrency03Description"] = "Permet d’alimenter les sanctuaires et\rdispositifs fonctionnant à l’anima en\rRevendreth. Depuis que la pénurie sévit, divers\rpurotins se sont mis à les troquer contre des\rmarchandises."
+--- Medallion of Service
+L["SLCurrency04Title"] = "Médaillon de service"
+L["SLCurrency04Description"] = "Marque pour services rendus au Bastion.\rPermet d’emprunter la voie de l’Ascension."
+--- Shadowlands PvP Weekly Reward Progress
+L["SLCurrency05Title"] = "Récompense de progression hebdomadaire - JcJ Shadowlands"
+L["SLCurrency05Description"] = "Permet d’obtenir les récompenses du coffre\rhebdomadaire d’Oribos."
+--- Sinstone Fragments
+L["SLCurrency06Title"] = "Fragments de stèle du vice"
+L["SLCurrency06Description"] = "L’archiviste Fane peut les utiliser pour recréer\rdes stèles du vice d’inquisiteur, qui vous\rpermettent de traquer les inquisiteurs dans les\rsalles de l’Expiation."
+--- Soul Ash
+L["SLCurrency07Title"] = "Cendre d’âme"
+L["SLCurrency07Description"] = "Source d’énergie brute trouvée dans\rTourment. Sert à alimenter la\rchambre du Runomancien."
+L["NoSLCurrency07"] = "Se récupère dans Tourment, la tour des Damnés."
+--- Stygia
+L["SLCurrency08Title"] = "Stygie"
+L["SLCurrency08Description"] = "Vestige résultant de la destruction violente\rd’une âme au sein de l’Antre."
+--- Redeemed Soul
+L["SLCurrency09Title"] = "Redeemed Soul"
+L["SLCurrency09Description"] = "Une âme exceptionnelle qui désire contribuer\rau renforcement du sanctum de votre\rcongrégation."
+--- Reservoir Anima
+L["SLCurrency10Title"] = "Anima du réservoir"
+L["SLCurrency10Description"] = "La quantité d’anima dont dispose votre\rcongrégation."
+--- Renown
+L["SLCurrency11Title"] = "Renom"
+L["SLCurrency11Description"] = "Votre renom auprès\rde votre congrégation."
+--- Phantasma
+L["SLCurrency12Title"] = "Fantasmes"
+L["SLCurrency12Description"] = "Ce filament d’anima mourant peut\rêtre utilisé pour gagner de la\rpuissance dans Tourment.\r\rTous les fantasmes sont détruits au\rmoment de quitter la tour."
+L["NoSLCurrency12"] = "Uniquement disponible dans Tourment, la tour des Damnés."
+--- Adventure Campaign Progress
+L["SLCurrency13Title"] = "Progression des aventures de la campagne"
+L["SLCurrency13Description"] = "Ce défi donne accès à des aventures\rsupplémentaires, aux récompenses\rencore plus précieuses."
+L["NoSLCurrency13"] = "Se récupère via la Table de Commandement."
+
+------ BfA pack
+--- A&H Service Medal (default)
+L["SMedalLabel"] = "S. Medal: "
+L["SMedalATitle"] = "7th Legion Service Medal"
+L["SMedalHTitle"] = "Honorbound Service Medal"
+L["SMedalDescription"] = "A badge of merit for action taken\ron the battlefields of Kul Tiras,\rZandalar, and active Warfronts."
+--- Artifact Power (default)
+L["noheart"] = "|cFFFF2e2eNo Heart of Azeroth!"
+L["AzeriteLevel"] = "Heart of Azeroth Level:|cFFFFFFFF "
+L["AzeriteXP"] = "Current Power:|cFFFFFFFF "
+L["AzeritetoLvL"] = "Azerite to Up:|cFFFFFFFF "
+L["AzeritetoMaximum"] = "This Level Maximum Power:|cFFFFFFFF "
+L["AzeriteLabel"] = "A. Power: "
+L["AzeriteTitle"] = "Artifact Power (Azerite)"
+L["AzeriteDescription"] = "Artifact Power empowers the Heart of Azeroth."
+--- Coalescing Visions (default)
+L["CoaviLabel"] = "C. Visions: "
+L["CoaviTitle"] = "Coalescing Visions"
+L["CoaviDescription"] = "Wrathion can manipulate these\rvisions into a vessel that will allow\ryou to gain access to a Horrific\rVision of N'Zoth."
+--- Corrupted Memento (default)
+L["CMementoLabel"] = "C. Memento: "
+L["CMementoTitle"] = "Corrupted Memento"
+L["CMementoDescription"] = "Fragments of memory from Horrific\rVisions of N'Zoth which can be\ranalyzed at the Titanic Research\rArchive in the Chamber of Heart."
+--- Echoes of Ny'alotha (default)
+L["ENyalothaLabel"] = "E. Ny'alotha: "
+L["ENyalothTitle"] = "Echoes of Ny'alotha"
+L["ENyalothDescription"] = "Scoured of N'Zoth's corruption,\rMOTHER can use this substance to\rsynthesize essences in the Chamber\rof Heart."
+--- Jelly (default)
+L["thinJ"] = "|cff1eff00Thin Jelly|r"
+L["richJ"] = "|cff0070ddRich Jelly|r"
+L["royalJ"] = "|cffa335eeRoyal Jelly|r"
+L["JellyLabel"] = "Jelly: "
+L["JellyTitle"] = "Jelly"
+L["NoJelly"] = "Alliance Only! Need reputation\rwith Honeyback Hive."
+--- Prismatic Manapearl (default)
+L["PpearlLabel"] = "Manapearl: "
+L["PpearlTitle"] = "Prismatic Manapearl"
+L["PpearlDescription"] = "A glistening sphere of arcane energy\rfound around Nazjatar. These can be\rtraded for rare and powerful items,\ror used to empower Benthic armor."
+L["NoPpearl"] = "Available in Nazjatar."
+--- War Resources (default)
+L["WResLabel"] = "War Res.: "
+L["WResTitle"] = "War Resources"
+L["WResDescription"] = "Used to recruit troops, run\rmissions, and research\rupgrades for your war effort."
+--- Seafarer's Dubloon (default)
+L["DubloonLabel"] = "Dubloon: "
+L["DubloonTitle"] = "Seafarer's Dubloon"
+L["DubloonDescription"] = "Currency used by the many varied\rtribes of the Great Sea. Used to\rprocure items from traders on\rIsland Expeditions."
+--- Seal of Wartorn Fate (default)
+L["WartornLabel"] = "Wartorn Fate: "
+L["WartornTitle"] = "Seal of Wartorn Fate"
+L["WartornDescription"] = "Twists fate to provide an\ropportunity for additional\rtreasure from Battle for\rAzeroth raid and dungeon\rbosses."
+--- Titan Residuum (default)
+L["TitanTitanLabel"] = "Residuum: "
+L["TitanTitanTitle"] = "Titan Residuum"
+L["TitanTitanDescription"] = "Unpowered remnants of Azerite armor\rcoveted by ethereal traders in Boralus\rand Zandalar. Obtained from Mythic\rKeystone weekly chests and by scrapping\ror disenchanting Azerite armor."
+
 ------ Draenor pack
 --- Apexis Crystal
 L["ApexisLabel"] = "Cristaux: "
