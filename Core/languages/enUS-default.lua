@@ -48,6 +48,10 @@ L["NoSLCurrency12"] = "Available only in Torghast."
 L["SLCurrency13Title"] = "Adventure Campaign Progress"
 L["SLCurrency13Description"] = "This challenge leads to additional\radventures with greater rewards."
 L["NoSLCurrency13"] = "Obtainable through Command Table."
+--- Valor
+L["SLCurrency14Title"] = "Valor"
+L["SLCurrency14Description"] = "A currency used to increase\rthe power of items from\rMythic dungeons."
+L["NoSLCurrency14"] = "Obtainable through Mythic+."
 
 ------ BfA pack
 --- A&H Service Medal (default)

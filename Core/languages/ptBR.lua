@@ -50,6 +50,10 @@ L["NoSLCurrency12"] = "Disponível apenas em Thanator."
 L["SLCurrency13Title"] = "Progresso na Campanha de Aventura"
 L["SLCurrency13Description"] = "Esse desafio leva a novas aventuras, com\rrecompensas maiores."
 L["NoSLCurrency13"] = "Obtido através da Mesa de Comando."
+--- Valor
+L["SLCurrency14Title"] = "Bravura"
+L["SLCurrency14Description"] = "Moeda usada para aumentar o poder\rde itens de masmorras Míticas."
+L["NoSLCurrency14"] = "Obtido através de Mítica+."
 
 ------ BfA pack
 --- A&H Service Medal
