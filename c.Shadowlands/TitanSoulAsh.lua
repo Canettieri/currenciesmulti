@@ -11,7 +11,6 @@ local ID = "TITAN_SOLAHM"
 local ICON = "Interface\\Icons\\inv_soulash"
 local CURRENCY_ID = 1828
 local currencyCount = 0.0
-local currencyMaximum
 local startcurrency
 
 local PLAYER_NAME, PLAYER_REALM
@@ -35,7 +34,6 @@ end
 local function GetAndSaveCurrency()
 	local info = C_CurrencyInfo.GetCurrencyInfo(CURRENCY_ID)
 	local amount = info.quantity
-	local totalMax = info.maxQuantity
 	if not PLAYER_KEY then return amount end
 
 	local charTable = GetCharTable()
@@ -45,13 +43,12 @@ local function GetAndSaveCurrency()
 	charTable[PLAYER_KEY].name = PLAYER_CLASS_COLOR .. PLAYER_NAME
 	charTable[PLAYER_KEY].faction = PLAYER_FACTION
 
-	return amount, totalMax
+	return amount
 end
 local function Update(self)
-	local amount, totalMax = GetAndSaveCurrency(ID)
+	local amount = GetAndSaveCurrency(ID)
 
 	currencyCount = amount or 0
-	currencyMaximum = totalMax
 	if amount and not startcurrency then startcurrency = currencyCount end
 
 	TitanPanelButton_UpdateButton(self.registry.id)
@@ -73,15 +70,10 @@ local eventsTable = {
 }
 -----------------------------------------------
 local function GetButtonText(self, id)
+
 	local currencyCountText
 	if not currencyCount then
 		currencyCountText = TitanUtils_GetHighlightText("0")
-	elseif currencyCount > currencyMaximum * 0.4 and currencyCount < currencyMaximum * 0.59 then
-		currencyCountText = "|cFFf6ed12"..currencyCount
-	elseif currencyCount > currencyMaximum * 0.59 and currencyCount < currencyMaximum * 0.79 then
-		currencyCountText = "|cFFf69112"..currencyCount
-	elseif currencyCount > currencyMaximum * 0.79 then
-		currencyCountText = "|cFFFF2e2e"..currencyCount
 	else
 		currencyCountText = TitanUtils_GetHighlightText(currencyCount)
 	end
@@ -89,43 +81,36 @@ local function GetButtonText(self, id)
 	local BarBalanceText = ""
 	if TitanGetVar(ID, "ShowBarBalance") then
 		if (currencyCount - startcurrency) > 0 then
-			BarBalanceText = " |cFF69FF69["..(currencyCount - startcurrency).."]"
+			BarBalanceText = " |cFF69FF69[" .. (currencyCount - startcurrency) .. "]"
 		elseif (currencyCount - startcurrency) < 0 then
-			BarBalanceText = " |cFFFF2e2e["..(currencyCount - startcurrency).."]"
+			BarBalanceText = " |cFFFF2e2e[" .. (currencyCount - startcurrency) .. "]"
 		end
 	end
 
-	local maxBarText
-	if currencyMaximum and currencyMaximum > 0 and TitanGetVar(ID, "MaxBar") then
-		maxBarText = "|r/|cFFFF2e2e"..currencyMaximum.."|r"
-	else
-		maxBarText = ""
-	end
-
-	return currencyCountText..maxBarText..BarBalanceText
+	return currencyCountText .. BarBalanceText
 end
 -----------------------------------------------
 local function GetTooltipText(self, id)
+
 	local ColorValueAccount = "0" -- Cores da conta de valor
 	if currencyCount and startcurrency then
 		local dif = currencyCount - startcurrency
 		if dif == 0 then
 			ColorValueAccount = TitanUtils_GetHighlightText("0")
 		elseif dif > 0 then
-			ColorValueAccount = "|cFF69FF69"..dif
+			ColorValueAccount = "|cFF69FF69" .. dif
 		else
-			ColorValueAccount = "|cFFFF2e2e"..dif
+			ColorValueAccount = "|cFFFF2e2e" .. dif
 		end
 	end
 
 	local valorAtual = TitanUtils_GetHighlightText(Util_StringComDefault(currencyCount, "0"))
-	local valorMaximo = TitanUtils_GetHighlightText(Util_StringComDefault(currencyMaximum, "0"))
 
 	local ValueText = "" -- Difere com e sem moeda
 	if valorAtual == TitanUtils_GetHighlightText("0") then
 		ValueText = L["info"] .. "\n" .. "|cFFFF2e2e" .. L["NoSLCurrency07"]
 	else
-		ValueText = L["info"] .. "\n" .. L["totalAcquired"] .. "\t" .. valorAtual .. "\n" .. L["maxpermitted"] .. "\t" .. valorMaximo .. "\n" .. L["canGet"] .. "\t" .. TitanUtils_GetHighlightText((currencyMaximum - currencyCount)).. "\n" ..L["session"] .. "\t" .. ColorValueAccount
+		ValueText = L["info"] .. "\n" .. L["totalAcquired"] .. "\t" .. valorAtual .. "\n" .. L["session"] .. "\t" .. ColorValueAccount
 	end
 
 	if TitanGetVar(ID, "ShowAltText") then
@@ -147,7 +132,7 @@ local function GetTooltipText(self, id)
 		ValueText = ValueText .. "\n"..L["TotalAlt"].."\t" .. total
 	end
 
-	return L["SLCurrency07Description"].."\r\r"..ValueText
+	return L["SLCurrency07Description"] .. "\r\r" .. ValueText
 end
 -----------------------------------------------
 L.Elib({
@@ -160,13 +145,12 @@ L.Elib({
 	getButtonText = GetButtonText,
 	getTooltipText = GetTooltipText,
 	eventsTable = eventsTable,
-	prepareMenu = L.PrepareCurrenciesMaxMenu,
+	prepareMenu = L.PrepareCurrenciesMenu,
 	savedVariables = {
 		ShowIcon = 1,
 		DisplayOnRightSide = false,
 		ShowBarBalance = false,
 		ShowLabelText = false,
-		MaxBar = false,
 		ShowAltText = true,
 	}
 })
