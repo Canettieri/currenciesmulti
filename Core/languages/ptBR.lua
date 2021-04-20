@@ -54,6 +54,8 @@ L["NoSLCurrency13"] = "Obtido através da Mesa de Comando."
 L["SLCurrency14Title"] = "Bravura"
 L["SLCurrency14Description"] = "Moeda usada para aumentar o poder\rde itens de masmorras Míticas."
 L["NoSLCurrency14"] = "Obtido através de Mítica+."
+L["seasonEarn"] = "Total da temporada:"
+L["canExpend"] = "Pode gastar:"
 
 ------ BfA pack
 --- A&H Service Medal

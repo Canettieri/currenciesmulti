@@ -52,6 +52,8 @@ L["NoSLCurrency13"] = "Obtainable through Command Table."
 L["SLCurrency14Title"] = "Valor"
 L["SLCurrency14Description"] = "A currency used to increase\rthe power of items from\rMythic dungeons."
 L["NoSLCurrency14"] = "Obtainable through Mythic+."
+L["seasonEarn"] = "Total season earns:"
+L["canExpend"] = "Can expend:"
 
 ------ BfA pack
 --- A&H Service Medal (default)
