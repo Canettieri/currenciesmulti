@@ -276,6 +276,9 @@ L["NoTimeless"] = "Disponível através da Ilha Perene."
 L["WarforgedLabel"] = "Selo Forjado: "
 L["WarforgedTitle"] = "Selo Forjado para a Guerra"
 L["WarforgedDescription"] = "Possuir o Selo Forjado para a Guerra\rpermite que o proprietário sortudo\rarrisque um selo para receber uma\rrecompensa bônus pelo Cerco a\rOrgrimmar, pelas Provações\rCelestiais e por Ordos."
+--- Lesser Charm of Good Fortune
+L["LegacyC01Title"] = "Amuleto Menor de Boa Sorte"
+L["LegacyC01Description"] = "Possuir o Amuleto Menor de Boa\rSorte resulta em grande\rfelicidade e na conversão do item\rem Selos Forjados para a Guerra,\rque permite que os jogadores\rarrisquem uma moeda para\rreceber uma recompensa extra\rpor encontros em raide."
 
 ------ Others pack
 --- Brawler's Gold

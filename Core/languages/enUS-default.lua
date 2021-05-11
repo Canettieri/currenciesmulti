@@ -274,6 +274,9 @@ L["NoTimeless"] = "Available through Timeless Isle."
 L["WarforgedLabel"] = "Warforged Seal: "
 L["WarforgedTitle"] = "Warforged Seal"
 L["WarforgedDescription"] = "Possession of the Warforged Seal\rallows its lucky owner to risk a\rseal to receive a bonus reward\rfrom the Siege of Orgrimmar, the\rCelestial Trials, and Ordos."
+--- Lesser Charm of Good Fortune (default)
+L["LegacyC01Title"] = "Lesser Charm of Good Fortune"
+L["LegacyC01Description"] = "Possession of the Lesser Charms of\rGood Fortune will result in great\rhappiness and the eventual\rconversion into Warforged Seals,\rwhich allow players to risk a coin to\rreceive a bonus reward from raid\rencounters."
 
 ------ Others pack
 --- Brawler's Gold (default)

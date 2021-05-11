@@ -43,6 +43,7 @@ c.Legacy\TitanCoinsofAir.lua
 c.Legacy\TitanCuriousCoin.lua
 c.Legacy\TitanDrownedMana.lua
 c.Legacy\TitanLegionfallSupplies.lua
+c.Legacy\TitanLGoodFortune.lua
 c.Legacy\TitanNethershard.lua
 c.Legacy\TitanOrderResources.lua
 c.Legacy\TitanSealofBrokenFate.lua
