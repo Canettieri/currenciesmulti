@@ -56,6 +56,22 @@ L["SLCurrency14Description"] = "Moeda usada para aumentar o poder\rde itens de m
 L["NoSLCurrency14"] = "Obtido através de Mítica+."
 L["seasonEarn"] = "Total da temporada:"
 L["canExpend"] = "Pode gastar:"
+--[[ Cataloged Research
+L["SLCurrency15Title"] = "Cataloged Research"
+L["SLCurrency15Description"] = "As you bring the Archivist relics he\rwill catalog it which will allow you to\rstart Field Studies to learn more\rabout them or identify relics in his\rcare that you can use in the field."
+L["NoSLCurrency15"] = "Adquirida em Korthia."
+--- Soul Cinders
+L["SLCurrency16Title"] = "Soul Cinders"
+L["SLCurrency16Description"] = "A raw source of power found\rwithin only the most dangerous\rlayers of Torghast. Used to fuel\rthe Runecarver's Chamber."
+L["NoSLCurrency16"] = "Adquirida em Thanator."
+--- Stygian Ember
+L["SLCurrency17Title"] = "Stygian Ember"
+L["SLCurrency17Description"] = "Once a brave warrior, now reduced\rto a sliver of undeath. Bonesmith\rHeirmir in Korthia can use these to\rimprove Shards of Domination."
+L["NoSLCurrency17"] = "Obtainable through Sanctum of\rDomination bosses."]]--
+--- Tower Knowledge
+L["SLCurrency18Title"] = "Saber da Torre"
+L["SLCurrency18Description"] = "Manifestação de conhecimento\rganha na Thanator. Usada para\rdesbloquear o poder da Caixa\rde Muitas Coisas."
+L["NoSLCurrency18"] = "Adquirida em Thanator."
 
 ------ BfA pack
 --- A&H Service Medal
