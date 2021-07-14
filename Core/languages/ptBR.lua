@@ -56,18 +56,18 @@ L["SLCurrency14Description"] = "Moeda usada para aumentar o poder\rde itens de m
 L["NoSLCurrency14"] = "Obtido através de Mítica+."
 L["seasonEarn"] = "Total da temporada:"
 L["canExpend"] = "Pode gastar:"
---[[ Cataloged Research
-L["SLCurrency15Title"] = "Cataloged Research"
-L["SLCurrency15Description"] = "As you bring the Archivist relics he\rwill catalog it which will allow you to\rstart Field Studies to learn more\rabout them or identify relics in his\rcare that you can use in the field."
+--- Cataloged Research
+L["SLCurrency15Title"] = "Pesquisa Catalogada"
+L["SLCurrency15Description"] = "À medida que você trouxer relíquias\rpara o Arquivista, ele as catalogará, o\rque permitirá a você iniciar Pesquisas\rde Campo para saber mais sobre elas ou\ridentificar as relíquias sob os cuidados\rdele que você pode usar em campo."
 L["NoSLCurrency15"] = "Adquirida em Korthia."
 --- Soul Cinders
-L["SLCurrency16Title"] = "Soul Cinders"
-L["SLCurrency16Description"] = "A raw source of power found\rwithin only the most dangerous\rlayers of Torghast. Used to fuel\rthe Runecarver's Chamber."
+L["SLCurrency16Title"] = "Cinzas de Alma"
+L["SLCurrency16Description"] = "Uma fonte de poder bruta encontrada\rapenas nas mais perigosas camadas\rda Thanator. Usada para alimentar a\rCâmara do Entalhador de Runas."
 L["NoSLCurrency16"] = "Adquirida em Thanator."
 --- Stygian Ember
-L["SLCurrency17Title"] = "Stygian Ember"
-L["SLCurrency17Description"] = "Once a brave warrior, now reduced\rto a sliver of undeath. Bonesmith\rHeirmir in Korthia can use these to\rimprove Shards of Domination."
-L["NoSLCurrency17"] = "Obtainable through Sanctum of\rDomination bosses."]]--
+L["SLCurrency17Title"] = "Brasa Estígia"
+L["SLCurrency17Description"] = "Um valente guerreiro no passado,\ragora reduzido a um fragmento\rperdido da morte-viva."
+L["NoSLCurrency17"] = "Obtido através dos chefes\rdo Sacrário da Dominação."
 --- Tower Knowledge
 L["SLCurrency18Title"] = "Saber da Torre"
 L["SLCurrency18Description"] = "Manifestação de conhecimento\rganha na Thanator. Usada para\rdesbloquear o poder da Caixa\rde Muitas Coisas."
