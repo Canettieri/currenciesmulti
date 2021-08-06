@@ -11,6 +11,8 @@ local ID = "TITAN_TWRKWM"
 local ICON = "Interface\\Icons\\spell_broker_orb"
 local CURRENCY_ID = 1904
 local currencyCount = 0.0
+local currencyMaximum
+local currencySeason
 local startcurrency
 
 local PLAYER_NAME, PLAYER_REALM
@@ -33,7 +35,9 @@ local function GetCharTable()
 end
 local function GetAndSaveCurrency()
 	local info = C_CurrencyInfo.GetCurrencyInfo(CURRENCY_ID)
-	local amount = info.quantity
+	local amount = info.quantity -- Valor que ainda posso gastar
+	local totalMax = info.maxQuantity -- Valor máximo da temporada
+	local season = info.totalEarned -- Valor total da temporada, aqui conta tudo que peguei, até mesmo o que já foi gasto.
 	if not PLAYER_KEY then return amount end
 
 	local charTable = GetCharTable()
@@ -43,12 +47,14 @@ local function GetAndSaveCurrency()
 	charTable[PLAYER_KEY].name = PLAYER_CLASS_COLOR .. PLAYER_NAME
 	charTable[PLAYER_KEY].faction = PLAYER_FACTION
 
-	return amount
+	return amount, totalMax, season
 end
 local function Update(self)
-	local amount = GetAndSaveCurrency(ID)
+	local amount, totalMax, season = GetAndSaveCurrency(ID)
 
 	currencyCount = amount or 0
+	currencyMaximum = totalMax
+	currencySeason = season or 0
 	if amount and not startcurrency then startcurrency = currencyCount end
 
 	TitanPanelButton_UpdateButton(self.registry.id)
@@ -70,47 +76,62 @@ local eventsTable = {
 }
 -----------------------------------------------
 local function GetButtonText(self, id)
+	local canSpendText = "|cFFFFFFFF[|r|cFF69FF69"..currencyCount.."|r|cFFFFFFFF]|r"
 
 	local currencyCountText
-	if not currencyCount then
+	if not currencySeason then
 		currencyCountText = TitanUtils_GetHighlightText("0")
+	elseif currencySeason > currencyMaximum * 0.4 and currencySeason < currencyMaximum * 0.59 then
+		currencyCountText = "|cFFf6ed12"..currencySeason
+	elseif currencySeason > currencyMaximum * 0.59 and currencySeason < currencyMaximum * 0.79 then
+		currencyCountText = "|cFFf69112"..currencySeason
+	elseif currencySeason > currencyMaximum * 0.79 then
+		currencyCountText = "|cFFFF2e2e"..currencySeason
 	else
-		currencyCountText = TitanUtils_GetHighlightText(currencyCount)
+		currencyCountText = TitanUtils_GetHighlightText(currencySeason)
 	end
 
 	local BarBalanceText = ""
 	if TitanGetVar(ID, "ShowBarBalance") then
 		if (currencyCount - startcurrency) > 0 then
-			BarBalanceText = " |cFF69FF69[" .. (currencyCount - startcurrency) .. "]"
+			BarBalanceText = " |cFF69FF69["..(currencyCount - startcurrency).."]"
 		elseif (currencyCount - startcurrency) < 0 then
-			BarBalanceText = " |cFFFF2e2e[" .. (currencyCount - startcurrency) .. "]"
+			BarBalanceText = " |cFFFF2e2e["..(currencyCount - startcurrency).."]"
 		end
 	end
 
-	return currencyCountText .. BarBalanceText
+	local maxBarText
+	if currencyMaximum and currencyMaximum > 0 and TitanGetVar(ID, "MaxBar") then
+		maxBarText = "|r/|cFFFF2e2e"..currencyMaximum.."|r"
+	else
+		maxBarText = ""
+	end
+
+	return canSpendText.." "..currencyCountText..maxBarText..BarBalanceText
 end
 -----------------------------------------------
 local function GetTooltipText(self, id)
-
 	local ColorValueAccount = "0" -- Cores da conta de valor
 	if currencyCount and startcurrency then
 		local dif = currencyCount - startcurrency
 		if dif == 0 then
 			ColorValueAccount = TitanUtils_GetHighlightText("0")
 		elseif dif > 0 then
-			ColorValueAccount = "|cFF69FF69" .. dif
+			ColorValueAccount = "|cFF69FF69"..dif
 		else
-			ColorValueAccount = "|cFFFF2e2e" .. dif
+			ColorValueAccount = "|cFFFF2e2e"..dif
 		end
 	end
 
-	local valorAtual = TitanUtils_GetHighlightText(Util_StringComDefault(currencyCount, "0"))
+	local valorSeason = TitanUtils_GetHighlightText(Util_StringComDefault(currencySeason, "0"))
+	local valorMaximo = TitanUtils_GetHighlightText(Util_StringComDefault(currencyMaximum, "0"))
+	local valorGastar = TitanUtils_GetHighlightText(Util_StringComDefault(currencyCount, "0"))
 
 	local ValueText = "" -- Difere com e sem moeda
 	if valorAtual == TitanUtils_GetHighlightText("0") then
 		ValueText = L["info"] .. "\n" .. "|cFFFF2e2e" .. L["NoSLCurrency18"]
 	else
-		ValueText = L["info"] .. "\n" .. L["totalAcquired"] .. "\t" .. valorAtual .. "\n" .. L["session"] .. "\t" .. ColorValueAccount
+		ValueText = L["info"] .. "\n" .. L["canExpend"] .. "\t" .. valorGastar .. "\n" .. L["seasonEarn"] .. "\t" .. valorSeason .. "\n" .. L["maxpermitted"] .. "\t" .. valorMaximo .. "\n" .. L["canGet"] .. "\t" .. TitanUtils_GetHighlightText((currencyMaximum - currencySeason)).. "\n" ..L["session"] .. "\t" .. ColorValueAccount
 	end
 
 	if TitanGetVar(ID, "ShowAltText") then
@@ -132,7 +153,7 @@ local function GetTooltipText(self, id)
 		ValueText = ValueText .. "\n"..L["TotalAlt"].."\t" .. total
 	end
 
-	return L["SLCurrency18Description"] .. "\r\r" .. ValueText
+	return L["SLCurrency18Description"].."\r\r"..ValueText
 end
 -----------------------------------------------
 L.Elib({
@@ -145,12 +166,13 @@ L.Elib({
 	getButtonText = GetButtonText,
 	getTooltipText = GetTooltipText,
 	eventsTable = eventsTable,
-	prepareMenu = L.PrepareCurrenciesMenu,
+	prepareMenu = L.PrepareCurrenciesMaxMenu,
 	savedVariables = {
 		ShowIcon = 1,
 		DisplayOnRightSide = false,
 		ShowBarBalance = false,
 		ShowLabelText = false,
+		MaxBar = false,
 		ShowAltText = true,
 	}
 })
