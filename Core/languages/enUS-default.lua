@@ -70,6 +70,14 @@ L["NoSLCurrency17"] = "Obtainable through Sanctum of\rDomination bosses."
 L["SLCurrency18Title"] = "Tower Knowledge"
 L["SLCurrency18Description"] = "Manifestation of knowledge\rgained in Torghast. Used to\runlock the power within\rThe Box of Many Things."
 L["NoSLCurrency18"] = "Acquired in Torghast."
+--- Cosmic Flux
+L["SLCurrency19Title"] = "Cosmic Flux"
+L["SLCurrency19Description"] = "Swirling fragments of creation\renergy that enable transformation,\rCosmic Flux can be used to\rempower equipment at the Creation\rCatalyst in Zereth Mortis or fuel the\rRunecarver's Chamber in Torghast."
+L["NoSLCurrency19"] = "Acquired in Zereth Mortis."
+--- Cyphers of the First Ones
+L["SLCurrency20Title"] = "Cyphers of the First Ones"
+L["SLCurrency20Description"] = "Echoes of the power used to forge\rreality itself. Can be deciphered at\rFirim's Cypher Console in Exile's Hollow."
+L["NoSLCurrency20"] = "Acquired in Zereth Mortis."
 
 ------ BfA pack
 --- A&H Service Medal

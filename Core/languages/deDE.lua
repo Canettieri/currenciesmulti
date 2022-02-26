@@ -8,6 +8,12 @@
 
 local _, L = ...;
 if GetLocale() == "deDE" then
+------ Shadowlands pack
+------ [tbd]
+
+------ BfA pack
+------ [tbd]]
+
 ------ Draenor pack
 --- Apexis Crystal
 L["ApexisLabel"] = "Kristalle: "
@@ -79,10 +85,10 @@ L["ManaTitle"] = "Uraltes Mana"
 L["ManaDescription"] = "Konzentrierte arkane Macht aus den\ruralten Leylinien unter Suramar."
 L["NoMana"] = "Erhältlich in Suramar."
 --- Coins of Air
-L["CAirLabel"] = "Coins of Air: "
-L["CAirTitle"] = "Coins of Air"
-L["CAirDescription"] = "Evaporate into mist after a while."
-L["NoCAir"] = "Rogue only, available in Legion."
+L["CAirLabel"] = "Münzen der Luft: "
+L["CAirTitle"] = "Münzen der Luft"
+L["CAirDescription"] = "Löst sich nach einer Weile in Nebel auf."
+L["NoCAir"] = "Nur für Schurken, erhältlich in Legion."
 --- Curious Coin
 L["CuriousLabel"] = "Kuriose M.: "
 L["CuriousTitle"] = "Kuriose Münze"
@@ -93,6 +99,11 @@ L["DrownedLabel"] = "Versunkenes Mana: "
 L["DrownedTitle"] = "Versunkenes Mana"
 L["DrownedDescription"] = "Wird benötigt zur Rufsteigerung bei Beschwörer Margoss \roder als Währung für die Waren die er verkauft."
 L["NoDrowned"] = "Angle in Margoss' Idyll, in der Nähe von Dalaran."
+--- Legionfall War Supplies
+L["LegionfallLabel"] = "Kriegsvorräte: "
+L["LegionfallTitle"] = "Kriegsvorräte der Legionsrichter"
+L["LegionfallDescription"] = "Werden zum Bau von wichtigen\rGebäuden an der Verheerten Küste\rverwendet.."
+L["NoLegionfall"] = "Erhältlich an der Verheerten Küste."
 --- Nethershard
 L["NetherLabel"] = "Nethersplitter: "
 L["NetherTitle"] = "Nethersplitter"
@@ -166,6 +177,9 @@ L["NoTimeless"] = "Erhältlich durch die Zeitlose Insel."
 L["WarforgedLabel"] = "Kriegsemblem: "
 L["WarforgedTitle"] = "Kriegsemblem"
 L["WarforgedDescription"] = "Der Besitz von Kriegsemblemen gestattet es dem glücklichen Eigentümer,\rein Emblem für eine Chance einzusetzen, zusätzliche Beute in der Schlacht\rum Orgrimmar, den Prüfungen der Erhabenen und von Ordos zu erhalten."
+--- Lesser Charm of Good Fortune
+L["LegacyC01Title"] = "Geringes Amulett des Glücks"
+L["LegacyC01Description"] = "Das geringe Amulett des Glücks\rgewährt große Freude und kann\rletztendlich in Kriegsembleme\rumgewandelt werden, die für eine\rChance eingesetzt werden können,\rzusätzliche Beute von\rSchlachtzugsbossen zu erhalten."
 
 ------ Others pack
 --- Brawler's Gold
@@ -178,19 +192,19 @@ L["GoldTitle"] = "Gold"
 L["GoldPlayerTip"] = "|cFFB4EEB4Hinweis:|r |cFFFFFFFFLinksklick öffnet das\rAbzeichenfenster von ${player}|cFFFFFFFF.|r"
 L["HigherOnly"] = "Nur höhere Werte anzeigen"
 --- Shiny Pet Charm
-L["PetLabel"] = "Shiny Charm: "
-L["PetTitle"] = "Shiny Pet Charm"
-L["PetDescription"] = "Redeemable at battle pet masters."
+L["PetLabel"] = "Gl. Glücksbringer: "
+L["PetTitle"] = "Glänzender Haustierglücksbringer"
+L["PetDescription"] = "Kann bei Kampfhaustiermeistern\reingelöst werden."
 L["NoMaxPet"] = "Erhältlich durch Haustierkämpfe in\rWarlords of Draenor und Legion"
 --- Polished Pet Charm
-L["PoliLabel"] = "Polished Charm: "
-L["PoliTitle"] = "Polished Pet Charm"
+L["PoliLabel"] = "Pol. Glücksbringer: "
+L["PoliTitle"] = "Polierter Haustierglücksbringer"
 
 ------ PvE pack
 --- Timewarped Badge
 L["TimewarpedLabel"] = "Abzeichen: "
 L["TimewarpedTitle"] = "Zeitverzerrtes Abzeichen"
-L["TimewarpedDescription"] = "Werden in Zeitwanderungsdungeons verdient. Können\rbei Händler in Dalaran oder Shattrath\eausgegeben werden."
+L["TimewarpedDescription"] = "Werden in Zeitwanderungsdungeons verdient. Können\rbei Händlern in Dalaran oder Shattrath\rausgegeben werden."
 L["NoBadge"] = "Trete einer Dungeonwarteschlange bei, während ein\rZeitwanderungsereignis stattfindet."
 
 ------ PvP pack
@@ -228,6 +242,9 @@ L["maximum"] = "Max"
 L["DraenorOnly"] = "Verfügbar in Warlords."
 L["LegionOnly"] = "Erhältlich auf den Verheerten Inseln."
 L["PandariaOnly"] = "Erhältlich in Pandaria."
+L["BfAOnly"] = "Erhältlich in Battle for Azeroth."
+L["VisionsOnly"] = "Erhältlich in Visionen of N'Zoth Inhalten."
+L["SLOnly"] = "Erhältlich in Shadowlands."
 L["session"] = "Sitzungsbalance: "
 L["showbb"] = "Sitzungsbalance in der Leiste anzeigen"
 L["mCata"] = "[|cFF198ae0Cata|r]"
@@ -239,15 +256,23 @@ L["mPvE"] = "[|cFF198ae0PvE|r]"
 L["mWoD"] = "[|cFF198ae0WoD|r]"
 L["mWotLK"] = "[|cFF198ae0WotLK|r]"
 L["mOther"] = "[|cFF198ae0Andere|r]"
+L["mBfA"] = "[|cFF198ae0BfA|r]"
+L["mShadowlands"] = "[|cFF198ae0Shadowlands|r]"
 L["info"] = "|cFFFFFFFF[Informationen]|r"
 L["totalAcquired"] = "Gesamt erhalten: "
 L["maxpermitted"] = "Max. Anzahl: "
 L["canGet"] = "Können noch erhalten werden: "
 L["maxBar"] = "Zeige Max. Anzahl in der Leiste"
 L["simpleText"] = "Zeige einfachen Text"
+L["showAltText"] = "Zeige Twinks"
+L["TotalAlt"] = "Währung gesamt:"
+L["AltChars"] = "|cFFFFFFFF[Alle Charaktere]|r"
+L["buttonText"] = "Leistentext"
+L["tooltip"] = "Tooltip"
 
 --- Menus
-L["actual"] = "Currency [BfA]"
+L["bfa"] = "Currency [BfA]"
 L["legacy"] = "Currency [Legacy]"
 L["misc"] = "Currency [Misc]"
+L["shadowl"] = "Currency [Shadowlands]"
 end
