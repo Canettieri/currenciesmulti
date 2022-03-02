@@ -76,6 +76,8 @@ c.Misc\TitanTolBaradComm.lua
 c.Shadowlands\TitanACProgress.lua
 c.Shadowlands\TitanArgentCommendation.lua
 c.Shadowlands\TitanCatalogedResearch.lua
+c.Shadowlands\TitanCosmicFlux.lua
+c.Shadowlands\TitanCyphersOfTheFirstOnes.lua
 c.Shadowlands\TitanGratefulOffering.lua
 c.Shadowlands\TitanInfusedRuby.lua
 c.Shadowlands\TitanMedallionofService.lua
