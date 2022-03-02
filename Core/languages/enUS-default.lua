@@ -72,7 +72,7 @@ L["SLCurrency18Description"] = "Manifestation of knowledge\rgained in Torghast. 
 L["NoSLCurrency18"] = "Acquired in Torghast."
 --- Cosmic Flux
 L["SLCurrency19Title"] = "Cosmic Flux"
-L["SLCurrency19Description"] = "Swirling fragments of creation\renergy that enable transformation,\rCosmic Flux can be used to\rempower equipment at the Creation\rCatalyst in Zereth Mortis or fuel the\rRunecarver's Chamber in Torghast."
+L["SLCurrency19Description"] = "Swirling fragments of creation energy that\renable transformation, Cosmic Flux can be\rused to empower equipment at the\rCreation Catalyst in Zereth Mortis or fuel\rthe Runecarver's Chamber in Torghast."
 L["NoSLCurrency19"] = "Acquired in Zereth Mortis."
 --- Cyphers of the First Ones
 L["SLCurrency20Title"] = "Cyphers of the First Ones"

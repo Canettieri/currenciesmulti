@@ -2,8 +2,7 @@
 	Do you want help us translating to your language?
 	Send me your translation in: https://www.curseforge.com/wow/addons/titan-panel-currencies-multi
 	Author: Canettieri
-  German translator: pas06, Mistrahw
-	Last update: 25/02/2018
+  German translator: pas06, Mistrahw and GroovyAyu
 --]]
 
 local _, L = ...;

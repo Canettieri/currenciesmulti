@@ -72,6 +72,14 @@ L["NoSLCurrency17"] = "Obtido através dos chefes\rdo Sacrário da Dominação."
 L["SLCurrency18Title"] = "Saber da Torre"
 L["SLCurrency18Description"] = "Manifestação de conhecimento\rganha na Thanator. Usada para\rdesbloquear o poder da Caixa\rde Muitas Coisas."
 L["NoSLCurrency18"] = "Adquirida em Thanator."
+--- Cosmic Flux
+L["SLCurrency19Title"] = "Fluxo Cósmico"
+L["SLCurrency19Description"] = "Energia de fragmentos da criação\rpropiciadora de transformações, o Fluxo\rCósmico é o combustível que alimenta os\requipamentos do Catalisador de Criação,\rem Zereth Mortis, e também a Câmara do\rEntalhador de Runas, na Thanator."
+L["NoSLCurrency19"] = "Adquirida em Zereth Mortis."
+--- Cyphers of the First Ones
+L["SLCurrency20Title"] = "Cifras dos Primogênitos"
+L["SLCurrency20Description"] = "Ecos do poder usado para forjar a\rprópria realidade. É possível\rdecifrar no Console de Cifra de\rFirim, na Gruta dos Exilados."
+L["NoSLCurrency20"] = "Adquirida em Zereth Mortis."
 
 ------ BfA pack
 --- A&H Service Medal
