@@ -1,0 +1,37 @@
+name: Package and release
+
+on:
+  push:
+    tags:
+      - '**'
+
+# a workflow is built up as jobs, and within these jobs are steps
+jobs:
+
+  # "release" is a job, you can name it anything you want
+  release:
+
+    # we can run our steps on pretty much anything, but the "ubuntu-latest" image is a safe bet
+    runs-on: ubuntu-latest
+
+    # specify the environment variables used by the packager, matching the secrets from the project on GitHub
+    env:
+      CF_API_KEY: ${{ secrets.CF_API_KEY }}
+      #WOWI_API_TOKEN: ${{ secrets.WOWI_API_TOKEN }}
+      WAGO_API_TOKEN: ${{ secrets.WAGO_API_TOKEN }}
+      GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
+
+    steps:
+
+      - name: Clone project
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # gets git history for changelogs
+
+      - name: Luacheck
+          uses: nebularg/actions-luacheck@86af42dcf465915896671903fcdec3e01a492e87
+          with:
+            args: --no-color -o 011
+
+      - name: Package and release
+        uses: BigWigsMods/packager@v2

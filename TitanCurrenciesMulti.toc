@@ -7,6 +7,8 @@
 ## Version: @project-version@
 ## Dependencies: Titan
 ## SavedVariables: TitanCurrenciesMultiDb
+## X-Curse-Project-ID: 94508
+## X-Wago-ID: xZKxeyGk
 Core\languages\enUS-default.lua
 Core\languages\deDE.lua
 Core\languages\esES.lua
