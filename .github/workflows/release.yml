@@ -17,7 +17,6 @@ jobs:
     # specify the environment variables used by the packager, matching the secrets from the project on GitHub
     env:
       CF_API_KEY: ${{ secrets.CF_API_KEY }}
-      #WOWI_API_TOKEN: ${{ secrets.WOWI_API_TOKEN }}
       WAGO_API_TOKEN: ${{ secrets.WAGO_API_TOKEN }}
       GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
 
@@ -29,9 +28,9 @@ jobs:
           fetch-depth: 0  # gets git history for changelogs
 
       - name: Luacheck
-          uses: nebularg/actions-luacheck@86af42dcf465915896671903fcdec3e01a492e87
-          with:
-            args: --no-color -o 011
+        uses: nebularg/actions-luacheck@86af42dcf465915896671903fcdec3e01a492e87
+        with:
+          args: --no-color -o 011
 
       - name: Package and release
         uses: BigWigsMods/packager@v2
