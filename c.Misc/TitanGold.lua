@@ -98,6 +98,7 @@ local function GetTooltipText(self, id)
 	local text = interp(L["GoldPlayerTip"], { player = PLAYER_NAME }) .. "\n \n"
 
 	local charTable = GetCharTable()
+	local showAllFactions = TitanGetVar(ID, "ShowAllFactions")
 	local total = money
 	text = text .. charTable[PLAYER_KEY].name .. "|r\t" .. formatGold(money) .. "\n"
 
@@ -109,7 +110,7 @@ local function GetTooltipText(self, id)
 	end
 
 	for k, v in pairs(charTable) do
-		if PLAYER_KEY ~= k and PLAYER_REALM == v.realm and PLAYER_FACTION == v.faction then
+		if PLAYER_KEY ~= k and PLAYER_REALM == v.realm and (showAllFactions or PLAYER_FACTION == v.faction) then
 			text = text .. v.name .. "\t" .. (formatGold(v.value)) .. "\n|r"
 			total = total + v.value
 		end
@@ -160,6 +161,7 @@ L.Elib({
 	menus = {
 		{ type = "toggle", text = L["HigherOnly"], var = "ShowHigherOnly", def = true, keepShown = true },
 		{ type = "toggle", text = L["showbb"], var = "ShowBarBalance", def = true, keepShown = true },
+		{ type = "toggle", text = L["showAllFactions"], var = "ShowAllFactions", def = false, keepShown = true },
 		{ type = "rightSideToggle" }
 	},
 	savedVariables = {
@@ -168,6 +170,7 @@ L.Elib({
 		ShowBarBalance = false,
 		ShowLabelText = false,
 		ShowHigherOnly = false,
-		charTable = {}
+		charTable = {},
+		ShowAllFactions = false,
 	}
 })

@@ -12,3 +12,6 @@ table.insert(TITAN_PANEL_BUTTONS_PLUGIN_CATEGORY, "CATEGORY_LEGACY")
 
 table.insert(categories, L["misc"])
 table.insert(TITAN_PANEL_BUTTONS_PLUGIN_CATEGORY, "CATEGORY_MISC")
+
+--table.insert(categories, L["dragonf"])
+--table.insert(TITAN_PANEL_BUTTONS_PLUGIN_CATEGORY, "CATEGORY_DRAGON")

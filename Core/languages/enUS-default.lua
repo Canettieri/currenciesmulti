@@ -387,9 +387,11 @@ L["TotalAlt"] = "Currency Total:"
 L["AltChars"] = "|cFFFFFFFF[All Characters]|r"
 L["buttonText"] = "Bar Text"
 L["tooltip"] = "Tooltip"
+L["showAllFactions"] = "Characters from Both Factions"
 
 --- Menus
 L["bfa"] = "Currency [BfA]"
 L["legacy"] = "Currency [Legacy]"
 L["misc"] = "Currency [Misc]"
 L["shadowl"] = "Currency [Shadowlands]"
+L["dragonf"] = "Currency [Dragonflight]"

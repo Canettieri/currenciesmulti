@@ -30,6 +30,11 @@ local function ToggleShowAltText(self, id) -- Show Alt Text
 	TitanPanelButton_UpdateButton(id)
 end
 
+local function ToggleShowAllFactions(self, id) -- Show all Factions
+	TitanToggleVar(id, "ShowAllFactions");
+	TitanPanelButton_UpdateButton(id)
+end
+
 function L.PrepareCurrenciesMaxMenu(eddm, self, id)
 	eddm.UIDropDownMenu_AddButton({
 		text = TitanPlugins[id].menuText,
@@ -82,6 +87,14 @@ function L.PrepareCurrenciesMaxMenu(eddm, self, id)
 	info.func = ToggleShowAltText;
 	info.arg1 = id
 	info.checked = TitanGetVar(id, "ShowAltText");
+	info.keepShownOnClick = true
+	eddm.UIDropDownMenu_AddButton(info);
+
+	info = {};
+	info.text = L["showAllFactions"];
+	info.func = ToggleShowAllFactions;
+	info.arg1 = id
+	info.checked = TitanGetVar(id, "ShowAllFactions");
 	info.keepShownOnClick = true
 	eddm.UIDropDownMenu_AddButton(info);
 

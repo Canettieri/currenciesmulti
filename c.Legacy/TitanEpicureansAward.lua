@@ -117,12 +117,13 @@ local function GetTooltipText(self, id)
 
 		local charTable = GetCharTable()
 		local total = currencyCount
+		local showAllFactions = TitanGetVar(ID, "ShowAllFactions")
 
 		-- the current char first!
 		ValueText = ValueText .. "\n \n" .. L["AltChars"] .. "\n" .. charTable[PLAYER_KEY].name .. "\t" .. "|cFFFFFFFF" .. (currencyCount) .. "\n|r"
 
 		for k, v in pairs(charTable) do
-			if k ~= PLAYER_KEY and PLAYER_FACTION == v.faction and (v.currency or 0) > 0 then
+			if k ~= PLAYER_KEY and (showAllFactions or PLAYER_FACTION == v.faction) and (v.currency or 0) > 0 then
 				ValueText = ValueText .. v.name .. "\t" .. "|cFFFFFFFF" .. (v.currency) .. "\n|r"
 				total = total + v.currency
 			end
@@ -151,5 +152,6 @@ L.Elib({
 		ShowBarBalance = false,
 		ShowLabelText = false,
 		ShowAltText = true,
+		ShowAllFactions = false,
 	}
 })
