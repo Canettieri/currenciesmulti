@@ -1,0 +1,27 @@
+## Interface: 30400
+## Title: Titan Panel [|cff336699Currencies|r] Multi! |cff00aa00@project-version@|r
+## Notes: Track a lot of currencies! Right-click on Titan Panel, go to "Information" tab and enjoy.
+## Notes-ptBR: Rastreie várias moedas! Clique com o botão direito no Painel Titan, vá na aba "Informação" e aproveite.
+## Notes-esES: Sigue un monton de monedas! Click-Dcho en Titan Panel, para ir a ventana de "Información" y disfruta.
+## Author: Canettieri
+## Version: @project-version@
+## Dependencies: TitanClassic
+## SavedVariables: TitanCurrenciesMultiDb
+## X-Curse-Project-ID: 94508
+## X-Wago-ID: xZKxeyGk
+Core\languages\enUS-default.lua
+Core\languages\deDE.lua
+Core\languages\esES.lua
+Core\languages\frFR.lua
+Core\languages\koKR.lua
+Core\languages\ptBR.lua
+Core\languages\ruRU.lua
+Core\ElioteDropDownMenu-1.0.lua
+Core\Elib-4.0.lua
+Core\CurrenciesCore.lua
+Core\CurrenciesCorewMax.lua
+Core\Menus.lua
+c.Legacy\WotLK\TitanChampionsSeal.lua
+c.Legacy\WotLK\TitanEpicureansAward.lua
+c.Misc\TitanBrewfestToken.lua
+c.Misc\TitanGold.lua

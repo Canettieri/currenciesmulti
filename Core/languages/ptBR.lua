@@ -397,4 +397,5 @@ L["legacy"] = "Moeda [Legado]"
 L["misc"] = "Moeda [Outros]"
 L["shadowl"] = "Moeda [Shadowlands]"
 L["dragonf"] = "Moeda [Dragonflight]"
+L["wotlk"] = "Moeda [WotLK]"
 end
