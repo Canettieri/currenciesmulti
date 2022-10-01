@@ -255,12 +255,7 @@ L["ArguniteTitle"] = "Veiled Argunite"
 L["ArguniteDescription"] = "This dull-colored crystal is\rhighly valued by ethereal\rtraders, especially Thaumaturge\rVashreen aboard the Vindicaar."
 L["NoArgunite"] = "Acquired in Argus."
 
------- Old pack
---- Bloody Coin
-L["BloodyLabel"] = "Bloody: "
-L["BloodyTitle"] = "Bloody Coin"
-L["BloodyDescription"] = "Pulled from the steaming\rcorpses of foes vanquished in\rthe mists of the Timeless Isle."
-L["NoBloody"] = "Available using |cff0070ddCenser of\rEternal Agony|r|cFFFF2e2e or|r |cff0070ddFire-Watcher's\rOath|r |cFFFF2e2ein Timeless Isle.|r"
+------ Wrath of the Lich King
 --- Champion's Seal
 L["ChampionsLabel"] = "Seal: "
 L["ChampionsTitle"] = "Champion's Seal"
@@ -271,6 +266,39 @@ L["EpicureanLabel"] = "Epic. Award: "
 L["EpicureanTitle"] = "Epicurean's Award"
 L["EpicureanDescription"] = "Visit special cooking vendors\rin Dalaran and the capital\rcities to purchase unusual\rcooking recipes, spices, and\reven a fine hat!"
 L["NoEpicurean"] = "Available through cooking\rquests in old Dalaran\r(Northrend) and capital cities."
+--- Badge of Justice
+L["LKCurrency01Title"] = "Badge of Justice"
+L["LKCurrency01Description"] = ""
+--- Emblem of Heroism
+L["LKCurrency02Title"] = "Emblem of Heroism"
+L["LKCurrency02Description"] = ""
+--- Emblem of Valor
+L["LKCurrency03Title"] = "Emblem of Valor"
+L["LKCurrency03Description"] = "Earned through completing Heroic\rDungeon daily quests and from bosses\rin Naxxramas and Obsidian Sanctum."
+--- Dalaran Jewelcrafter's Token
+L["LKCurrency04Title"] = "Dalaran Jewelcrafter's Token"
+L["LKCurrency04Description"] = "Tiffany Cartier's shop in Dalaran\rwill gladly accept these tokens\rfor unique jewelcrafting recipes."
+L["NoLKCurrency04"] = "Rewarded from level 80\rJewelcrafting daily quests in\rDalaran."
+--- Stone Keeper's Shard
+L["LKCurrency05Title"] = "Stone Keeper's Shard"
+L["LKCurrency05Description"] = ""
+--- Venture Coin
+L["LKCurrency06Title"] = "Venture Coin"
+L["LKCurrency06Description"] = ""
+--- Honor Points
+L["LKCurrency07Title"] = "Honor Points"
+L["LKCurrency07Description"] = "Honor is gained by killing\rmembers of the opposite faction\rin PvP combat. You can use honor\rpoints to purchase special items."
+--- Arena Points
+L["LKCurrency08Title"] = "Arena Points"
+L["LKCurrency08Description"] = "Arena Points are gained by\rbeing victorious in arena\rcombat. You can trade in these\rarena points for fabulous prizes!"
+L["NoLKCurrency04"] = "Rewarded from 'Call to Arms'\rdaily quests."
+
+------ Old pack
+--- Bloody Coin
+L["BloodyLabel"] = "Bloody: "
+L["BloodyTitle"] = "Bloody Coin"
+L["BloodyDescription"] = "Pulled from the steaming\rcorpses of foes vanquished in\rthe mists of the Timeless Isle."
+L["NoBloody"] = "Available using |cff0070ddCenser of\rEternal Agony|r|cFFFF2e2e or|r |cff0070ddFire-Watcher's\rOath|r |cFFFF2e2ein Timeless Isle.|r"
 --- Good Fortune, Elder Charm of
 L["GFortuneLabel"] = "Good Fortune: "
 L["GFortuneTitle"] = "Elder Charm of Good Fortune"
@@ -357,6 +385,7 @@ L["totalbag"] = "Total in Bag: "
 L["totalbank"] = "Total in Bank: "
 L["full"] = "Full!"
 L["maximum"] = "Max"
+L["WotLKOnly"] = "Available in the Wrath of The Lich King."
 L["DraenorOnly"] = "Available in Draenor."
 L["LegionOnly"] = "Available in Broken Isles."
 L["PandariaOnly"] = "Available in Pandaria."

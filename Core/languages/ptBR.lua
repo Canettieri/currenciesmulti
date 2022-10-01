@@ -257,12 +257,7 @@ L["ArguniteTitle"] = "Argunita Velada"
 L["ArguniteDescription"] = "Esse cristal opaco é muito estimado\rpelos mercadores etéreos,\rprincipalmente pelo Taumaturgo\rVashreen, a bordo da Vindicaar."
 L["NoArgunite"] = "Adquirida em Argus."
 
------- Old pack
---- Bloody Coin
-L["BloodyLabel"] = "Sangrenta: "
-L["BloodyTitle"] = "Moeda Sangrenta"
-L["BloodyDescription"] = "Arrancada dos corpos fumegantes\rde inimigos vencidos em meio\ràs névoas da Ilha Perene."
-L["NoBloody"] = "Disponível ao usar |cff0070ddIncensário da\rAgonia Eterna|r|cFFFF2e2e ou|r |cff0070ddJuramento do\rVigilante do Fogo|r |cFFFF2e2ena Ilha Perene.|r"
+------ Wrath of the Lich King
 --- Champion's Seal
 L["ChampionsLabel"] = "Selo: "
 L["ChampionsTitle"] = "Selo do Campeão"
@@ -271,8 +266,41 @@ L["NoChampions"] = "Disponível no Coliseu dos\rCruzados, em Nortúndria."
 --- Epicurean's Award
 L["EpicureanLabel"] = "P. Epicurista: "
 L["EpicureanTitle"] = "Prêmio do Epicurista"
-L["EpicureanDescription"] = "Visite comerciantes de culinária\rem Dalaran e outras capitais\rpara comprar receitas especiais\rde culinária, condimentos e até\rmesmo um belo chapéu!"
-L["NoEpicurean"] = "Disponível através de missões de culinária na antiga\rDalaran (Nortúndria) e nas cidades capitais."
+L["EpicureanDescription"] = "Visite comerciantes de culinária em Dalaran\re outras capitais para comprar receitas\respeciais de culinária, condimentos e até\rmesmo um belo chapéu!"
+L["NoEpicurean"] = "Disponível através de missões de culinária na\rantiga Dalaran (Nortúndria) e nas capitais."
+--- Badge of Justice
+L["LKCurrency01Title"] = "Distintivo da Justiça"
+L["LKCurrency01Description"] = " "
+--- Emblem of Heroism
+L["LKCurrency02Title"] = "Emblema de Heroísmo"
+L["LKCurrency02Description"] = " "
+--- Emblem of Valor
+L["LKCurrency03Title"] = "Emblema de Valor"
+L["LKCurrency03Description"] = "Ganho através de missões diárias de\rMasmorras Heróicas e de chefes de\rNaxxramas e Obsidian Sanctum."
+--- Dalaran Jewelcrafter's Token
+L["LKCurrency04Title"] = "Ficha do Joalheiro de Dalaran"
+L["LKCurrency04Description"] = "A loja de Sojoia Kara em Dalaran\raceita de bom grado essas fichas em\rtroca de instruções de joalheria raras."
+L["NoLKCurrency04"] = "Recompensado por missões diárias\rde joalheria, no nível 80, em Dalaran."
+--- Stone Keeper's Shard
+L["LKCurrency05Title"] = "Lasca do Guardião de Pedra"
+L["LKCurrency05Description"] = " "
+--- Venture Coin
+L["LKCurrency06Title"] = "Moeda da Empreendimentos S.A."
+L["LKCurrency06Description"] = " "
+--- Honor Points
+L["LKCurrency07Title"] = "Pontos de Honra"
+L["LKCurrency07Description"] = "Ganha-se honra ao matar membros\rda facção oposta em combate JxJ.\rÉ possível usar os pontos de honra\rpara comprar itens especiais."
+--- Arena Points
+L["LKCurrency08Title"] = "Pontos de Arena"
+L["LKCurrency08Description"] = "Ganham-se pontos de arena ao vencer\rcombates de arena. É possível trocar\resses pontos por recompensas fabulosas!"
+L["NoLKCurrency04"] = "Ganho de missões diária ‘Chamado às\rarmas’. "
+
+------ Old pack
+--- Bloody Coin
+L["BloodyLabel"] = "Sangrenta: "
+L["BloodyTitle"] = "Moeda Sangrenta"
+L["BloodyDescription"] = "Arrancada dos corpos fumegantes\rde inimigos vencidos em meio\ràs névoas da Ilha Perene."
+L["NoBloody"] = "Disponível ao usar |cff0070ddIncensário da\rAgonia Eterna|r|cFFFF2e2e ou|r |cff0070ddJuramento do\rVigilante do Fogo|r |cFFFF2e2ena Ilha Perene.|r"
 --- Good Fortune, Elder Charm of
 L["GFortuneLabel"] = "Boa Sorte: "
 L["GFortuneTitle"] = "Antigo Amuleto de Boa Sorte"
@@ -355,11 +383,12 @@ L["LovelyLabel"] = "Patuá A.: "
 L["LovelyTitle"] = "Patuá Adorável"
 L["LovelyDescription"] = "Use 10 para confeccionar uma Pulseira de Patuás Adoráveis.\r[Encontrado apenas no evento 'O amor está no ar'.]"
 
---- Shared
+--- Compartilhados
 L["totalbag"] = "Total na Bolsa: "
 L["totalbank"] = "Total no Banco: "
 L["full"] = "Lotado!"
 L["maximum"] = "Máx"
+L["WotLKOnly"] = "Disponível em Wrath of The Lich King."
 L["DraenorOnly"] = "Disponível em Draenor."
 L["LegionOnly"] = "Disponível nas Ilhas Partidas."
 L["PandariaOnly"] = "Disponível em Pandária."

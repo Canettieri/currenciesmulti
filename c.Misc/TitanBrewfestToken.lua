@@ -8,7 +8,13 @@ Special Thanks to Eliote.
 local ADDON_NAME, L = ...;
 local version = GetAddOnMetadata(ADDON_NAME, "Version")
 local ID = "TITAN_BWFTM"
-local ITEM_ID = 1299
+local expansionLevel = GetExpansionLevel()
+local ITEM_ID
+if expansionLevel == 2 then
+	ITEM_ID = 37829
+else
+	ITEM_ID = 1299
+end
 local currencyCount = 0
 local startcurrency = 0
 

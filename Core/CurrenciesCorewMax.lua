@@ -6,9 +6,8 @@
 --]]
 
 local ADDON_NAME, L = ...;
-local ACE = LibStub("AceLocale-3.0"):GetLocale("Titan", true)
+local ACE = LibStub("AceLocale-3.0"):GetLocale(TITAN_ID, true)
 L.Elib = LibStub("Elib-4.0").Register
-
 
 local function ToggleRightSideDisplay(self, id) -- Right side display
 	TitanToggleVar(id, "DisplayOnRightSide");

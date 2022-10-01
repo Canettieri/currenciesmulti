@@ -20,8 +20,16 @@ Core\ElioteDropDownMenu-1.0.lua
 Core\Elib-4.0.lua
 Core\CurrenciesCore.lua
 Core\CurrenciesCorewMax.lua
-Core\Menus.lua
+Core\Menus-Classic.lua
+c.Legacy\WotLK\TitanArenaPoints.lua
+c.Legacy\WotLK\TitanBadgeofJustice.lua
 c.Legacy\WotLK\TitanChampionsSeal.lua
+c.Legacy\WotLK\TitanEmblemofHeroism.lua
+c.Legacy\WotLK\TitanEmblemofValor.lua
 c.Legacy\WotLK\TitanEpicureansAward.lua
+c.Legacy\WotLK\TitanHonorPoints.lua
+c.Legacy\WotLK\TitanJewelcrafterToken.lua
+#c.Legacy\WotLK\TitanStoneKeepersShard.lua
+c.Legacy\WotLK\TitanVentureCoin.lua
 c.Misc\TitanBrewfestToken.lua
 c.Misc\TitanGold.lua
