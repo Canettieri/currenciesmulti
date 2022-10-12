@@ -182,6 +182,7 @@ L["NoAncestry"] = "Available through the event\rLunar Festival."
 --- Darkmoon Prize Ticket
 L["DarkmoonLabel"] = "Tickets: "
 L["DarkmoonTitle"] = "Darkmoon Prize Ticket"
+L["DarkmoonClasicTitle"] = "Darkmoon Faire Prize Ticket" -- It has a different name in Classic!
 L["DarkmoonDescription"] = "Awarded for winning games\ror doing favors at the\rDarkmoon Faire."
 L["NoTickets"] = "Available through the\rDarkmoon Faire."
 --- Love Token

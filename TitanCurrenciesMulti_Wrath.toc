@@ -32,4 +32,5 @@ c.Legacy\WotLK\TitanJewelcrafterToken.lua
 #c.Legacy\WotLK\TitanStoneKeepersShard.lua
 c.Legacy\WotLK\TitanVentureCoin.lua
 c.Misc\TitanBrewfestToken.lua
+c.Misc\TitanDarkmoonTicketClassic.lua
 c.Misc\TitanGold.lua

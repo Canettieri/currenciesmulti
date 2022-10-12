@@ -184,6 +184,7 @@ L["NoAncestry"] = "Disponível através do evento\r'Festival da Lua'."
 --- Darkmoon Prize Ticket
 L["DarkmoonLabel"] = "Cupons: "
 L["DarkmoonTitle"] = "Cupom Premiado de Negraluna"
+L["DarkmoonClasicTitle"] = "Cupom Premiado da Feira de Negraluna"
 L["DarkmoonDescription"] = "Concedidos a quem ganhar jogos ou\rrealizar favores na Feira de Negraluna."
 L["NoTickets"] = "Disponível através da 'Feira de Negraluna'."
 --- Love Token
