@@ -9,4 +9,10 @@ local _, L = ...;
 local ID = "TITAN_INFRYM"
 local CURRENCY_ID = 1820
 
-L:CreateSimpleCurrencyPlugin(CURRENCY_ID, ID, L["SLOnly"])
+L:CreateSimpleCurrencyPlugin({
+	currencyId = CURRENCY_ID,
+	titanId = ID,
+	noCurrencyText = L["SLOnly"],
+	expName = L["mShadowlands"],
+	category = "CATEGORY_SHADOWLANDS"
+})
