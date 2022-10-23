@@ -86,7 +86,7 @@ local function GetButtonText(self, id)
 		end
 	end
 
-	return L["TimewarpedLabel"], currencyCountText..BarBalanceText
+	return currencyCountText..BarBalanceText
 end
 -----------------------------------------------
 local function GetTooltipText(self, id)

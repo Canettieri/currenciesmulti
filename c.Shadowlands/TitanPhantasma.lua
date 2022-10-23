@@ -108,7 +108,7 @@ local function GetTooltipText(self, id)
 
 	local ValueText = "" -- Difere com e sem moeda
 	if valorAtual == TitanUtils_GetHighlightText("0") then
-		ValueText = L["info"] .. "\n" .. "|cFFFF2e2e" .. L["NoSLCurrency12"]
+		ValueText = L["info"] .. "\n" .. "|cFFFF2e2e" .. L["SLShared02"]
 	else
 		ValueText = L["info"] .. "\n" .. L["totalAcquired"] .. "\t" .. valorAtual .. "\n" .. L["session"] .. "\t" .. ColorValueAccount
 	end

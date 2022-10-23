@@ -58,7 +58,7 @@ local function GetButtonText(self, id)
 		end
 	end
 
-	return L["SpookyLabel"], currencyCountText .. barBalanceText
+	return currencyCountText .. barBalanceText
 end
 -----------------------------------------------
 local function GetTooltipText(self, id)

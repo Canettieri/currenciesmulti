@@ -87,6 +87,7 @@ c.Shadowlands\TitanPhantasma.lua
 c.Shadowlands\TitanRedeemedSoul.lua
 c.Shadowlands\TitanRenown.lua
 c.Shadowlands\TitanReservoirAnima.lua
+c.Shadowlands\TitanSandwornRelic.lua
 c.Shadowlands\TitanSinstoneFragments.lua
 c.Shadowlands\TitanSoulAsh.lua
 c.Shadowlands\TitanSoulCinders.lua

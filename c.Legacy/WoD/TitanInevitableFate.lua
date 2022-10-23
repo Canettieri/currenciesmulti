@@ -102,7 +102,7 @@ local function GetButtonText(self, id)
 		maxBarText = ""
 	end
 
-	return L["InevitableLabel"], currencyCountText..maxBarText..BarBalanceText
+	return currencyCountText..maxBarText..BarBalanceText
 end
 -----------------------------------------------
 local function GetTooltipText(self, id)

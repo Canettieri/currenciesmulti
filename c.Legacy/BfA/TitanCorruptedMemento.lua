@@ -87,7 +87,7 @@ local function GetButtonText(self, id)
 		end
 	end
 
-	return L["CMementoLabel"], currencyCountText..BarBalanceText
+	return currencyCountText..BarBalanceText
 end
 -----------------------------------------------
 local function GetTooltipText(self, id)

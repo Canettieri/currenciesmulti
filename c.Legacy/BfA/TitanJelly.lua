@@ -78,7 +78,7 @@ local function GetButtonText(self, id)
 		end
 	end
 
-	return L["JellyLabel"], thinCountText..thinBalanceText.." "..richCountText..richBalanceText.." "..royalCountText..royalBalanceText
+	return thinCountText..thinBalanceText.." "..richCountText..richBalanceText.." "..royalCountText..royalBalanceText
 end
 -----------------------------------------------
 local function GetTooltipText(self, id)

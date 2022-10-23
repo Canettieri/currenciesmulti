@@ -1,5 +1,5 @@
 --[[
-Description: This plugin is part of the "Titan Panel [Currencies] Multi" addon. It shows your amount of Mark of Honor.
+Description: This plugin is part of the "Titan Panel [Currencies] Multi" addon. It shows your amount of Sandworn Relic.
 Site: https://www.curseforge.com/wow/addons/titan-panel-currencies-multi
 Author: Canettieri
 Special Thanks to Eliote.
@@ -7,8 +7,9 @@ Special Thanks to Eliote.
 
 local ADDON_NAME, L = ...;
 local version = GetAddOnMetadata(ADDON_NAME, "Version")
-local ID = "TITAN_MKFHNM"
-local ITEM_ID = 137642
+local ID = "TITAN_SWRLM"
+local ICON = "Interface\\Icons\\creatureportrait_altarofair_01"
+local ITEM_ID = 190189
 local currencyCount = 0
 local startcurrency = 0
 
@@ -46,19 +47,14 @@ local function Update(self)
 end
 -----------------------------------------------
 local function GetButtonText(self, id)
-	local currencyCountText
-	if not currencyCount then
-		currencyCountText = TitanUtils_GetHighlightText("0")
-	else
-		currencyCountText = TitanUtils_GetHighlightText(currencyCount)
-	end
+	local currencyCountText = TitanUtils_GetHighlightText(currencyCount)
 
 	local barBalanceText = ""
 	if TitanGetVar(ID, "ShowBarBalance") then
 		if (currencyCount - startcurrency) > 0 then
-			barBalanceText = " |cFF69FF69["..(currencyCount - startcurrency).."]"
+			barBalanceText = " |cFF69FF69[" .. (currencyCount - startcurrency) .. "]"
 		elseif (currencyCount - startcurrency) < 0 then
-			barBalanceText = " |cFFFF2e2e["..(currencyCount - startcurrency).."]"
+			barBalanceText = " |cFFFF2e2e[" .. (currencyCount - startcurrency) .. "]"
 		end
 	end
 
@@ -72,17 +68,17 @@ local function GetTooltipText(self, id)
 	if dif == 0 then
 		colorValueAccount = TitanUtils_GetHighlightText("0")
 	elseif dif > 0 then
-		colorValueAccount = "|cFF69FF69"..dif
+		colorValueAccount = "|cFF69FF69" .. dif
 	else
-		colorValueAccount = "|cFFFF2e2e"..dif
+		colorValueAccount = "|cFFFF2e2e" .. dif
 	end
 
-	local valorBag = L["totalbag"].. "\t" ..TitanUtils_GetHighlightText(GetItemCount(137642)).."\n"
-	local valorBank = L["totalbank"].. "\t" ..TitanUtils_GetHighlightText(GetItemCount(137642, true) - GetItemCount(137642))
+	local valorBag = L["totalbag"].. "\t" ..TitanUtils_GetHighlightText(GetItemCount(190189)).."\n"
+	local valorBank = L["totalbank"].. "\t" ..TitanUtils_GetHighlightText(GetItemCount(190189, true) - GetItemCount(190189))
 
 	local ValueText = "" -- Difere com e sem moeda
 	if currencyCount == 0 then
-		ValueText = L["info"] .. "\n" .. "|cFFFF2e2e" .. L["NoMark"]
+		ValueText = L["info"] .. "\n" .. "|cFFFF2e2e" .. L["SLShared01"]
 	else
 		ValueText = L["info"] .. "\n" .. valorBag .. valorBank .. "\n".. L["session"] .. "\t" .. colorValueAccount
 	end
@@ -107,7 +103,7 @@ local function GetTooltipText(self, id)
 		ValueText = ValueText .. "\n"..L["TotalAlt"].."\t" .. total
 	end
 
-	return L["MarkDescription"].."\r\r"..ValueText
+	return L["SLCurrency21Description"] .. "\r\r" .. ValueText
 end
 -----------------------------------------------
 local eventsTable = {
@@ -141,10 +137,10 @@ local eventsTable = {
 -----------------------------------------------
 L.Elib({
 	id = ID,
-	name = L["mPvP"].." Titan|cFF66b1ea "..L["MarkTitle"].."|r",
-	tooltip = L["MarkTitle"],
-	icon = "Interface\\Icons\\ability_pvp_gladiatormedallion",
-	category = "CATEGORY_MISC",
+	name = L["mShadowlands"].." Titan|cFF66b1ea "..L["SLCurrency21Title"].."|r",
+	tooltip = L["SLCurrency21Title"],
+	icon = ICON,
+	category = "CATEGORY_SHADOWLANDS",
 	version = version,
 	getButtonText = GetButtonText,
 	getTooltipText = GetTooltipText,
