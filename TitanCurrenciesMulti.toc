@@ -21,6 +21,7 @@ Core\Elib-4.0.lua
 Core\CurrenciesCore.lua
 Core\CurrenciesCorewMax.lua
 Core\Menus.lua
+Core\SimpleCurrencyPlugin.lua
 c.Legacy\BfA\TitanArtifactPower.lua
 c.Legacy\BfA\TitanCoalescingVisions.lua
 c.Legacy\BfA\TitanCorruptedMemento.lua
