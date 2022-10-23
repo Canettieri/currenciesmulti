@@ -112,30 +112,31 @@ function L:CreateSimpleCurrencyPlugin(params)
 			GameTooltip:AddLine(CURRENCY_NAME, 1, 1, 1)
 		end
 
-		local ColorValueAccount = "0" -- Cores da conta de valor
-		if currencyCount and startcurrency then
-			local dif = currencyCount - startcurrency
-			if dif == 0 then
-				ColorValueAccount = TitanUtils_GetHighlightText("0")
-			elseif dif > 0 then
-				ColorValueAccount = "|cFF69FF69" .. dif
-			else
-				ColorValueAccount = "|cFFFF2e2e" .. dif
-			end
-		end
-
 		GameTooltip:AddLine(" ")
 		GameTooltip:AddLine(L["info"])
 
 		if not currencyCount or currencyCount == 0 then
-			GameTooltip:AddLine("|cFFFF2e2e" .. params.acquireText)
+			GameTooltip:AddLine("|cFFFF2e2e" .. params.noCurrencyText)
 		else
 			GameTooltip:AddDoubleLine(L["totalAcquired"], TitanUtils_GetHighlightText(currencyCount))
 			if (currencyMaximum and currencyMaximum > 0) then
 				GameTooltip:AddDoubleLine(L["maxpermitted"], TitanUtils_GetHighlightText(currencyMaximum))
 				GameTooltip:AddDoubleLine(L["canGet"], TitanUtils_GetHighlightText((currencyMaximum - currencyCount)))
 			end
-			GameTooltip:AddDoubleLine(L["session"], ColorValueAccount)
+
+			local sessionValueText = "0" -- Cores da conta de valor
+			if currencyCount and startcurrency then
+				local dif = currencyCount - startcurrency
+				if dif == 0 then
+					sessionValueText = TitanUtils_GetHighlightText("0")
+				elseif dif > 0 then
+					sessionValueText = "|cFF69FF69" .. dif
+				else
+					sessionValueText = "|cFFFF2e2e" .. dif
+				end
+			end
+
+			GameTooltip:AddDoubleLine(L["session"], sessionValueText)
 		end
 
 		if TitanGetVar(params.titanId, "ShowAltText") then
@@ -173,7 +174,7 @@ function L:CreateSimpleCurrencyPlugin(params)
 		tooltip = CURRENCY_NAME,
 		customTooltip = CreateTooltip,
 		icon = ICON,
-		category = params.titanCategory,
+		category = params.category,
 		version = version,
 		getButtonText = GetButtonText,
 		eventsTable = eventsTable,
