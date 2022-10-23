@@ -9,4 +9,4 @@ local _, L = ...;
 local ID = "TITAN_SOLAHM"
 local CURRENCY_ID = 1828
 
-L:CreateSimpleCurrencyPlugin(CURRENCY_ID, ID)
+L:CreateSimpleCurrencyPlugin(CURRENCY_ID, ID, L["SLShared02"])

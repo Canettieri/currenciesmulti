@@ -9,26 +9,20 @@ local ADDON_NAME, L = ...;
 L.Elib = LibStub("Elib-4.0").Register
 local version = GetAddOnMetadata(ADDON_NAME, "Version")
 
-local function Util_StringComDefault(v, d)
-	if not v then
-		return d
-	end
-	return v
-end
-
 local function GetCharTable(titanId)
 	TitanCurrenciesMultiDb = TitanCurrenciesMultiDb or {}
 	TitanCurrenciesMultiDb[titanId] = TitanCurrenciesMultiDb[titanId] or { charTable = {} }
 	return TitanCurrenciesMultiDb[titanId].charTable
 end
 
-function L:CreateSimpleCurrencyPlugin(currencyId, titanId)
+function L:CreateSimpleCurrencyPlugin(currencyId, titanId, acquireText)
 	local currencyCount = 0.0
 	local startcurrency
 
 	local currencyInfoBase = C_CurrencyInfo.GetCurrencyInfo(currencyId)
 	local ICON = currencyInfoBase.iconFileID
 	local CURRENCY_NAME = currencyInfoBase.name
+	local currencyMaximum = currencyInfoBase.maxQuantity
 
 	local PLAYER_NAME, PLAYER_REALM
 	local PLAYER_KEY
@@ -38,7 +32,10 @@ function L:CreateSimpleCurrencyPlugin(currencyId, titanId)
 	local function GetAndSaveCurrency()
 		local info = C_CurrencyInfo.GetCurrencyInfo(currencyId)
 		local amount = info.quantity
-		if not PLAYER_KEY then return amount end
+		local totalMax = info.maxQuantity
+		if not PLAYER_KEY then
+			return amount, totalMax
+		end
 
 		local charTable = GetCharTable(titanId)
 
@@ -47,13 +44,14 @@ function L:CreateSimpleCurrencyPlugin(currencyId, titanId)
 		charTable[PLAYER_KEY].name = PLAYER_CLASS_COLOR .. PLAYER_NAME
 		charTable[PLAYER_KEY].faction = PLAYER_FACTION
 
-		return amount
+		return amount, totalMax
 	end
 
 	local function Update(self)
-		local amount = GetAndSaveCurrency()
+		local amount, totalMax = GetAndSaveCurrency()
 
 		currencyCount = amount or 0
+		currencyMaximum = totalMax or 0
 		if amount and not startcurrency then
 			startcurrency = currencyCount
 		end
@@ -76,24 +74,33 @@ function L:CreateSimpleCurrencyPlugin(currencyId, titanId)
 		end,
 	}
 	-----------------------------------------------
-	local function GetButtonText(self, id)
-		local currencyCountText
-		if not currencyCount then
-			currencyCountText = TitanUtils_GetHighlightText("0")
-		else
-			currencyCountText = TitanUtils_GetHighlightText(currencyCount)
-		end
-
-		local BarBalanceText = ""
-		if TitanGetVar(titanId, "ShowBarBalance") then
-			if (currencyCount - startcurrency) > 0 then
-				BarBalanceText = " |cFF69FF69[" .. (currencyCount - startcurrency) .. "]"
-			elseif (currencyCount - startcurrency) < 0 then
-				BarBalanceText = " |cFFFF2e2e[" .. (currencyCount - startcurrency) .. "]"
+	local function GetButtonText()
+		local currencyCountText = TitanUtils_GetHighlightText(currencyCount or "0")
+		if currencyCount and currencyMaximum > 0 then
+			if currencyCount > currencyMaximum * 0.4 and currencyCount < currencyMaximum * 0.59 then
+				currencyCountText = "|cFFf6ed12" .. currencyCount
+			elseif currencyCount > currencyMaximum * 0.59 and currencyCount < currencyMaximum * 0.79 then
+				currencyCountText = "|cFFf69112" .. currencyCount
+			elseif currencyCount > currencyMaximum * 0.79 then
+				currencyCountText = "|cFFFF2e2e" .. currencyCount
 			end
 		end
 
-		return currencyCountText .. BarBalanceText
+		local maxBarText = ""
+		if currencyMaximum and currencyMaximum > 0 and TitanGetVar(titanId, "MaxBar") then
+			maxBarText = "|r/|cFFFF2e2e" .. currencyMaximum .. "|r"
+		end
+
+		local barBalanceText = ""
+		if TitanGetVar(titanId, "ShowBarBalance") then
+			if (currencyCount - startcurrency) > 0 then
+				barBalanceText = " |cFF69FF69[" .. (currencyCount - startcurrency) .. "]"
+			elseif (currencyCount - startcurrency) < 0 then
+				barBalanceText = " |cFFFF2e2e[" .. (currencyCount - startcurrency) .. "]"
+			end
+		end
+
+		return currencyCountText .. maxBarText .. barBalanceText
 	end
 	-----------------------------------------------
 	local function CreateTooltip()
@@ -117,15 +124,17 @@ function L:CreateSimpleCurrencyPlugin(currencyId, titanId)
 			end
 		end
 
-		local valorAtual = TitanUtils_GetHighlightText(Util_StringComDefault(currencyCount, "0"))
-
 		GameTooltip:AddLine(" ")
 		GameTooltip:AddLine(L["info"])
 
-		if valorAtual == TitanUtils_GetHighlightText("0") then
-			GameTooltip:AddLine("|cFFFF2e2e" .. L["SLShared02"])
+		if not currencyCount or currencyCount == 0 then
+			GameTooltip:AddLine("|cFFFF2e2e" .. acquireText)
 		else
-			GameTooltip:AddDoubleLine(L["totalAcquired"], valorAtual)
+			GameTooltip:AddDoubleLine(L["totalAcquired"], TitanUtils_GetHighlightText(currencyCount))
+			if (currencyMaximum and currencyMaximum > 0) then
+				GameTooltip:AddDoubleLine(L["maxpermitted"], TitanUtils_GetHighlightText(currencyMaximum))
+				GameTooltip:AddDoubleLine(L["canGet"], TitanUtils_GetHighlightText((currencyMaximum - currencyCount)))
+			end
 			GameTooltip:AddDoubleLine(L["session"], ColorValueAccount)
 		end
 
@@ -150,7 +159,16 @@ function L:CreateSimpleCurrencyPlugin(currencyId, titanId)
 			GameTooltip:AddDoubleLine(L["TotalAlt"], total)
 		end
 	end
-	-----------------------------------------------
+
+	local function ifZero(valueToCheck, resultIfZero, resultElse)
+		if (valueToCheck == nil or valueToCheck <= 0) then
+			return resultIfZero
+		end
+		return resultElse
+	end
+
+	print(CURRENCY_NAME, ifZero(currencyMaximum, "teste", "teste 2"))
+
 	L.Elib({
 		id = titanId,
 		name = L["mShadowlands"] .. " Titan|cFF66b1ea " .. CURRENCY_NAME .. "|r",
@@ -161,7 +179,7 @@ function L:CreateSimpleCurrencyPlugin(currencyId, titanId)
 		version = version,
 		getButtonText = GetButtonText,
 		eventsTable = eventsTable,
-		prepareMenu = L.PrepareCurrenciesMenu,
+		prepareMenu = ifZero(currencyMaximum, L.PrepareCurrenciesMenu, L.PrepareCurrenciesMaxMenu),
 		savedVariables = {
 			ShowIcon = 1,
 			DisplayOnRightSide = false,
@@ -169,6 +187,7 @@ function L:CreateSimpleCurrencyPlugin(currencyId, titanId)
 			ShowLabelText = false,
 			ShowAltText = true,
 			ShowAllFactions = false,
+			MaxBar = ifZero(currencyMaximum, nil, false),
 		}
 	})
 
