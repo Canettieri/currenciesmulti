@@ -92,8 +92,11 @@ function L:CreateSimpleItemPlugin(params)
 	local function CreateTooltip()
 		GameTooltip:ClearLines()
 		local link = itemMixin:GetItemLink()
-		if (link) then
+		if (link and TitanGetVar(params.titanId, "UseHyperlink")) then
 			GameTooltip:SetHyperlink(link)
+			if (TitanGetVar(params.titanId, "HideInfoWhenHyperlink")) then
+				return
+			end
 		else
 			GameTooltip:AddLine(itemMixin:GetItemName(), 1, 1, 1)
 		end
@@ -166,6 +169,8 @@ function L:CreateSimpleItemPlugin(params)
 			ShowLabelText = false,
 			ShowAltText = true,
 			ShowAllFactions = false,
+			UseHyperlink = true,
+			HideInfoWhenHyperlink = false,
 		},
 		afterLoad = function(self)
 			itemMixin:ContinueOnItemLoad(function()

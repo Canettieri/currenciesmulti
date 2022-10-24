@@ -364,6 +364,8 @@ L["AltChars"] = "|cFFFFFFFF[All Characters]|r"
 L["buttonText"] = "Bar Text"
 L["tooltip"] = "Tooltip"
 L["showAllFactions"] = "Characters from Both Factions"
+L["useHyperlink"] = "Show tooltip as hyperlink"
+L["hideInfoWhenHyperlink"] = "Hide extra info when showing hyperlink"
 
 --- Menus
 L["bfa"] = "Currency [BfA]"

@@ -106,8 +106,11 @@ function L:CreateSimpleCurrencyPlugin(params)
 	local function CreateTooltip()
 		GameTooltip:ClearLines()
 		local link = C_CurrencyInfo.GetCurrencyLink(params.currencyId, currencyCount)
-		if (link) then
+		if (link and TitanGetVar(params.titanId, "UseHyperlink")) then
 			GameTooltip:SetHyperlink(link)
+			if (TitanGetVar(params.titanId, "HideInfoWhenHyperlink")) then
+				return
+			end
 		else
 			GameTooltip:AddLine(CURRENCY_NAME, 1, 1, 1)
 		end
@@ -187,6 +190,8 @@ function L:CreateSimpleCurrencyPlugin(params)
 			ShowAltText = true,
 			ShowAllFactions = false,
 			MaxBar = ifZero(currencyMaximum, nil, false),
+			UseHyperlink = true,
+			HideInfoWhenHyperlink = false,
 		}
 	})
 

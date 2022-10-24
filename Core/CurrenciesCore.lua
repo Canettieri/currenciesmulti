@@ -14,18 +14,8 @@ local function ToggleRightSideDisplay(self, id) -- Right side display
 	TitanPanel_InitPanelButtons();
 end
 
-local function ToggleShowBarBalance(self, id) -- Show Balance in Titan Bar
-	TitanToggleVar(id, "ShowBarBalance");
-	TitanPanelButton_UpdateButton(id)
-end
-
-local function ToggleShowAltText(self, id) -- Show Alt Text
-	TitanToggleVar(id, "ShowAltText");
-	TitanPanelButton_UpdateButton(id)
-end
-
-local function ToggleShowAllFactions(self, id) -- Show all Factions
-	TitanToggleVar(id, "ShowAllFactions");
+local function ToggleVar(self, id, var)
+	TitanToggleVar(id, var);
 	TitanPanelButton_UpdateButton(id)
 end
 
@@ -47,8 +37,9 @@ function L.PrepareCurrenciesMenu(eddm, self, id)
 
 	info = {};
 	info.text = L["showbb"];
-	info.func = ToggleShowBarBalance;
+	info.func = ToggleVar;
 	info.arg1 = id
+	info.arg2 = "ShowBarBalance"
 	info.checked = TitanGetVar(id, "ShowBarBalance");
 	info.keepShownOnClick = true
 	eddm.UIDropDownMenu_AddButton(info);
@@ -70,17 +61,37 @@ function L.PrepareCurrenciesMenu(eddm, self, id)
 
 	info = {};
 	info.text = L["showAltText"];
-	info.func = ToggleShowAltText;
+	info.func = ToggleVar;
 	info.arg1 = id
+	info.arg2 = "ShowAltText"
 	info.checked = TitanGetVar(id, "ShowAltText");
 	info.keepShownOnClick = true
 	eddm.UIDropDownMenu_AddButton(info);
 
 	info = {};
 	info.text = L["showAllFactions"];
-	info.func = ToggleShowAllFactions;
+	info.func = ToggleVar;
 	info.arg1 = id
+	info.arg2 = "ShowAllFactions"
 	info.checked = TitanGetVar(id, "ShowAllFactions");
+	info.keepShownOnClick = true
+	eddm.UIDropDownMenu_AddButton(info);
+
+	info = {};
+	info.text = L["useHyperlink"];
+	info.func = ToggleVar;
+	info.arg1 = id
+	info.arg2 = "UseHyperlink"
+	info.checked = TitanGetVar(id, "UseHyperlink");
+	info.keepShownOnClick = true
+	eddm.UIDropDownMenu_AddButton(info);
+
+	info = {};
+	info.text = L["hideInfoWhenHyperlink"];
+	info.func = ToggleVar;
+	info.arg1 = id
+	info.arg2 = "HideInfoWhenHyperlink"
+	info.checked = TitanGetVar(id, "HideInfoWhenHyperlink");
 	info.keepShownOnClick = true
 	eddm.UIDropDownMenu_AddButton(info);
 
