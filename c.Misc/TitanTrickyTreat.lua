@@ -12,7 +12,7 @@ local ITEM_ID = 33226
 L:CreateSimpleItemPlugin({
 	itemId = ITEM_ID,
 	titanId = ID,
-	noCurrencyText = L["SLShared02"],
+	noCurrencyText = L["HallowEnd"],
 	expName = L["mEvent"],
 	category = "CATEGORY_MISC"
 })

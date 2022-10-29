@@ -177,6 +177,7 @@ function L:CreateSimpleItemPlugin(params)
 				self.registry.menuText = params.expName .. " Titan|cFF66b1ea " .. itemMixin:GetItemName() .. "|r"
 				self.registry.tooltipTitle = itemMixin:GetItemName()
 				self.registry.icon = itemMixin:GetItemIcon()
+				TitanPanelButton_UpdateButton(params.titanId)
 			end)
 		end
 	})
