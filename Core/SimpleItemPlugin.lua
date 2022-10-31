@@ -57,6 +57,9 @@ function L:CreateSimpleItemPlugin(params)
 			startcurrency = amount
 			currencyCount = startcurrency
 
+			-- Reset menuText to fix colors in titan menu
+			self.registry.menuText = params.expName .. " Titan|cFF66b1ea " .. (itemMixin:GetItemName() or params.titanId) .. "|r"
+
 			TitanPanelButton_UpdateButton(self.registry.id)
 
 			self.BAG_UPDATE = function(self, bagID)

@@ -140,6 +140,9 @@ local eventsTable = {
 
 		startMoney = GetAndSaveMoney(self.registry.id)
 
+		-- Reset menuText to fix colors in titan menu
+		self.registry.menuText = L["mOther"].." Titan|cFF66b1ea "..L["GoldTitle"].."|r"
+
 		TitanPanelButton_UpdateButton(self.registry.id)
 	end,
 	PLAYER_MONEY = function(self)
