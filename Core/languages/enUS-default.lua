@@ -5,6 +5,9 @@
 --]]
 
 local _, L = ...;
+------ Dragonflight pack
+L["DragonEventOnly"] = "Obtainable through Dragonflight\rPre-Patch Event."
+
 ------ Shadowlands pack
 --- Adventure Campaign Progress
 L["NoSLCurrency13"] = "Obtainable through Command Table."

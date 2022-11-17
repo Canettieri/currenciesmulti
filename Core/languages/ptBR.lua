@@ -7,6 +7,9 @@
 
 local _, L = ...;
 if GetLocale() == "ptBR" then
+------ Dragonflight pack
+L["DragonEventOnly"] = "Obtida através do evento de\rPré-Patch do Dragonflight."
+
 ------ Shadowlands pack
 --- Adventure Campaign Progress
 L["NoSLCurrency13"] = "Obtido através da Mesa de Comando."
