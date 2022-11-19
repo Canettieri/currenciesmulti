@@ -81,7 +81,7 @@ function L:CreateSimpleItemPlugin(params)
 		local currencyCountText = TitanUtils_GetHighlightText(currencyCount)
 
 		local barBalanceText = ""
-		if TitanGetVar(titanId, "ShowBarBalance") then
+		if TitanGetVar(params.titanId, "ShowBarBalance") then
 			if (currencyCount - startcurrency) > 0 then
 				barBalanceText = " |cFF69FF69[" .. (currencyCount - startcurrency) .. "]"
 			elseif (currencyCount - startcurrency) < 0 then
