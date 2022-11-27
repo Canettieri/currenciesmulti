@@ -18,6 +18,7 @@ Core\languages\ptBR.lua
 Core\languages\ruRU.lua
 Core\ElioteDropDownMenu-1.0.lua
 Core\Elib-4.0.lua
+Core\Utils.lua
 Core\CurrenciesCore.lua
 Core\CurrenciesCorewMax.lua
 Core\Menus.lua

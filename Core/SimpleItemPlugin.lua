@@ -140,12 +140,16 @@ function L:CreateSimpleItemPlugin(params)
 			GameTooltip:AddLine(" ")
 			GameTooltip:AddLine(L["AltChars"])
 
-			-- the current char first!
-			GameTooltip:AddDoubleLine(charTable[PLAYER_KEY].name, "|cFFFFFFFF" .. (currencyCount))
-
-			for k, v in pairs(charTable) do
-				if k ~= PLAYER_KEY and (showAllFactions or PLAYER_FACTION == v.faction) and (v.currency or 0) > 0 then
-					GameTooltip:AddDoubleLine(v.name, "|cFFFFFFFF" .. (v.currency))
+			local sortBy = TitanGetVar(params.titanId, "AltTextSortByAmount") and "currency"
+			local sortAsc = not sortBy
+			local sortedList = L.Utils.SortTableBy(charTable, sortBy, sortAsc)
+			for _, p in ipairs(sortedList) do
+				local k, v = p.key, p.value
+				local isCurrent = k == PLAYER_KEY
+				if isCurrent or ((showAllFactions or PLAYER_FACTION == v.faction) and (v.currency or 0) > 0) then
+					local arrow = isCurrent and "> " or ""
+					local arrowEnd = isCurrent and "|r <" or ""
+					GameTooltip:AddDoubleLine(arrow .. v.name .. arrowEnd, "|cFFFFFFFF" .. (v.currency))
 					total = total + v.currency
 				end
 			end
@@ -171,6 +175,7 @@ function L:CreateSimpleItemPlugin(params)
 			ShowBarBalance = false,
 			ShowLabelText = false,
 			ShowAltText = true,
+			AltTextSortByAmount = false,
 			ShowAllFactions = false,
 			UseHyperlink = true,
 			HideInfoWhenHyperlink = false,
