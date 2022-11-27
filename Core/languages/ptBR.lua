@@ -166,8 +166,9 @@ L["AltChars"] = "|cFFFFFFFF[Todos Personagens]|r"
 L["buttonText"] = "Texto da Barra"
 L["tooltip"] = "Texto de Ajuda"
 L["showAllFactions"] = "Personagens de Ambas Facções"
-L["useHyperlink"] = "Mostrar tooltip como hyperlink"
-L["hideInfoWhenHyperlink"] = "Esconder infos extras com hyperlink"
+L["useHyperlink"] = "Mostrar Tooltip como Hyperlink"
+L["hideInfoWhenHyperlink"] = "Esconder Infos Extras com Hyperlink"
+L["sortByAmount"] = "Ordenar por Quantidade"
 
 --- Menus
 L["bfa"] = "Moeda [BfA]"
