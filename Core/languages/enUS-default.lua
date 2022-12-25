@@ -7,6 +7,7 @@
 local _, L = ...;
 ------ Dragonflight pack
 L["DragonEventOnly"] = "Obtainable through Dragonflight\rPre-Patch Event."
+L["DragonFPvP"] = "Obtainable through Dragon Isles\rPvP quests."
 
 ------ Shadowlands pack
 --- Adventure Campaign Progress

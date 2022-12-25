@@ -9,6 +9,7 @@ local _, L = ...;
 if GetLocale() == "ptBR" then
 ------ Dragonflight pack
 L["DragonEventOnly"] = "Obtida através do evento de\rPré-Patch do Dragonflight."
+L["DragonFPvP"] = "Obtida através de quests PVP nas\rIlhas do Dragão."
 
 ------ Shadowlands pack
 --- Adventure Campaign Progress

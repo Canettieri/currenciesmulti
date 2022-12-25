@@ -24,6 +24,7 @@ Core\CurrenciesCorewMax.lua
 Core\Menus.lua
 Core\SimpleCurrencyPlugin.lua
 Core\SimpleItemPlugin.lua
+c.Dragonflight\TitanBloodyTokens.lua
 c.Dragonflight\TitanCobaltAssembly.lua
 c.Dragonflight\TitanDGlyphEmbers.lua
 c.Dragonflight\TitanDISupplies.lua
