@@ -30,6 +30,7 @@ c.Dragonflight\TitanDGlyphEmbers.lua
 c.Dragonflight\TitanDISupplies.lua
 c.Dragonflight\TitanEffigyAdornments.lua
 c.Dragonflight\TitanElementalOverflow.lua
+c.Dragonflight\TitanMagmote.lua
 c.Dragonflight\TitanPArcaneEnergy.lua
 c.Dragonflight\TitanPrimevalEssence.lua
 c.Dragonflight\TitanStormSigil.lua
