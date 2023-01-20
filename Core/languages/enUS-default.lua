@@ -8,6 +8,7 @@ local _, L = ...;
 ------ Dragonflight pack
 L["DragonEventOnly"] = "Obtainable through Dragonflight\rPre-Patch Event."
 L["DragonFPvP"] = "Obtainable through Dragon Isles\rPvP quests."
+L["NoDFCurrency01"] = "You need the title 'the Worldbreaker' to acquire it."
 
 ------ Shadowlands pack
 --- Adventure Campaign Progress

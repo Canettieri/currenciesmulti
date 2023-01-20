@@ -6,13 +6,13 @@ Special Thanks to Eliote.
 --]]
 
 local _, L = ...;
-local ID = "TITAN_MAGMTE"
+local ID = "TITAN_MGMTSM"
 local ITEM_ID = 202173
 
 L:CreateSimpleItemPlugin({
 	itemId = ITEM_ID,
 	titanId = ID,
-	noCurrencyText = L["DragonFOnly"],
+	noCurrencyText = L["NoDFCurrency01"],
 	expName = L["mDragonflight"],
 	category = "CATEGORY_DRAGON"
 })
