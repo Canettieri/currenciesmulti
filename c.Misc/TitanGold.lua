@@ -99,7 +99,7 @@ local function GetTooltipText(self, id)
 
 	local charTable = GetCharTable()
 	local showAllFactions = TitanGetVar(ID, "ShowAllFactions")
-	local total = money
+	local total = 0
 	local dif = money - startMoney
 	if dif > 0 then
 		text = text .. L["session"] .. "\t" .. formatGold(dif) .. "\n \n"

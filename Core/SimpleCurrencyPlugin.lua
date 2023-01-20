@@ -146,7 +146,7 @@ function L:CreateSimpleCurrencyPlugin(params)
 
 		if TitanGetVar(params.titanId, "ShowAltText") then
 			local charTable = GetCharTable(params.titanId)
-			local total = currencyCount
+			local total = 0
 			local showAllFactions = TitanGetVar(params.titanId, "ShowAllFactions")
 
 			GameTooltip:AddLine(" ")
