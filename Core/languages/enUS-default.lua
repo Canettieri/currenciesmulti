@@ -119,6 +119,8 @@ L["HigherOnly"] = "Display Higher Value Only"
 L["NoMaxPet"] = "Available through Pet Battles in\rWarlords of Draenor and Legion."
 --- Timewarped Badge
 L["NoBadge"] = "Enter in a dungeon queue\rwhen Timewalking event is\roccurring."
+--- Trader's Tender
+L["TradersTender"] = "Obtained from your capital's Trading Post."
 
 ------ PvP pack
 --- Mark of Honor

@@ -1,12 +1,12 @@
 --[[
 Description: This plugin is part of the "Titan Panel [Currencies] Multi" addon. It shows your amount of Catalyst Charges.
 Site: https://www.curseforge.com/wow/addons/titan-panel-currencies-multi
-Author: Centias
+Author: Canetieri (pull request from Centias)
 Special Thanks to Eliote.
 --]]
 
 local _, L = ...;
-local ID = "TITAN_DICCCM"
+local ID = "TITAN_CLYCHM"
 local CURRENCY_ID = 2167
 
 L:CreateSimpleCurrencyPlugin({

@@ -1,7 +1,7 @@
 --[[
 Description: This plugin is part of the "Titan Panel [Currencies] Multi" addon. It shows your amount of Magmotes.
 Site: https://www.curseforge.com/wow/addons/titan-panel-currencies-multi
-Author: Canettieri
+Author: Canettieri (pull request from bferullo)
 Special Thanks to Eliote.
 --]]
 

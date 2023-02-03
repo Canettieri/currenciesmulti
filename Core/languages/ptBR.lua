@@ -122,6 +122,8 @@ L["HigherOnly"] = "Exibir Apenas Maior Valor"
 L["NoMaxPet"] = "Disponível através de batalhas de mascote\rem Warlords of Draenor e Legion."
 --- Timewarped Badge
 L["NoBadge"] = "Entre em uma fila de masmorras\rquando o evento de Caminhada\rTemporal estiver ocorrendo."
+--- Trader's Tender
+L["TradersTender"] = "Obtidas no Posto Comercial de sua capital."
 
 ------ PvP pack
 --- Mark of Honor
