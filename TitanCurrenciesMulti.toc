@@ -82,6 +82,7 @@ c.Misc\TitanConquest.lua
 c.Misc\TitanDarkmoonTicket.lua
 c.Misc\TitanGold.lua
 c.Misc\TitanHonor.lua
+c.Misc\TitanLovelyCharm.lua
 c.Misc\TitanLoveToken.lua
 c.Misc\TitanMarkofHonor.lua
 c.Misc\TitanShinyPetCharm.lua
