@@ -7,10 +7,10 @@ Special Thanks to Eliote.
 
 local _, L = ...;
 local ID = "TITAN_WGRPKM"
-local ITEM_ID = 43589
+local CURRENCY_ID = 126
 
-L:CreateSimpleItemPlugin({
-	itemId = ITEM_ID,
+L:CreateSimpleCurrencyPlugin({
+	currencyId = CURRENCY_ID,
 	titanId = ID,
 	noCurrencyText = L["WotLKOnly"],
 	expName = L["mWotLK"],
