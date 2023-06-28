@@ -27,6 +27,8 @@ Core\SimpleItemPlugin.lua
 c.Legacy\WotLK\TitanArenaPoints.lua
 c.Legacy\WotLK\TitanBadgeofJustice.lua
 c.Legacy\WotLK\TitanChampionsSeal.lua
+c.Legacy\WotLK\TitanEmblemofFrost.lua
+c.Legacy\WotLK\TitanEmblemofTriumph.lua
 c.Legacy\WotLK\TitanEmblemofConquest.lua
 c.Legacy\WotLK\TitanEmblemofHeroism.lua
 c.Legacy\WotLK\TitanEmblemofValor.lua
