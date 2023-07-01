@@ -35,6 +35,7 @@ c.Dragonflight\TitanFlightstones.lua
 c.Dragonflight\TitanMagmote.lua
 c.Dragonflight\TitanPArcaneEnergy.lua
 c.Dragonflight\TitanPrimevalEssence.lua
+c.Dragonflight\TitanRenascentShadowflame.lua
 c.Dragonflight\TitanStormSigil.lua
 c.Legacy\BfA\TitanArtifactPower.lua
 c.Legacy\BfA\TitanCoalescingVisions.lua

@@ -35,6 +35,7 @@ c.Legacy\WotLK\TitanEmblemofValor.lua
 c.Legacy\WotLK\TitanEpicureansAward.lua
 c.Legacy\WotLK\TitanHonorPoints.lua
 c.Legacy\WotLK\TitanJewelcrafterToken.lua
+c.Legacy\WotLK\TitanSiderealEssence.lua
 c.Legacy\WotLK\TitanStoneKeepersShard.lua
 c.Legacy\WotLK\TitanVentureCoin.lua
 c.Legacy\WotLK\TitanWintergraspMark.lua
