@@ -98,7 +98,9 @@ L["NoEpicurean"] = "Disponível através de missões de culinária na\rantiga Da
 --- Dalaran Jewelcrafter's Token
 L["NoLKCurrency04"] = "Recompensado por missões diárias\rde joalheria, no nível 80, em Dalaran."
 --- Arena Points
-L["NoLKCurrency04"] = "Ganho de missões diária ‘Chamado às\rarmas’. "
+L["NoLKCurrency04"] = "Ganho de missões diária ‘Chamado às\rarmas’."
+--- Sidereal Essence
+L["NoLKCurrency05"] = "Ganho em masmorras H+."
 
 ------ Old pack
 --- Bloody Coin
