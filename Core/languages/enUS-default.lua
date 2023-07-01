@@ -170,6 +170,7 @@ L["showAllFactions"] = "Characters from Both Factions"
 L["useHyperlink"] = "Show tooltip as hyperlink"
 L["hideInfoWhenHyperlink"] = "Hide extra info when showing hyperlink"
 L["sortByAmount"] = "Sort by amount"
+L["addDigitSeparator"] = "Add thousands separator for large numbers"
 
 --- Menus
 L["bfa"] = "Currency [BfA]"
