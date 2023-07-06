@@ -78,14 +78,17 @@ function L:CreateSimpleItemPlugin(params)
 	}
 
 	local function GetButtonText()
-		local currencyCountText = TitanUtils_GetHighlightText(currencyCount)
+		local AddSeparator = TitanGetVar(params.titanId, "AddSeparator")
+		local currencyCountText = TitanUtils_GetHighlightText(AddSeparator and BreakUpLargeNumbers(currencyCount) or (currencyCount or "0"))
 
 		local barBalanceText = ""
 		if TitanGetVar(params.titanId, "ShowBarBalance") then
-			if (currencyCount - startcurrency) > 0 then
-				barBalanceText = " |cFF69FF69[" .. (currencyCount - startcurrency) .. "]"
+			local delta = (currencyCount - startcurrency)
+			local deltaText = AddSeparator and BreakUpLargeNumbers(delta) or delta
+			if delta > 0 then
+				barBalanceText = " |cFF69FF69[" .. deltaText .. "]"
 			elseif (currencyCount - startcurrency) < 0 then
-				barBalanceText = " |cFFFF2e2e[" .. (currencyCount - startcurrency) .. "]"
+				barBalanceText = " |cFFFF2e2e[" .. deltaText .. "]"
 			end
 		end
 
@@ -104,6 +107,7 @@ function L:CreateSimpleItemPlugin(params)
 			GameTooltip:AddLine(itemMixin:GetItemName(), 1, 1, 1)
 		end
 
+		local AddSeparator = TitanGetVar(params.titanId, "AddSeparator")
 		GameTooltip:AddLine(" ")
 		GameTooltip:AddLine(L["info"])
 
@@ -111,21 +115,23 @@ function L:CreateSimpleItemPlugin(params)
 			GameTooltip:AddLine("|cFFFF2e2e" .. params.noCurrencyText)
 		else
 			local bag = GetItemCount(params.itemId)
-			local total = GetItemCount(params.itemId, true)
-			local bank = total - bag
+			local bank = GetItemCount(params.itemId, true) - bag
+			local bagText = AddSeparator and BreakUpLargeNumbers(bag) or bag
+			local bankText = AddSeparator and BreakUpLargeNumbers(bank) or bank
 
-			GameTooltip:AddDoubleLine(L["totalbag"], TitanUtils_GetHighlightText(bag))
-			GameTooltip:AddDoubleLine(L["totalbank"], TitanUtils_GetHighlightText(bank))
+			GameTooltip:AddDoubleLine(L["totalbag"], TitanUtils_GetHighlightText(bagText))
+			GameTooltip:AddDoubleLine(L["totalbank"], TitanUtils_GetHighlightText(bankText))
 
 			local sessionValueText = "0" -- Cores da conta de valor
 			if currencyCount and startcurrency then
 				local dif = currencyCount - startcurrency
+				local difText = AddSeparator and BreakUpLargeNumbers(dif) or dif
 				if dif == 0 then
 					sessionValueText = TitanUtils_GetHighlightText("0")
 				elseif dif > 0 then
-					sessionValueText = "|cFF69FF69" .. dif
+					sessionValueText = "|cFF69FF69" .. difText
 				else
-					sessionValueText = "|cFFFF2e2e" .. dif
+					sessionValueText = "|cFFFF2e2e" .. difText
 				end
 			end
 
@@ -149,12 +155,14 @@ function L:CreateSimpleItemPlugin(params)
 				if isCurrent or ((showAllFactions or PLAYER_FACTION == v.faction) and (v.currency or 0) > 0) then
 					local arrow = isCurrent and "> " or ""
 					local arrowEnd = isCurrent and "|r <" or ""
-					GameTooltip:AddDoubleLine(arrow .. v.name .. arrowEnd, "|cFFFFFFFF" .. (v.currency))
+					local amountText = AddSeparator and BreakUpLargeNumbers(v.currency) or v.currency
+
+					GameTooltip:AddDoubleLine(arrow .. v.name .. arrowEnd, "|cFFFFFFFF" .. (amountText))
 					total = total + v.currency
 				end
 			end
 
-			GameTooltip:AddDoubleLine(L["TotalAlt"], total)
+			GameTooltip:AddDoubleLine(L["TotalAlt"], AddSeparator and BreakUpLargeNumbers(total) or total)
 		end
 	end
 
@@ -179,6 +187,7 @@ function L:CreateSimpleItemPlugin(params)
 			ShowAllFactions = false,
 			UseHyperlink = true,
 			HideInfoWhenHyperlink = false,
+			AddSeparator= false,
 		},
 		afterLoad = function(self)
 			itemMixin:ContinueOnItemLoad(function()

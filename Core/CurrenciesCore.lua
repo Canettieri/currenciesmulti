@@ -63,6 +63,7 @@ function L.PrepareCurrenciesMenuBase(eddm, self, id, hasMax)
 	eddm.UIDropDownMenu_AddButton(CreateTitle(id, L["tooltip"]));
 	eddm.UIDropDownMenu_AddButton(CreateToggle(id, L["showAltText"], "ShowAltText"));
 	eddm.UIDropDownMenu_AddButton(CreateToggle(id, L["sortByAmount"], "AltTextSortByAmount"));
+	eddm.UIDropDownMenu_AddButton(CreateToggle(id, L["addDigitSeparator"], "AddSeparator"));
 	eddm.UIDropDownMenu_AddButton(CreateToggle(id, L["showAllFactions"], "ShowAllFactions"));
 	eddm.UIDropDownMenu_AddButton(CreateToggle(id, L["useHyperlink"], "UseHyperlink"));
 	eddm.UIDropDownMenu_AddButton(CreateToggle(id, L["hideInfoWhenHyperlink"], "HideInfoWhenHyperlink"));

@@ -77,28 +77,32 @@ function L:CreateSimpleCurrencyPlugin(params)
 	}
 	-----------------------------------------------
 	local function GetButtonText()
-		local currencyCountText = TitanUtils_GetHighlightText(currencyCount or "0")
+		local AddSeparator = TitanGetVar(params.titanId, "AddSeparator")
+		local currencyCountText = TitanUtils_GetHighlightText(AddSeparator and BreakUpLargeNumbers(currencyCount) or (currencyCount or "0"))
 		if currencyCount and currencyMaximum > 0 then
+			local currencyCountText = AddSeparator and BreakUpLargeNumbers(currencyCount) or (currencyCount or "0")
 			if currencyCount > currencyMaximum * 0.4 and currencyCount < currencyMaximum * 0.59 then
-				currencyCountText = "|cFFf6ed12" .. currencyCount
+				currencyCountText = "|cFFf6ed12" .. currencyCountText
 			elseif currencyCount > currencyMaximum * 0.59 and currencyCount < currencyMaximum * 0.79 then
-				currencyCountText = "|cFFf69112" .. currencyCount
+				currencyCountText = "|cFFf69112" .. currencyCountText
 			elseif currencyCount > currencyMaximum * 0.79 then
-				currencyCountText = "|cFFFF2e2e" .. currencyCount
+				currencyCountText = "|cFFFF2e2e" .. currencyCountText
 			end
 		end
 
 		local maxBarText = ""
 		if currencyMaximum and currencyMaximum > 0 and TitanGetVar(params.titanId, "MaxBar") then
-			maxBarText = "|r/|cFFFF2e2e" .. currencyMaximum .. "|r"
+			maxBarText = "|r/|cFFFF2e2e" .. (AddSeparator and BreakUpLargeNumbers(currencyMaximum) or currencyMaximum) .. "|r"
 		end
 
 		local barBalanceText = ""
 		if TitanGetVar(params.titanId, "ShowBarBalance") then
-			if (currencyCount - startcurrency) > 0 then
-				barBalanceText = " |cFF69FF69[" .. (currencyCount - startcurrency) .. "]"
+			local delta = (currencyCount - startcurrency)
+			local deltaText = AddSeparator and BreakUpLargeNumbers(delta) or delta
+			if delta > 0 then
+				barBalanceText = " |cFF69FF69[" .. deltaText .. "]"
 			elseif (currencyCount - startcurrency) < 0 then
-				barBalanceText = " |cFFFF2e2e[" .. (currencyCount - startcurrency) .. "]"
+				barBalanceText = " |cFFFF2e2e[" .. deltaText .. "]"
 			end
 		end
 
@@ -117,27 +121,33 @@ function L:CreateSimpleCurrencyPlugin(params)
 			GameTooltip:AddLine(CURRENCY_NAME, 1, 1, 1)
 		end
 
+		local AddSeparator = TitanGetVar(params.titanId, "AddSeparator")
 		GameTooltip:AddLine(" ")
 		GameTooltip:AddLine(L["info"])
 
 		if not currencyCount or currencyCount == 0 then
 			GameTooltip:AddLine("|cFFFF2e2e" .. params.noCurrencyText)
 		else
-			GameTooltip:AddDoubleLine(L["totalAcquired"], TitanUtils_GetHighlightText(currencyCount))
+			local currentText = AddSeparator and BreakUpLargeNumbers(currencyCount) or currencyCount
+
+			GameTooltip:AddDoubleLine(L["totalAcquired"], TitanUtils_GetHighlightText(currentText))
 			if (currencyMaximum and currencyMaximum > 0) then
-				GameTooltip:AddDoubleLine(L["maxpermitted"], TitanUtils_GetHighlightText(currencyMaximum))
-				GameTooltip:AddDoubleLine(L["canGet"], TitanUtils_GetHighlightText((currencyMaximum - currencyCount)))
+				local maxText = AddSeparator and BreakUpLargeNumbers(currencyMaximum) or currencyMaximum
+				local canGetText = AddSeparator and BreakUpLargeNumbers((currencyMaximum - currencyCount)) or (currencyMaximum - currencyCount)
+				GameTooltip:AddDoubleLine(L["maxpermitted"], TitanUtils_GetHighlightText(maxText))
+				GameTooltip:AddDoubleLine(L["canGet"], TitanUtils_GetHighlightText(canGetText))
 			end
 
 			local sessionValueText = "0" -- Cores da conta de valor
 			if currencyCount and startcurrency then
 				local dif = currencyCount - startcurrency
+				local difText = AddSeparator and BreakUpLargeNumbers(dif) or dif
 				if dif == 0 then
 					sessionValueText = TitanUtils_GetHighlightText("0")
 				elseif dif > 0 then
-					sessionValueText = "|cFF69FF69" .. dif
+					sessionValueText = "|cFF69FF69" .. difText
 				else
-					sessionValueText = "|cFFFF2e2e" .. dif
+					sessionValueText = "|cFFFF2e2e" .. difText
 				end
 			end
 
@@ -161,12 +171,14 @@ function L:CreateSimpleCurrencyPlugin(params)
 				if isCurrent or ((showAllFactions or PLAYER_FACTION == v.faction) and (v.currency or 0) > 0) then
 					local arrow = isCurrent and "> " or ""
 					local arrowEnd = isCurrent and "|r <" or ""
-					GameTooltip:AddDoubleLine(arrow .. v.name .. arrowEnd, "|cFFFFFFFF" .. (v.currency))
+					local amountText = AddSeparator and BreakUpLargeNumbers(v.currency) or v.currency
+
+					GameTooltip:AddDoubleLine(arrow .. v.name .. arrowEnd, "|cFFFFFFFF" .. (amountText))
 					total = total + v.currency
 				end
 			end
 
-			GameTooltip:AddDoubleLine(L["TotalAlt"], total)
+			GameTooltip:AddDoubleLine(L["TotalAlt"], AddSeparator and BreakUpLargeNumbers(total) or total)
 		end
 	end
 
@@ -199,6 +211,7 @@ function L:CreateSimpleCurrencyPlugin(params)
 			MaxBar = ifZero(currencyMaximum, nil, false),
 			UseHyperlink = true,
 			HideInfoWhenHyperlink = false,
+			AddSeparator= false,
 		}
 	})
 
