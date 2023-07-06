@@ -96,9 +96,9 @@ L["NoEpicurean"] = "Available through cooking\rquests in old Dalaran\r(Northrend
 --- Dalaran Jewelcrafter's Token
 L["NoLKCurrency04"] = "Rewarded from level 80\rJewelcrafting daily quests in\rDalaran."
 --- Arena Points
-L["NoLKCurrency04"] = "Rewarded from 'Call to Arms'\rdaily quests."
+L["NoLKCurrency05"] = "Rewarded from 'Call to Arms'\rdaily quests."
 --- Sidereal Essence
-L["NoLKCurrency05"] = "Awarded from H+ Dungeons."
+L["NoLKCurrency06"] = "Awarded from H+ Dungeons."
 
 ------ Old pack
 --- Bloody Coin

@@ -98,9 +98,9 @@ L["NoEpicurean"] = "Disponível através de missões de culinária na\rantiga Da
 --- Dalaran Jewelcrafter's Token
 L["NoLKCurrency04"] = "Recompensado por missões diárias\rde joalheria, no nível 80, em Dalaran."
 --- Arena Points
-L["NoLKCurrency04"] = "Ganho de missões diária ‘Chamado às\rarmas’."
+L["NoLKCurrency05"] = "Ganho de missões diária ‘Chamado às\rarmas’."
 --- Sidereal Essence
-L["NoLKCurrency05"] = "Ganho em masmorras H+."
+L["NoLKCurrency06"] = "Ganho em masmorras H+."
 
 ------ Old pack
 --- Bloody Coin
@@ -175,6 +175,7 @@ L["showAllFactions"] = "Personagens de Ambas Facções"
 L["useHyperlink"] = "Mostrar Tooltip como Hyperlink"
 L["hideInfoWhenHyperlink"] = "Esconder Infos Extras com Hyperlink"
 L["sortByAmount"] = "Ordenar por Quantidade"
+L["addDigitSeparator"] = "Adicionar Separador de Centenas aos Números"
 
 --- Menus
 L["bfa"] = "Moeda [BfA]"
