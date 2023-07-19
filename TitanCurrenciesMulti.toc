@@ -34,6 +34,7 @@ c.Dragonflight\TitanElementalOverflow.lua
 c.Dragonflight\TitanFlightstones.lua
 c.Dragonflight\TitanMagmote.lua
 c.Dragonflight\TitanPArcaneEnergy.lua
+C.Dragonflight\TitanParacausalFlakes.lua
 c.Dragonflight\TitanPrimevalEssence.lua
 c.Dragonflight\TitanRenascentShadowflame.lua
 c.Dragonflight\TitanStormSigil.lua
