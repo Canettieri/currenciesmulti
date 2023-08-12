@@ -28,6 +28,7 @@ c.Dragonflight\TitanBloodyTokens.lua
 c.Dragonflight\TitanCatalystCharge.lua
 c.Dragonflight\TitanCobaltAssembly.lua
 c.Dragonflight\TitanDGlyphEmbers.lua
+c.Dragonflight\TitanDilatedTimeCapsule.lua
 c.Dragonflight\TitanDISupplies.lua
 c.Dragonflight\TitanEffigyAdornments.lua
 c.Dragonflight\TitanElementalOverflow.lua
