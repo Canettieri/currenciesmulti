@@ -30,6 +30,7 @@ c.Dragonflight\TitanCobaltAssembly.lua
 c.Dragonflight\TitanDGlyphEmbers.lua
 c.Dragonflight\TitanDilatedTimeCapsule.lua
 c.Dragonflight\TitanDISupplies.lua
+c.Dragonflight\TitanDreamsurgeCoalescence.lua
 c.Dragonflight\TitanEffigyAdornments.lua
 c.Dragonflight\TitanElementalOverflow.lua
 c.Dragonflight\TitanFlightstones.lua
