@@ -1,4 +1,4 @@
-## Interface: 30402
+## Interface: 30403
 ## Title: Titan Panel [|cff336699Currencies|r] Multi! |cff00aa00@project-version@|r
 ## Notes: Track a lot of currencies! Right-click on Titan Panel, go to "Information" tab and enjoy.
 ## Notes-ptBR: Rastreie várias moedas! Clique com o botão direito no Painel Titan, vá na aba "Informação" e aproveite.
@@ -39,6 +39,7 @@ c.Legacy\WotLK\TitanSiderealEssence.lua
 c.Legacy\WotLK\TitanStoneKeepersShard.lua
 c.Legacy\WotLK\TitanVentureCoin.lua
 c.Legacy\WotLK\TitanWintergraspMark.lua
+c.Legacy\WotLK\TitanDefilarsScourgestone.lua
 c.Misc\TitanBrewfestToken.lua
 c.Misc\TitanDarkmoonTicketClassic.lua
 c.Misc\TitanGold.lua
