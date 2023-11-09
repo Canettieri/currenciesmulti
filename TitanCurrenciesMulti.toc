@@ -32,6 +32,7 @@ c.Dragonflight\TitanDGlyphEmbers.lua
 c.Dragonflight\TitanDilatedTimeCapsule.lua
 c.Dragonflight\TitanDISupplies.lua
 c.Dragonflight\TitanDrakesDreamingCrest.lua
+c.Dragonflight\TitanDreamInfusion.lua
 c.Dragonflight\TitanDreamsurgeCoalescence.lua
 c.Dragonflight\TitanEffigyAdornments.lua
 c.Dragonflight\TitanElementalOverflow.lua
@@ -42,6 +43,7 @@ c.Dragonflight\TitanParacausalFlakes.lua
 c.Dragonflight\TitanPArcaneEnergy.lua
 c.Dragonflight\TitanPrimevalEssence.lua
 c.Dragonflight\TitanRenascentShadowflame.lua
+c.Dragonflight\TitanSeedbloom.lua
 c.Dragonflight\TitanStormSigil.lua
 c.Dragonflight\TitanWhelplingsDreamingCrest.lua
 c.Dragonflight\TitanWyrmsDreamingCrest.lua
