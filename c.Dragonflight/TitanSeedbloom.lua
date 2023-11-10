@@ -19,7 +19,7 @@ local ITEM_ID = 211376
 --	category = "CATEGORY_DRAGON"
 --})
 L:CreateSimpleItemPlugin({
-	currencyId = ITEM_ID,
+	itemId = ITEM_ID,
 	titanId = ID,
 	noCurrencyText = L["DragonFOnly"],
 	expName = L["mDragonflight"],
