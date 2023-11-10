@@ -1,13 +1,12 @@
 --[[
-Description: This plugin is part of the "Titan Panel [Currencies] Multi" addon. It shows your Dilated Time Capsules.
+Description: This plugin is part of the "Titan Panel [Currencies] Multi" addon. It shows your Dilated Time Pod.
 Site: https://www.curseforge.com/wow/addons/titan-panel-currencies-multi
 Author: Canettieri
-Special Thanks to Protuhj for this addition.
 --]]
 
 local _, L = ...;
-local ID = "TITAN_DFCAPSULE"
-local ITEM_ID = 207030
+local ID = "TITAN_DLTPOD"
+local ITEM_ID = 209856
 
 L:CreateSimpleItemPlugin({
 	itemId = ITEM_ID,
