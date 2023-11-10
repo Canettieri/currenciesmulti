@@ -7,10 +7,19 @@ Special Thanks to Protuhj.
 
 local _, L = ...;
 local ID = "TITAN_SEEDBLOOM"
-local CURRENCY_ID = 2651
+local ITEM_ID = 211376
+-- Currency seems unused?
+--local CURRENCY_ID = 2651
 
-L:CreateSimpleCurrencyPlugin({
-	currencyId = CURRENCY_ID,
+--L:CreateSimpleCurrencyPlugin({
+--	currencyId = CURRENCY_ID,
+--	titanId = ID,
+--	noCurrencyText = L["DragonFOnly"],
+--	expName = L["mDragonflight"],
+--	category = "CATEGORY_DRAGON"
+--})
+L:CreateSimpleItemPlugin({
+	currencyId = ITEM_ID,
 	titanId = ID,
 	noCurrencyText = L["DragonFOnly"],
 	expName = L["mDragonflight"],
