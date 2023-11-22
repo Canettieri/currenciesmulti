@@ -26,8 +26,8 @@ function L:CreateSimpleCurrencyPlugin(params)
 	local useTotalEarnedForMaxQty = currencyInfoBase.useTotalEarnedForMaxQty
 	local totalSeasonalEarned = currencyInfoBase.totalEarned
 	-- For whatever reason, the value can be nil when the plugin first loads
-	-- If you know that the currency has a maximum, then allow the creator to force it to be treated as if it had a max.
-	local forceMax = params.forceMax
+	-- If the creator knows that the currency has a maximum, then allow them to force it to be treated as if it had a max.
+	local forceMax = params.forceMax or false
 
 	local PLAYER_NAME, PLAYER_REALM
 	local PLAYER_KEY
