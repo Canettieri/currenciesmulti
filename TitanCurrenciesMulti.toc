@@ -32,6 +32,7 @@ c.Dragonflight\TitanDGlyphEmbers.lua
 c.Dragonflight\TitanDilatedTimePod.lua
 c.Dragonflight\TitanDISupplies.lua
 c.Dragonflight\TitanDrakesDreamingCrest.lua
+c.Dragonflight\TitanDreamEnergy.lua
 c.Dragonflight\TitanDreamInfusion.lua
 c.Dragonflight\TitanDreamsurgeCoalescence.lua
 c.Dragonflight\TitanDreamsurgeCocoon.lua

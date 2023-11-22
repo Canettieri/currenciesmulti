@@ -22,7 +22,12 @@ function L:CreateSimpleCurrencyPlugin(params)
 	local currencyInfoBase = C_CurrencyInfo.GetCurrencyInfo(params.currencyId)
 	local ICON = currencyInfoBase.iconFileID
 	local CURRENCY_NAME = currencyInfoBase.name
-	local currencyMaximum = currencyInfoBase.maxQuantity
+	local currencyMaximum = currencyInfoBase.maxQuantity or 0
+	local useTotalEarnedForMaxQty = currencyInfoBase.useTotalEarnedForMaxQty
+	local totalSeasonalEarned = currencyInfoBase.totalEarned
+	-- For whatever reason, the value can be nil when the plugin first loads
+	-- If the creator knows that the currency has a maximum, then allow them to force it to be treated as if it had a max.
+	local forceMax = params.forceMax or false
 
 	local PLAYER_NAME, PLAYER_REALM
 	local PLAYER_KEY
@@ -44,6 +49,9 @@ function L:CreateSimpleCurrencyPlugin(params)
 		charTable[PLAYER_KEY].name = PLAYER_CLASS_COLOR .. PLAYER_NAME
 		charTable[PLAYER_KEY].faction = PLAYER_FACTION
 
+		-- Make sure these values are up to date, since they can be wrong when the addon first loads
+		useTotalEarnedForMaxQty = info.useTotalEarnedForMaxQty
+		totalSeasonalEarned = info.totalEarned
 		return amount, totalMax
 	end
 
@@ -79,20 +87,25 @@ function L:CreateSimpleCurrencyPlugin(params)
 	local function GetButtonText()
 		local AddSeparator = TitanGetVar(params.titanId, "AddSeparator")
 		local currencyCountText = TitanUtils_GetHighlightText(AddSeparator and BreakUpLargeNumbers(currencyCount) or (currencyCount or "0"))
-		if currencyCount and currencyMaximum > 0 then
-			local currencyCountText = AddSeparator and BreakUpLargeNumbers(currencyCount) or (currencyCount or "0")
-			if currencyCount > currencyMaximum * 0.4 and currencyCount < currencyMaximum * 0.59 then
+		if (currencyCount or totalSeasonalEarned) and currencyMaximum > 0 then
+			local maxCheckCurrency = (useTotalEarnedForMaxQty and totalSeasonalEarned) or currencyCount
+			currencyCountText = AddSeparator and BreakUpLargeNumbers(currencyCount) or (currencyCount or "0")
+			if maxCheckCurrency > currencyMaximum * 0.4 and maxCheckCurrency < currencyMaximum * 0.59 then
 				currencyCountText = "|cFFf6ed12" .. currencyCountText
-			elseif currencyCount > currencyMaximum * 0.59 and currencyCount < currencyMaximum * 0.79 then
+			elseif maxCheckCurrency > currencyMaximum * 0.59 and maxCheckCurrency < currencyMaximum * 0.79 then
 				currencyCountText = "|cFFf69112" .. currencyCountText
-			elseif currencyCount > currencyMaximum * 0.79 then
+			elseif maxCheckCurrency > currencyMaximum * 0.79 then
 				currencyCountText = "|cFFFF2e2e" .. currencyCountText
 			end
 		end
 
 		local maxBarText = ""
 		if currencyMaximum and currencyMaximum > 0 and TitanGetVar(params.titanId, "MaxBar") then
-			maxBarText = "|r/|cFFFF2e2e" .. (AddSeparator and BreakUpLargeNumbers(currencyMaximum) or currencyMaximum) .. "|r"
+			local localMaxValue = (useTotalEarnedForMaxQty and totalEarned) or currencyMaximum
+			local canEarnText = (AddSeparator and BreakUpLargeNumbers(localMaxValue - totalSeasonalEarned)) or (localMaxValue - totalSeasonalEarned)
+						canEarnText = (useTotalEarnedForMaxQty and (" [" .. canEarnText .. "]")) or ""
+			maxBarText = "|r/|cFFFF2e2e" .. (AddSeparator and BreakUpLargeNumbers(currencyMaximum) or currencyMaximum)
+			maxBarText = maxBarText .. canEarnText .. "|r"
 		end
 
 		local barBalanceText = ""
@@ -132,8 +145,9 @@ function L:CreateSimpleCurrencyPlugin(params)
 
 			GameTooltip:AddDoubleLine(L["totalAcquired"], TitanUtils_GetHighlightText(currentText))
 			if (currencyMaximum and currencyMaximum > 0) then
-				local maxText = AddSeparator and BreakUpLargeNumbers(currencyMaximum) or currencyMaximum
-				local canGetText = AddSeparator and BreakUpLargeNumbers((currencyMaximum - currencyCount)) or (currencyMaximum - currencyCount)
+				local localCountValue = (useTotalEarnedForMaxQty and totalSeasonalEarned) or currencyCount
+				local maxText = (AddSeparator and BreakUpLargeNumbers(currencyMaximum)) or currencyMaximum
+				local canGetText = (AddSeparator and BreakUpLargeNumbers(currencyMaximum - localCountValue)) or (currencyMaximum - localCountValue)
 				GameTooltip:AddDoubleLine(L["maxpermitted"], TitanUtils_GetHighlightText(maxText))
 				GameTooltip:AddDoubleLine(L["canGet"], TitanUtils_GetHighlightText(canGetText))
 			end
@@ -188,6 +202,12 @@ function L:CreateSimpleCurrencyPlugin(params)
 		end
 		return resultElse
 	end
+	local prepMenu = ifZero(currencyMaximum, L.PrepareCurrenciesMenu, L.PrepareCurrenciesMaxMenu)
+	maxBarValue = ifZero(currencyMaximum, nil, false)
+	if forceMax then
+		prepMenu = L.PrepareCurrenciesMaxMenu
+		maxBarValue = 1
+	end
 
 	L.Elib({
 		id = params.titanId,
@@ -199,7 +219,7 @@ function L:CreateSimpleCurrencyPlugin(params)
 		version = version,
 		getButtonText = GetButtonText,
 		eventsTable = eventsTable,
-		prepareMenu = ifZero(currencyMaximum, L.PrepareCurrenciesMenu, L.PrepareCurrenciesMaxMenu),
+		prepareMenu = prepMenu,
 		savedVariables = {
 			ShowIcon = 1,
 			DisplayOnRightSide = false,
@@ -208,7 +228,7 @@ function L:CreateSimpleCurrencyPlugin(params)
 			ShowAltText = true,
 			AltTextSortByAmount = false,
 			ShowAllFactions = false,
-			MaxBar = ifZero(currencyMaximum, nil, false),
+			MaxBar = maxBarValue,
 			UseHyperlink = true,
 			HideInfoWhenHyperlink = false,
 			AddSeparator= false,
