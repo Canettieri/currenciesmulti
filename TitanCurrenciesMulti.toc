@@ -48,6 +48,7 @@ c.Dragonflight\TitanRenascentDream.lua
 c.Dragonflight\TitanRenascentShadowflame.lua
 c.Dragonflight\TitanSeedbloom.lua
 c.Dragonflight\TitanStormSigil.lua
+c.Dragonflight\TitanTrophyofStrife.lua
 c.Dragonflight\TitanWhelplingsDreamingCrest.lua
 c.Dragonflight\TitanWyrmsDreamingCrest.lua
 c.Legacy\BfA\TitanArtifactPower.lua
