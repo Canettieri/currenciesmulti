@@ -1,12 +1,12 @@
 --[[
-Description: This plugin is part of the "Titan Panel [Currencies] Multi" addon. It shows your  Wyrm's Dreaming Crests.
+Description: This plugin is part of the "Titan Panel [Currencies] Multi" addon. It shows your  Trophy of Strife.
 Site: https://www.curseforge.com/wow/addons/titan-panel-currencies-multi
 Author: Canettieri
 Special Thanks to Protuhj.
 --]]
 
 local _, L = ...;
-local ID = "TITAN_WYDRCM"
+local ID = "TITAN_TRPYFM"
 local CURRENCY_ID = 2797
 
 L:CreateSimpleCurrencyPlugin({
