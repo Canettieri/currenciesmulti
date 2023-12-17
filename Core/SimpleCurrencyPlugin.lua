@@ -86,16 +86,16 @@ function L:CreateSimpleCurrencyPlugin(params)
 	-----------------------------------------------
 	local function GetButtonText()
 		local AddSeparator = TitanGetVar(params.titanId, "AddSeparator")
-		local currencyCountText = TitanUtils_GetHighlightText(AddSeparator and BreakUpLargeNumbers(currencyCount) or (currencyCount or "0"))
+		local currencyCountTextNoColor = AddSeparator and BreakUpLargeNumbers(currencyCount) or (currencyCount or "0")
+		local currencyCountText = TitanUtils_GetHighlightText(currencyCountTextNoColor)
 		if (currencyCount or totalSeasonalEarned) and currencyMaximum > 0 then
-			local maxCheckCurrency = (useTotalEarnedForMaxQty and totalSeasonalEarned) or currencyCount
-			currencyCountText = AddSeparator and BreakUpLargeNumbers(currencyCount) or (currencyCount or "0")
+			local maxCheckCurrency = (useTotalEarnedForMaxQty and totalSeasonalEarned and totalSeasonalEarned > 0) or currencyCount
 			if maxCheckCurrency > currencyMaximum * 0.4 and maxCheckCurrency < currencyMaximum * 0.59 then
-				currencyCountText = "|cFFf6ed12" .. currencyCountText
+				currencyCountText = "|cFFf6ed12" .. currencyCountTextNoColor
 			elseif maxCheckCurrency > currencyMaximum * 0.59 and maxCheckCurrency < currencyMaximum * 0.79 then
-				currencyCountText = "|cFFf69112" .. currencyCountText
+				currencyCountText = "|cFFf69112" .. currencyCountTextNoColor
 			elseif maxCheckCurrency > currencyMaximum * 0.79 then
-				currencyCountText = "|cFFFF2e2e" .. currencyCountText
+				currencyCountText = "|cFFFF2e2e" .. currencyCountTextNoColor
 			end
 		end
 
