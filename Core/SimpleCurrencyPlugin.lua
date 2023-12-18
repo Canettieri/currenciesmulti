@@ -28,6 +28,9 @@ function L:CreateSimpleCurrencyPlugin(params)
 	-- For whatever reason, the value can be nil when the plugin first loads
 	-- If the creator knows that the currency has a maximum, then allow them to force it to be treated as if it had a max.
 	local forceMax = params.forceMax or false
+	-- For seasonal currencies, like crests in Dragonflight, track how much the maximum allowed
+	-- amount increases weekly, to be able to color the current amount more appropriately
+	local weeklyIncrease = params.weeklyIncrease or 0
 
 	local PLAYER_NAME, PLAYER_REALM
 	local PLAYER_KEY
@@ -90,15 +93,34 @@ function L:CreateSimpleCurrencyPlugin(params)
 		local currencyCountText = TitanUtils_GetHighlightText(currencyCountTextNoColor)
 		if (currencyCount or totalSeasonalEarned) and currencyMaximum > 0 then
 			local maxCheckCurrency = (useTotalEarnedForMaxQty and totalSeasonalEarned) or currencyCount
-			if maxCheckCurrency > currencyMaximum * 0.4 and maxCheckCurrency < currencyMaximum * 0.59 then
-				-- Yellow
-				currencyCountText = "|cFFf6ed12" .. currencyCountTextNoColor
-			elseif maxCheckCurrency > currencyMaximum * 0.59 and maxCheckCurrency < currencyMaximum * 0.79 then
-				-- Orange
-				currencyCountText = "|cFFf69112" .. currencyCountTextNoColor
-			elseif maxCheckCurrency > currencyMaximum * 0.79 then
-				-- Red
-				currencyCountText = "|cFFFF2e2e" .. currencyCountTextNoColor
+			-- For currencies with a static max amount
+			if weeklyIncrease == 0 then
+				if maxCheckCurrency > currencyMaximum * 0.4 and maxCheckCurrency < currencyMaximum * 0.59 then
+					-- Yellow
+					currencyCountText = "|cFFf6ed12" .. currencyCountTextNoColor
+				elseif maxCheckCurrency > currencyMaximum * 0.59 and maxCheckCurrency < currencyMaximum * 0.79 then
+					-- Orange
+					currencyCountText = "|cFFf69112" .. currencyCountTextNoColor
+				elseif maxCheckCurrency > currencyMaximum * 0.79 then
+					-- Red
+					currencyCountText = "|cFFFF2e2e" .. currencyCountTextNoColor
+				end
+			else
+				-- For currencies that increase the maximum amount weekly, color based on how much you can still earn
+				-- compared to the weekly increase amount
+				local localMaxValue = (useTotalEarnedForMaxQty and totalEarned) or currencyMaximum
+				local canEarnAmount = localMaxValue - totalSeasonalEarned
+				-- Basically reverse the logic above
+				if canEarnAmount < weeklyIncrease * 0.79 and canEarnAmount > weeklyIncrease * 0.59 then
+					-- Yellow
+					currencyCountText = "|cFFf6ed12" .. currencyCountTextNoColor
+				elseif canEarnAmount < weeklyIncrease * 0.59 and canEarnAmount > weeklyIncrease * 0.4 then
+					-- Orange
+					currencyCountText = "|cFFf69112" .. currencyCountTextNoColor
+				elseif canEarnAmount < weeklyIncrease * 0.4 then
+					-- Red
+					currencyCountText = "|cFFFF2e2e" .. currencyCountTextNoColor
+				end
 			end
 		end
 

@@ -15,5 +15,6 @@ L:CreateSimpleCurrencyPlugin({
 	noCurrencyText = L["DragonFOnly"],
 	expName = L["mDragonflight"],
 	category = "CATEGORY_DRAGON",
-	forceMax = true
+	forceMax = true,
+	weeklyIncrease = 90
 })
