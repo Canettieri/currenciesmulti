@@ -89,12 +89,15 @@ function L:CreateSimpleCurrencyPlugin(params)
 		local currencyCountTextNoColor = AddSeparator and BreakUpLargeNumbers(currencyCount) or (currencyCount or "0")
 		local currencyCountText = TitanUtils_GetHighlightText(currencyCountTextNoColor)
 		if (currencyCount or totalSeasonalEarned) and currencyMaximum > 0 then
-			local maxCheckCurrency = (useTotalEarnedForMaxQty and totalSeasonalEarned and totalSeasonalEarned > 0) or currencyCount
+			local maxCheckCurrency = (useTotalEarnedForMaxQty and totalSeasonalEarned) or currencyCount
 			if maxCheckCurrency > currencyMaximum * 0.4 and maxCheckCurrency < currencyMaximum * 0.59 then
+				-- Yellow
 				currencyCountText = "|cFFf6ed12" .. currencyCountTextNoColor
 			elseif maxCheckCurrency > currencyMaximum * 0.59 and maxCheckCurrency < currencyMaximum * 0.79 then
+				-- Orange
 				currencyCountText = "|cFFf69112" .. currencyCountTextNoColor
 			elseif maxCheckCurrency > currencyMaximum * 0.79 then
+				-- Red
 				currencyCountText = "|cFFFF2e2e" .. currencyCountTextNoColor
 			end
 		end
@@ -103,7 +106,7 @@ function L:CreateSimpleCurrencyPlugin(params)
 		if currencyMaximum and currencyMaximum > 0 and TitanGetVar(params.titanId, "MaxBar") then
 			local localMaxValue = (useTotalEarnedForMaxQty and totalEarned) or currencyMaximum
 			local canEarnText = (AddSeparator and BreakUpLargeNumbers(localMaxValue - totalSeasonalEarned)) or (localMaxValue - totalSeasonalEarned)
-						canEarnText = (useTotalEarnedForMaxQty and (" [" .. canEarnText .. "]")) or ""
+			canEarnText = (useTotalEarnedForMaxQty and (" [" .. canEarnText .. "]")) or ""
 			maxBarText = "|r/|cFFFF2e2e" .. (AddSeparator and BreakUpLargeNumbers(currencyMaximum) or currencyMaximum)
 			maxBarText = maxBarText .. canEarnText .. "|r"
 		end

@@ -1,8 +1,7 @@
 --[[
-Description: This plugin is part of the "Titan Panel [Currencies] Multi" addon. It shows your  Trophy of Strife.
+Description: This plugin is part of the "Titan Panel [Currencies] Multi" addon. It shows your Trophy of Strife.
 Site: https://www.curseforge.com/wow/addons/titan-panel-currencies-multi
 Author: Canettieri
-Special Thanks to Protuhj.
 --]]
 
 local _, L = ...;
