@@ -218,7 +218,7 @@ function L:CreateSimpleCurrencyPlugin(params)
 		tooltip = CURRENCY_NAME,
 		customTooltip = CreateTooltip,
 		icon = ICON,
-		category = params.category,
+		category = "Information",
 		version = version,
 		getButtonText = GetButtonText,
 		eventsTable = eventsTable,

@@ -172,7 +172,7 @@ function L:CreateSimpleItemPlugin(params)
 		tooltip = "",
 		customTooltip = CreateTooltip,
 		icon = "0",
-		category = params.category,
+		category = "Interface",
 		version = version,
 		getButtonText = GetButtonText,
 		eventsTable = eventsTable,
