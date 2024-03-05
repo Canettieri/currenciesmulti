@@ -21,7 +21,7 @@ Core\Elib-4.0.lua
 Core\Utils.lua
 Core\CurrenciesCore.lua
 Core\CurrenciesCorewMax.lua
-Core\Menus.lua
+#Core\Menus.lua
 Core\SimpleCurrencyPlugin.lua
 Core\SimpleItemPlugin.lua
 c.Dragonflight\TitanAspectsDreamingCrest.lua
