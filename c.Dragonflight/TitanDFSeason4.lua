@@ -1,6 +1,6 @@
 --[[
 Description: This plugin is part of the "Titan Panel [Currencies] Multi" addon.
-It shows the crests currencies from Dragonflight Season 4.
+It shows the seasonal currencies from Dragonflight Season 4.
 Site: https://www.curseforge.com/wow/addons/titan-panel-currencies-multi
 Author: Canettieri
 Special Thanks to Protuhj.
@@ -38,10 +38,20 @@ L:CreateSimpleCurrencyPlugin({
 	forceMax = true
 })
 
--- Aspect's Awakeend Crests
+-- Aspect's Awakened Crests
 L:CreateSimpleCurrencyPlugin({
 	currencyId = 2812,
 	titanId = "TITAN_ASPECTAWAKECREST",
+	noCurrencyText = L["DragonFOnly"],
+	expName = L["mDragonflight"],
+	category = "CATEGORY_DRAGON",
+	forceMax = true
+})
+
+-- Renascent Awakening (Catalyst charges)
+L:CreateSimpleCurrencyPlugin({
+	currencyId = 2912,
+	titanId = "TITAN_RENASCENTAWAKE",
 	noCurrencyText = L["DragonFOnly"],
 	expName = L["mDragonflight"],
 	category = "CATEGORY_DRAGON",

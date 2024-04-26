@@ -1,6 +1,6 @@
 --[[
 Description: This plugin is part of the "Titan Panel [Currencies] Multi" addon.
-It shows the crests currencies from Dragonflight Season 3.
+It shows the seasonal currencies from Dragonflight Season 3.
 Site: https://www.curseforge.com/wow/addons/titan-panel-currencies-multi
 Author: Canettieri
 Special Thanks to Protuhj.
@@ -47,4 +47,13 @@ local _, L = ...;
 --	expName = L["mDragonflight"],
 --	category = "CATEGORY_DRAGON",
 --	forceMax = true
+--})
+
+-- Renascent Dream (Catalyst charges)
+--L:CreateSimpleCurrencyPlugin({
+--	currencyId = 2796,
+--	titanId = "TITAN_RNDRMM",
+--	noCurrencyText = L["DragonFOnly"],
+--	expName = L["mDragonflight"],
+--	category = "CATEGORY_DRAGON"
 --})

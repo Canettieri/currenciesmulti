@@ -25,9 +25,7 @@ Core\Menus.lua
 Core\SimpleCurrencyPlugin.lua
 Core\SimpleItemPlugin.lua
 c.Dragonflight\TitanBloodyTokens.lua
-c.Dragonflight\TitanCatalystCharge.lua
 c.Dragonflight\TitanCobaltAssembly.lua
-c.Dragonflight\TitanDFSeason3.lua
 c.Dragonflight\TitanDFSeason4.lua
 c.Dragonflight\TitanDGlyphEmbers.lua
 c.Dragonflight\TitanDilatedTimePod.lua
@@ -45,8 +43,6 @@ c.Dragonflight\TitanMysteriousFragment.lua
 c.Dragonflight\TitanParacausalFlakes.lua
 c.Dragonflight\TitanPArcaneEnergy.lua
 c.Dragonflight\TitanPrimevalEssence.lua
-c.Dragonflight\TitanRenascentDream.lua
-c.Dragonflight\TitanRenascentShadowflame.lua
 c.Dragonflight\TitanSeedbloom.lua
 c.Dragonflight\TitanStormSigil.lua
 c.Dragonflight\TitanTrophyofStrife.lua
