@@ -12,7 +12,7 @@ local _, L = ...;
 L:CreateSimpleCurrencyPlugin({
 	currencyId = 2806,
 	titanId = "TITAN_WHELPAWAKECREST",
-	noCurrencyText = L["DragonFOnly"],
+	noCurrencyText = L["DFSeason4"],
 	expName = L["mDragonflight"],
 	category = "CATEGORY_DRAGON",
 	forceMax = true
@@ -22,7 +22,7 @@ L:CreateSimpleCurrencyPlugin({
 L:CreateSimpleCurrencyPlugin({
 	currencyId = 2807,
 	titanId = "TITAN_DRAKEAWAKECREST",
-	noCurrencyText = L["DragonFOnly"],
+	noCurrencyText = L["DFSeason4"],
 	expName = L["mDragonflight"],
 	category = "CATEGORY_DRAGON",
 	forceMax = true
@@ -32,7 +32,7 @@ L:CreateSimpleCurrencyPlugin({
 L:CreateSimpleCurrencyPlugin({
 	currencyId = 2809,
 	titanId = "TITAN_WYRMAWAKECREST",
-	noCurrencyText = L["DragonFOnly"],
+	noCurrencyText = L["DFSeason4"],
 	expName = L["mDragonflight"],
 	category = "CATEGORY_DRAGON",
 	forceMax = true
@@ -42,7 +42,7 @@ L:CreateSimpleCurrencyPlugin({
 L:CreateSimpleCurrencyPlugin({
 	currencyId = 2812,
 	titanId = "TITAN_ASPECTAWAKECREST",
-	noCurrencyText = L["DragonFOnly"],
+	noCurrencyText = L["DFSeason4"],
 	expName = L["mDragonflight"],
 	category = "CATEGORY_DRAGON",
 	forceMax = true
@@ -52,7 +52,7 @@ L:CreateSimpleCurrencyPlugin({
 L:CreateSimpleCurrencyPlugin({
 	currencyId = 2912,
 	titanId = "TITAN_RENASCENTAWAKE",
-	noCurrencyText = L["DragonFOnly"],
+	noCurrencyText = L["DFSeason4"],
 	expName = L["mDragonflight"],
 	category = "CATEGORY_DRAGON",
 	forceMax = true
