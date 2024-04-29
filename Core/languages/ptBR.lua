@@ -11,6 +11,7 @@ if GetLocale() == "ptBR" then
 L["DragonEventOnly"] = "Obtida através do evento de\rPré-Patch do Dragonflight."
 L["DragonFPvP"] = "Obtida através de quests PVP nas\rIlhas do Dragão."
 L["NoDFCurrency01"] = "Você precisa do título 'o Quebramundo' para poder adquirir."
+L["DFSeason4"] = "Obtido na Temporada 4 de Dragonflight."
 
 ------ Shadowlands pack
 --- Adventure Campaign Progress
