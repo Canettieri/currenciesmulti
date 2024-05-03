@@ -57,3 +57,12 @@ L:CreateSimpleCurrencyPlugin({
 	category = "CATEGORY_DRAGON",
 	forceMax = true
 })
+
+-- Dreamsurge Cradle
+L:CreateSimpleItemPlugin({
+	itemId = 224297,
+	titanId = "TITAN_DRSGCRADLE",
+	noCurrencyText = L["DragonFOnly"],
+	expName = L["mDragonflight"],
+	category = "CATEGORY_DRAGON"
+})
