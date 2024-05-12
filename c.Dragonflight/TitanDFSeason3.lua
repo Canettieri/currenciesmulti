@@ -49,10 +49,19 @@ local _, L = ...;
 --	forceMax = true
 --})
 
--- Renascent Dream (Catalyst charges)
+---- Renascent Dream (Catalyst charges)
 --L:CreateSimpleCurrencyPlugin({
 --	currencyId = 2796,
 --	titanId = "TITAN_RNDRMM",
+--	noCurrencyText = L["DragonFOnly"],
+--	expName = L["mDragonflight"],
+--	category = "CATEGORY_DRAGON"
+--})
+
+---- Dreamsurge Cocoon
+--L:CreateSimpleItemPlugin({
+--	itemId = 210254,
+--	titanId = "TITAN_DRSGOON",
 --	noCurrencyText = L["DragonFOnly"],
 --	expName = L["mDragonflight"],
 --	category = "CATEGORY_DRAGON"
