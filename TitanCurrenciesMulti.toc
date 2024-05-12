@@ -30,10 +30,10 @@ c.Dragonflight\TitanDFSeason4.lua
 c.Dragonflight\TitanDGlyphEmbers.lua
 c.Dragonflight\TitanDilatedTimePod.lua
 c.Dragonflight\TitanDISupplies.lua
+c.Dragonflight\TitanDragonShardOfKnowledge.lua
 c.Dragonflight\TitanDreamEnergy.lua
 c.Dragonflight\TitanDreamInfusion.lua
 c.Dragonflight\TitanDreamsurgeCoalescence.lua
-c.Dragonflight\TitanDreamsurgeCocoon.lua
 c.Dragonflight\TitanEffigyAdornments.lua
 c.Dragonflight\TitanElementalOverflow.lua
 c.Dragonflight\TitanEmeraldDewdrop.lua
