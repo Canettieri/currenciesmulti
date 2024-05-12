@@ -9,7 +9,7 @@ local _, L = ...;
 local ID = "TITAN_TDRTRM"
 local CURRENCY_ID = 2032
 
-L:CreateSimpleCurrencyPlugin({
+L:CreateNoAltCurrencyPlugin({
 	currencyId = CURRENCY_ID,
 	titanId = ID,
 	noCurrencyText = L["TradersTender"],
