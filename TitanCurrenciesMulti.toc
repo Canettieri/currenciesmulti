@@ -41,6 +41,7 @@ c.Dragonflight\TitanElementalOverflow.lua
 c.Dragonflight\TitanEmeraldDewdrop.lua
 c.Dragonflight\TitanFlightstones.lua
 c.Dragonflight\TitanMagmote.lua
+c.Dragonflight\TitanMopRemix.lua
 c.Dragonflight\TitanMysteriousFragment.lua
 c.Dragonflight\TitanParacausalFlakes.lua
 c.Dragonflight\TitanPArcaneEnergy.lua
