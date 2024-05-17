@@ -13,8 +13,8 @@ L:CreateSimpleCurrencyPlugin({
 	currencyId = 2778,
 	titanId = "TITAN_DFMOPBRONZE",
 	noCurrencyText = L["DFMOPRemix"],
-	expName = L["mDragonflight"],
-	category = "CATEGORY_DRAGON",
+	expName = L["mMoPRemix"],
+	category = "CATEGORY_MISC",
 	forceMax = true,
 })
 

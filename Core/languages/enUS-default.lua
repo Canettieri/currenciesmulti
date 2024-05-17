@@ -10,7 +10,7 @@ L["DragonEventOnly"] = "Obtainable through Dragonflight\rPre-Patch Event."
 L["DragonFPvP"] = "Obtainable through Dragon Isles\rPvP quests."
 L["NoDFCurrency01"] = "You need the title 'the Worldbreaker' to acquire it."
 L["DFSeason4"] = "Obtainable in Dragonflight Season 4."
-L["DFMOPRemix"] = "Obtainable only during the MOP Remix event in Dragonflight Season 4."
+L["DFMOPRemix"] = "Obtainable only during the MoP Remix event."
 
 ------ Shadowlands pack
 --- Adventure Campaign Progress
@@ -159,6 +159,7 @@ L["mOther"] = "[|cFF198ae0Others|r]"
 L["mBfA"] = "[|cFF198ae0BfA|r]"
 L["mShadowlands"] = "[|cFF198ae0Shadowlands|r]"
 L["mDragonflight"] = "[|cFF198ae0Dragonflight|r]"
+L["mMoPRemix"] = "[|cFF198ae0MoP Remix|r]"
 L["info"] = "|cFFFFFFFF[Information]|r"
 L["totalAcquired"] = "Total acquired: "
 L["maxpermitted"] = "Maximum permitted: "
