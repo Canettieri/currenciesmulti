@@ -12,7 +12,7 @@ local CURRENCY_ID = 1901
 L:CreateSimpleCurrencyPlugin({
 	currencyId = CURRENCY_ID,
 	titanId = ID,
-	noCurrencyText = L["WotLKOnly"],
-	expName = L["mWotLK"],
-	category = "CATEGORY_LEGACY"
+	noCurrencyText = L["NoMark"],
+	expName = L["mPvP"],
+	category = "CATEGORY_MISC"
 })

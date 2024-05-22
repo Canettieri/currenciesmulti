@@ -14,6 +14,16 @@ L["NoDFCurrency01"] = "Você precisa do título 'o Quebramundo' para poder adqui
 L["DFSeason4"] = "Obtido na Temporada 4 de Dragonflight."
 L["DFMOPRemix"] = "Disponível durante o evento MoP Remix."
 
+------ Cataclysm Classic pack
+--- Cata Defauls
+L["CataOnly"] = "Disponível no Cataclysm."
+--- Chef's Award
+L["NoCataCurrency01"] = "Recompensa de missões\rdiárias de culinária."
+--- Justice Points
+L["NoCataCurrency02"] = "Ganhe ao derrotar chefes de\rmasmorras ou raids antigas."
+--- Valor Points
+L["NoCataCurrency03"] = "Ganhe ao derrotar chefes de\rraids recentes ou completando\rmasmorras heróicas."
+
 ------ Shadowlands pack
 --- Adventure Campaign Progress
 L["NoSLCurrency13"] = "Obtido através da Mesa de Comando."
@@ -187,4 +197,5 @@ L["misc"] = "Moeda [Outros]"
 L["shadowl"] = "Moeda [Shadowlands]"
 L["dragonf"] = "Moeda [Dragonflight]"
 L["wotlk"] = "Moeda [WotLK]"
+L["cata"] = "Moeda [Cataclysm]"
 end

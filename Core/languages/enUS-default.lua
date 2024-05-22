@@ -12,6 +12,16 @@ L["NoDFCurrency01"] = "You need the title 'the Worldbreaker' to acquire it."
 L["DFSeason4"] = "Obtainable in Dragonflight Season 4."
 L["DFMOPRemix"] = "Obtainable only during the MoP Remix event."
 
+------ Cataclysm Classic pack
+--- Cata Defauls
+L["CataOnly"] = "Available in Cataclysm."
+--- Chef's Award
+L["NoCataCurrency01"] = "Earned by completing daily\rcooking quests."
+--- Justice Points
+L["NoCataCurrency02"] = "Earned for defeating dungeon \ror older raid bosses."
+--- Valor Points
+L["NoCataCurrency03"] = "Earned for defeating recent raid bosses\ror completing heroic Dungeon."
+
 ------ Shadowlands pack
 --- Adventure Campaign Progress
 L["NoSLCurrency13"] = "Obtainable through Command Table."
@@ -184,3 +194,4 @@ L["misc"] = "Currency [Misc]"
 L["shadowl"] = "Currency [Shadowlands]"
 L["dragonf"] = "Currency [Dragonflight]"
 L["wotlk"] = "Currency [WotLK]"
+L["cata"] = "Currency [Cataclysm]"

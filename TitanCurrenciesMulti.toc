@@ -41,7 +41,6 @@ c.Dragonflight\TitanElementalOverflow.lua
 c.Dragonflight\TitanEmeraldDewdrop.lua
 c.Dragonflight\TitanFlightstones.lua
 c.Dragonflight\TitanMagmote.lua
-c.Misc\TitanMopRemix.lua
 c.Dragonflight\TitanMysteriousFragment.lua
 c.Dragonflight\TitanParacausalFlakes.lua
 c.Dragonflight\TitanPArcaneEnergy.lua
@@ -99,6 +98,7 @@ c.Misc\TitanHonor.lua
 c.Misc\TitanLovelyCharm.lua
 c.Misc\TitanLoveToken.lua
 c.Misc\TitanMarkofHonor.lua
+c.Misc\TitanMopRemix.lua
 c.Misc\TitanShinyPetCharm.lua
 c.Misc\TitanSpookySupplies.lua
 c.Misc\TitanTimewarpedBadge.lua
