@@ -77,6 +77,7 @@ c.Legacy\MoP\TitanGoodFortune.lua
 c.Legacy\MoP\TitanIronpawToken.lua
 c.Legacy\MoP\TitanLGoodFortune.lua
 c.Legacy\MoP\TitanMoguRune.lua
+c.Legacy\MoP\TitanShanzeRitualStone.lua
 c.Legacy\MoP\TitanTimelessCoin.lua
 c.Legacy\MoP\TitanWarforgedSeal.lua
 c.Legacy\WoD\TitanApexisCrystal.lua
