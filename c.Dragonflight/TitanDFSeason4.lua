@@ -66,3 +66,12 @@ L:CreateSimpleItemPlugin({
 	expName = L["mDragonflight"],
 	category = "CATEGORY_DRAGON"
 })
+
+-- Antique Bronze Bullion
+L:CreateSimpleItemPlugin({
+	itemId = 213089,
+	titanId = "TITAN_ANTBRONZBULL",
+	noCurrencyText = L["DragonFOnly"],
+	expName = L["mDragonflight"],
+	category = "CATEGORY_DRAGON"
+})
