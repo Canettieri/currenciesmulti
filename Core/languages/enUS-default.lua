@@ -17,6 +17,8 @@ L["DFMOPRemix"] = "Obtainable only during the MoP Remix event."
 L["CataOnly"] = "Available in Cataclysm."
 --- Chef's Award
 L["NoCataCurrency01"] = "Earned by completing daily\rcooking quests."
+--- Dalaran Jewelcrafter's Token
+L["NoCataCurrency04"] = "Rewarded from level 80\rJewelcrafting daily quests in Dalaran"
 --- Justice Points
 L["NoCataCurrency02"] = "Earned for defeating dungeon \ror older raid bosses."
 --- Valor Points
@@ -69,6 +71,8 @@ L["NoMaxOil"] = "Available through Shipyard in\rWarlords of Draenor."
 ------ Events pack
 --- Brewfest Prize Token
 L["NoToken"] = "Available through the event\rBrewfest."
+--- Burning Blossom
+L["NoEventCurrency01"] = "Available through the event\rMidsummer Fire Festival."
 --- Coin of Ancestry
 L["NoAncestry"] = "Available through the event\rLunar Festival."
 --- Darkmoon Prize Ticket

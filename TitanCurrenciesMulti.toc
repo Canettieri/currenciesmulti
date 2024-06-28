@@ -91,6 +91,7 @@ c.Legacy\WotLK\TitanChampionsSeal.lua
 c.Legacy\WotLK\TitanEpicureansAward.lua
 c.Misc\TitanBrawlersGold.lua
 c.Misc\TitanBrewfestToken.lua
+c.Misc\TitanBurningBlossom.lua
 c.Misc\TitanCoinAncestry.lua
 c.Misc\TitanConquest.lua
 c.Misc\TitanDarkmoonTicket.lua
