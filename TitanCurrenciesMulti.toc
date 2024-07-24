@@ -1,4 +1,4 @@
-## Interface: 100207
+## Interface: 110000
 ## Title: Titan Panel [|cff336699Currencies|r] Multi! |cff00aa00@project-version@|r
 ## Notes: Track a lot of currencies! Right-click on Titan Panel, go to "Information" tab and enjoy.
 ## Notes-ptBR: Rastreie várias moedas! Clique com o botão direito no Painel Titan, vá na aba "Informação" e aproveite.
@@ -77,7 +77,6 @@ c.Legacy\MoP\TitanGoodFortune.lua
 c.Legacy\MoP\TitanIronpawToken.lua
 c.Legacy\MoP\TitanLGoodFortune.lua
 c.Legacy\MoP\TitanMoguRune.lua
-c.Legacy\MoP\TitanShanzeRitualStone.lua
 c.Legacy\MoP\TitanTimelessCoin.lua
 c.Legacy\MoP\TitanWarforgedSeal.lua
 c.Legacy\WoD\TitanApexisCrystal.lua
