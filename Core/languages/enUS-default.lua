@@ -8,7 +8,6 @@ local _, L = ...;
 
 ------ The War Within pack
 L["TWWEventOnly"] = "Obtainable through The War Within\rPre-Patch Event."
-L["NoDFCurrency01"] = "You need the title 'the Worldbreaker' to acquire it."
 
 ------ Dragonflight pack
 L["DragonEventOnly"] = "Obtainable through Dragonflight\rPre-Patch Event."
