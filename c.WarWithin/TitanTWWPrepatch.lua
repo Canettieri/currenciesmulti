@@ -16,10 +16,28 @@ L:CreateSimpleCurrencyPlugin({
 	category = "CATEGORY_TWW",
 })
 
+-- Memory of Northrend
+L:CreateSimpleItemPlugin({
+	itemId = 223642,
+	titanId = "TITAN_MEMNORTHREND",
+	noCurrencyText = L["TWWEventOnly"],
+	expName = L["mWarWithin"],
+	category = "CATEGORY_TWW"
+})
+
 -- Memory of Kalimdor
 L:CreateSimpleItemPlugin({
 	itemId = 223644,
 	titanId = "TITAN_MEMKALIMDOR",
+	noCurrencyText = L["TWWEventOnly"],
+	expName = L["mWarWithin"],
+	category = "CATEGORY_TWW"
+})
+
+-- Memory of the Eastern Kingdoms
+L:CreateSimpleItemPlugin({
+	itemId = 223646,
+	titanId = "TITAN_MEMEASTKING",
 	noCurrencyText = L["TWWEventOnly"],
 	expName = L["mWarWithin"],
 	category = "CATEGORY_TWW"
