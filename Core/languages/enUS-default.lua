@@ -5,6 +5,10 @@
 --]]
 
 local _, L = ...;
+
+------ The War Within pack
+L["TWWEventOnly"] = "Obtainable through The War Within\rPre-Patch Event."
+
 ------ Dragonflight pack
 L["DragonEventOnly"] = "Obtainable through Dragonflight\rPre-Patch Event."
 L["DragonFPvP"] = "Obtainable through Dragon Isles\rPvP quests."
@@ -173,6 +177,7 @@ L["mOther"] = "[|cFF198ae0Others|r]"
 L["mBfA"] = "[|cFF198ae0BfA|r]"
 L["mShadowlands"] = "[|cFF198ae0Shadowlands|r]"
 L["mDragonflight"] = "[|cFF198ae0Dragonflight|r]"
+L["mWarWithin"] = "[|cFF198ae0The War Within|r]"
 L["mMoPRemix"] = "[|cFF198ae0MoP Remix|r]"
 L["info"] = "|cFFFFFFFF[Information]|r"
 L["totalAcquired"] = "Total acquired: "
@@ -197,5 +202,6 @@ L["legacy"] = "Currency [Legacy]"
 L["misc"] = "Currency [Misc]"
 L["shadowl"] = "Currency [Shadowlands]"
 L["dragonf"] = "Currency [Dragonflight]"
+L["warwithin"] = "Currency [The War Within]"
 L["wotlk"] = "Currency [WotLK]"
 L["cata"] = "Currency [Cataclysm]"
