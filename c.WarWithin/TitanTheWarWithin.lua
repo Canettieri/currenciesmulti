@@ -11,7 +11,7 @@ local _, L = ...;
 L:CreateSimpleCurrencyPlugin({
 	currencyId = 3089,
 	titanId = "TITAN_RESIDMEMORIES",
-	noCurrencyText = L["TWWEventOnly"],
+	noCurrencyText = L["NoTWWCurrency01"],
 	expName = L["mWarWithin"],
 	category = "CATEGORY_TWW",
 })
@@ -20,7 +20,7 @@ L:CreateSimpleCurrencyPlugin({
 L:CreateSimpleItemPlugin({
 	itemId = 223642,
 	titanId = "TITAN_MEMNORTHREND",
-	noCurrencyText = L["TWWEventOnly"],
+	noCurrencyText = L["NoTWWCurrency01"],
 	expName = L["mWarWithin"],
 	category = "CATEGORY_TWW"
 })
@@ -29,7 +29,7 @@ L:CreateSimpleItemPlugin({
 L:CreateSimpleItemPlugin({
 	itemId = 223644,
 	titanId = "TITAN_MEMKALIMDOR",
-	noCurrencyText = L["TWWEventOnly"],
+	noCurrencyText = L["NoTWWCurrency01"],
 	expName = L["mWarWithin"],
 	category = "CATEGORY_TWW"
 })
@@ -38,7 +38,7 @@ L:CreateSimpleItemPlugin({
 L:CreateSimpleItemPlugin({
 	itemId = 223646,
 	titanId = "TITAN_MEMEASTKING",
-	noCurrencyText = L["TWWEventOnly"],
+	noCurrencyText = L["NoTWWCurrency01"],
 	expName = L["mWarWithin"],
 	category = "CATEGORY_TWW"
 })

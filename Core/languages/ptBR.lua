@@ -7,6 +7,9 @@
 
 local _, L = ...;
 if GetLocale() == "ptBR" then
+------ The War Within pack
+L["NoTWWCurrency01"] = "Obtida através do evento de\rpré-patch de The War Within."
+
 ------ Dragonflight pack
 L["DragonEventOnly"] = "Obtida através do evento de\rPré-Patch do Dragonflight."
 L["DragonFPvP"] = "Obtida através de quests PVP nas\rIlhas do Dragão."
@@ -200,6 +203,7 @@ L["legacy"] = "Moeda [Legado]"
 L["misc"] = "Moeda [Outros]"
 L["shadowl"] = "Moeda [Shadowlands]"
 L["dragonf"] = "Moeda [Dragonflight]"
+L["warwithin"] = "Moeda [The War Within]"
 L["wotlk"] = "Moeda [WotLK]"
 L["cata"] = "Moeda [Cataclysm]"
 end
