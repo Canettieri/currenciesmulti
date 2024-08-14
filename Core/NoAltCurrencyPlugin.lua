@@ -7,6 +7,7 @@
 
 local ADDON_NAME, L = ...;
 L.Elib = LibStub("Elib-4.0").Register
+local GetAddOnMetadata = C_AddOns and C_AddOns.GetAddOnMetadata or GetAddOnMetadata
 local version = GetAddOnMetadata(ADDON_NAME, "Version")
 
 local function GetCharTable(titanId)
