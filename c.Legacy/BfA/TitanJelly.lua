@@ -7,6 +7,7 @@ Special Thanks to Eliote.
 
 local ADDON_NAME, L = ...;
 local ACE = LibStub("AceLocale-3.0"):GetLocale("Titan", true)
+local GetAddOnMetadata = C_AddOns and C_AddOns.GetAddOnMetadata or GetAddOnMetadata
 local version = GetAddOnMetadata(ADDON_NAME, "Version")
 local ID = "TITAN_JELLYM"
 local thinJelly = 0
