@@ -126,4 +126,7 @@ c.Shadowlands\TitanStygia.lua
 c.Shadowlands\TitanStygianEmber.lua
 c.Shadowlands\TitanTowerKnowledge.lua
 c.Shadowlands\TitanValor.lua
-c.WarWithin\TitanTheWarWithin.lua
+c.WarWithin\TitanArtisansAcuity.lua
+c.WarWithin\TitanResonanceCrystals.lua
+c.WarWithin\TitanTheWarWithinPrepatch.lua
+

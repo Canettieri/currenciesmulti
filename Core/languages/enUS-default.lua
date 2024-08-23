@@ -6,6 +6,7 @@
 
 local _, L = ...;
 ------ The War Within pack
+L["NoTWWCurrency"] = "Obtainable in The War Within"
 L["NoTWWCurrency01"] = "Obtainable through The War Within\rPre-Patch Event."
 
 ------ Dragonflight pack
