@@ -130,5 +130,6 @@ c.WarWithin\TitanArtisansAcuity.lua
 c.WarWithin\TitanProfessionKnowledge.lua
 c.WarWithin\TitanResonanceCrystals.lua
 c.WarWithin\TitanSizzlingCinderpollen.lua
+c.WarWithin\TitanValorstones.lua
 c.WarWithin\TitanTheWarWithinPrepatch.lua
 
