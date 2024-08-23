@@ -10,7 +10,7 @@ local _, L = ...;
 -- Khaz Algar Alchemy Knowledge
 L:CreateSimpleCurrencyPlugin({
 	currencyId = 2785,
-	titanId = "TITAN_KABSKNOW",
+	titanId = "TITAN_KAALCHKNOW",
 	noCurrencyText = L["NoTWWCurrency"],
 	expName = L["mWarWithin"],
 	category = "CATEGORY_TWW",
