@@ -10,7 +10,7 @@ local _, L = ...;
 
 -- Weathered Harbinger Crests
 L:CreateSimpleCurrencyPlugin({
-	currencyId = 2918,
+	currencyId = 2914,
 	titanId = "TITAN_WEATHHARBCREST",
 	noCurrencyText = L["TWWSeason1"],
 	expName = L["mWarWithin"],
@@ -20,7 +20,7 @@ L:CreateSimpleCurrencyPlugin({
 
 -- Carved Harbinger Crests
 L:CreateSimpleCurrencyPlugin({
-	currencyId = 2919,
+	currencyId = 2915,
 	titanId = "TITAN_CARVEDHARBCREST",
 	noCurrencyText = L["TWWSeason1"],
 	expName = L["mWarWithin"],
@@ -30,7 +30,7 @@ L:CreateSimpleCurrencyPlugin({
 
 -- Runed Harbinger Crests
 L:CreateSimpleCurrencyPlugin({
-	currencyId = 2920,
+	currencyId = 2916,
 	titanId = "TITAN_RUNEDHARBCREST",
 	noCurrencyText = L["TWWSeason1"],
 	expName = L["mWarWithin"],
@@ -40,7 +40,7 @@ L:CreateSimpleCurrencyPlugin({
 
 -- Gilded Harbinger Crests
 L:CreateSimpleCurrencyPlugin({
-	currencyId = 2921,
+	currencyId = 2917,
 	titanId = "TITAN_GILDHARBCREST",
 	noCurrencyText = L["TWWSeason1"],
 	expName = L["mWarWithin"],
