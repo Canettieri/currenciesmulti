@@ -14,4 +14,5 @@ L:CreateSimpleCurrencyPlugin({
 	noCurrencyText = L["NoTWWCurrency"],
 	expName = L["mWarWithin"],
 	category = "CATEGORY_TWW",
+	forceMax = true,
 })
