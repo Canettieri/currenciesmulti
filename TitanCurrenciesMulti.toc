@@ -132,5 +132,5 @@ c.WarWithin\TitanProfessionKnowledge.lua
 c.WarWithin\TitanResonanceCrystals.lua
 c.WarWithin\TitanSizzlingCinderpollen.lua
 c.WarWithin\TitanValorstones.lua
-c.WarWithin\TitanTheWarWithinPrepatch.lua
-
+c.WarWithin\TitanTWWPrepatch.lua
+c.WarWithin\TitanTWWSeason1.lua
