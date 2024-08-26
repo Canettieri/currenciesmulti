@@ -7,8 +7,10 @@
 
 local _, L = ...;
 if GetLocale() == "ptBR" then
------- The War Within pack
+    ------ The War Within pack
+L["NoTWWCurrency"] = "Obtida em The War Within."
 L["NoTWWCurrency01"] = "Obtida através do evento de\rpré-patch de The War Within."
+L["TWWSeason1"] = "Obtida na temporada 1 de The War\rWithin."
 
 ------ Dragonflight pack
 L["DragonEventOnly"] = "Obtida através do evento de\rPré-Patch do Dragonflight."
