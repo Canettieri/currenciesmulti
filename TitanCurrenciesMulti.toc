@@ -129,7 +129,6 @@ c.Shadowlands\TitanValor.lua
 c.WarWithin\TitanArtisansAcuity.lua
 c.WarWithin\TitanMereldarDerbyMark.lua
 c.WarWithin\TitanKej.lua
-c.WarWithin\TitanProfessionKnowledge.lua
 c.WarWithin\TitanResonanceCrystals.lua
 c.WarWithin\TitanRestoredCofferKey.lua
 c.WarWithin\TitanSizzlingCinderpollen.lua
