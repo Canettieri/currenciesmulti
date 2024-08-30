@@ -5,14 +5,16 @@ Author: Canettieri
 Special Thanks to Eliote.
 --]]
 
-local _, L = ...;
-local ID = "TITAN_FLHTSM"
-local CURRENCY_ID = 2245
+-- Flightstones have been zeroed out and are now obsolete
 
-L:CreateSimpleCurrencyPlugin({
-	currencyId = CURRENCY_ID,
-	titanId = ID,
-	noCurrencyText = L["DragonFOnly"],
-	expName = L["mDragonflight"],
-	category = "CATEGORY_DRAGON"
-})
+--local _, L = ...;
+--local ID = "TITAN_FLHTSM"
+--local CURRENCY_ID = 2245
+--
+--L:CreateSimpleCurrencyPlugin({
+--	currencyId = CURRENCY_ID,
+--	titanId = ID,
+--	noCurrencyText = L["DragonFOnly"],
+--	expName = L["mDragonflight"],
+--	category = "CATEGORY_DRAGON"
+--})
