@@ -28,7 +28,6 @@ Core\SimpleCurrencyPlugin.lua
 Core\SimpleItemPlugin.lua
 c.Dragonflight\TitanBloodyTokens.lua
 c.Dragonflight\TitanCobaltAssembly.lua
-c.Dragonflight\TitanDFSeason4.lua
 c.Dragonflight\TitanDGlyphEmbers.lua
 c.Dragonflight\TitanDilatedTimePod.lua
 c.Dragonflight\TitanDISupplies.lua
@@ -39,7 +38,6 @@ c.Dragonflight\TitanDreamsurgeCoalescence.lua
 c.Dragonflight\TitanEffigyAdornments.lua
 c.Dragonflight\TitanElementalOverflow.lua
 c.Dragonflight\TitanEmeraldDewdrop.lua
-c.Dragonflight\TitanFlightstones.lua
 c.Dragonflight\TitanMagmote.lua
 c.Dragonflight\TitanMysteriousFragment.lua
 c.Dragonflight\TitanParacausalFlakes.lua
@@ -99,7 +97,6 @@ c.Misc\TitanHonor.lua
 c.Misc\TitanLovelyCharm.lua
 c.Misc\TitanLoveToken.lua
 c.Misc\TitanMarkofHonor.lua
-c.Misc\TitanMopRemix.lua
 c.Misc\TitanShinyPetCharm.lua
 c.Misc\TitanSpookySupplies.lua
 c.Misc\TitanTimewarpedBadge.lua

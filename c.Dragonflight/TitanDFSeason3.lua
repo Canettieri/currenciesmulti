@@ -6,7 +6,7 @@ Author: Canettieri
 Special Thanks to Protuhj.
 --]]
 
-local _, L = ...;
+-- local _, L = ...;
 -- These are no longer obtainable, since season 3 is over
 
 -- Whelpling's Dreaming Crests

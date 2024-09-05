@@ -14,8 +14,6 @@ L["TWWSeason1"] = "Obtainable in The War Within Season 1."
 L["DragonEventOnly"] = "Obtainable through Dragonflight\rPre-Patch Event."
 L["DragonFPvP"] = "Obtainable through Dragon Isles\rPvP quests."
 L["NoDFCurrency01"] = "You need the title 'the Worldbreaker' to acquire it."
-L["DFSeason4"] = "Obtainable in Dragonflight Season 4."
-L["DFMOPRemix"] = "Obtainable only during the MoP Remix event."
 
 ------ Cataclysm Classic pack
 --- Cata Defauls
