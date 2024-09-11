@@ -124,13 +124,14 @@ c.Shadowlands\TitanStygianEmber.lua
 c.Shadowlands\TitanTowerKnowledge.lua
 c.Shadowlands\TitanValor.lua
 c.WarWithin\TitanArtisansAcuity.lua
-c.WarWithin\TitanMereldarDerbyMark.lua
 c.WarWithin\TitanKej.lua
+c.WarWithin\TitanMereldarDerbyMark.lua
+c.WarWithin\TitanOddGlobOfWax.lua
 c.WarWithin\TitanRadiantEchoes.lua
 c.WarWithin\TitanResonanceCrystals.lua
 c.WarWithin\TitanRestoredCofferKey.lua
 c.WarWithin\TitanSizzlingCinderpollen.lua
-c.WarWithin\TitanValorstones.lua
 c.WarWithin\TitanTWWPrepatch.lua
 c.WarWithin\TitanTWWSeason1.lua
 c.WarWithin\TitanUndercoin.lua
+c.WarWithin\TitanValorstones.lua
