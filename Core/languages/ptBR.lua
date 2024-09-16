@@ -22,8 +22,8 @@ L["NoDFCurrency01"] = "Você precisa do título 'o Quebramundo' para poder adqui
 L["CataOnly"] = "Disponível no Cataclysm."
 --- Chef's Award
 L["NoCataCurrency01"] = "Recompensa de missões\rdiárias de culinária."
---- Dalaran Jewelcrafter's Token
-L["NoCataCurrency04"] = "Recompensa de missões de\rJoalheria do nível 80 em Dalaran."
+--- Illustrious Jewelcrafter's Token
+L["NoCataCurrency04"] = "Recompensa de missões diárias de\rjoalheria na capital da sua facção."
 --- Justice Points
 L["NoCataCurrency02"] = "Ganhe ao derrotar chefes de\rmasmorras ou raids antigas."
 --- Valor Points
