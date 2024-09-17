@@ -28,6 +28,7 @@ c.Legacy\Cataclysm\TitanChefAward.lua
 c.Legacy\Cataclysm\TitanIllustriousJCToken.lua
 c.Legacy\Cataclysm\TitanJusticePoints.lua
 c.Legacy\Cataclysm\TitanValorPoints.lua
+c.Legacy\Cataclysm\TitanMarkWorldTree.lua
 c.Legacy\WotLK\TitanArenaPoints.lua
 c.Legacy\WotLK\TitanBadgeofJustice.lua
 c.Legacy\WotLK\TitanChampionsSeal.lua
