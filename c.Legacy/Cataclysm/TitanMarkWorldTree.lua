@@ -14,5 +14,5 @@ L:CreateSimpleCurrencyPlugin({
 	titanId = ID,
 	noCurrencyText = L["NoWorldTree"],
 	expName = L["mCata"],
-	category = "CATEGORY_LEGACY"
+	category = "CATEGORY_CATA"
 })
