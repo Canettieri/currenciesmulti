@@ -5,9 +5,8 @@
 --]]
 
 local _, L = ...;
-
 ------ Anniversary pack
-L["No20thCurrency"] = "Obtainable during the 20th Anniversary event Oct 22, 2024 to Jan 7, 2025"
+L["No20thCurrency"] = "Obtainable during the 20th\rAnniversary event Oct 22,\r2024 to Jan 7, 2025."
 
 ------ The War Within pack
 L["NoTWWCurrency"] = "Obtainable in The War Within."
