@@ -86,6 +86,7 @@ c.Legacy\WoD\TitanPrimalSpirit.lua
 c.Legacy\WoD\TitanTemperedFate.lua
 c.Legacy\WotLK\TitanChampionsSeal.lua
 c.Legacy\WotLK\TitanEpicureansAward.lua
+c.Misc\TitanAnniversary.lua
 c.Misc\TitanBrawlersGold.lua
 c.Misc\TitanBrewfestToken.lua
 c.Misc\TitanBurningBlossom.lua
