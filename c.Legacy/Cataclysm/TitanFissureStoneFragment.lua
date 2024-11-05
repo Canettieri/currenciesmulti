@@ -12,7 +12,7 @@ local CURRENCY_ID = 3148
 L:CreateSimpleCurrencyPlugin({
 	currencyId = CURRENCY_ID,
 	titanId = ID,
-	noCurrencyText = L["NoFissStone"],
+	noCurrencyText = L["NoCataCurrency04"],
 	expName = L["mCata"],
-	category = (LE_EXPANSION_LEVEL_CURRENT <= LE_EXPANSION_CATACLYSM) and "CATEGORY_CATA" or "CATEGORY_LEGACY"
+	category = "CATEGORY_CATA"
 })

@@ -29,6 +29,8 @@ L["NoCataCurrency04"] = "Rewarded from jewelcrafting\rdaily quests in your facti
 L["NoCataCurrency02"] = "Earned for defeating dungeon \ror older raid bosses."
 --- Valor Points
 L["NoCataCurrency03"] = "Earned for defeating recent raid bosses\ror completing heroic Dungeon."
+--- Fissure Stone Fragment
+L["NoCataCurrency04"] = "Available through Protocol Inferno\rHeroic Dungeons."
 
 ------ Shadowlands pack
 --- Adventure Campaign Progress
@@ -129,8 +131,6 @@ L["NoBloody"] = "Available using |cff0070ddCenser of\rEternal Agony|r|cFFFF2e2e 
 L["NoIronpaw"] = "Available through cooking quests in Pandaria."
 --- Mark of the World Tree
 L["NoWorldTree"] = "Available through daily\rquests in Mount Hyjal."
---- Fissure Stone Fragment
-L["NoFissStone"] = "Available through Protocol Inferno Heroic Dungeons."
 --- Timeless Coin
 L["NoTimeless"] = "Available through Timeless Isle."
 

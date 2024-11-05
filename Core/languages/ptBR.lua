@@ -31,6 +31,8 @@ L["NoCataCurrency04"] = "Recompensa de missões diárias de\rjoalheria na capita
 L["NoCataCurrency02"] = "Ganhe ao derrotar chefes de\rmasmorras ou raids antigas."
 --- Valor Points
 L["NoCataCurrency03"] = "Ganhe ao derrotar chefes de\rraids recentes ou completando\rmasmorras heróicas."
+--- Fissure Stone Fragment
+L["NoCataCurrency04"] = "Disponível através da masmorra\rheróica Protocolo Inferno."
 
 ------ Shadowlands pack
 --- Adventure Campaign Progress
