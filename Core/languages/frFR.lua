@@ -66,6 +66,8 @@ L["NoEpicurean"] = "Disponible via les quêtes de cuisine dans le vieux Dalaran\
 L["NoIronpaw"] = "Disponible via les quêtes de cuisine de la Pandarie."
 --- Mark of the World Tree
 L["NoWorldTree"] = "Disponible via les quêtes journalières du Mont Hyjal."
+--- Fissure Stone Fragment
+L["NoFissStone"] = "Disponible via Protocole Inferno Donjons héroïques"
 --- Timeless Coin
 L["NoTimeless"] = "Disponible sur l’île du Temps figé."
 

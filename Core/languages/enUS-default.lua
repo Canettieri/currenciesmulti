@@ -129,6 +129,8 @@ L["NoBloody"] = "Available using |cff0070ddCenser of\rEternal Agony|r|cFFFF2e2e 
 L["NoIronpaw"] = "Available through cooking quests in Pandaria."
 --- Mark of the World Tree
 L["NoWorldTree"] = "Available through daily\rquests in Mount Hyjal."
+--- Fissure Stone Fragment
+L["NoFissStone"] = "Available through Protocol Inferno Heroic Dungeons."
 --- Timeless Coin
 L["NoTimeless"] = "Available through Timeless Isle."
 
