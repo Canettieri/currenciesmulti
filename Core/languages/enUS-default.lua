@@ -23,14 +23,16 @@ L["NoDFCurrency01"] = "You need the title 'the Worldbreaker' to acquire it."
 L["CataOnly"] = "Available in Cataclysm."
 --- Chef's Award
 L["NoCataCurrency01"] = "Earned by completing daily\rcooking quests."
---- Illustrious Jewelcrafter's Token
-L["NoCataCurrency04"] = "Rewarded from jewelcrafting\rdaily quests in your faction's city."
 --- Justice Points
 L["NoCataCurrency02"] = "Earned for defeating dungeon \ror older raid bosses."
 --- Valor Points
 L["NoCataCurrency03"] = "Earned for defeating recent raid bosses\ror completing heroic Dungeon."
+--- Illustrious Jewelcrafter's Token
+L["NoCataCurrency04"] = "Rewarded from jewelcrafting\rdaily quests in your faction's city."
 --- Fissure Stone Fragment
-L["NoCataCurrency04"] = "Available through Protocol Inferno\rHeroic Dungeons."
+L["NoCataCurrency05"] = "Available through Protocol Inferno\rHeroic Dungeons."
+--- Conquest Points
+L["NoCataCurrency06"] = "Earned from doing ranked arena\rmatches and rated battlegrounds."
 
 ------ Shadowlands pack
 --- Adventure Campaign Progress

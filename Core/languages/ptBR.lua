@@ -25,14 +25,16 @@ L["NoDFCurrency01"] = "Você precisa do título 'o Quebramundo' para poder adqui
 L["CataOnly"] = "Disponível no Cataclysm."
 --- Chef's Award
 L["NoCataCurrency01"] = "Recompensa de missões\rdiárias de culinária."
---- Illustrious Jewelcrafter's Token
-L["NoCataCurrency04"] = "Recompensa de missões diárias de\rjoalheria na capital da sua facção."
 --- Justice Points
 L["NoCataCurrency02"] = "Ganhe ao derrotar chefes de\rmasmorras ou raids antigas."
 --- Valor Points
 L["NoCataCurrency03"] = "Ganhe ao derrotar chefes de\rraids recentes ou completando\rmasmorras heróicas."
+--- Illustrious Jewelcrafter's Token
+L["NoCataCurrency04"] = "Recompensa de missões diárias de\rjoalheria na capital da sua facção."
 --- Fissure Stone Fragment
-L["NoCataCurrency04"] = "Disponível através da masmorra\rheróica Protocolo Inferno."
+L["NoCataCurrency05"] = "Disponível através da masmorra\rheróica Protocolo Inferno."
+--- Conquest Points
+L["NoCataCurrency06"] = "Recompensa de campos de\rbatalha e arena ranqueados."
 
 ------ Shadowlands pack
 --- Adventure Campaign Progress
