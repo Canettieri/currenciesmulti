@@ -182,6 +182,7 @@ function L:CreateNoAltCurrencyPlugin(params)
 		icon = ICON,
 		category = params.category,
 		version = version,
+		onClick = L.DefaultCurrencyClickHandler,
 		getButtonText = GetButtonText,
 		eventsTable = eventsTable,
 		prepareMenu = prepMenu,
