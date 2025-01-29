@@ -14,4 +14,4 @@ L:CreateSimpleItemPlugin({
 	noCurrencyText = L["NoTWWCurrency"],
 	expName = L["mWarWithin"],
 	category = "CATEGORY_TWW"
-
+})
