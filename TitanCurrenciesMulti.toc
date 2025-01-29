@@ -130,6 +130,7 @@ c.WarWithin\TitanKej.lua
 c.WarWithin\TitanMereldarDerbyMark.lua
 c.WarWithin\TitanOddGlobOfWax.lua
 c.WarWithin\TitanRadiantEchoes.lua
+c.WarWithin\TitanRadiantRemnant.lua
 c.WarWithin\TitanResonanceCrystals.lua
 c.WarWithin\TitanRestoredCofferKey.lua
 c.WarWithin\TitanSizzlingCinderpollen.lua
