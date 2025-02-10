@@ -90,3 +90,9 @@ end
 function L.PrepareCurrenciesMenu(eddm, self, id)
 	return L.PrepareCurrenciesMenuBase(eddm, self, id, false)
 end
+
+function L.DefaultCurrencyClickHandler(self, button)
+	if (button == "LeftButton") then
+		ToggleCharacter("TokenFrame");
+	end
+end
