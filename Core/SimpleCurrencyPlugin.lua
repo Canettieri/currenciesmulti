@@ -99,11 +99,10 @@ function L:CreateSimpleCurrencyPlugin(params)
 	local eventsTable = {
 		CURRENCY_DISPLAY_UPDATE = function(self, ...)
 			local currencyID = ...;
-			-- If the currency is warband, then we can't filter out events where the currencyID argument is nil
+			-- If the currency is account-wide, then we can't filter out events where the currencyID argument is nil
 			-- We can't rely on the ACCOUNT_CHARACTER_CURRENCY_DATA_RECEIVED event below, because it doesn't fire reliably following a transfer
-			if isAccountTransferable then
-				Update(self)
-			elseif currencyID == params.currencyId then
+			-- For regular currencies, try and reduce how often things update
+			if isAccountTransferable or (currencyID == params.currencyId) then
 				Update(self)
 			end
 		end,
