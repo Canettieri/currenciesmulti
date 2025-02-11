@@ -24,9 +24,7 @@ function L:CreateSimpleCurrencyPlugin(params)
 	-- the account total display on or off (Update() isn't called when an option is toggled)
 	-- These values only track ALT amounts
 	local warbandAltTotal = 0
-	local warbandAltLastTotal
 	local warbandAltStartTotal
-	local warbandAltSessionDelta = 0
 	-- Default to true, since the request won't work until at least PLAYER_ENTERING_WORLD
 	local accountDataRequested = true
 
@@ -85,17 +83,9 @@ function L:CreateSimpleCurrencyPlugin(params)
 				if warbandAltTotal and not warbandAltStartTotal then
 					warbandAltStartTotal = warbandAltTotal
 				end
-				-- This is basically used to track if you're transferring currency from alts, so it doesn't get counted
-				-- towards your session earned amount, since we want that value to only be positive
-				if params.currencyId == 3090 then
-					print("start total: " .. tostring(warbandAltStartTotal))
-					print("warbandAltTotal: " .. tostring(warbandAltTotal))
-				end
-				warbandAltSessionDelta = warbandAltStartTotal - warbandAltTotal
 			elseif not accountDataRequested then
-				C_CurrencyInfo.RequestCurrencyDataForAccountCharacters()
 				accountDataRequested = true
-				print("Requesting data")
+				C_CurrencyInfo.RequestCurrencyDataForAccountCharacters()
 			end
 		end
 		currencyCount = amount or 0
@@ -107,15 +97,14 @@ function L:CreateSimpleCurrencyPlugin(params)
 	end
 	-----------------------------------------------
 	local eventsTable = {
-		CURRENCY_DISPLAY_UPDATE = function(self, currencyType, ...)
-			if currencyType == params.currencyId then
-				print("CURRENCY_DISPLAY_UPDATE: " .. tostring(currencyType))
-				-- if isAccountTransferable then
-				
-				-- 	C_CurrencyInfo.RequestCurrencyDataForAccountCharacters()
-				-- else
-					Update(self)
-				-- end
+		CURRENCY_DISPLAY_UPDATE = function(self, ...)
+			local currencyID = ...;
+			-- If the currency is warband, then we can't filter out events where the currencyID argument is nil
+			-- We can't rely on the ACCOUNT_CHARACTER_CURRENCY_DATA_RECEIVED event below, because it doesn't fire reliably following a transfer
+			if isAccountTransferable then
+				Update(self)
+			elseif currencyID == params.currencyId then
+				Update(self)
 			end
 		end,
 		PLAYER_ENTERING_WORLD = function(self, ...)
@@ -133,10 +122,9 @@ function L:CreateSimpleCurrencyPlugin(params)
 			Update(self)
 		end,
 		ACCOUNT_CHARACTER_CURRENCY_DATA_RECEIVED = function(self, ...)
-			if params.currencyId == 3090 then
-				print("ACCOUNT_CHARACTER_CURRENCY_DATA_RECEIVED")
+			if isAccountTransferable then
+				Update(self)
 			end
-			Update(self)
 		end,
 	}
 	-----------------------------------------------
@@ -221,16 +209,29 @@ function L:CreateSimpleCurrencyPlugin(params)
 		end
 
 		local AddSeparator = TitanGetVar(params.titanId, "AddSeparator")
+		local showAccountTotal = TitanGetVar(params.titanId, "TotalBalanceBar") or false
 		GameTooltip:AddLine(" ")
 		GameTooltip:AddLine(L["info"])
-
-		if (TitanGetVar(params.titanId, "TotalBalanceBar") and (not warbandAltTotal or warbandAltTotal == 0)) or
-			(not currencyCount or currencyCount == 0) then
+		local hasCurrency = (currencyCount or 0 ) > 0
+		hasCurrency = showAccountTotal and (hasCurrency or ((warbandAltTotal or 0) > 0)) or hasCurrency
+		if (not hasCurrency) then
 			GameTooltip:AddLine("|cFFFF2e2e" .. params.noCurrencyText)
 		else
-			local currentText = AddSeparator and BreakUpLargeNumbers(currencyCount) or currencyCount
+			local totalLabel = L["totalAcquired"]
+			local dif = 0
+			local localCurrencyCount = currencyCount
+			local localStartCurrency = startcurrency
+			if isAccountTransferable and showAccountTotal then
+				localCurrencyCount = localCurrencyCount + warbandAltTotal
+				localStartCurrency = localStartCurrency + warbandAltStartTotal
+				totalLabel = L["warbandTotal"]
+			end
+			if localCurrencyCount and localStartCurrency then
+				dif = localCurrencyCount - localStartCurrency
+			end
+			local currentText = AddSeparator and BreakUpLargeNumbers(localCurrencyCount) or localCurrencyCount
 
-			GameTooltip:AddDoubleLine(L["totalAcquired"], TitanUtils_GetHighlightText(currentText))
+			GameTooltip:AddDoubleLine(totalLabel, TitanUtils_GetHighlightText(currentText))
 			if (currencyMaximum and currencyMaximum > 0) then
 				local localCountValue = (useTotalEarnedForMaxQty and totalSeasonalEarned) or currencyCount
 				local maxText = (AddSeparator and BreakUpLargeNumbers(currencyMaximum)) or currencyMaximum
@@ -239,18 +240,8 @@ function L:CreateSimpleCurrencyPlugin(params)
 				GameTooltip:AddDoubleLine(L["canGet"], TitanUtils_GetHighlightText(canGetText))
 			end
 
-			local dif = 0
-			local localCurrencyCount = currencyCount
-			local localStartCurrency = startcurrency
-			if isAccountTransferable and TitanGetVar(params.titanId, "TotalBalanceBar") then
-				localCurrencyCount = localCurrencyCount + warbandAltTotal
-				localStartCurrency = localStartCurrency + warbandAltStartTotal
-			end
-			if localCurrencyCount and localStartCurrency then
-				dif = localCurrencyCount - localStartCurrency
-			end
 			local difText = AddSeparator and BreakUpLargeNumbers(dif) or dif
-			local sessionValueText = "0" -- Cores da conta de valor
+			local sessionValueText = "0"
 			if dif == 0 then
 				sessionValueText = TitanUtils_GetHighlightText("0")
 			elseif dif > 0 then
