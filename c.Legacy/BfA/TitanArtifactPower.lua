@@ -18,14 +18,6 @@ local azeriteCount
 local azeriteMaximum
 local CHARCOLOR = "|c" .. RAID_CLASS_COLORS[select(2, UnitClass("player"))].colorStr .. "|r"
 -----------------------------------------------
-local function Util_StringComDefault(v,d)
-    if not v then
-        return d
-    end
-
-    return v
-end
------------------------------------------------
 local function UpdateAll(self)
     local activeAzeriteItemLocation = C_AzeriteItem.FindActiveAzeriteItem()
     if activeAzeriteItemLocation and activeAzeriteItemLocation:IsValid() then
@@ -42,7 +34,11 @@ end
 -----------------------------------------------
 local eventsTable = {
     CVAR_UPDATE = UpdateAll,
-    PLAYER_ENTERING_WORLD = UpdateAll,
+    PLAYER_ENTERING_WORLD = function(self, ...)
+        self.registry.menuText = L["mBfA"].." Titan|cFF66b1ea "..L["AzeriteTitle"].."|r" -- Fix for Titan bug that causes colors not to appear in the menu
+
+        UpdateAll(self)
+    end,
     PLAYER_EQUIPMENT_CHANGED = UpdateAll,
     AZERITE_ITEM_EXPERIENCE_CHANGED = UpdateAll,
     AZERITE_ITEM_POWER_LEVEL_CHANGED = UpdateAll,

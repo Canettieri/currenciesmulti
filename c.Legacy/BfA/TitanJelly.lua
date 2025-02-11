@@ -117,7 +117,7 @@ local eventsTable = {
 
 		startRoyal = getRoyal()
 		royalJelly = startRoyal
-
+		self.registry.menuText = L["mBfA"].." Titan|cFF66b1ea "..L["JellyTitle"].."|r" -- Fix for Titan bug that causes colors not to appear in the menu
 		TitanPanelButton_UpdateButton(self.registry.id)
 
 		self.BAG_UPDATE = function(self, bagID)

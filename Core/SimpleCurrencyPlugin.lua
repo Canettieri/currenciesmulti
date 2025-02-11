@@ -79,7 +79,7 @@ function L:CreateSimpleCurrencyPlugin(params)
 			PLAYER_FACTION = UnitFactionGroup("player")
 			PLAYER_CLASS_COLOR = "|c" .. RAID_CLASS_COLORS[select(2, UnitClass("player"))].colorStr
 
-			self.registry.menuText = params.expName .. " Titan|cFF66b1ea " .. CURRENCY_NAME .. "|r" -- Correção pra bug do Titan que faz as cores não aparecerem no menu
+			self.registry.menuText = params.expName .. " Titan|cFF66b1ea " .. CURRENCY_NAME .. "|r" -- Fix for Titan bug that causes colors not to appear in the menu
 
 			Update(self)
 		end,
