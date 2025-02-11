@@ -42,7 +42,7 @@ local function CreateTitle(id, text)
 	return info
 end
 
-function L.PrepareCurrenciesMenuBase(eddm, self, id, hasMax)
+function L.PrepareCurrenciesMenuBase(eddm, self, id, hasMax, isWarband)
 	eddm.UIDropDownMenu_AddButton(CreateTitle(id, TitanPlugins[id].menuText));
 	eddm.UIDropDownMenu_AddButton(CreateTitle(id, L["buttonText"]));
 
@@ -50,6 +50,10 @@ function L.PrepareCurrenciesMenuBase(eddm, self, id, hasMax)
 
 	if (hasMax) then
 		eddm.UIDropDownMenu_AddButton(CreateToggle(id, L["maxBar"], "MaxBar"));
+	end
+
+	if (isWarband) then
+		eddm.UIDropDownMenu_AddButton(CreateToggle(id, L["showWarbandTotal"], "TotalBalanceBar"));
 	end
 
 	eddm.UIDropDownMenu_AddButton({
@@ -88,7 +92,13 @@ function L.PrepareCurrenciesMenuBase(eddm, self, id, hasMax)
 end
 
 function L.PrepareCurrenciesMenu(eddm, self, id)
-	return L.PrepareCurrenciesMenuBase(eddm, self, id, false)
+	return L.PrepareCurrenciesMenuBase(eddm, self, id, false, false)
+end
+
+-- I'm not sure if there are Warband currencies that have max
+-- If Blizzard adds some in the future, we'll need to split this into multiple versions
+function L.PrepareCurrenciesMenuWarband(eddm, self, id)
+	return L.PrepareCurrenciesMenuBase(eddm, self, id, false, true)
 end
 
 function L.DefaultCurrencyClickHandler(self, button)
