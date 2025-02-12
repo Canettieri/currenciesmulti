@@ -123,6 +123,8 @@ function L:CreateSimpleCurrencyPlugin(params)
 		ACCOUNT_CHARACTER_CURRENCY_DATA_RECEIVED = function(self, ...)
 			if isAccountTransferable then
 				Update(self)
+			else
+				self:UnregisterEvent("ACCOUNT_CHARACTER_CURRENCY_DATA_RECEIVED")
 			end
 		end,
 	}
