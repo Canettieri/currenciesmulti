@@ -143,6 +143,8 @@ L["NoBrawler"] = "Available through Brawler's Guild\rfights."
 L["GoldTitle"] = "Gold"
 L["GoldPlayerTip"] = "|cFFB4EEB4Hint:|r |cFFFFFFFFLeft-click opens ${player}|cFFFFFFFF's currency window.|r"
 L["HigherOnly"] = "Display Higher Value Only"
+--- Polished Pet Charm
+L["NoPolPet"] = "Available through Pet Battles in\rBfA and later expansions."
 --- Shiny Pet Charm
 L["NoMaxPet"] = "Available through Pet Battles in\rWarlords of Draenor and Legion."
 --- Timewarped Badge
