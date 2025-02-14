@@ -9,5 +9,5 @@ local _, L = ...;
 L.Elib = LibStub("Elib-4.0").Register
 
 function L.PrepareCurrenciesMaxMenu(eddm, self, id)
-	L.PrepareCurrenciesMenuBase(eddm, self, id, true)
+	L.PrepareCurrenciesMenuBase(eddm, self, id, true, false)
 end

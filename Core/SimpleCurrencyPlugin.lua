@@ -19,16 +19,28 @@ end
 function L:CreateSimpleCurrencyPlugin(params)
 	local currencyCount = 0.0
 	local startcurrency
+	-- Use separate variables to track your warband alt amounts so the display can be toggled at will
+	-- If we don't track both, then you would lose session info if you happened to toggle
+	-- the account total display on or off (Update() isn't called when an option is toggled)
+	-- These values only track ALT amounts
+	local warbandAltTotal = 0
+	local warbandAltStartTotal
+	-- Default to true, since the request won't work until at least PLAYER_ENTERING_WORLD
+	local accountDataRequested = true
 
 	local currencyInfoBase = C_CurrencyInfo.GetCurrencyInfo(params.currencyId)
 	local ICON = currencyInfoBase.iconFileID
 	local CURRENCY_NAME = currencyInfoBase.name
+	local isAccountTransferable = currencyInfoBase.isAccountTransferable or false
 	local currencyMaximum = currencyInfoBase.maxQuantity or 0
 	local useTotalEarnedForMaxQty = currencyInfoBase.useTotalEarnedForMaxQty
 	local totalSeasonalEarned = currencyInfoBase.totalEarned
 	-- For whatever reason, the value can be nil when the plugin first loads
 	-- If the creator knows that the currency has a maximum, then allow them to force it to be treated as if it had a max.
 	local forceMax = params.forceMax or false
+	-- For seasonal currencies, like crests added in Dragonflight and beyond, track how much the maximum allowed
+	-- amount increases weekly, to be able to color the current amount more appropriately
+	local weeklyIncrease = currencyInfoBase.maxWeeklyQuantity or 0
 
 	local PLAYER_NAME, PLAYER_REALM
 	local PLAYER_KEY
@@ -53,26 +65,51 @@ function L:CreateSimpleCurrencyPlugin(params)
 		-- Make sure these values are up to date, since they can be wrong when the addon first loads
 		useTotalEarnedForMaxQty = info.useTotalEarnedForMaxQty
 		totalSeasonalEarned = info.totalEarned
+		isAccountTransferable = info.isAccountTransferable or false
 		return amount, totalMax
 	end
 
 	local function Update(self)
 		local amount, totalMax = GetAndSaveCurrency()
-
+		if isAccountTransferable then
+			local accountData = C_CurrencyInfo.FetchCurrencyDataFromAccountCharacters(params.currencyId)
+			if accountData then
+				local total = 0
+				-- The above API returns OTHER character data, not the current one
+				for _, p in ipairs(accountData) do
+					total = total + p.quantity
+				end
+				warbandAltTotal = total
+				if warbandAltTotal and not warbandAltStartTotal then
+					warbandAltStartTotal = warbandAltTotal
+				end
+			elseif not accountDataRequested then
+				accountDataRequested = true
+				C_CurrencyInfo.RequestCurrencyDataForAccountCharacters()
+			end
+		end
 		currencyCount = amount or 0
 		currencyMaximum = totalMax or 0
 		if amount and not startcurrency then
 			startcurrency = currencyCount
 		end
-
 		TitanPanelButton_UpdateButton(self.registry.id)
 	end
 	-----------------------------------------------
 	local eventsTable = {
-		CURRENCY_DISPLAY_UPDATE = Update,
+		CURRENCY_DISPLAY_UPDATE = function(self, ...)
+			local currencyID = ...;
+			-- If the currency is account-wide, then we can't filter out events where the currencyID argument is nil
+			-- We can't rely on the ACCOUNT_CHARACTER_CURRENCY_DATA_RECEIVED event below, because it doesn't fire reliably following a transfer
+			-- For regular currencies, try and reduce how often things update
+			if isAccountTransferable or (currencyID == params.currencyId) then
+				Update(self)
+			end
+		end,
 		PLAYER_ENTERING_WORLD = function(self, ...)
 			self:UnregisterEvent("PLAYER_ENTERING_WORLD")
 			self.PLAYER_ENTERING_WORLD = nil
+			accountDataRequested = false
 
 			PLAYER_NAME, PLAYER_REALM = UnitFullName("player")
 			PLAYER_KEY = PLAYER_NAME .. "-" .. PLAYER_REALM
@@ -83,29 +120,60 @@ function L:CreateSimpleCurrencyPlugin(params)
 
 			Update(self)
 		end,
+		ACCOUNT_CHARACTER_CURRENCY_DATA_RECEIVED = function(self, ...)
+			if isAccountTransferable then
+				Update(self)
+			else
+				self:UnregisterEvent("ACCOUNT_CHARACTER_CURRENCY_DATA_RECEIVED")
+			end
+		end,
 	}
 	-----------------------------------------------
 	local function GetButtonText()
+		local showAccountTotal = TitanGetVar(params.titanId, "TotalBalanceBar") or false
 		local AddSeparator = TitanGetVar(params.titanId, "AddSeparator")
 		local currencyCountTextNoColor = AddSeparator and BreakUpLargeNumbers(currencyCount) or (currencyCount or "0")
 		local currencyCountText = TitanUtils_GetHighlightText(currencyCountTextNoColor)
-		if (currencyCount or totalSeasonalEarned) and currencyMaximum > 0 then
+		if isAccountTransferable and showAccountTotal then
+			local totalVal = currencyCount + warbandAltTotal
+			currencyCountTextNoColor = AddSeparator and BreakUpLargeNumbers(totalVal) or (totalVal or "0")
+			currencyCountText = "|cFF00CCFF" .. currencyCountTextNoColor
+		elseif (currencyCount or totalSeasonalEarned) and currencyMaximum > 0 then
 			local maxCheckCurrency = (useTotalEarnedForMaxQty and totalSeasonalEarned) or currencyCount
-			if maxCheckCurrency > currencyMaximum * 0.4 and maxCheckCurrency < currencyMaximum * 0.59 then
-				-- Yellow
-				currencyCountText = "|cFFf6ed12" .. currencyCountTextNoColor
-			elseif maxCheckCurrency > currencyMaximum * 0.59 and maxCheckCurrency < currencyMaximum * 0.79 then
-				-- Orange
-				currencyCountText = "|cFFf69112" .. currencyCountTextNoColor
-			elseif maxCheckCurrency > currencyMaximum * 0.79 then
-				-- Red
-				currencyCountText = "|cFFFF2e2e" .. currencyCountTextNoColor
+			-- For currencies with a static max amount
+			if weeklyIncrease == 0 then
+				if maxCheckCurrency > currencyMaximum * 0.4 and maxCheckCurrency < currencyMaximum * 0.59 then
+					-- Yellow
+					currencyCountText = "|cFFf6ed12" .. currencyCountTextNoColor
+				elseif maxCheckCurrency > currencyMaximum * 0.59 and maxCheckCurrency < currencyMaximum * 0.79 then
+					-- Orange
+					currencyCountText = "|cFFf69112" .. currencyCountTextNoColor
+				elseif maxCheckCurrency > currencyMaximum * 0.79 then
+					-- Red
+					currencyCountText = "|cFFFF2e2e" .. currencyCountTextNoColor
+				end
+			else
+				-- For currencies that increase the maximum amount weekly, color based on how much you can still earn
+				-- compared to the weekly increase amount
+				local localMaxValue = (useTotalEarnedForMaxQty and totalSeasonalEarned) or currencyMaximum
+				local canEarnAmount = localMaxValue - totalSeasonalEarned
+				-- Basically reverse the logic above
+				if canEarnAmount < weeklyIncrease * 0.79 and canEarnAmount > weeklyIncrease * 0.59 then
+					-- Yellow
+					currencyCountText = "|cFFf6ed12" .. currencyCountTextNoColor
+				elseif canEarnAmount < weeklyIncrease * 0.59 and canEarnAmount > weeklyIncrease * 0.4 then
+					-- Orange
+					currencyCountText = "|cFFf69112" .. currencyCountTextNoColor
+				elseif canEarnAmount < weeklyIncrease * 0.4 then
+					-- Red
+					currencyCountText = "|cFFFF2e2e" .. currencyCountTextNoColor
+				end
 			end
 		end
 
 		local maxBarText = ""
 		if currencyMaximum and currencyMaximum > 0 and TitanGetVar(params.titanId, "MaxBar") then
-			local localMaxValue = (useTotalEarnedForMaxQty and totalEarned) or currencyMaximum
+			local localMaxValue = (useTotalEarnedForMaxQty and totalSeasonalEarned) or currencyMaximum
 			local canEarnText = (AddSeparator and BreakUpLargeNumbers(localMaxValue - totalSeasonalEarned)) or (localMaxValue - totalSeasonalEarned)
 			canEarnText = (useTotalEarnedForMaxQty and (" [" .. canEarnText .. "]")) or ""
 			maxBarText = "|r/|cFFFF2e2e" .. (AddSeparator and BreakUpLargeNumbers(currencyMaximum) or currencyMaximum)
@@ -115,10 +183,13 @@ function L:CreateSimpleCurrencyPlugin(params)
 		local barBalanceText = ""
 		if TitanGetVar(params.titanId, "ShowBarBalance") then
 			local delta = (currencyCount - startcurrency)
+			if isAccountTransferable and showAccountTotal then
+				delta = delta + (warbandAltTotal - warbandAltStartTotal)
+			end
 			local deltaText = AddSeparator and BreakUpLargeNumbers(delta) or delta
 			if delta > 0 then
 				barBalanceText = " |cFF69FF69[" .. deltaText .. "]"
-			elseif (currencyCount - startcurrency) < 0 then
+			elseif delta < 0 then
 				barBalanceText = " |cFFFF2e2e[" .. deltaText .. "]"
 			end
 		end
@@ -139,15 +210,29 @@ function L:CreateSimpleCurrencyPlugin(params)
 		end
 
 		local AddSeparator = TitanGetVar(params.titanId, "AddSeparator")
+		local showAccountTotal = TitanGetVar(params.titanId, "TotalBalanceBar") or false
 		GameTooltip:AddLine(" ")
 		GameTooltip:AddLine(L["info"])
-
-		if not currencyCount or currencyCount == 0 then
+		local hasCurrency = (currencyCount or 0 ) > 0
+		hasCurrency = showAccountTotal and (hasCurrency or ((warbandAltTotal or 0) > 0)) or hasCurrency
+		if (not hasCurrency) then
 			GameTooltip:AddLine("|cFFFF2e2e" .. params.noCurrencyText)
 		else
-			local currentText = AddSeparator and BreakUpLargeNumbers(currencyCount) or currencyCount
+			local totalLabel = L["totalAcquired"]
+			local dif = 0
+			local localCurrencyCount = currencyCount
+			local localStartCurrency = startcurrency
+			if isAccountTransferable and showAccountTotal then
+				localCurrencyCount = localCurrencyCount + warbandAltTotal
+				localStartCurrency = localStartCurrency + warbandAltStartTotal
+				totalLabel = L["warbandTotal"]
+			end
+			if localCurrencyCount and localStartCurrency then
+				dif = localCurrencyCount - localStartCurrency
+			end
+			local currentText = AddSeparator and BreakUpLargeNumbers(localCurrencyCount) or localCurrencyCount
 
-			GameTooltip:AddDoubleLine(L["totalAcquired"], TitanUtils_GetHighlightText(currentText))
+			GameTooltip:AddDoubleLine(totalLabel, TitanUtils_GetHighlightText(currentText))
 			if (currencyMaximum and currencyMaximum > 0) then
 				local localCountValue = (useTotalEarnedForMaxQty and totalSeasonalEarned) or currencyCount
 				local maxText = (AddSeparator and BreakUpLargeNumbers(currencyMaximum)) or currencyMaximum
@@ -156,17 +241,14 @@ function L:CreateSimpleCurrencyPlugin(params)
 				GameTooltip:AddDoubleLine(L["canGet"], TitanUtils_GetHighlightText(canGetText))
 			end
 
-			local sessionValueText = "0" -- Cores da conta de valor
-			if currencyCount and startcurrency then
-				local dif = currencyCount - startcurrency
-				local difText = AddSeparator and BreakUpLargeNumbers(dif) or dif
-				if dif == 0 then
-					sessionValueText = TitanUtils_GetHighlightText("0")
-				elseif dif > 0 then
-					sessionValueText = "|cFF69FF69" .. difText
-				else
-					sessionValueText = "|cFFFF2e2e" .. difText
-				end
+			local difText = AddSeparator and BreakUpLargeNumbers(dif) or dif
+			local sessionValueText = "0"
+			if dif == 0 then
+				sessionValueText = TitanUtils_GetHighlightText("0")
+			elseif dif > 0 then
+				sessionValueText = "|cFF69FF69" .. difText
+			else
+				sessionValueText = "|cFFFF2e2e" .. difText
 			end
 
 			GameTooltip:AddDoubleLine(L["session"], sessionValueText)
@@ -206,11 +288,17 @@ function L:CreateSimpleCurrencyPlugin(params)
 		end
 		return resultElse
 	end
-	local prepMenu = ifZero(currencyMaximum, L.PrepareCurrenciesMenu, L.PrepareCurrenciesMaxMenu)
-	maxBarValue = ifZero(currencyMaximum, nil, false)
-	if forceMax then
-		prepMenu = L.PrepareCurrenciesMaxMenu
-		maxBarValue = 1
+	local prepMenu = L.PrepareCurrenciesMenu
+	local maxBarValue = nil
+	if isAccountTransferable then
+		prepMenu = L.PrepareCurrenciesMenuWarband
+	else
+		prepMenu = ifZero(currencyMaximum, prepMenu, L.PrepareCurrenciesMaxMenu)
+		maxBarValue = ifZero(currencyMaximum, nil, 0)
+		if forceMax then
+			prepMenu = L.PrepareCurrenciesMaxMenu
+			maxBarValue = 1
+		end
 	end
 
 	L.Elib({
@@ -237,6 +325,7 @@ function L:CreateSimpleCurrencyPlugin(params)
 			UseHyperlink = true,
 			HideInfoWhenHyperlink = false,
 			AddSeparator= false,
+			TotalBalanceBar = false
 		}
 	})
 
