@@ -8,20 +8,27 @@
 local ADDON_NAME, L = ...;
 L.Elib = LibStub("Elib-4.0").Register
 local GetAddOnMetadata = C_AddOns and C_AddOns.GetAddOnMetadata or GetAddOnMetadata
-local GetItemCount = GetItemCount or C_Item.GetItemCount
+local GetItemCount = C_Item.GetItemCount or GetItemCount
 local version = GetAddOnMetadata(ADDON_NAME, "Version")
-
-local function GetCharTable(titanId)
-	TitanCurrenciesMultiDb = TitanCurrenciesMultiDb or {}
-	TitanCurrenciesMultiDb[titanId] = TitanCurrenciesMultiDb[titanId] or { charTable = {} }
-	return TitanCurrenciesMultiDb[titanId].charTable
-end
 
 function L:CreateSimpleItemPlugin(params)
 	local itemMixin = Item:CreateFromItemID(params.itemId)
 
 	local currencyCount = 0.0
 	local startcurrency
+	-- Currently used only in retail
+	local accountTotal = 0
+	-- Simplify logic in this file with this flag
+	local useAccountTotal = false
+	if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
+		-- This information appears to be useless for this purpose
+		-- Polished Pet Charms return "1" as well for bindType
+		-- local bindType = select(14, C_Item.GetItemInfo(params.itemId))
+		-- Checking some "Warbound until equipped" items, results in a bindType of "1"???
+		-- useAccountTotal = (bindType == Enum.ItemBind.None) or (bindType == Enum.ItemBind.ToBnetAccount) or (bindType == Enum.ItemBind.ToWoWAccount)
+		-- This will just result in some soulbound items to always show 0 for their Warband total.
+		useAccountTotal = true
+	end
 
 	local PLAYER_NAME, PLAYER_REALM
 	local PLAYER_KEY
@@ -29,13 +36,21 @@ function L:CreateSimpleItemPlugin(params)
 	local PLAYER_CLASS_COLOR
 
 	local function GetAndSaveCurrency()
-		local amount = GetItemCount(params.itemId, true)
+		-- Gets the bank, and reagent bank -- ignoring the uses (third argument)
+		local amount = GetItemCount(params.itemId, true, false, true)
 		local amountBag = GetItemCount(params.itemId)
+
+		if useAccountTotal then
+			-- GetItemCount with the last argument (includeAccountBank) = true, includes bag amount, so we have to subtract that
+			-- to only get the account amount
+			accountTotal = GetItemCount(params.itemId, false, false, false, true) - amountBag
+		end
+
 		if not PLAYER_KEY then
 			return amount, amountBag
 		end
 
-		local charTable = GetCharTable(params.titanId)
+		local charTable = L.Utils.GetCharTable(params.titanId)
 
 		charTable[PLAYER_KEY] = charTable[PLAYER_KEY] or {}
 		charTable[PLAYER_KEY].currency = amount
@@ -65,13 +80,12 @@ function L:CreateSimpleItemPlugin(params)
 			TitanPanelButton_UpdateButton(self.registry.id)
 
 			self.BAG_UPDATE = function(self, bagID)
-				local token = GetAndSaveCurrency()
-				local currencyBag = token
+				local currencyTotal = GetAndSaveCurrency()
 
-				if currencyCount == currencyBag then
+				if currencyCount == currencyTotal then
 					return
 				end
-				currencyCount = currencyBag
+				currencyCount = currencyTotal
 
 				TitanPanelButton_UpdateButton(self.registry.id)
 			end
@@ -80,8 +94,13 @@ function L:CreateSimpleItemPlugin(params)
 	}
 
 	local function GetButtonText()
+		local showAccountTotal = TitanGetVar(params.titanId, "TotalBalanceBar") or false
 		local AddSeparator = TitanGetVar(params.titanId, "AddSeparator")
 		local currencyCountText = TitanUtils_GetHighlightText(AddSeparator and BreakUpLargeNumbers(currencyCount) or (currencyCount or "0"))
+		if useAccountTotal and showAccountTotal then
+			local totalVal = currencyCount + accountTotal
+			currencyCountText = "|cFF00CCFF" .. (AddSeparator and BreakUpLargeNumbers(totalVal) or (totalVal or "0"))
+		end
 
 		local barBalanceText = ""
 		if TitanGetVar(params.titanId, "ShowBarBalance") then
@@ -113,16 +132,25 @@ function L:CreateSimpleItemPlugin(params)
 		GameTooltip:AddLine(" ")
 		GameTooltip:AddLine(L["info"])
 
-		if not currencyCount or currencyCount == 0 then
+		local localAccountAmount = 0
+		if useAccountTotal then
+			localAccountAmount = accountTotal
+		end
+
+		if (not currencyCount or currencyCount == 0) and localAccountAmount == 0 then
 			GameTooltip:AddLine("|cFFFF2e2e" .. params.noCurrencyText)
 		else
 			local bag = GetItemCount(params.itemId)
-			local bank = GetItemCount(params.itemId, true) - bag
+			local bank = GetItemCount(params.itemId, true, false, true) - bag
 			local bagText = AddSeparator and BreakUpLargeNumbers(bag) or bag
 			local bankText = AddSeparator and BreakUpLargeNumbers(bank) or bank
 
 			GameTooltip:AddDoubleLine(L["totalbag"], TitanUtils_GetHighlightText(bagText))
 			GameTooltip:AddDoubleLine(L["totalbank"], TitanUtils_GetHighlightText(bankText))
+			if useAccountTotal then
+				local accountText = AddSeparator and BreakUpLargeNumbers(accountTotal) or accountTotal
+				GameTooltip:AddDoubleLine(L["warbandTotal"], TitanUtils_GetHighlightText(accountText))
+			end
 
 			local sessionValueText = "0" -- Cores da conta de valor
 			if currencyCount and startcurrency then
@@ -141,7 +169,7 @@ function L:CreateSimpleItemPlugin(params)
 		end
 
 		if TitanGetVar(params.titanId, "ShowAltText") then
-			local charTable = GetCharTable(params.titanId)
+			local charTable = L.Utils.GetCharTable(params.titanId)
 			local total = 0
 			local showAllFactions = TitanGetVar(params.titanId, "ShowAllFactions")
 
@@ -168,6 +196,10 @@ function L:CreateSimpleItemPlugin(params)
 		end
 	end
 
+	local prepMenu = L.PrepareCurrenciesMenu
+	if useAccountTotal then
+		prepMenu = L.PrepareCurrenciesMenuWarband
+	end
 	L.Elib({
 		id = params.titanId,
 		name = params.expName .. " Titan|cFF66b1ea " .. params.titanId .. "|r",
@@ -178,7 +210,7 @@ function L:CreateSimpleItemPlugin(params)
 		version = version,
 		getButtonText = GetButtonText,
 		eventsTable = eventsTable,
-		prepareMenu = L.PrepareCurrenciesMenu,
+		prepareMenu = prepMenu,
 		savedVariables = {
 			ShowIcon = 1,
 			DisplayOnRightSide = false,
@@ -189,7 +221,8 @@ function L:CreateSimpleItemPlugin(params)
 			ShowAllFactions = false,
 			UseHyperlink = true,
 			HideInfoWhenHyperlink = false,
-			AddSeparator= false,
+			AddSeparator = false,
+			TotalBalanceBar = false,
 		},
 		afterLoad = function(self)
 			itemMixin:ContinueOnItemLoad(function()
