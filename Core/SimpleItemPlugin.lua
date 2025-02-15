@@ -18,6 +18,7 @@ function L:CreateSimpleItemPlugin(params)
 	local startcurrency
 	-- Currently used only in retail
 	local accountTotal = 0
+	local lastButtonUpdateAccountTotal = 0
 	-- Simplify logic in this file with this flag
 	local useAccountTotal = false
 	if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
@@ -81,8 +82,9 @@ function L:CreateSimpleItemPlugin(params)
 
 			self.BAG_UPDATE = function(self, bagID)
 				local currencyTotal = GetAndSaveCurrency()
-
-				if currencyCount == currencyTotal then
+				local showAccountTotal = TitanGetVar(params.titanId, "TotalBalanceBar") or false
+				-- Only short-circuit if both values haven't changed
+				if (currencyCount == currencyTotal and (showAccountTotal and lastButtonUpdateAccountTotal == accountTotal)) then
 					return
 				end
 				currencyCount = currencyTotal
@@ -98,6 +100,7 @@ function L:CreateSimpleItemPlugin(params)
 		local AddSeparator = TitanGetVar(params.titanId, "AddSeparator")
 		local currencyCountText = TitanUtils_GetHighlightText(AddSeparator and BreakUpLargeNumbers(currencyCount) or (currencyCount or "0"))
 		if useAccountTotal and showAccountTotal then
+			lastButtonUpdateAccountTotal = accountTotal
 			local totalVal = currencyCount + accountTotal
 			currencyCountText = "|cFF00CCFF" .. (AddSeparator and BreakUpLargeNumbers(totalVal) or (totalVal or "0"))
 		end
