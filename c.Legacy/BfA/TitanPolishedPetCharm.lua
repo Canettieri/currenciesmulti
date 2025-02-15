@@ -14,5 +14,6 @@ L:CreateSimpleItemPlugin({
 	titanId = ID,
 	noCurrencyText = L["BfAOnly"],
 	expName = L["mBfA"],
-	category = "CATEGORY_BFA"
+	category = "CATEGORY_BFA",
+	allowAccountTotal = true
 })
