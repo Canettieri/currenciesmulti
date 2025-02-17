@@ -10,12 +10,6 @@ L.Elib = LibStub("Elib-4.0").Register
 local GetAddOnMetadata = C_AddOns and C_AddOns.GetAddOnMetadata or GetAddOnMetadata
 local version = GetAddOnMetadata(ADDON_NAME, "Version")
 
-local function GetCharTable(titanId)
-	TitanCurrenciesMultiDb = TitanCurrenciesMultiDb or {}
-	TitanCurrenciesMultiDb[titanId] = TitanCurrenciesMultiDb[titanId] or { charTable = {} }
-	return TitanCurrenciesMultiDb[titanId].charTable
-end
-
 function L:CreateNoAltCurrencyPlugin(params)
 	local currencyCount = 0.0
 	local startcurrency
@@ -42,7 +36,7 @@ function L:CreateNoAltCurrencyPlugin(params)
 			return amount, totalMax
 		end
 
-		local charTable = GetCharTable(params.titanId)
+		local charTable = L.Utils.GetCharTable(params.titanId)
 
 		charTable[PLAYER_KEY] = charTable[PLAYER_KEY] or {}
 		charTable[PLAYER_KEY].currency = amount

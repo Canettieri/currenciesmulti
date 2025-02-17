@@ -58,16 +58,10 @@ local function formatGold(value, cor, somenteMaior)
 	return text
 end
 
-local function GetCharTable()
-	TitanCurrenciesMultiDb = TitanCurrenciesMultiDb or {}
-	TitanCurrenciesMultiDb[ID] = TitanCurrenciesMultiDb[ID] or { charTable = {} }
-	return TitanCurrenciesMultiDb[ID].charTable
-end
-
 local function GetAndSaveMoney(id)
 	local money = GetMoney("player")
 
-	local charTable = GetCharTable()
+	local charTable = L.Utils.GetCharTable(ID)
 	charTable[PLAYER_KEY] = charTable[PLAYER_KEY] or {}
 	charTable[PLAYER_KEY].value = money
 	charTable[PLAYER_KEY].name = PLAYER_CLASS_COLOR .. PLAYER_NAME
@@ -98,7 +92,7 @@ local function GetTooltipText(self, id)
 
 	local text = interp(L["GoldPlayerTip"], { player = PLAYER_NAME }) .. "\n \n"
 
-	local charTable = GetCharTable()
+	local charTable = L.Utils.GetCharTable(ID)
 	local showAllFactions = TitanGetVar(ID, "ShowAllFactions")
 	local total = 0
 	local dif = money - startMoney

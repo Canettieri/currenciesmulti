@@ -11,11 +11,6 @@ local GetAddOnMetadata = C_AddOns and C_AddOns.GetAddOnMetadata or GetAddOnMetad
 local GetItemCount = GetItemCount or C_Item.GetItemCount
 local version = GetAddOnMetadata(ADDON_NAME, "Version")
 
-local function GetCharTable(titanId)
-	TitanCurrenciesMultiDb = TitanCurrenciesMultiDb or {}
-	TitanCurrenciesMultiDb[titanId] = TitanCurrenciesMultiDb[titanId] or { charTable = {} }
-	return TitanCurrenciesMultiDb[titanId].charTable
-end
 
 function L:CreateSimpleItemPlugin(params)
 	local itemMixin = Item:CreateFromItemID(params.itemId)
@@ -35,7 +30,7 @@ function L:CreateSimpleItemPlugin(params)
 			return amount, amountBag
 		end
 
-		local charTable = GetCharTable(params.titanId)
+		local charTable = L.Utils.GetCharTable(params.titanId)
 
 		charTable[PLAYER_KEY] = charTable[PLAYER_KEY] or {}
 		charTable[PLAYER_KEY].currency = amount
@@ -141,7 +136,7 @@ function L:CreateSimpleItemPlugin(params)
 		end
 
 		if TitanGetVar(params.titanId, "ShowAltText") then
-			local charTable = GetCharTable(params.titanId)
+			local charTable = L.Utils.GetCharTable(params.titanId)
 			local total = 0
 			local showAllFactions = TitanGetVar(params.titanId, "ShowAllFactions")
 

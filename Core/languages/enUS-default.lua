@@ -213,3 +213,10 @@ L["dragonf"] = "Currency [Dragonflight]"
 L["warwithin"] = "Currency [The War Within]"
 L["wotlk"] = "Currency [WotLK]"
 L["cata"] = "Currency [Cataclysm]"
+
+--- Character List Plugin strings
+L["charListPluginDisplayName"] = "Data Management"
+L["purgeDataMenu"] = "Purge character data"
+L["charsChunkMenu"]= "Character Chunk #%d"
+L["purgeDataQuestion"]= "Are you sure you want to purge data for %s?"
+L["charMgmtTooltip"] = "Right-click to selectively purge character data|nother than the current character's."

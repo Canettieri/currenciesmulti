@@ -26,6 +26,7 @@ Core\NoAltCurrencyCore.lua
 Core\NoAltCurrencyPlugin.lua
 Core\SimpleCurrencyPlugin.lua
 Core\SimpleItemPlugin.lua
+Core\CharacterListPlugin.lua
 c.Dragonflight\TitanBloodyTokens.lua
 c.Dragonflight\TitanCobaltAssembly.lua
 c.Dragonflight\TitanDGlyphEmbers.lua
