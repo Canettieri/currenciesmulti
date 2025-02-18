@@ -37,3 +37,34 @@ function Utils.GetCharTable(titanId)
 	TitanCurrenciesMultiDb[titanId] = TitanCurrenciesMultiDb[titanId] or { charTable = {} }
 	return TitanCurrenciesMultiDb[titanId].charTable
 end
+
+function Utils.CreateTitle(id, text)
+	local info = {};
+	info.text = text;
+	info.notClickable = true
+	info.notCheckable = true
+	info.isTitle = true
+	info.isUninteractable = true
+	info.hasArrow = false
+	return info
+end
+
+function Utils.CreateToggle(id, text, var)
+	local info = {}
+	info.text = text
+	info.func = function()
+		TitanToggleVar(id, var);
+		TitanPanelButton_UpdateButton(id)
+	end
+	info.arg1 = id
+	info.arg2 = var
+	info.checked = TitanGetVar(id, var)
+	info.keepShownOnClick = true
+	return info
+end
+
+function Utils.ToggleRightSideDisplay(id)
+	-- Right side display
+	TitanToggleVar(id, "DisplayOnRightSide");
+	TitanPanel_InitPanelButtons();
+end

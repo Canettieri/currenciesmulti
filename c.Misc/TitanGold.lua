@@ -93,6 +93,7 @@ local function GetTooltipText(self, id)
 	local text = interp(L["GoldPlayerTip"], { player = PLAYER_NAME }) .. "\n \n"
 
 	local charTable = L.Utils.GetCharTable(ID)
+
 	if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
 		local success, value =  pcall(C_Bank.FetchDepositedMoney, Enum.BankType.Account)
 
@@ -108,6 +109,7 @@ local function GetTooltipText(self, id)
 			charTable = newCharTable
 		end
 	end
+
 	local showAllFactions = TitanGetVar(ID, "ShowAllFactions")
 	local total = 0
 	local dif = money - startMoney

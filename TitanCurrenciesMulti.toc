@@ -27,6 +27,7 @@ Core\NoAltCurrencyPlugin.lua
 Core\RemovedCurrenciesAndItems.lua
 Core\SimpleCurrencyPlugin.lua
 Core\SimpleItemPlugin.lua
+Core\CharacterListPlugin.lua
 c.Dragonflight\TitanBloodyTokens.lua
 c.Dragonflight\TitanDGlyphEmbers.lua
 c.Dragonflight\TitanDISupplies.lua

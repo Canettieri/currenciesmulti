@@ -11,15 +11,6 @@ local GetAddOnMetadata = C_AddOns and C_AddOns.GetAddOnMetadata or GetAddOnMetad
 local GetItemCount = C_Item.GetItemCount or GetItemCount
 local version = GetAddOnMetadata(ADDON_NAME, "Version")
 
---[[ params fields
-	itemId = integer - in-game item ID
-	titanId = string - unique string to represent the item in the database,
-	noCurrencyText = string - text to show if the user doesn't have any of the item,
-	expName = string - text that will show in the sub-menu (in blue) on the left,
-	category = string - top-level menu where this item will fall
-	allowAccountTotal - [optional] boolean - should this item be allowed to have the "Show the account total on bar" menu item
-		- the default for this behavior is false, since getting the bind type for an item is unreliable in telling you it's warbound or not.
-]]
 function L:CreateSimpleItemPlugin(params)
 	local itemMixin = Item:CreateFromItemID(params.itemId)
 
