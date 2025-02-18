@@ -13,5 +13,6 @@ L:CreateSimpleItemPlugin({
 	titanId = "TITAN_SIZZLINGCPOLLEN",
 	noCurrencyText = L["NoTWWCurrency"],
 	expName = L["mWarWithin"],
-	category = "CATEGORY_TWW"
+	category = "CATEGORY_TWW",
+	allowAccountTotal = true
 })

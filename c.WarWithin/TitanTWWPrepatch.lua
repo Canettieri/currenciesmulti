@@ -8,37 +8,11 @@ Special Thanks to Protuhj.
 local _, L = ...;
 
 -- Residual Memories
+-- Really unused, but still shows in the currency tab
 L:CreateSimpleCurrencyPlugin({
 	currencyId = 3089,
 	titanId = "TITAN_RESIDMEMORIES",
 	noCurrencyText = L["NoTWWCurrency01"],
 	expName = L["mWarWithin"],
 	category = "CATEGORY_TWW",
-})
-
--- Memory of Northrend
-L:CreateSimpleItemPlugin({
-	itemId = 223642,
-	titanId = "TITAN_MEMNORTHREND",
-	noCurrencyText = L["NoTWWCurrency01"],
-	expName = L["mWarWithin"],
-	category = "CATEGORY_TWW"
-})
-
--- Memory of Kalimdor
-L:CreateSimpleItemPlugin({
-	itemId = 223644,
-	titanId = "TITAN_MEMKALIMDOR",
-	noCurrencyText = L["NoTWWCurrency01"],
-	expName = L["mWarWithin"],
-	category = "CATEGORY_TWW"
-})
-
--- Memory of the Eastern Kingdoms
-L:CreateSimpleItemPlugin({
-	itemId = 223646,
-	titanId = "TITAN_MEMEASTKING",
-	noCurrencyText = L["NoTWWCurrency01"],
-	expName = L["mWarWithin"],
-	category = "CATEGORY_TWW"
 })
