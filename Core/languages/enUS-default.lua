@@ -143,6 +143,8 @@ L["NoBrawler"] = "Available through Brawler's Guild\rfights."
 L["GoldTitle"] = "Gold"
 L["GoldPlayerTip"] = "|cFFB4EEB4Hint:|r |cFFFFFFFFLeft-click opens ${player}|cFFFFFFFF's currency window.|r"
 L["HigherOnly"] = "Display Higher Value Only"
+--- Polished Pet Charm
+L["NoPolPet"] = "Available through Pet Battles in\rBfA and later expansions."
 --- Shiny Pet Charm
 L["NoMaxPet"] = "Available through Pet Battles in\rWarlords of Draenor and Legion."
 --- Timewarped Badge
@@ -184,6 +186,7 @@ L["mBfA"] = "[|cFF198ae0BfA|r]"
 L["mShadowlands"] = "[|cFF198ae0Shadowlands|r]"
 L["mDragonflight"] = "[|cFF198ae0Dragonflight|r]"
 L["mWarWithin"] = "[|cFF198ae0The War Within|r]"
+L["mWarWithinS1"] = "[|cFF198ae0TWW S1|r]"
 L["mMoPRemix"] = "[|cFF198ae0MoP Remix|r]"
 L["info"] = "|cFFFFFFFF[Information]|r"
 L["totalAcquired"] = "Total acquired: "

@@ -14,5 +14,6 @@ L:CreateSimpleItemPlugin({
 	titanId = ID,
 	noCurrencyText = L["NoDFCurrency01"],
 	expName = L["mDragonflight"],
-	category = "CATEGORY_DRAGON"
+	category = "CATEGORY_DRAGON",
+	allowAccountTotal = true
 })

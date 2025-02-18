@@ -59,7 +59,7 @@ local function formatGold(value, cor, somenteMaior)
 end
 
 local function GetAndSaveMoney(id)
-	local money = GetMoney("player")
+	local money = GetMoney()
 
 	local charTable = L.Utils.GetCharTable(ID)
 	charTable[PLAYER_KEY] = charTable[PLAYER_KEY] or {}
@@ -72,7 +72,7 @@ local function GetAndSaveMoney(id)
 end
 
 local function GetButtonText(self, id)
-	local money = GetMoney("player")
+	local money = GetMoney()
 
 	local balance = ""
 	if TitanGetVar(id, "ShowBarBalance") then
@@ -93,6 +93,23 @@ local function GetTooltipText(self, id)
 	local text = interp(L["GoldPlayerTip"], { player = PLAYER_NAME }) .. "\n \n"
 
 	local charTable = L.Utils.GetCharTable(ID)
+
+	if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
+		local success, value =  pcall(C_Bank.FetchDepositedMoney, Enum.BankType.Account)
+
+		if success and value > 0 then
+			local newCharTable = {}
+			newCharTable[L["WarbandBank"]] = {}
+			newCharTable[L["WarbandBank"]].value = value
+			newCharTable[L["WarbandBank"]].faction = PLAYER_FACTION
+			newCharTable[L["WarbandBank"]].realm = PLAYER_REALM
+			newCharTable[L["WarbandBank"]].name = "|cFF00CCFF" .. L["WarbandBank"]
+			-- Merge the tables
+			for k,v in pairs(charTable) do newCharTable[k] = v end
+			charTable = newCharTable
+		end
+	end
+
 	local showAllFactions = TitanGetVar(ID, "ShowAllFactions")
 	local total = 0
 	local dif = money - startMoney

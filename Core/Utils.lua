@@ -68,4 +68,3 @@ function Utils.ToggleRightSideDisplay(id)
 	TitanToggleVar(id, "DisplayOnRightSide");
 	TitanPanel_InitPanelButtons();
 end
-
