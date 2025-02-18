@@ -12,7 +12,7 @@ local ITEM_ID = 163036
 L:CreateSimpleItemPlugin({
 	itemId = ITEM_ID,
 	titanId = ID,
-	noCurrencyText = L["BfAOnly"],
-	expName = L["mBfA"],
-	category = "CATEGORY_BFA"
+	noCurrencyText = L["NoPolPet"],
+	expName = L["mOther"],
+	category = "CATEGORY_MISC"
 })

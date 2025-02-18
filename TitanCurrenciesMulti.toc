@@ -52,7 +52,6 @@ c.Legacy\BfA\TitanCorruptedMemento.lua
 c.Legacy\BfA\TitanEchoesNyalotha.lua
 c.Legacy\BfA\TitanJelly.lua
 c.Legacy\BfA\TitanManapearl.lua
-c.Legacy\BfA\TitanPolishedPetCharm.lua
 c.Legacy\BfA\TitanSeafarersDubloon.lua
 c.Legacy\BfA\TitanSealofWartornFate.lua
 c.Legacy\BfA\TitanServiceMedal.lua
@@ -98,6 +97,7 @@ c.Misc\TitanHonor.lua
 c.Misc\TitanLovelyCharm.lua
 c.Misc\TitanLoveToken.lua
 c.Misc\TitanMarkofHonor.lua
+c.Misc\TitanPolishedPetCharm.lua
 c.Misc\TitanShinyPetCharm.lua
 c.Misc\TitanSpookySupplies.lua
 c.Misc\TitanTimewarpedBadge.lua
