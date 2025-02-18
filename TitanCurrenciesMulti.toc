@@ -24,12 +24,11 @@ Core\CurrenciesCorewMax.lua
 Core\Menus.lua
 Core\NoAltCurrencyCore.lua
 Core\NoAltCurrencyPlugin.lua
+Core\RemovedCurrenciesAndItems.lua
 Core\SimpleCurrencyPlugin.lua
 Core\SimpleItemPlugin.lua
 c.Dragonflight\TitanBloodyTokens.lua
-c.Dragonflight\TitanCobaltAssembly.lua
 c.Dragonflight\TitanDGlyphEmbers.lua
-c.Dragonflight\TitanDilatedTimePod.lua
 c.Dragonflight\TitanDISupplies.lua
 c.Dragonflight\TitanDragonShardOfKnowledge.lua
 c.Dragonflight\TitanDreamEnergy.lua
@@ -42,7 +41,6 @@ c.Dragonflight\TitanMagmote.lua
 c.Dragonflight\TitanMysteriousFragment.lua
 c.Dragonflight\TitanParacausalFlakes.lua
 c.Dragonflight\TitanPArcaneEnergy.lua
-c.Dragonflight\TitanPrimevalEssence.lua
 c.Dragonflight\TitanSeedbloom.lua
 c.Dragonflight\TitanStormSigil.lua
 c.Dragonflight\TitanTrophyofStrife.lua
@@ -123,7 +121,6 @@ c.Shadowlands\TitanSoulCinders.lua
 c.Shadowlands\TitanStygia.lua
 c.Shadowlands\TitanStygianEmber.lua
 c.Shadowlands\TitanTowerKnowledge.lua
-c.Shadowlands\TitanValor.lua
 c.WarWithin\TitanArtisansAcuity.lua
 c.WarWithin\TitanFlameBlessedIron.lua
 c.WarWithin\TitanKej.lua

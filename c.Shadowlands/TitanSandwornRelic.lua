@@ -12,7 +12,8 @@ local ITEM_ID = 190189
 L:CreateSimpleItemPlugin({
 	itemId = ITEM_ID,
 	titanId = ID,
-	noCurrencyText = L["SLShared02"],
+	noCurrencyText = L["SLShared01"],
 	expName = L["mShadowlands"],
-	category = "CATEGORY_SHADOWLANDS"
+	category = "CATEGORY_SHADOWLANDS",
+	allowAccountTotal = true
 })

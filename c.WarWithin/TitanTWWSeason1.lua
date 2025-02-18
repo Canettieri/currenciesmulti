@@ -13,7 +13,7 @@ L:CreateSimpleCurrencyPlugin({
 	currencyId = 2914,
 	titanId = "TITAN_WEATHHARBCREST",
 	noCurrencyText = L["TWWSeason1"],
-	expName = L["mWarWithin"],
+	expName = L["mWarWithinS1"],
 	category = "CATEGORY_TWW",
 	forceMax = true
 })
@@ -23,7 +23,7 @@ L:CreateSimpleCurrencyPlugin({
 	currencyId = 2915,
 	titanId = "TITAN_CARVEDHARBCREST",
 	noCurrencyText = L["TWWSeason1"],
-	expName = L["mWarWithin"],
+	expName = L["mWarWithinS1"],
 	category = "CATEGORY_TWW",
 	forceMax = true
 })
@@ -33,7 +33,7 @@ L:CreateSimpleCurrencyPlugin({
 	currencyId = 2916,
 	titanId = "TITAN_RUNEDHARBCREST",
 	noCurrencyText = L["TWWSeason1"],
-	expName = L["mWarWithin"],
+	expName = L["mWarWithinS1"],
 	category = "CATEGORY_TWW",
 	forceMax = true
 })
@@ -43,7 +43,7 @@ L:CreateSimpleCurrencyPlugin({
 	currencyId = 2917,
 	titanId = "TITAN_GILDHARBCREST",
 	noCurrencyText = L["TWWSeason1"],
-	expName = L["mWarWithin"],
+	expName = L["mWarWithinS1"],
 	category = "CATEGORY_TWW",
 	forceMax = true
 })
@@ -53,7 +53,7 @@ L:CreateSimpleCurrencyPlugin({
 	currencyId = 2813,
 	titanId = "TITAN_HARMONSILK",
 	noCurrencyText = L["TWWSeason1"],
-	expName = L["mWarWithin"],
+	expName = L["mWarWithinS1"],
 	category = "CATEGORY_TWW",
 	forceMax = true
 })
@@ -63,6 +63,6 @@ L:CreateSimpleItemPlugin({
 	itemId = 229899,
 	titanId = "TITAN_CFFRKYM",
 	noCurrencyText = L["NoTWWCurrency"],
-	expName = L["mWarWithin"],
+	expName = L["mWarWithinS1"],
 	category = "CATEGORY_TWW"
 })
