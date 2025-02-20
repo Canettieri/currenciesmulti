@@ -33,6 +33,8 @@ L["NoCataCurrency04"] = "Rewarded from jewelcrafting\rdaily quests in your facti
 L["NoCataCurrency05"] = "Available through Protocol Inferno\rHeroic Dungeons."
 --- Conquest Points
 L["NoCataCurrency06"] = "Earned from doing ranked arena\rmatches and rated battlegrounds."
+--- Obsidian Stone Fragment
+L["NoCataCurrency07"] = "Available through Protocol Twilight\rHeroic Dungeons."
 
 ------ Shadowlands pack
 --- Adventure Campaign Progress
