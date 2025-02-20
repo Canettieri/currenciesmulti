@@ -1,4 +1,4 @@
-## Interface: 40401
+## Interface: 40402
 ## Title: Titan Panel [|cff336699Currencies|r] Multi! |cff00aa00@project-version@|r
 ## Notes: Track a lot of currencies! Right-click on Titan Panel, go to "Information" tab and enjoy.
 ## Notes-ptBR: Rastreie várias moedas! Clique com o botão direito no Painel Titan, vá na aba "Informação" e aproveite.
@@ -27,6 +27,7 @@ Core\SimpleItemPlugin.lua
 c.Legacy\Cataclysm\TitanChefAward.lua
 c.Legacy\Cataclysm\TitanConquestPoints.lua
 c.Legacy\Cataclysm\TitanFissureStoneFragment.lua
+c.Legacy\Cataclysm\TitanObsidianStoneFragment.lua
 c.Legacy\Cataclysm\TitanIllustriousJCToken.lua
 c.Legacy\Cataclysm\TitanJusticePoints.lua
 c.Legacy\Cataclysm\TitanMarkWorldTree.lua
