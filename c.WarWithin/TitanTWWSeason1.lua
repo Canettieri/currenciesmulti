@@ -8,47 +8,8 @@ Special Thanks to Protuhj.
 
 local _, L = ...;
 
--- Weathered Harbinger Crests
-L:CreateSimpleCurrencyPlugin({
-	currencyId = 2914,
-	titanId = "TITAN_WEATHHARBCREST",
-	noCurrencyText = L["TWWSeason1"],
-	expName = L["mWarWithinS1"],
-	category = "CATEGORY_TWW",
-	forceMax = true
-})
-
--- Carved Harbinger Crests
-L:CreateSimpleCurrencyPlugin({
-	currencyId = 2915,
-	titanId = "TITAN_CARVEDHARBCREST",
-	noCurrencyText = L["TWWSeason1"],
-	expName = L["mWarWithinS1"],
-	category = "CATEGORY_TWW",
-	forceMax = true
-})
-
--- Runed Harbinger Crests
-L:CreateSimpleCurrencyPlugin({
-	currencyId = 2916,
-	titanId = "TITAN_RUNEDHARBCREST",
-	noCurrencyText = L["TWWSeason1"],
-	expName = L["mWarWithinS1"],
-	category = "CATEGORY_TWW",
-	forceMax = true
-})
-
--- Gilded Harbinger Crests
-L:CreateSimpleCurrencyPlugin({
-	currencyId = 2917,
-	titanId = "TITAN_GILDHARBCREST",
-	noCurrencyText = L["TWWSeason1"],
-	expName = L["mWarWithinS1"],
-	category = "CATEGORY_TWW",
-	forceMax = true
-})
-
 -- Harmonized Silk (Catalyst charges, max 8 currently)
+-- Will probably become OBE once S2 starts
 L:CreateSimpleCurrencyPlugin({
 	currencyId = 2813,
 	titanId = "TITAN_HARMONSILK",
@@ -59,6 +20,7 @@ L:CreateSimpleCurrencyPlugin({
 })
 
 -- Coffer Key Shard
+-- Will probably become OBE once S2 starts
 L:CreateSimpleItemPlugin({
 	itemId = 229899,
 	titanId = "TITAN_CFFRKYM",
