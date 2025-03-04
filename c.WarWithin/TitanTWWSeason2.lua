@@ -51,3 +51,14 @@ L:CreateSimpleCurrencyPlugin({
 	forceMax = true,
 	weeklyIncrease = 90
 })
+
+-- Essence of Kaja'mite (Catalyst charges, max 8)
+L:CreateSimpleCurrencyPlugin({
+	currencyId = 3116,
+	titanId = "TITAN_TWWS2CATALYST",
+	noCurrencyText = L["TWWSeason2"],
+	expName = L["mWarWithinS2"],
+	category = "CATEGORY_TWW",
+	forceMax = true
+})
+
