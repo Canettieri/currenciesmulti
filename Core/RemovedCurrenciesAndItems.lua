@@ -12,6 +12,10 @@ if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
 			print("TitanCurrenciesMultiDb is nil?")
 		end
 		local removed = {
+			"TITAN_WEATHHARBCREST", -- TWW S1 Weathered Harbinger Crests
+			"TITAN_CARVEDHARBCREST", -- TWW S1 Carved Harbinger Crests
+			"TITAN_RUNEDHARBCREST", -- TWW S1 Runed Harbinger Crests
+			"TITAN_GILDHARBCREST", -- TWW S1 Gilded Harbinger Crests
 			"TITAN_KAALCHKNOW", -- TWW Khaz Algar Alchemy Knowledge
 			"TITAN_KABSKNOW", -- TWW Khaz Algar Blacksmithing Knowledge
 			"TITAN_KAENCHKNOW", -- TWW Khaz Algar Enchanting Knowledge
