@@ -149,8 +149,7 @@ function L:CreateSimpleCurrencyPlugin(params)
 			else
 				-- For currencies that increase the maximum amount weekly, color based on how much you can still earn
 				-- compared to the weekly increase amount
-				local localMaxValue = (useTotalEarnedForMaxQty and totalSeasonalEarned) or currencyMaximum
-				local canEarnAmount = localMaxValue - totalSeasonalEarned
+				local canEarnAmount = currencyMaximum - maxCheckCurrency
 				-- Basically reverse the logic above
 				if canEarnAmount < weeklyIncrease * 0.79 and canEarnAmount > weeklyIncrease * 0.59 then
 					-- Yellow
@@ -167,8 +166,8 @@ function L:CreateSimpleCurrencyPlugin(params)
 
 		local maxBarText = ""
 		if currencyMaximum and currencyMaximum > 0 and TitanGetVar(params.titanId, "MaxBar") then
-			local localMaxValue = (useTotalEarnedForMaxQty and totalSeasonalEarned) or currencyMaximum
-			local canEarnText = (AddSeparator and BreakUpLargeNumbers(localMaxValue - totalSeasonalEarned)) or (localMaxValue - totalSeasonalEarned)
+			local maxCheckCurrency = (useTotalEarnedForMaxQty and totalSeasonalEarned) or currencyCount
+			local canEarnText = (AddSeparator and BreakUpLargeNumbers(currencyMaximum - maxCheckCurrency)) or (currencyMaximum - maxCheckCurrency)
 			canEarnText = (useTotalEarnedForMaxQty and (" [" .. canEarnText .. "]")) or ""
 			maxBarText = "|r/|cFFFF2e2e" .. (AddSeparator and BreakUpLargeNumbers(currencyMaximum) or currencyMaximum)
 			maxBarText = maxBarText .. canEarnText .. "|r"
