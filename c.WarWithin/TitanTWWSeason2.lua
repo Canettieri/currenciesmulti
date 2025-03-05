@@ -61,4 +61,3 @@ L:CreateSimpleCurrencyPlugin({
 	category = "CATEGORY_TWW",
 	forceMax = true
 })
-
