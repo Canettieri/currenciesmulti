@@ -61,3 +61,12 @@ L:CreateSimpleCurrencyPlugin({
 	category = "CATEGORY_TWW",
 	forceMax = true
 })
+
+-- Coffer Key Shard (TWW S2 version)
+L:CreateSimpleItemPlugin({
+	itemId = 236096,
+	titanId = "TITAN_TWWS2CKS",
+	noCurrencyText = L["TWWSeason2"],
+	expName = L["mWarWithinS2"],
+	category = "CATEGORY_TWW"
+})
