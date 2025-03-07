@@ -13,7 +13,6 @@ L["No20thCurrency"] = "Pode ser obtida até o dia 7 de\rjaneiro de 2025 no event
 ------ The War Within pack
 L["NoTWWCurrency"] = "Obtida em The War Within."
 L["NoTWWCurrency01"] = "Obtida através do evento de\rpré-patch de The War Within."
-L["TWWSeason1"] = "Obtida na temporada 1 de The War\rWithin."
 L["TWWSeason2"] = "Obtida na temporada 2 de The War\rWithin."
 L["TWWUndermine"] = "Obtida na Inframina."
 
@@ -189,7 +188,6 @@ L["mBfA"] = "[|cFF198ae0BfA|r]"
 L["mShadowlands"] = "[|cFF198ae0Shadowlands|r]"
 L["mDragonflight"] = "[|cFF198ae0Dragonflight|r]"
 L["mWarWithin"] = "[|cFF198ae0The War Within|r]"
-L["mWarWithinS1"] = "[|cFF198ae0The War Within (S1)|r]"
 L["mWarWithinS2"] = "[|cFF198ae0The War Within (S2)|r]"
 L["mUndermine"] = "[|cFF198ae0Inframina|r]"
 L["mMoPRemix"] = "[|cFF198ae0MoP Remix|r]"

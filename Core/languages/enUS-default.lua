@@ -11,7 +11,6 @@ L["No20thCurrency"] = "Obtainable during the 20th\rAnniversary event Oct 22,\r20
 ------ The War Within pack
 L["NoTWWCurrency"] = "Obtainable in The War Within."
 L["NoTWWCurrency01"] = "Obtainable through The War Within\rPre-Patch Event."
-L["TWWSeason1"] = "Obtainable in The War Within Season 1."
 L["TWWSeason2"] = "Obtainable in The War Within Season 2."
 L["TWWUndermine"] = "Obtainable in The Undermine."
 
@@ -190,7 +189,6 @@ L["mBfA"] = "[|cFF198ae0BfA|r]"
 L["mShadowlands"] = "[|cFF198ae0Shadowlands|r]"
 L["mDragonflight"] = "[|cFF198ae0Dragonflight|r]"
 L["mWarWithin"] = "[|cFF198ae0The War Within|r]"
-L["mWarWithinS1"] = "[|cFF198ae0The War Within (S1)|r]"
 L["mWarWithinS2"] = "[|cFF198ae0The War Within (S2)|r]"
 L["mUndermine"] = "[|cFF198ae0Undermine|r]"
 L["mMoPRemix"] = "[|cFF198ae0MoP Remix|r]"
