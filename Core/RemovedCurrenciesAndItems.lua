@@ -34,6 +34,7 @@ if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
 			"TITAN_COLLYM", -- DF Cobalt Assembly rep currency, this was never really a "real" currency
 			"TITAN_DLTPOD", -- DF Dilated Time Pod item
 			"TITAN_PRESSM", -- DF Primeval Essence item
+			"TITAN_DREAMENERGY", -- DF Dream Energy
 			"TITAN_CLYCHM", -- DF S1 Catalyst Charges
 			"TITAN_RENSFLM", -- DF S2  Renascent Shadowflame (Catalyst)
 			"TITAN_WHELPDREAMINGCREST", -- DF S3 Whelpling's Dreaming Crests
