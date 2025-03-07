@@ -65,7 +65,7 @@ L:CreateSimpleCurrencyPlugin({
 -- Coffer Key Shard (TWW S2 version)
 L:CreateSimpleItemPlugin({
 	itemId = 236096,
-	titanId = "TITAN_TWWS2CKS",
+	titanId = "TITAN_CFFRKYM",
 	noCurrencyText = L["TWWSeason2"],
 	expName = L["mWarWithinS2"],
 	category = "CATEGORY_TWW"
@@ -74,7 +74,7 @@ L:CreateSimpleItemPlugin({
 -- Radiant Echo (TWW S2 version)
 L:CreateSimpleItemPlugin({
 	itemId = 235897,
-	titanId = "TITAN_TWWS2RADECHO",
+	titanId = "TITAN_RADECHO",
 	noCurrencyText = L["TWWSeason2"],
 	expName = L["mWarWithinS2"],
 	category = "CATEGORY_TWW"
