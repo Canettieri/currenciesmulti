@@ -47,3 +47,12 @@ L:CreateSimpleCurrencyPlugin({
 	category = "CATEGORY_TWW",
 	forceMax = true
 })
+
+-- Coffer Key Shard
+L:CreateSimpleItemPlugin({
+	itemId = 236096,
+	titanId = "TITAN_CFFRKYM",
+	noCurrencyText = L["NoTWWCurrency"],
+	expName = L["mWarWithinS2"],
+	category = "CATEGORY_TWW"
+})

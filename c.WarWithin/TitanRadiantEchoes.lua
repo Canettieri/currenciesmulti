@@ -9,7 +9,7 @@ local _, L = ...;
 
 -- Radiant Echo
 L:CreateSimpleItemPlugin({
-	itemId = 220520,
+	itemId = 235897,
 	titanId = "TITAN_RADECHO",
 	noCurrencyText = L["NoTWWCurrency"],
 	expName = L["mWarWithin"],
