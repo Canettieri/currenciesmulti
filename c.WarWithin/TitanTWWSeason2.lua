@@ -70,3 +70,12 @@ L:CreateSimpleItemPlugin({
 	expName = L["mWarWithinS2"],
 	category = "CATEGORY_TWW"
 })
+
+-- Radiant Echo (TWW S2 version)
+L:CreateSimpleItemPlugin({
+	itemId = 235897,
+	titanId = "TITAN_TWWS2RADECHO",
+	noCurrencyText = L["TWWSeason2"],
+	expName = L["mWarWithinS2"],
+	category = "CATEGORY_TWW"
+})
