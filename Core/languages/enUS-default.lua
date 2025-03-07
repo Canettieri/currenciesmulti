@@ -12,6 +12,7 @@ L["No20thCurrency"] = "Obtainable during the 20th\rAnniversary event Oct 22,\r20
 L["NoTWWCurrency"] = "Obtainable in The War Within."
 L["NoTWWCurrency01"] = "Obtainable through The War Within\rPre-Patch Event."
 L["TWWSeason1"] = "Obtainable in The War Within Season 1."
+L["TWWSeason2"] = "Obtainable in The War Within Season 2."
 L["TWWUndermine"] = "Obtainable in The Undermine."
 
 ------ Dragonflight pack

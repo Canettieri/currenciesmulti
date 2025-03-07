@@ -14,6 +14,7 @@ L["No20thCurrency"] = "Pode ser obtida até o dia 7 de\rjaneiro de 2025 no event
 L["NoTWWCurrency"] = "Obtida em The War Within."
 L["NoTWWCurrency01"] = "Obtida através do evento de\rpré-patch de The War Within."
 L["TWWSeason1"] = "Obtida na temporada 1 de The War\rWithin."
+L["TWWSeason2"] = "Obtida na temporada 2 de The War\rWithin."
 
 ------ Dragonflight pack
 L["DragonEventOnly"] = "Obtida através do evento de\rPré-Patch do Dragonflight."

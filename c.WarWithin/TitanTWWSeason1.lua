@@ -9,7 +9,7 @@ Special Thanks to Protuhj.
 local _, L = ...;
 
 -- Harmonized Silk (Catalyst charges, max 8 currently)
--- Will probably become OBE once S2 starts
+-- This has not been made OBE at the start of S2
 L:CreateSimpleCurrencyPlugin({
 	currencyId = 2813,
 	titanId = "TITAN_HARMONSILK",

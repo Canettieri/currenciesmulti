@@ -12,6 +12,8 @@ if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
 			print("TitanCurrenciesMultiDb is nil?")
 		end
 		local removed = {
+			"TITAN_RADECHO", -- TWW S1 Radiant Echo
+			"TITAN_CFFRKYM", -- TWW S1 Coffer Key Shard
 			"TITAN_WEATHHARBCREST", -- TWW S1 Weathered Harbinger Crests
 			"TITAN_CARVEDHARBCREST", -- TWW S1 Carved Harbinger Crests
 			"TITAN_RUNEDHARBCREST", -- TWW S1 Runed Harbinger Crests
@@ -33,6 +35,7 @@ if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
 			"TITAN_COLLYM", -- DF Cobalt Assembly rep currency, this was never really a "real" currency
 			"TITAN_DLTPOD", -- DF Dilated Time Pod item
 			"TITAN_PRESSM", -- DF Primeval Essence item
+			"TITAN_DREAMENERGY", -- DF Dream Energy
 			"TITAN_CLYCHM", -- DF S1 Catalyst Charges
 			"TITAN_RENSFLM", -- DF S2  Renascent Shadowflame (Catalyst)
 			"TITAN_WHELPDREAMINGCREST", -- DF S3 Whelpling's Dreaming Crests
