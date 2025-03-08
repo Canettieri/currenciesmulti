@@ -63,8 +63,12 @@ function Utils.CreateToggle(id, text, var)
 	return info
 end
 
-function Utils.ToggleRightSideDisplay(id)
+-- First argument from ElioteDropDownMenu is 'self', just ignore it
+function Utils.ToggleRightSideDisplay(_, id)
 	-- Right side display
+	local bar = TitanUtils_GetWhichBar(id)
 	TitanToggleVar(id, "DisplayOnRightSide");
-	TitanPanel_InitPanelButtons();
+	TitanPanel_RemoveButton(id);
+	TitanUtils_AddButtonOnBar(bar, id);
+	TitanPanelButton_UpdateButton(id)
 end
