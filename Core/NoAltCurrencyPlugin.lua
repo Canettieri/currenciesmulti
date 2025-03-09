@@ -22,7 +22,7 @@ function L:CreateNoAltCurrencyPlugin(params)
 	local totalSeasonalEarned = currencyInfoBase.totalEarned
 	-- For whatever reason, the value can be nil when the plugin first loads
 	-- If the creator knows that the currency has a maximum, then allow them to force it to be treated as if it had a max.
-
+	local forceMax = params.forceMax or false
 	local PLAYER_NAME, PLAYER_REALM
 	local PLAYER_KEY
 	local PLAYER_FACTION
@@ -72,7 +72,7 @@ function L:CreateNoAltCurrencyPlugin(params)
 			PLAYER_FACTION = UnitFactionGroup("player")
 			PLAYER_CLASS_COLOR = "|c" .. RAID_CLASS_COLORS[select(2, UnitClass("player"))].colorStr
 
-			self.registry.menuText = params.expName .. " Titan|cFF66b1ea " .. CURRENCY_NAME .. "|r" -- Correção pra bug do Titan que faz as cores não aparecerem no menu
+			self.registry.menuText = params.expName .. " Titan|cFF66b1ea " .. CURRENCY_NAME .. "|r" -- Fix for Titan bug that causes colors not to appear in the menu
 
 			Update(self)
 		end,
@@ -98,8 +98,8 @@ function L:CreateNoAltCurrencyPlugin(params)
 
 		local maxBarText = ""
 		if currencyMaximum and currencyMaximum > 0 and TitanGetVar(params.titanId, "MaxBar") then
-			local localMaxValue = (useTotalEarnedForMaxQty and totalEarned) or currencyMaximum
-			local canEarnText = (AddSeparator and BreakUpLargeNumbers(localMaxValue - totalSeasonalEarned)) or (localMaxValue - totalSeasonalEarned)
+			local maxCheckCurrency = (useTotalEarnedForMaxQty and totalSeasonalEarned) or currencyCount
+			local canEarnText = (AddSeparator and BreakUpLargeNumbers(currencyMaximum - maxCheckCurrency)) or (currencyMaximum - maxCheckCurrency)
 			canEarnText = (useTotalEarnedForMaxQty and (" [" .. canEarnText .. "]")) or ""
 			maxBarText = "|r/|cFFFF2e2e" .. (AddSeparator and BreakUpLargeNumbers(currencyMaximum) or currencyMaximum)
 			maxBarText = maxBarText .. canEarnText .. "|r"
@@ -111,7 +111,7 @@ function L:CreateNoAltCurrencyPlugin(params)
 			local deltaText = AddSeparator and BreakUpLargeNumbers(delta) or delta
 			if delta > 0 then
 				barBalanceText = " |cFF69FF69[" .. deltaText .. "]"
-			elseif (currencyCount - startcurrency) < 0 then
+			elseif delta < 0 then
 				barBalanceText = " |cFFFF2e2e[" .. deltaText .. "]"
 			end
 		end
@@ -166,8 +166,14 @@ function L:CreateNoAltCurrencyPlugin(params)
 		end
 	end
 
-	local prepMenu = L.PrepareNoAltCurrenciesMenuBase
-
+	local prepMenu = L.PrepareNoAltCurrenciesMenu
+	local maxBarValue = nil
+	prepMenu = L.Utils.ifZero(currencyMaximum, prepMenu, L.PrepareNoAltCurrenciesMaxMenu)
+	maxBarValue = L.Utils.ifZero(currencyMaximum, nil, 0)
+	if forceMax then
+		prepMenu = L.PrepareNoAltCurrenciesMaxMenu
+		maxBarValue = 1
+	end
 	L.Elib({
 		id = params.titanId,
 		name = params.expName .. " Titan|cFF66b1ea " .. CURRENCY_NAME .. "|r",
@@ -176,9 +182,9 @@ function L:CreateNoAltCurrencyPlugin(params)
 		icon = ICON,
 		category = params.category,
 		version = version,
-		onClick = L.DefaultCurrencyClickHandler,
 		getButtonText = GetButtonText,
 		eventsTable = eventsTable,
+		onClick = L.DefaultCurrencyClickHandler,
 		prepareMenu = prepMenu,
 		savedVariables = {
 			ShowIcon = 1,
