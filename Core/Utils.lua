@@ -1,5 +1,6 @@
 local _, T = ...
 
+local ACE = LibStub("AceLocale-3.0"):GetLocale(TITAN_ID, true)
 local Utils = {}
 T.Utils = Utils
 
@@ -61,6 +62,47 @@ function Utils.CreateToggle(id, text, var)
 	info.checked = TitanGetVar(id, var)
 	info.keepShownOnClick = true
 	return info
+end
+
+-- Adds the "Shift Right", "Shift Left", "Hide", and "Close" menus
+function Utils.AddCommonMenuItems(eddm, id)
+	eddm.UIDropDownMenu_AddButton({
+		text = ACE["TITAN_PANEL_SHIFT_RIGHT"],
+		func = function()
+			TitanUtils_ShiftButtonOnBarRight(id)
+		end,
+		arg1 = id,
+		keepShownOnClick = true,
+		notCheckable = true
+	});
+
+	eddm.UIDropDownMenu_AddButton({
+		text = ACE["TITAN_PANEL_SHIFT_LEFT"],
+		func = function()
+			TitanUtils_ShiftButtonOnBarLeft(id)
+		end,
+		arg1 = id,
+		keepShownOnClick = true,
+		notCheckable = true
+	});
+
+	eddm.UIDropDownMenu_AddSpace();
+
+	eddm.UIDropDownMenu_AddButton({
+		notCheckable = true,
+		text = ACE["TITAN_PANEL_MENU_HIDE"],
+		func = function()
+			TitanPanelRightClickMenu_Hide(id)
+		end
+	})
+
+	eddm.UIDropDownMenu_AddSeparator();
+
+	eddm.UIDropDownMenu_AddButton({
+		text = CLOSE,
+		notCheckable = true,
+		keepShownOnClick = false,
+	});
 end
 
 -- First argument from ElioteDropDownMenu is 'self', just ignore it
