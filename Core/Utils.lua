@@ -32,6 +32,13 @@ function Utils.SortTableBy(t, valueKey, asc)
 	return sortedList
 end
 
+function Utils.ifZero(valueToCheck, resultIfZero, resultElse)
+	if (valueToCheck == nil or valueToCheck <= 0) then
+		return resultIfZero
+	end
+	return resultElse
+end
+
 function Utils.GetCharTable(titanId)
 	TitanCurrenciesMultiDb = TitanCurrenciesMultiDb or {}
 	TitanCurrenciesMultiDb[titanId] = TitanCurrenciesMultiDb[titanId] or { charTable = {} }
