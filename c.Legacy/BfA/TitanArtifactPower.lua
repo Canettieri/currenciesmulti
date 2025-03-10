@@ -74,37 +74,18 @@ local function OnClick(self, button)
 end
 -----------------------------------------------
 function PrepareMenu(eddm, self, id)
-    eddm.UIDropDownMenu_AddButton({
-        text = TitanPlugins[id].menuText,
-        hasArrow = false,
-        isTitle = true,
-        isUninteractable = true,
-        notCheckable = true
-    })
-
-    local info = {};
-    info.text = ACE["TITAN_CLOCK_MENU_DISPLAY_ON_RIGHT_SIDE"];
-    info.func = ToggleRightSideDisplay;
-    info.arg1 = id
-    info.checked = TitanGetVar(id, "DisplayOnRightSide");
-    info.keepShownOnClick = true
-    eddm.UIDropDownMenu_AddButton(info);
-
-    eddm.UIDropDownMenu_AddSpace();
+    eddm.UIDropDownMenu_AddButton(L.Utils.CreateTitle(id, TitanPlugins[id].menuText));
+    eddm.UIDropDownMenu_AddButton(L.Utils.CreateTitle(id, L["buttonText"]));
 
     eddm.UIDropDownMenu_AddButton({
-        notCheckable = true,
-        text = ACE["TITAN_PANEL_MENU_HIDE"],
-        func = function() TitanPanelRightClickMenu_Hide(id) end
-    })
+        text = ACE["TITAN_CLOCK_MENU_DISPLAY_ON_RIGHT_SIDE"],
+        func = L.Utils.ToggleRightSideDisplay,
+        arg1 = id,
+        checked = TitanGetVar(id, "DisplayOnRightSide"),
+        keepShownOnClick = true
+    });
 
-    eddm.UIDropDownMenu_AddSeparator();
-
-    info = {};
-    info.text = CLOSE;
-    info.notCheckable = true
-    info.keepShownOnClick = false
-    eddm.UIDropDownMenu_AddButton(info);
+    L.Utils.AddCommonMenuItems(eddm, id);
 end
 -----------------------------------------------
 L.Elib({

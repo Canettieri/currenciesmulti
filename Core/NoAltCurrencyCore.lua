@@ -32,21 +32,5 @@ function L.PrepareNoAltCurrenciesMenuBase(eddm, self, id, hasMax)
 	eddm.UIDropDownMenu_AddButton(L.Utils.CreateToggle(id, L["useHyperlink"], "UseHyperlink"));
 	eddm.UIDropDownMenu_AddButton(L.Utils.CreateToggle(id, L["hideInfoWhenHyperlink"], "HideInfoWhenHyperlink"));
 
-	eddm.UIDropDownMenu_AddSpace();
-
-	eddm.UIDropDownMenu_AddButton({
-		notCheckable = true,
-		text = ACE["TITAN_PANEL_MENU_HIDE"],
-		func = function()
-			TitanPanelRightClickMenu_Hide(id)
-		end
-	})
-
-	eddm.UIDropDownMenu_AddSeparator();
-
-	eddm.UIDropDownMenu_AddButton({
-		text = CLOSE,
-		notCheckable = true,
-		keepShownOnClick = false,
-	});
+	L.Utils.AddCommonMenuItems(eddm, id);
 end
