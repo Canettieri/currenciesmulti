@@ -44,3 +44,13 @@ L:CreateSimpleItemPlugin({
 	category = "CATEGORY_TWW",
 	allowAccountTotal = true
 })
+
+-- "Gold" Fish
+L:CreateSimpleItemPlugin({
+	itemId = 227673,
+	titanId = "TITAN_UMGOLDFISH",
+	noCurrencyText = L["TWWUndermine"],
+	expName = L["mUndermine"],
+	category = "CATEGORY_TWW",
+	allowAccountTotal = true
+})
