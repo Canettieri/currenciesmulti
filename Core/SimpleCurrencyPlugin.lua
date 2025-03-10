@@ -275,19 +275,13 @@ function L:CreateSimpleCurrencyPlugin(params)
 		end
 	end
 
-	local function ifZero(valueToCheck, resultIfZero, resultElse)
-		if (valueToCheck == nil or valueToCheck <= 0) then
-			return resultIfZero
-		end
-		return resultElse
-	end
 	local prepMenu = L.PrepareCurrenciesMenu
 	local maxBarValue = nil
 	if isAccountTransferable then
 		prepMenu = L.PrepareCurrenciesMenuWarband
 	else
-		prepMenu = ifZero(currencyMaximum, prepMenu, L.PrepareCurrenciesMaxMenu)
-		maxBarValue = ifZero(currencyMaximum, nil, 0)
+		prepMenu = L.Utils.ifZero(currencyMaximum, prepMenu, L.PrepareCurrenciesMaxMenu)
+		maxBarValue = L.Utils.ifZero(currencyMaximum, nil, 0)
 		if forceMax then
 			prepMenu = L.PrepareCurrenciesMaxMenu
 			maxBarValue = 1

@@ -14,5 +14,6 @@ L:CreateSimpleItemPlugin({
 	titanId = ID,
 	noCurrencyText = L["NoMaxPet"],
 	expName = L["mOther"],
-	category = "CATEGORY_MISC"
+	category = "CATEGORY_MISC",
+	allowAccountTotal = true
 })

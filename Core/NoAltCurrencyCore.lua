@@ -9,6 +9,14 @@ local _, L = ...;
 local ACE = LibStub("AceLocale-3.0"):GetLocale(TITAN_ID, true)
 L.Elib = LibStub("Elib-4.0").Register
 
+function L.PrepareNoAltCurrenciesMenu(eddm, self, id)
+	L.PrepareNoAltCurrenciesMenuBase(eddm, self, id, false)
+end
+
+function L.PrepareNoAltCurrenciesMaxMenu(eddm, self, id)
+	L.PrepareNoAltCurrenciesMenuBase(eddm, self, id, true)
+end
+
 function L.PrepareNoAltCurrenciesMenuBase(eddm, self, id, hasMax)
 	eddm.UIDropDownMenu_AddButton(L.Utils.CreateTitle(id, TitanPlugins[id].menuText));
 	eddm.UIDropDownMenu_AddButton(L.Utils.CreateTitle(id, L["buttonText"]));

@@ -13,6 +13,5 @@ L:CreateSimpleCurrencyPlugin({
 	titanId = ID,
 	noCurrencyText = L["DragonFOnly"],
 	expName = L["mDragonflight"],
-	category = "CATEGORY_DRAGON",
-	forceMax = true
+	category = "CATEGORY_DRAGON"
 })
