@@ -68,6 +68,7 @@ c.Legacy\Legion\TitanSealofBrokenFate.lua
 c.Legacy\Legion\TitanSightlessEye.lua
 c.Legacy\Legion\TitanTimewornArtifact.lua
 c.Legacy\Legion\TitanVeiledArgunite.lua
+c.Legacy\Legion\TitanWakeningEssence.lua
 c.Legacy\MoP\TitanBloodyCoin.lua
 c.Legacy\MoP\TitanGoodFortune.lua
 c.Legacy\MoP\TitanIronpawToken.lua
