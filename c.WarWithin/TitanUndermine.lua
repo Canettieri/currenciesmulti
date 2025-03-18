@@ -54,3 +54,12 @@ L:CreateSimpleItemPlugin({
 	category = "CATEGORY_TWW",
 	allowAccountTotal = true
 })
+
+-- Market Research
+L:CreateSimpleCurrencyPlugin({
+	currencyId = 3226,
+	titanId = "TITAN_UMMARKETRESEARCH",
+	noCurrencyText = L["TWWUndermine"],
+	expName = L["mUndermine"],
+	category = "CATEGORY_TWW"
+})
