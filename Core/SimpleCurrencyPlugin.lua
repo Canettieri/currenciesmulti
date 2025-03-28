@@ -34,7 +34,7 @@ function L:CreateSimpleCurrencyPlugin(params)
 	local forceMax = params.forceMax or false
 	-- For seasonal currencies, like crests added in Dragonflight and beyond, track how much the maximum allowed
 	-- amount increases weekly, to be able to color the current amount more appropriately
-	local weeklyIncrease = currencyInfoBase.maxWeeklyQuantity or 0
+	local weeklyIncrease = params.weeklyIncrease or 0
 
 	local PLAYER_NAME, PLAYER_REALM
 	local PLAYER_KEY
