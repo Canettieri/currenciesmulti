@@ -110,7 +110,7 @@ function L:CreateSimpleCurrencyPlugin(params)
 			PLAYER_FACTION = UnitFactionGroup("player")
 			PLAYER_CLASS_COLOR = "|c" .. RAID_CLASS_COLORS[select(2, UnitClass("player"))].colorStr
 
-			self.registry.menuText = params.expName .. " Titan|cFF66b1ea " .. CURRENCY_NAME .. "|r" -- Fix for Titan bug that causes colors not to appear in the menu
+			self.registry.menuText = params.expName .. " Titan " .. L.Utils.ColorText("FF66B1EA", CURRENCY_NAME) -- Fix for Titan bug that causes colors not to appear in the menu
 
 			Update(self)
 		end,
@@ -122,6 +122,34 @@ function L:CreateSimpleCurrencyPlugin(params)
 			end
 		end,
 	}
+
+	-----------------------------------------------
+	local function conditionalColorText(textToColor, maxCheckCurrencyAmount, maxAmount)
+		-- For currencies with a static max amount
+		local currencyCountText = textToColor
+		local dividend = maxCheckCurrencyAmount / maxAmount
+		if weeklyIncrease ~= 0 then
+			-- If we can earn more than the weeklyIncrease amount, just short-circuit out
+			if dividend >= 1.0 then
+				return TitanUtils_GetHighlightText(currencyCountText)
+			end
+			dividend = 1 - dividend
+		end
+		if dividend > 0.4 and dividend < 0.59 then
+			-- Yellow
+			currencyCountText = L.Utils.ColorText(Titan_Global.colors.yellow_gold, textToColor)
+		elseif dividend >= 0.59 and dividend < 0.79 then
+			-- Orange
+			currencyCountText = L.Utils.ColorText(Titan_Global.colors.orange, textToColor)
+		elseif dividend >= 0.79 then
+			-- Red
+			currencyCountText = TitanUtils_GetRedText(textToColor)
+		else
+			currencyCountText = TitanUtils_GetHighlightText(currencyCountText)
+		end
+		return currencyCountText
+	end
+
 	-----------------------------------------------
 	local function GetButtonText()
 		local showAccountTotal = TitanGetVar(params.titanId, "TotalBalanceBar") or false
@@ -131,46 +159,32 @@ function L:CreateSimpleCurrencyPlugin(params)
 		if isAccountTransferable and showAccountTotal then
 			local totalVal = currencyCount + warbandAltTotal
 			currencyCountTextNoColor = AddSeparator and BreakUpLargeNumbers(totalVal) or (totalVal or "0")
-			currencyCountText = "|cFF00CCFF" .. currencyCountTextNoColor
+			-- Colors the amount "B.Net blue" (cyan-ish)
+			currencyCountText = L.Utils.ColorText("FF00CCFF", currencyCountTextNoColor)
 		elseif (currencyCount or totalSeasonalEarned) and currencyMaximum > 0 then
 			local maxCheckCurrency = (useTotalEarnedForMaxQty and totalSeasonalEarned) or currencyCount
-			-- For currencies with a static max amount
-			if weeklyIncrease == 0 then
-				if maxCheckCurrency > currencyMaximum * 0.4 and maxCheckCurrency < currencyMaximum * 0.59 then
-					-- Yellow
-					currencyCountText = "|cFFf6ed12" .. currencyCountTextNoColor
-				elseif maxCheckCurrency > currencyMaximum * 0.59 and maxCheckCurrency < currencyMaximum * 0.79 then
-					-- Orange
-					currencyCountText = "|cFFf69112" .. currencyCountTextNoColor
-				elseif maxCheckCurrency > currencyMaximum * 0.79 then
-					-- Red
-					currencyCountText = "|cFFFF2e2e" .. currencyCountTextNoColor
-				end
-			else
-				-- For currencies that increase the maximum amount weekly, color based on how much you can still earn
-				-- compared to the weekly increase amount
-				local canEarnAmount = currencyMaximum - maxCheckCurrency
-				-- Basically reverse the logic above
-				if canEarnAmount < weeklyIncrease * 0.79 and canEarnAmount > weeklyIncrease * 0.59 then
-					-- Yellow
-					currencyCountText = "|cFFf6ed12" .. currencyCountTextNoColor
-				elseif canEarnAmount < weeklyIncrease * 0.59 and canEarnAmount > weeklyIncrease * 0.4 then
-					-- Orange
-					currencyCountText = "|cFFf69112" .. currencyCountTextNoColor
-				elseif canEarnAmount < weeklyIncrease * 0.4 then
-					-- Red
-					currencyCountText = "|cFFFF2e2e" .. currencyCountTextNoColor
-				end
+			local maxAmount = currencyMaximum
+			if weeklyIncrease ~= 0 then
+				-- For currencies that increase weekly, we want to color based on how much we can still earn
+				maxAmount = weeklyIncrease
+				maxCheckCurrency = currencyMaximum - maxCheckCurrency
 			end
+			currencyCountText = conditionalColorText(currencyCountTextNoColor, maxCheckCurrency, maxAmount)
 		end
 
 		local maxBarText = ""
 		if currencyMaximum and currencyMaximum > 0 and TitanGetVar(params.titanId, "MaxBar") then
 			local maxCheckCurrency = (useTotalEarnedForMaxQty and totalSeasonalEarned) or currencyCount
-			local canEarnText = (AddSeparator and BreakUpLargeNumbers(currencyMaximum - maxCheckCurrency)) or (currencyMaximum - maxCheckCurrency)
+			local canEarnAmount = currencyMaximum - maxCheckCurrency
+			local canEarnText = (AddSeparator and BreakUpLargeNumbers(canEarnAmount)) or canEarnAmount
+			if weeklyIncrease ~= 0 and canEarnAmount > (weeklyIncrease * 1.25) then
+				-- If the character can earn more than 1.25x a week's worth of currency still, reduce the amount of text on the bar
+				canEarnText = TitanUtils_GetHighlightText("*")
+			end
+			-- Only show the can earn amount for seasonal currencies
 			canEarnText = (useTotalEarnedForMaxQty and (" [" .. canEarnText .. "]")) or ""
-			maxBarText = "|r/|cFFFF2e2e" .. (AddSeparator and BreakUpLargeNumbers(currencyMaximum) or currencyMaximum)
-			maxBarText = maxBarText .. canEarnText .. "|r"
+			maxBarText = (AddSeparator and BreakUpLargeNumbers(currencyMaximum) or currencyMaximum)
+			maxBarText = "|r/" .. TitanUtils_GetRedText(maxBarText .. canEarnText)
 		end
 
 		local barBalanceText = ""
@@ -181,9 +195,9 @@ function L:CreateSimpleCurrencyPlugin(params)
 			end
 			local deltaText = AddSeparator and BreakUpLargeNumbers(delta) or delta
 			if delta > 0 then
-				barBalanceText = " |cFF69FF69[" .. deltaText .. "]"
+				barBalanceText = TitanUtils_GetGreenText(" [" .. deltaText .. "]")
 			elseif delta < 0 then
-				barBalanceText = " |cFFFF2e2e[" .. deltaText .. "]"
+				barBalanceText = TitanUtils_GetRedText(" [" .. deltaText .. "]")
 			end
 		end
 
@@ -209,7 +223,7 @@ function L:CreateSimpleCurrencyPlugin(params)
 		local hasCurrency = (currencyCount or 0 ) > 0
 		hasCurrency = showAccountTotal and (hasCurrency or ((warbandAltTotal or 0) > 0)) or hasCurrency
 		if (not hasCurrency) then
-			GameTooltip:AddLine("|cFFFF2e2e" .. params.noCurrencyText)
+			GameTooltip:AddLine(TitanUtils_GetRedText(params.noCurrencyText))
 		else
 			local totalLabel = L["totalAcquired"]
 			local dif = 0
@@ -239,9 +253,9 @@ function L:CreateSimpleCurrencyPlugin(params)
 			if dif == 0 then
 				sessionValueText = TitanUtils_GetHighlightText("0")
 			elseif dif > 0 then
-				sessionValueText = "|cFF69FF69" .. difText
+				sessionValueText = TitanUtils_GetGreenText(difText)
 			else
-				sessionValueText = "|cFFFF2e2e" .. difText
+				sessionValueText = TitanUtils_GetRedText(difText)
 			end
 
 			GameTooltip:AddDoubleLine(L["session"], sessionValueText)
@@ -266,7 +280,7 @@ function L:CreateSimpleCurrencyPlugin(params)
 					local arrowEnd = isCurrent and "|r <" or ""
 					local amountText = AddSeparator and BreakUpLargeNumbers(v.currency) or v.currency
 
-					GameTooltip:AddDoubleLine(arrow .. v.name .. arrowEnd, "|cFFFFFFFF" .. (amountText))
+					GameTooltip:AddDoubleLine(arrow .. v.name .. arrowEnd, TitanUtils_GetHighlightText(amountText))
 					total = total + v.currency
 				end
 			end
@@ -290,7 +304,7 @@ function L:CreateSimpleCurrencyPlugin(params)
 
 	L.Elib({
 		id = params.titanId,
-		name = params.expName .. " Titan|cFF66b1ea " .. CURRENCY_NAME .. "|r",
+		name = params.expName .. " Titan " .. L.Utils.ColorText("FF66B1EA", CURRENCY_NAME),
 		tooltip = CURRENCY_NAME,
 		customTooltip = CreateTooltip,
 		icon = ICON,
