@@ -72,7 +72,7 @@ function L:CreateNoAltCurrencyPlugin(params)
 			PLAYER_FACTION = UnitFactionGroup("player")
 			PLAYER_CLASS_COLOR = "|c" .. RAID_CLASS_COLORS[select(2, UnitClass("player"))].colorStr
 
-			self.registry.menuText = params.expName .. " Titan|cFF66b1ea " .. CURRENCY_NAME .. "|r" -- Fix for Titan bug that causes colors not to appear in the menu
+			self.registry.menuText = params.expName .. " Titan " .. L.Utils.ColorText("FF66B1EA", CURRENCY_NAME) -- Fix for Titan bug that causes colors not to appear in the menu
 
 			Update(self)
 		end,
@@ -86,13 +86,13 @@ function L:CreateNoAltCurrencyPlugin(params)
 			local maxCheckCurrency = (useTotalEarnedForMaxQty and totalSeasonalEarned) or currencyCount
 			if maxCheckCurrency > currencyMaximum * 0.4 and maxCheckCurrency < currencyMaximum * 0.59 then
 				-- Yellow
-				currencyCountText = "|cFFf6ed12" .. currencyCountTextNoColor
+				currencyCountText = L.Utils.ColorText(Titan_Global.colors.yellow_gold, currencyCountTextNoColor)
 			elseif maxCheckCurrency > currencyMaximum * 0.59 and maxCheckCurrency < currencyMaximum * 0.79 then
 				-- Orange
-				currencyCountText = "|cFFf69112" .. currencyCountTextNoColor
+				currencyCountText = L.Utils.ColorText(Titan_Global.colors.orange, currencyCountTextNoColor)
 			elseif maxCheckCurrency > currencyMaximum * 0.79 then
 				-- Red
-				currencyCountText = "|cFFFF2e2e" .. currencyCountTextNoColor
+				currencyCountText = TitanUtils_GetRedText(currencyCountTextNoColor)
 			end
 		end
 
@@ -101,8 +101,8 @@ function L:CreateNoAltCurrencyPlugin(params)
 			local maxCheckCurrency = (useTotalEarnedForMaxQty and totalSeasonalEarned) or currencyCount
 			local canEarnText = (AddSeparator and BreakUpLargeNumbers(currencyMaximum - maxCheckCurrency)) or (currencyMaximum - maxCheckCurrency)
 			canEarnText = (useTotalEarnedForMaxQty and (" [" .. canEarnText .. "]")) or ""
-			maxBarText = "|r/|cFFFF2e2e" .. (AddSeparator and BreakUpLargeNumbers(currencyMaximum) or currencyMaximum)
-			maxBarText = maxBarText .. canEarnText .. "|r"
+			maxBarText = (AddSeparator and BreakUpLargeNumbers(currencyMaximum) or currencyMaximum)
+			maxBarText = "|r/" .. TitanUtils_GetRedText(maxBarText .. canEarnText)
 		end
 
 		local barBalanceText = ""
@@ -110,9 +110,9 @@ function L:CreateNoAltCurrencyPlugin(params)
 			local delta = (currencyCount - startcurrency)
 			local deltaText = AddSeparator and BreakUpLargeNumbers(delta) or delta
 			if delta > 0 then
-				barBalanceText = " |cFF69FF69[" .. deltaText .. "]"
+				barBalanceText = TitanUtils_GetGreenText(" [" .. deltaText .. "]")
 			elseif delta < 0 then
-				barBalanceText = " |cFFFF2e2e[" .. deltaText .. "]"
+				barBalanceText = TitanUtils_GetRedText(" [" .. deltaText .. "]")
 			end
 		end
 
@@ -136,7 +136,7 @@ function L:CreateNoAltCurrencyPlugin(params)
 		GameTooltip:AddLine(L["info"])
 
 		if not currencyCount or currencyCount == 0 then
-			GameTooltip:AddLine("|cFFFF2e2e" .. params.noCurrencyText)
+			GameTooltip:AddLine(TitanUtils_GetRedText(params.noCurrencyText))
 		else
 			local currentText = AddSeparator and BreakUpLargeNumbers(currencyCount) or currencyCount
 
@@ -156,9 +156,9 @@ function L:CreateNoAltCurrencyPlugin(params)
 				if dif == 0 then
 					sessionValueText = TitanUtils_GetHighlightText("0")
 				elseif dif > 0 then
-					sessionValueText = "|cFF69FF69" .. difText
+					sessionValueText = TitanUtils_GetGreenText(difText)
 				else
-					sessionValueText = "|cFFFF2e2e" .. difText
+					sessionValueText = TitanUtils_GetRedText(difText)
 				end
 			end
 
@@ -176,7 +176,7 @@ function L:CreateNoAltCurrencyPlugin(params)
 	end
 	L.Elib({
 		id = params.titanId,
-		name = params.expName .. " Titan|cFF66b1ea " .. CURRENCY_NAME .. "|r",
+		name = params.expName .. " Titan " .. L.Utils.ColorText("FF66B1EA", CURRENCY_NAME),
 		tooltip = CURRENCY_NAME,
 		customTooltip = CreateTooltip,
 		icon = ICON,

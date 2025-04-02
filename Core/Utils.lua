@@ -121,3 +121,29 @@ function Utils.ToggleRightSideDisplay(_, id)
 	TitanUtils_AddButtonOnBar(bar, id);
 	TitanPanelButton_UpdateButton(id)
 end
+
+-- This is the TitanGlobal.lua function "Encode"
+---@param color string Hex color code (can handle 3 or 4 byte codes, 3 bytes will get 'FF' prepended)
+---@param text string Text to wrap
+---@return string text Color encoded string
+function Utils.ColorText(color, text)
+	-- This does the sanity checks for the Get<color> routines below
+	local res = ""
+	local c = tostring(color)
+	local t = tostring(text)
+	if (c and t) then
+		local alpha = ""
+		if string.len(c) == 6 then
+			alpha = "ff"
+		end
+		res = "|c" .. alpha .. c .. t .. "|r"
+	else
+		if (t) then
+			res = tostring(t)
+		else
+			-- return blank string
+		end
+	end
+
+	return res
+end
