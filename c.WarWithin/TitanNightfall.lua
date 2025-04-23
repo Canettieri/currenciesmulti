@@ -8,13 +8,22 @@ Special Thanks Protuhj.
 
 local _, L = ...;
 
+-- Radiant Emblem of Service
+L:CreateSimpleItemPlugin({
+	itemId = 238920,
+	titanId = "TITAN_TWWNFRADEMOFSER",
+	noCurrencyText = L["TWWNFEvents"],
+	expName = L["mNightfall"],
+	category = "CATEGORY_TWW"
+})
+
 -- Displaced Corrupted Mementos
 L:CreateSimpleCurrencyPlugin({
 	currencyId = 3149,
 	titanId = "TITAN_TWWNFDISCORMEM",
 	noCurrencyText = L["TWWNFVisions"],
 	expName = L["mHorrificVisions"],
-	category = "CATEGORY_TWW",
+	category = "CATEGORY_TWW"
 })
 
 -- Black Blood Residue
