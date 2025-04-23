@@ -13,6 +13,8 @@ L["NoTWWCurrency"] = "Obtainable in The War Within."
 L["NoTWWCurrency01"] = "Obtainable through The War Within\rPre-Patch Event."
 L["TWWSeason2"] = "Obtainable in The War Within Season 2."
 L["TWWUndermine"] = "Obtainable in The Undermine."
+L["TWWNFVisions"] = "Obtainable in Horrific Visions in the The War Within 11.1.5 Nightfall patch.\r" ..
+	"Horrific Visions are scheduled to be available on May 20, 2025."
 
 ------ Dragonflight pack
 L["DragonEventOnly"] = "Obtainable through Dragonflight\rPre-Patch Event."
@@ -191,6 +193,7 @@ L["mDragonflight"] = "[|cFF198ae0Dragonflight|r]"
 L["mWarWithin"] = "[|cFF198ae0The War Within|r]"
 L["mWarWithinS2"] = "[|cFF198ae0The War Within (S2)|r]"
 L["mUndermine"] = "[|cFF198ae0Undermine|r]"
+L["mHorrificVisions"] = "[|cFF198ae0Horrific Visions|r]"
 L["mMoPRemix"] = "[|cFF198ae0MoP Remix|r]"
 L["info"] = "|cFFFFFFFF[Information]|r"
 L["totalAcquired"] = "Total acquired: "
