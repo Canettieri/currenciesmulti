@@ -97,6 +97,8 @@ L["NoTickets"] = "Available through the\rDarkmoon Faire."
 L["NoLove"] = "Available through the event\rLove is in the Air."
 --- Spooky Supplies and Tricky Treat
 L["HallowEnd"] = "Available through the event\rHallow's End."
+--- Children's Week items
+L["NoChildrensWeek"] = "Available through the event\rChildren's Week"
 
 ------ Legion pack
 --- Ancient Mana
