@@ -47,10 +47,14 @@ function L.PrepareCurrenciesMenu(eddm, self, id)
 	return L.PrepareCurrenciesMenuBase(eddm, self, id, false, false)
 end
 
--- I'm not sure if there are Warband currencies that have max
--- If Blizzard adds some in the future, we'll need to split this into multiple versions
+-- Warbound currency without a max
 function L.PrepareCurrenciesMenuWarband(eddm, self, id)
 	return L.PrepareCurrenciesMenuBase(eddm, self, id, false, true)
+end
+
+-- Warbound currency with a max
+function L.PrepareCurrenciesMenuWarbandMax(eddm, self, id)
+	return L.PrepareCurrenciesMenuBase(eddm, self, id, true, true)
 end
 
 function L.DefaultCurrencyClickHandler(self, button)
