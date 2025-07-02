@@ -159,6 +159,8 @@ L["NoMaxPet"] = "Available through Pet Battles in\rWarlords of Draenor and Legio
 L["NoBadge"] = "Enter in a dungeon queue\rwhen Timewalking event is\roccurring."
 --- Trader's Tender
 L["TradersTender"] = "Obtained from your capital's Trading Post."
+--- Diablo Events
+L["GreedyEmissary"] = "Obtained during the Greedy Emissary Diablo Event."
 
 ------ PvP pack
 --- Mark of Honor
