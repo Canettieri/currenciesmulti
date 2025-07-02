@@ -93,6 +93,7 @@ c.Misc\TitanChildrensWeek.lua
 c.Misc\TitanCoinAncestry.lua
 c.Misc\TitanConquest.lua
 c.Misc\TitanDarkmoonTicket.lua
+c.Misc\TitanDiablo.lua
 c.Misc\TitanGold.lua
 c.Misc\TitanHonor.lua
 c.Misc\TitanLovelyCharm.lua
