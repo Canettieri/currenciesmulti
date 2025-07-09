@@ -109,11 +109,11 @@
   <li><strong>Cataloged Research</strong>,</li>
   <li><strong>Cosmic Flux</strong>,</li>
   <li><strong>Cyphers of the First Ones</strong>,</li>
-  <li><strong>Grateful Offering </strong>,</li>
+  <li><strong>Grateful Offering</strong>,</li>
   <li><strong>Infused Ruby</strong>,</li>
   <li><strong>Medallion of Service</strong>,</li>
   <li><strong>Phantasma</strong>,</li>
-  <li><strong>Redeemed Soul</strong> ,</li>
+  <li><strong>Redeemed Soul</strong>,</li>
   <li><strong>Renown</strong>,</li>
   <li><strong>Reservoir Anima</strong>,</li>
   <li><strong>Sandworn Relic</strong>,</li>
@@ -139,7 +139,7 @@
   <li><strong>Emblem of Valor</strong>,</li>
   <li><strong>Sidereal Essence</strong>,</li>
   <li><strong>Stone Keeper's Shard</strong>,</li>
-  <li><strong>Venture Coin.</strong></li>
+  <li><strong>Venture Coin</strong>.</li>
 </ul>
 
 <h3><strong>Battle for Azeroth (12)</strong></h3>
@@ -166,7 +166,7 @@
   <li><strong>Oil</strong>,</li>
   <li><strong>Primal Spirit</strong>,</li>
   <li><strong>Seal of Inevitable Fate</strong>,</li>
-  <li><strong>Seal of Tempered Fate.</strong></li>
+  <li><strong>Seal of Tempered Fate</strong>.</li>
 </ul>
 
 <h3><strong>Events (8)</strong></h3>
@@ -225,7 +225,7 @@
   <li><strong>Honor Points </strong><em>[Classic only]</em>,</li>
   <li><strong>Mark of Honor</strong>,</li>
   <li><strong>Timewarped Badge</strong>,</li>
-  <li><strong>Tol Barad Commendation </strong>.</li>
+  <li><strong>Tol Barad Commendation</strong>.</li>
 </ul>
 
 <h2>6. I am missing a currency</h2>
