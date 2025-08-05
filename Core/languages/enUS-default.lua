@@ -28,7 +28,7 @@ L["CataOnly"] = "Available in Cataclysm."
 --- Chef's Award
 L["NoCataCurrency01"] = "Earned by completing daily\rcooking quests."
 --- Justice Points
-L["NoCataCurrency02"] = "Earned for defeating dungeon \ror older raid bosses."
+L["NoCataCurrency02"] = "Earned for defeating dungeon\ror older raid bosses."
 --- Valor Points
 L["NoCataCurrency03"] = "Earned for defeating recent raid bosses\ror completing heroic Dungeon."
 --- Illustrious Jewelcrafter's Token
@@ -231,6 +231,7 @@ L["dragonf"] = "Currency [Dragonflight]"
 L["warwithin"] = "Currency [The War Within]"
 L["wotlk"] = "Currency [WotLK]"
 L["cata"] = "Currency [Cataclysm]"
+L["mop"] = "Currency [Mists of Pandaria]"
 
 --- Character List Plugin strings
 L["charListPluginDisplayName"] = "Data Management"

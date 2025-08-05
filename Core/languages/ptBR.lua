@@ -219,4 +219,5 @@ L["dragonf"] = "Moeda [Dragonflight]"
 L["warwithin"] = "Moeda [The War Within]"
 L["wotlk"] = "Moeda [WotLK]"
 L["cata"] = "Moeda [Cataclysm]"
+L["mop"] = "Moeda [Mists of Pandaria]"
 end

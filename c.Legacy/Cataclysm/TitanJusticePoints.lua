@@ -13,7 +13,7 @@ L:CreateSimpleCurrencyPlugin({
 	currencyId = CURRENCY_ID,
 	titanId = ID,
 	noCurrencyText = L["NoCataCurrency02"],
-	expName = L["mCata"],
-	category = "CATEGORY_CATA",
+	expName = L["mPvE"], -- Essa moeda foi continuada em Pandaria.
+	category = "CATEGORY_MISC", -- Mudei para a categoria misc.
 	forceMax = true
 })

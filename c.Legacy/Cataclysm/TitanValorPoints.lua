@@ -13,7 +13,7 @@ L:CreateSimpleCurrencyPlugin({
 	currencyId = CURRENCY_ID,
 	titanId = ID,
 	noCurrencyText = L["NoCataCurrency03"],
-	expName = L["mCata"],
-	category = "CATEGORY_CATA",
+	expName = L["mPvE"], -- Essa moeda foi do Cata para o MoP
+	category = "CATEGORY_CATA", -- Mudado para Misc em MoP
 	forceMax = true
 })

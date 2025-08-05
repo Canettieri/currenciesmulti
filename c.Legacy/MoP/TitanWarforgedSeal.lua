@@ -14,5 +14,5 @@ L:CreateSimpleCurrencyPlugin({
 	titanId = ID,
 	noCurrencyText = L["PandariaOnly"],
 	expName = L["mMoP"],
-	category = "CATEGORY_LEGACY"
+	category = (LE_EXPANSION_LEVEL_CURRENT <= LE_EXPANSION_MISTS_OF_PANDARIA) and "CATEGORY_CURRENT" or "CATEGORY_LEGACY"
 })
