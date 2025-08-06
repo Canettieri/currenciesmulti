@@ -137,7 +137,7 @@ c.WarWithin\TitanRestoredCofferKey.lua
 c.WarWithin\TitanSizzlingCinderpollen.lua
 c.WarWithin\TitanTitanDiscShard.lua
 c.WarWithin\TitanTWWPrepatch.lua
-c.WarWithin\TitanTWWSeason2.lua
+c.WarWithin\TitanTWWSeasonal.lua
 c.WarWithin\TitanUndercoin.lua
 c.WarWithin\TitanUndermine.lua
 c.WarWithin\TitanValorstones.lua
