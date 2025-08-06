@@ -11,6 +11,6 @@ L:CreateSimpleCurrencyPlugin({
 	currencyId = 2803,
 	titanId = "TITAN_UNDRCNM",
 	noCurrencyText = L["NoTWWCurrency"],
-	expName = L["mWarWithin"],
+	expName = L["mDelves"],
 	category = "CATEGORY_TWW",
 })
