@@ -140,4 +140,5 @@ c.WarWithin\TitanTWWPrepatch.lua
 c.WarWithin\TitanTWWSeasonal.lua
 c.WarWithin\TitanUndercoin.lua
 c.WarWithin\TitanUndermine.lua
+c.WarWithin\TitanUntetheredCoin.lua
 c.WarWithin\TitanValorstones.lua

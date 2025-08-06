@@ -13,7 +13,7 @@ L:CreateSimpleCurrencyPlugin({
 	currencyId = 3090,
 	titanId = "TITAN_FLMBLSIRON",
 	noCurrencyText = L["NoTWWCurrency"],
-	expName = L["mWarWithin"],
+	expName = L["mSirenIsle"],
 	category = "CATEGORY_TWW"
 })
 
