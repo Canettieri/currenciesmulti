@@ -67,10 +67,9 @@ L:CreateSimpleCurrencyPlugin({
 	forceMax = true
 })
 
--- Starlight Spark Dust (TWW S3 Catalyst charges, max 8)
--- These are currently still relevant
+-- Ethereal Voidsplinter (TWW S3 Catalyst charges, max 8)
 L:CreateSimpleCurrencyPlugin({
-	currencyId = 3141,
+	currencyId = 3269,
 	titanId = "TITAN_TWWS3CATALYST",
 	noCurrencyText = L["TWWSeason3"],
 	expName = L["mWarWithinS3"],
