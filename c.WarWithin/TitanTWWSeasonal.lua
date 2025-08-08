@@ -56,17 +56,6 @@ L:CreateSimpleCurrencyPlugin({
 	weeklyIncrease = 90,
 })
 
--- Essence of Kaja'mite (TWW S2 Catalyst charges, max 8)
--- These are currently still relevant
-L:CreateSimpleCurrencyPlugin({
-	currencyId = 3116,
-	titanId = "TITAN_TWWS2CATALYST",
-	noCurrencyText = L["TWWSeason2"],
-	expName = L["mWarWithinS2"],
-	category = "CATEGORY_TWW",
-	forceMax = true
-})
-
 -- Ethereal Voidsplinter (TWW S3 Catalyst charges, max 8)
 L:CreateSimpleCurrencyPlugin({
 	currencyId = 3269,
