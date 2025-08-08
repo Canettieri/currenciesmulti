@@ -103,3 +103,15 @@ L:CreateSimpleCurrencyPlugin({
 	forceMax = true,
 	weeklyIncrease = 125,
 })
+
+-- Ethereal Strands (S3 Cloak upgrade currency)
+-- This is a "Warband Currency"
+-- Thanks to Reselsnark on Github
+L:CreateNoAltCurrencyPlugin({
+	currencyId = 3278,
+	titanId = "TITAN_TWWS3ETHEREALSTRAND",
+	noCurrencyText = L["TWWSeason3"],
+	expName = L["mWarWithinS3"],
+	category = "CATEGORY_TWW",
+	forceMax = true,
+})
