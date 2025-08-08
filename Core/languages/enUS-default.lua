@@ -11,7 +11,6 @@ L["No20thCurrency"] = "Obtainable during the 20th\rAnniversary event Oct 22,\r20
 ------ The War Within pack
 L["NoTWWCurrency"] = "Obtainable in The War Within."
 L["NoTWWCurrency01"] = "Obtainable through The War Within\rPre-Patch Event."
-L["TWWSeason2"] = "Obtainable in The War Within Season 2."
 L["TWWSeason3"] = "Obtainable in The War Within Season 3."
 L["TWWUndermine"] = "Obtainable in The Undermine."
 L["TWWNFVisions"] = "Obtainable in Horrific Visions in the The War Within 11.1.5 Nightfall patch.\r"
