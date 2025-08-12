@@ -91,14 +91,15 @@
   <li><strong>Trophy of Strife.</strong></li>
 </ul>
 
-<h3><strong>Cataclysm Classic Exclusive (7)</strong></h3>
+<h3><strong>Classic Only (8)</strong></h3>
 <ul>
-  <li><strong>Chef's Award</strong>,</li>
+  <li><strong>August Stone Fragment</strong>,</li>
   <li><strong>Conquest Points</strong>,</li>
   <li><strong>Dalaran Jewelcrafter's Token</strong>,</li>
+  <li><strong>Defiler's Scourgestone</strong>,</li>
   <li><strong>Fissure Stone Fragment</strong>,</li>
   <li><strong>Justice Points</strong>,</li>
-  <li><strong>Mark of the World Tree,</strong></li>
+  <li><strong>Sidereal Essence</strong>,</li>
   <li><strong>Valor Points</strong>.</li>
 </ul>
 
@@ -124,22 +125,6 @@
   <li><strong>Stygian Ember</strong>,</li>
   <li><strong>Tower Knowledge</strong>,</li>
   <li><strong>Valor</strong>.</li>
-</ul>
-
-<h3><strong>WotLK Classic Exclusive (12)</strong></h3>
-<ul>
-  <li><strong>Arena Points</strong>,</li>
-  <li><strong>Badge of Justice</strong>,</li>
-  <li><strong>Dalaran Jewelcrafter's Token</strong>,</li>
-  <li><strong>Defiler's Scourgestone</strong>,</li>
-  <li><strong>Emblem of Conquest</strong>,</li>
-  <li><strong>Emblem of Frost</strong>,</li>
-  <li><strong>Emblem of Heroism</strong>,</li>
-  <li><strong>Emblems of Triumph</strong>,</li>
-  <li><strong>Emblem of Valor</strong>,</li>
-  <li><strong>Sidereal Essence</strong>,</li>
-  <li><strong>Stone Keeper's Shard</strong>,</li>
-  <li><strong>Venture Coin</strong>.</li>
 </ul>
 
 <h3><strong>Battle for Azeroth (12)</strong></h3>
