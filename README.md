@@ -11,7 +11,7 @@
   <strong>Usage Sample:</strong>
 </h3>
 <p>
-  <img src="https://imgur.com/zzsLSp2.jpg" alt="Profession Bar" width="1095" height="24" />
+  <img src="https://imgur.com/zzsLSp2.jpg" alt="Profession Bar" />
 </p>
 
 <h3><strong>FAQ:</strong></h3>
