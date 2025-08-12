@@ -7,9 +7,6 @@
 
 local _, L = ...;
 if GetLocale() == "ptBR" then
------- Anniversary pack
-L["No20thCurrency"] = "Pode ser obtida até o dia 7 de\rjaneiro de 2025 no evento de 20\ranos de World of Warcraft."
-
 ------ The War Within pack
 L["NoTWWCurrency"] = "Obtida em The War Within."
 L["NoTWWCurrency01"] = "Obtida através do evento de\rpré-patch de The War Within."
@@ -21,7 +18,7 @@ L["DragonEventOnly"] = "Obtida através do evento de\rPré-Patch do Dragonflight
 L["DragonFPvP"] = "Obtida através de quests PVP nas\rIlhas do Dragão."
 L["NoDFCurrency01"] = "Você precisa do título 'o Quebramundo' para poder adquirir."
 
------- Cataclysm Classic pack
+------ Moedas do Clássico
 --- Cata Defauls
 L["CataOnly"] = "Disponível no Cataclysm."
 --- Chef's Award
@@ -36,6 +33,8 @@ L["NoCataCurrency04"] = "Recompensa de missões diárias de\rjoalheria na capita
 L["NoCataCurrency05"] = "Disponível através da masmorra\rheróica Protocolo Inferno."
 --- Conquest Points
 L["NoCataCurrency06"] = "Recompensa de campos de\rbatalha e arena ranqueados."
+--- August Stone Fragment
+L["NoMoPCurrency01"] = "Disponível através das Masmorras Celestiais."
 
 ------ Shadowlands pack
 --- Adventure Campaign Progress

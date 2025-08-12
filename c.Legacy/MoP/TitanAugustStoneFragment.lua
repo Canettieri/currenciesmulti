@@ -6,14 +6,14 @@ Special Thanks to Eliote.
 --]]
 
 local _, L = ...;
-local ID = "TITAN_AUGUST"
+local ID = "TITAN_AGTSTM"
 local CURRENCY_ID = 3350
 
 L:CreateSimpleCurrencyPlugin({
 	currencyId = CURRENCY_ID,
 	titanId = ID,
-	noCurrencyText = L["NoAugust"],
+	noCurrencyText = L["NoMoPCurrency01"],
 	expName = L["mMoP"],
-	category = (LE_EXPANSION_LEVEL_CURRENT <= LE_EXPANSION_MISTS_OF_PANDARIA) and "CATEGORY_CURRENT" or "CATEGORY_LEGACY",
+	category = "CATEGORY_CURRENT", -- This is a Classic only currency.
 	forceMax = true
 })

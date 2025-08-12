@@ -5,10 +5,7 @@
 --]]
 
 local _, L = ...;
------- Anniversary pack
-L["No20thCurrency"] = "Obtainable during the 20th\rAnniversary event Oct 22,\r2024 to Jan 7, 2025."
-
------- The War Within pack
+------ The War Within pack (Please describe the currency for which this is used and follow the 'NoTWWCurrency' pattern.)
 L["NoTWWCurrency"] = "Obtainable in The War Within."
 L["NoTWWCurrency01"] = "Obtainable through The War Within\rPre-Patch Event."
 L["TWWSeason3"] = "Obtainable in The War Within Season 3."
@@ -23,7 +20,7 @@ L["DragonEventOnly"] = "Obtainable through Dragonflight\rPre-Patch Event."
 L["DragonFPvP"] = "Obtainable through Dragon Isles\rPvP quests."
 L["NoDFCurrency01"] = "You need the title 'the Worldbreaker' to acquire it."
 
------- Cataclysm Classic pack
+------ Classic pack
 --- Cata Defauls
 L["CataOnly"] = "Available in Cataclysm."
 --- Chef's Award
@@ -40,6 +37,8 @@ L["NoCataCurrency05"] = "Available through Protocol Inferno\rHeroic Dungeons."
 L["NoCataCurrency06"] = "Earned from doing ranked arena\rmatches and rated battlegrounds."
 --- Obsidian Stone Fragment
 L["NoCataCurrency07"] = "Available through Protocol Twilight\rHeroic Dungeons."
+--- August Stone Fragment
+L["NoMoPCurrency01"] = "Available through Celestial Dungeons."
 
 ------ Shadowlands pack
 --- Adventure Campaign Progress
@@ -144,8 +143,6 @@ L["NoIronpaw"] = "Available through cooking quests in Pandaria."
 L["NoWorldTree"] = "Available through daily\rquests in Mount Hyjal."
 --- Timeless Coin
 L["NoTimeless"] = "Available through Timeless Isle."
---- August Stone Fragment
-L["NoAugust"] = "Available through Celestial Dungeons."
 
 ------ Others pack
 --- Brawler's Gold
