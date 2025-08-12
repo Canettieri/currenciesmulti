@@ -144,6 +144,8 @@ L["NoIronpaw"] = "Available through cooking quests in Pandaria."
 L["NoWorldTree"] = "Available through daily\rquests in Mount Hyjal."
 --- Timeless Coin
 L["NoTimeless"] = "Available through Timeless Isle."
+--- August Stone Fragment
+L["NoAugust"] = "Available through Celestial Dungeons."
 
 ------ Others pack
 --- Brawler's Gold
