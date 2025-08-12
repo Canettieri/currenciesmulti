@@ -4,7 +4,7 @@
 </p>
 
 <p>
-  <img src="https://i.imgur.com/zNb4yaj.png" alt="Inside Image" width="1095" height="523" />
+  <img src="https://i.imgur.com/zNb4yaj.png" alt="Inside Image" />
 </p>
 
 <h3>
