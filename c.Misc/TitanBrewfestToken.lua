@@ -14,5 +14,6 @@ L:CreateSimpleItemPlugin({
 	titanId = ID,
 	noCurrencyText = L["NoToken"],
 	expName = L["mEvent"],
-	category = "CATEGORY_MISC"
+	category = "CATEGORY_MISC",
+	allowAccountTotal = true
 })
