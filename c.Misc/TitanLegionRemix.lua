@@ -15,3 +15,12 @@ L:CreateSimpleCurrencyPlugin({
 	expName = L["mLegionRemix"],
 	category = "CATEGORY_REMIX",
 })
+
+-- Infinite Power
+L:CreateSimpleCurrencyPlugin({
+	currencyId = 3268,
+	titanId = "TITAN_LEMIXINFPOWER",
+	noCurrencyText = L["NoLemixCurrency"],
+	expName = L["mLegionRemix"],
+	category = "CATEGORY_REMIX",
+})
