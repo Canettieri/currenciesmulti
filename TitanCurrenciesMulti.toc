@@ -96,7 +96,6 @@ c.Misc\TitanDarkmoonTicket.lua
 c.Misc\TitanDiablo.lua
 c.Misc\TitanGold.lua
 c.Misc\TitanHonor.lua
-c.Misc\TitanLegionRemix.lua
 c.Misc\TitanLovelyCharm.lua
 c.Misc\TitanLoveToken.lua
 c.Misc\TitanMarkofHonor.lua
@@ -107,6 +106,7 @@ c.Misc\TitanTimewarpedBadge.lua
 c.Misc\TitanTradersTender.lua
 c.Misc\TitanTolBaradComm.lua
 c.Misc\TitanTrickyTreat.lua
+c.Remix\TitanLegionRemix.lua
 c.Shadowlands\TitanACProgress.lua
 c.Shadowlands\TitanArgentCommendation.lua
 c.Shadowlands\TitanCatalogedResearch.lua
