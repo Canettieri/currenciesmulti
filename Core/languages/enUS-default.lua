@@ -15,6 +15,10 @@ L["TWWNFEvents"] = "Obtainable via The War Within patch 11.1.5 Nightfall scenari
 L["TWWKaresh"] = "Obtainable in K'aresh, added in patch 11.2.0."
 L["OverchargedDelves"] = "Obtainable in Overcharged Delves at any tier."
 
+------ Legion Remix pack
+L["NoLemixCurrency"] = "Obtainable in Legion Remix."
+L["mLegionRemix"] = "[|cFF198ae0Legion Remix|r]"
+
 ------ Dragonflight pack
 L["DragonEventOnly"] = "Obtainable through Dragonflight\rPre-Patch Event."
 L["DragonFPvP"] = "Obtainable through Dragon Isles\rPvP quests."
@@ -235,6 +239,7 @@ L["warwithin"] = "Currency [The War Within]"
 L["wotlk"] = "Currency [WotLK]"
 L["cata"] = "Currency [Cataclysm]"
 L["mop"] = "Currency [Mists of Pandaria]"
+L["remix"] = "Currency [Remix]"
 
 --- Character List Plugin strings
 L["charListPluginDisplayName"] = "Data Management"

@@ -1,4 +1,4 @@
-## Interface: 110200
+## Interface: 110205
 ## Title: Titan Panel [|cff336699Currencies|r] Multi! |cff00aa00@project-version@|r
 ## Notes: Track a lot of currencies! Right-click on Titan Panel, go to "Information" tab and enjoy.
 ## Notes-ptBR: Rastreie várias moedas! Clique com o botão direito no Painel Titan, vá na aba "Informação" e aproveite.
@@ -106,6 +106,7 @@ c.Misc\TitanTimewarpedBadge.lua
 c.Misc\TitanTradersTender.lua
 c.Misc\TitanTolBaradComm.lua
 c.Misc\TitanTrickyTreat.lua
+c.Remix\TitanLegionRemix.lua
 c.Shadowlands\TitanACProgress.lua
 c.Shadowlands\TitanArgentCommendation.lua
 c.Shadowlands\TitanCatalogedResearch.lua
