@@ -24,3 +24,12 @@ L:CreateSimpleCurrencyPlugin({
 	expName = L["mLegionRemix"],
 	category = "CATEGORY_REMIX",
 })
+
+-- Mote of a Broken Time
+L:CreateSimpleItemPlugin({
+	itemId = 253224,
+	titanId = "TITAN_LEMIXMOTEBT",
+	noCurrencyText = L["NoLemixCurrency"],
+	expName = L["mLegionRemix"],
+	category = "CATEGORY_REMIX"
+})
