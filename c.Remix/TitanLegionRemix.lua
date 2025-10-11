@@ -33,3 +33,12 @@ L:CreateSimpleItemPlugin({
 	expName = L["mLegionRemix"],
 	category = "CATEGORY_REMIX"
 })
+
+-- Fragmented Memento of Epoch Challenges
+L:CreateSimpleItemPlugin({
+	itemId = 254267,
+	titanId = "TITAN_LEMIXFRAGMEMEC",
+	noCurrencyText = L["NoLemixCurrency"],
+	expName = L["mLegionRemix"],
+	category = "CATEGORY_REMIX"
+})
