@@ -13,7 +13,6 @@ if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
 		end
 		local removed = {
 			"TITAN_TWWS2CATALYST", -- TWW S2 Catalyst Charges
-			"TITAN_PUZZCARTCHIP", -- TWW S2 Puzzling Cartel Chip
 			"TITAN_HARMONSILK", -- TWW S1 Catalyst Charges
 			"TITAN_WEATHHARBCREST", -- TWW S1 Weathered Harbinger Crests
 			"TITAN_CARVEDHARBCREST", -- TWW S1 Carved Harbinger Crests

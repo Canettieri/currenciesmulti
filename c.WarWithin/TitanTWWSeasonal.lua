@@ -16,9 +16,7 @@ L:CreateSimpleCurrencyPlugin({
 	titanId = "TITAN_TWWS2R1CREST",
 	noCurrencyText = L["TWWSeason3"],
 	expName = L["mWarWithinS3"],
-	category = "CATEGORY_TWW",
-	forceMax = true,
-	weeklyIncrease = 90,
+	category = "CATEGORY_TWW"
 })
 
 -- Carved Ethereal Crests
@@ -27,12 +25,8 @@ L:CreateSimpleCurrencyPlugin({
 	titanId = "TITAN_TWWS2R2CREST",
 	noCurrencyText = L["TWWSeason3"],
 	expName = L["mWarWithinS3"],
-	category = "CATEGORY_TWW",
-	forceMax = true,
-	weeklyIncrease = 90,
+	category = "CATEGORY_TWW"
 })
-
--- Runed and Gilded are not earnable until the season actually starts
 
 -- Runed Ethereal Crests
 L:CreateSimpleCurrencyPlugin({
@@ -40,9 +34,7 @@ L:CreateSimpleCurrencyPlugin({
 	titanId = "TITAN_TWWS2R3CREST",
 	noCurrencyText = L["TWWSeason3"],
 	expName = L["mWarWithinS3"],
-	category = "CATEGORY_TWW",
-	forceMax = true,
-	weeklyIncrease = 90,
+	category = "CATEGORY_TWW"
 })
 
 -- Gilded Ethereal Crests
@@ -51,9 +43,7 @@ L:CreateSimpleCurrencyPlugin({
 	titanId = "TITAN_TWWS2R4CREST",
 	noCurrencyText = L["TWWSeason3"],
 	expName = L["mWarWithinS3"],
-	category = "CATEGORY_TWW",
-	forceMax = true,
-	weeklyIncrease = 90,
+	category = "CATEGORY_TWW"
 })
 
 -- Ethereal Voidsplinter (TWW S3 Catalyst charges, max 8)
@@ -100,8 +90,7 @@ L:CreateSimpleCurrencyPlugin({
 	noCurrencyText = L["TWWSeason3"],
 	expName = L["mWarWithinS3"],
 	category = "CATEGORY_TWW",
-	forceMax = true,
-	weeklyIncrease = 125,
+	forceMax = true
 })
 
 -- Ethereal Strands (S3 Cloak upgrade currency)
@@ -114,4 +103,13 @@ L:CreateNoAltCurrencyPlugin({
 	expName = L["mWarWithinS3"],
 	category = "CATEGORY_TWW",
 	forceMax = true,
+})
+
+-- Puzzling Cartel Chip (TWW S3 version)
+L:CreateSimpleItemPlugin({
+	itemId = 250741,
+	titanId = "TITAN_PUZZCARTCHIP",
+	noCurrencyText = L["TWWSeason3"],
+	expName = L["mWarWithinS3"],
+	category = "CATEGORY_TWW"
 })
