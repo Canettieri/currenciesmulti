@@ -14,5 +14,6 @@ L:CreateSimpleCurrencyPlugin({
 	titanId = ID,
 	noCurrencyText = L["NoMark"],
 	expName = L["mPvP"],
-	category = "CATEGORY_MISC"
+	category = "CATEGORY_MISC",
+	forceMax = true,
 })

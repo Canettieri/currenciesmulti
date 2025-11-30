@@ -26,8 +26,8 @@ Core\SimpleCurrencyPlugin.lua
 Core\SimpleItemPlugin.lua
 #c.Legacy\Cataclysm\TitanChefAward.lua
 c.Legacy\Cataclysm\TitanConquestPoints.lua
-#c.Legacy\Cataclysm\TitanFissureStoneFragment.lua
-#c.Legacy\Cataclysm\TitanObsidianStoneFragment.lua
+c.Legacy\Cataclysm\TitanFissureStoneFragment.lua
+c.Legacy\Cataclysm\TitanObsidianStoneFragment.lua
 c.Legacy\Cataclysm\TitanIllustriousJCToken.lua
 c.Legacy\Cataclysm\TitanJusticePoints.lua
 c.Legacy\Cataclysm\TitanMarkWorldTree.lua
