@@ -45,6 +45,8 @@ c.Dragonflight\TitanRidersOfAzerothBadge.lua
 c.Dragonflight\TitanSeedbloom.lua
 c.Dragonflight\TitanStormSigil.lua
 c.Dragonflight\TitanTrophyofStrife.lua
+c.Housing\TitanLumber.lua
+c.Housing\TitanHousingMisc.lua
 c.Legacy\BfA\TitanArtifactPower.lua
 c.Legacy\BfA\TitanCoalescingVisions.lua
 c.Legacy\BfA\TitanCorruptedMemento.lua
@@ -85,6 +87,7 @@ c.Legacy\WoD\TitanPrimalSpirit.lua
 c.Legacy\WoD\TitanTemperedFate.lua
 c.Legacy\WotLK\TitanChampionsSeal.lua
 c.Legacy\WotLK\TitanEpicureansAward.lua
+c.Midnight\TitanMidnightPrepatch.lua
 c.Misc\TitanAnniversary.lua
 c.Misc\TitanBrawlersGold.lua
 c.Misc\TitanBrewfestToken.lua

@@ -5,6 +5,9 @@
 --]]
 
 local _, L = ...;
+------ Midnight pack
+L["NoTwilightBladeInsignia"] = "Obtainable during the Midnight prepatch event"
+
 ------ The War Within pack (Please describe the currency for which this is used and follow the 'NoTWWCurrency' pattern.)
 L["NoTWWCurrency"] = "Obtainable in The War Within."
 L["NoTWWCurrency01"] = "Obtainable through The War Within\rPre-Patch Event."
@@ -14,10 +17,6 @@ L["TWWNFVisions"] = "Obtainable in Horrific Visions in the The War Within 11.1.5
 L["TWWNFEvents"] = "Obtainable via The War Within patch 11.1.5 Nightfall scenario."
 L["TWWKaresh"] = "Obtainable in K'aresh, added in patch 11.2.0."
 L["OverchargedDelves"] = "Obtainable in Overcharged Delves at any tier."
-
------- Legion Remix pack
-L["NoLemixCurrency"] = "Obtainable in Legion Remix."
-L["mLegionRemix"] = "[|cFF198ae0Legion Remix|r]"
 
 ------ Dragonflight pack
 L["DragonEventOnly"] = "Obtainable through Dragonflight\rPre-Patch Event."
@@ -200,6 +199,7 @@ L["mBfA"] = "[|cFF198ae0BfA|r]"
 L["mShadowlands"] = "[|cFF198ae0Shadowlands|r]"
 L["mDragonflight"] = "[|cFF198ae0Dragonflight|r]"
 L["mWarWithin"] = "[|cFF198ae0The War Within|r]"
+L["mMidnight"] = "[|cFF198ae0Midnight|r]"
 L["mDelves"] = "[|cFF198ae0Delves|r]"
 L["mSirenIsle"] = "[|cFF198ae0Siren Isle|r]"
 L["mWarWithinS2"] = "[|cFF198ae0The War Within (S2)|r]"
@@ -236,10 +236,12 @@ L["misc"] = "Currency [Misc]"
 L["shadowl"] = "Currency [Shadowlands]"
 L["dragonf"] = "Currency [Dragonflight]"
 L["warwithin"] = "Currency [The War Within]"
+L["midnight"] = "Currency [Midnight]"
 L["wotlk"] = "Currency [WotLK]"
 L["cata"] = "Currency [Cataclysm]"
 L["mop"] = "Currency [Mists of Pandaria]"
 L["remix"] = "Currency [Remix]"
+L["housing"] = "Currency [Housing]"
 
 --- Character List Plugin strings
 L["charListPluginDisplayName"] = "Data Management"
@@ -247,3 +249,22 @@ L["purgeDataMenu"] = "Purge character data"
 L["charsChunkMenu"]= "Character Chunk #%d"
 L["purgeDataQuestion"]= "Are you sure you want to purge data for %s?"
 L["charMgmtTooltip"] = "Right-click to selectively purge character data|nother than the current character's."
+
+--- Housing strings
+L["mEndeavors"] = "[|cFF198ae0Endeavors|r]"
+L["noCurrCommCoupons"] = "Gained via Neighborhood Endeavors"
+L["mLumber"] = "[|cFF198ae0Lumber|r]"
+L["IronwoodLumber"] = "Gathered in Classic zones"
+L["OlembaLumber"] = "Gathered in Burning Crusade zones (Outland)"
+L["ColdwindLumber"] = "Gathered in Wrath of the Lich King zones (Northrend)"
+L["AshwoodLumber"] = "Gathered in Cataclysm zones"
+L["BambooLumber"] = "Gathered in Pandaria zones"
+L["ShadowmoonLumber"] = "Gathered in Warlords of Draenor zones."
+L["FelTouchedLumber"] = "Gathered in Legion zones (Broken Isles and Argus)"
+L["DarkpineLumber"] = "Gathered in Battle for Azeroth zones (Kul Tiras and Zandalar)"
+L["ArdenLumber"] = "Gathered in Shadowlands zones"
+L["DragonpineLumber"] = "Gathered in Dragonflight zones (Dragon Isles)"
+L["DornicFirLumber"] = "Gathered in The War Within zones (Khaz Algar)"
+L["ThalassianLumber"] = "Gathered in Midnight zones (Harandar)"
+
+
