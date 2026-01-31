@@ -45,6 +45,8 @@ c.Dragonflight\TitanRidersOfAzerothBadge.lua
 c.Dragonflight\TitanSeedbloom.lua
 c.Dragonflight\TitanStormSigil.lua
 c.Dragonflight\TitanTrophyofStrife.lua
+c.Housing\TitanLumber.lua
+c.Housing\TitanHousingMisc.lua
 c.Legacy\BfA\TitanArtifactPower.lua
 c.Legacy\BfA\TitanCoalescingVisions.lua
 c.Legacy\BfA\TitanCorruptedMemento.lua
