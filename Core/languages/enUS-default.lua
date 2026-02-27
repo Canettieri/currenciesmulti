@@ -7,6 +7,7 @@
 local _, L = ...;
 ------ Midnight pack
 L["NoTwilightBladeInsignia"] = "Obtainable during the Midnight prepatch event"
+L["NoMidnightCurrency"] = "Obtainable in Midnight."
 
 ------ The War Within pack (Please describe the currency for which this is used and follow the 'NoTWWCurrency' pattern.)
 L["NoTWWCurrency"] = "Obtainable in The War Within."
@@ -164,6 +165,8 @@ L["NoBadge"] = "Enter in a dungeon queue\rwhen Timewalking event is\roccurring."
 L["TradersTender"] = "Obtained from your capital's Trading Post."
 --- Diablo Events
 L["GreedyEmissary"] = "Obtained during the Greedy Emissary Diablo Event."
+-- Delves
+L["NoUndercoin"] = "Obtained via Delving."
 
 ------ PvP pack
 --- Mark of Honor

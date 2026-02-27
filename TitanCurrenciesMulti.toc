@@ -87,7 +87,9 @@ c.Legacy\WoD\TitanPrimalSpirit.lua
 c.Legacy\WoD\TitanTemperedFate.lua
 c.Legacy\WotLK\TitanChampionsSeal.lua
 c.Legacy\WotLK\TitanEpicureansAward.lua
+c.Midnight\TitanMidnight.lua
 c.Midnight\TitanMidnightPrepatch.lua
+c.Midnight\TitanUndercoin.lua
 c.Misc\TitanAnniversary.lua
 c.Misc\TitanBrawlersGold.lua
 c.Misc\TitanBrewfestToken.lua
@@ -141,7 +143,6 @@ c.WarWithin\TitanSizzlingCinderpollen.lua
 c.WarWithin\TitanTitanDiscShard.lua
 c.WarWithin\TitanTWWPrepatch.lua
 c.WarWithin\TitanTWWSeasonal.lua
-c.WarWithin\TitanUndercoin.lua
 c.WarWithin\TitanUndermine.lua
 c.WarWithin\TitanUntetheredCoin.lua
 c.WarWithin\TitanValorstones.lua
