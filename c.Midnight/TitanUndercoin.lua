@@ -10,7 +10,7 @@ local _, L = ...;
 L:CreateSimpleCurrencyPlugin({
 	currencyId = 2803,
 	titanId = "TITAN_UNDRCNM",
-	noCurrencyText = L["NoTWWCurrency"],
+	noCurrencyText = L["NoUndercoin"],
 	expName = L["mDelves"],
-	category = "CATEGORY_TWW",
+	category = "CATEGORY_MIDNIGHT",
 })
