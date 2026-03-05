@@ -38,7 +38,7 @@ L:CreateSimpleCurrencyPlugin({
 -- Hero Dawncrests
 L:CreateSimpleCurrencyPlugin({
 	currencyId = 3345,
-	titanId = "TITAN_MIDNTHEROICCREST",
+	titanId = "TITAN_MIDNTHEROCREST",
 	noCurrencyText = L["NoMidnightSeason1"],
 	expName = L["mMidnightS1"],
 	category = "CATEGORY_MIDNIGHT"
@@ -47,7 +47,7 @@ L:CreateSimpleCurrencyPlugin({
 -- Myth Dawncrests
 L:CreateSimpleCurrencyPlugin({
 	currencyId = 3347,
-	titanId = "TITAN_MIDNTMYTHICCREST",
+	titanId = "TITAN_MIDNTMYTHCREST",
 	noCurrencyText = L["NoMidnightSeason1"],
 	expName = L["mMidnightS1"],
 	category = "CATEGORY_MIDNIGHT"
