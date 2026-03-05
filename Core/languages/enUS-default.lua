@@ -8,6 +8,7 @@ local _, L = ...;
 ------ Midnight pack
 L["NoTwilightBladeInsignia"] = "Obtainable during the Midnight prepatch event"
 L["NoMidnightCurrency"] = "Obtainable in Midnight."
+L["NoMidnightSeason1"] = "Obtainable in Midnight Season 1."
 
 ------ The War Within pack (Please describe the currency for which this is used and follow the 'NoTWWCurrency' pattern.)
 L["NoTWWCurrency"] = "Obtainable in The War Within."
@@ -203,6 +204,7 @@ L["mShadowlands"] = "[|cFF198ae0Shadowlands|r]"
 L["mDragonflight"] = "[|cFF198ae0Dragonflight|r]"
 L["mWarWithin"] = "[|cFF198ae0The War Within|r]"
 L["mMidnight"] = "[|cFF198ae0Midnight|r]"
+L["mMidnightS1"] = "[|cFF198ae0Midnight (S1)|r]"
 L["mDelves"] = "[|cFF198ae0Delves|r]"
 L["mSirenIsle"] = "[|cFF198ae0Siren Isle|r]"
 L["mWarWithinS2"] = "[|cFF198ae0The War Within (S2)|r]"
