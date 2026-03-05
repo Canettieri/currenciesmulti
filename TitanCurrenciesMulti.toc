@@ -90,6 +90,7 @@ c.Legacy\WotLK\TitanEpicureansAward.lua
 c.Midnight\TitanMidnight.lua
 c.Midnight\TitanMidnightPrepatch.lua
 c.Midnight\TitanUndercoin.lua
+c.Midnight\TitanMidnightSeasonal.lua
 c.Misc\TitanAnniversary.lua
 c.Misc\TitanBrawlersGold.lua
 c.Misc\TitanBrewfestToken.lua
