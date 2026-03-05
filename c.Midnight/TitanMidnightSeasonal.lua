@@ -2,7 +2,7 @@
 Description: This plugin is part of the "Titan Panel [Currencies] Multi" addon.
 It shows the seasonal currencies from Midnight.
 Site: https://www.curseforge.com/wow/addons/titan-panel-currencies-multi
-Author: Edurne85
+Author: edurne85
 Data based on information available on Wowhead and in-game.
 --]]
 
