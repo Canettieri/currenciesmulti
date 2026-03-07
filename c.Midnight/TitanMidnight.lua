@@ -110,4 +110,3 @@ L:CreateSimpleCurrencyPlugin({
 	expName = L["mMidnight"],
 	category = "CATEGORY_MIDNIGHT"
 })
-
