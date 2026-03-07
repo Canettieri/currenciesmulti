@@ -4,6 +4,9 @@ local categories = LibStub("AceLocale-3.0"):GetLocale(TITAN_ID, true)["TITAN_PAN
 table.insert(categories, L["midnight"])
 table.insert(TITAN_PANEL_BUTTONS_PLUGIN_CATEGORY, "CATEGORY_MIDNIGHT")
 
+table.insert(categories, L["midnightprofs"])
+table.insert(TITAN_PANEL_BUTTONS_PLUGIN_CATEGORY, "CATEGORY_MIDNIGHTPROFS")
+
 table.insert(categories, L["warwithin"])
 table.insert(TITAN_PANEL_BUTTONS_PLUGIN_CATEGORY, "CATEGORY_TWW")
 

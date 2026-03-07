@@ -147,3 +147,9 @@ function Utils.ColorText(color, text)
 
 	return res
 end
+
+-- Takes the given text and wraps it in square brackets and colors it blue
+-- so we don't have to write the string with the color codes as part of the string
+function Utils.MakeMenuText(menuText)
+	return "[|cFF198ae0" .. menuText .. "|r]"
+end

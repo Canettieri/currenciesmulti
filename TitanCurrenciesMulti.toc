@@ -89,6 +89,7 @@ c.Legacy\WotLK\TitanChampionsSeal.lua
 c.Legacy\WotLK\TitanEpicureansAward.lua
 c.Midnight\TitanMidnight.lua
 c.Midnight\TitanMidnightPrepatch.lua
+c.Midnight\TitanMidnightProfessions.lua
 c.Midnight\TitanUndercoin.lua
 c.Midnight\TitanMidnightSeasonal.lua
 c.Misc\TitanAnniversary.lua
@@ -132,6 +133,7 @@ c.Shadowlands\TitanStygia.lua
 c.Shadowlands\TitanStygianEmber.lua
 c.Shadowlands\TitanTowerKnowledge.lua
 c.WarWithin\TitanArtisansAcuity.lua
+c.WarWithin\TitanEtherealStrands.lua
 c.WarWithin\TitanFlameBlessedIron.lua
 c.WarWithin\TitanKej.lua
 c.WarWithin\TitanMereldarDerbyMark.lua
@@ -139,7 +141,6 @@ c.WarWithin\TitanNightfall.lua
 c.WarWithin\TitanOddGlobOfWax.lua
 c.WarWithin\TitanRadiantRemnant.lua
 c.WarWithin\TitanResonanceCrystals.lua
-c.WarWithin\TitanRestoredCofferKey.lua
 c.WarWithin\TitanSizzlingCinderpollen.lua
 c.WarWithin\TitanTitanDiscShard.lua
 c.WarWithin\TitanTWWPrepatch.lua

@@ -13,6 +13,10 @@ if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
 			return
 		end
 		local removed = {
+			"TITAN_TWWS2R1CREST", -- TWW S3 Weathered Ethereal Crests
+			"TITAN_TWWS2R2CREST", -- TWW S3 Carved Ethereal Crests
+			"TITAN_TWWS2R3CREST", -- TWW S3 Runed Ethereal Crests
+			"TITAN_TWWS2R4CREST", -- TWW S3 Gilded Ethereal Crests
 			"TITAN_LEMIXBRONZE", -- Legion Remix Bronze
 			"TITAN_LEMIXINFPOWER", -- Legion Remix Infinite Power
 			"TITAN_LEMIXMOTEBT", -- Legion Remix Mote of a Broken Time
