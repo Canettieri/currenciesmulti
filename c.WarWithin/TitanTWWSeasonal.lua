@@ -8,45 +8,8 @@ Special Thanks to Odysseas68 and Protuhj.
 
 local _, L = ...;
 
--- After TWW, we can convert the IDs to generic seasonal IDs
-
--- Weathered Ethereal Crests
-L:CreateSimpleCurrencyPlugin({
-	currencyId = 3284,
-	titanId = "TITAN_TWWS2R1CREST",
-	noCurrencyText = L["TWWSeason3"],
-	expName = L["mWarWithinS3"],
-	category = "CATEGORY_TWW"
-})
-
--- Carved Ethereal Crests
-L:CreateSimpleCurrencyPlugin({
-	currencyId = 3286,
-	titanId = "TITAN_TWWS2R2CREST",
-	noCurrencyText = L["TWWSeason3"],
-	expName = L["mWarWithinS3"],
-	category = "CATEGORY_TWW"
-})
-
--- Runed Ethereal Crests
-L:CreateSimpleCurrencyPlugin({
-	currencyId = 3288,
-	titanId = "TITAN_TWWS2R3CREST",
-	noCurrencyText = L["TWWSeason3"],
-	expName = L["mWarWithinS3"],
-	category = "CATEGORY_TWW"
-})
-
--- Gilded Ethereal Crests
-L:CreateSimpleCurrencyPlugin({
-	currencyId = 3290,
-	titanId = "TITAN_TWWS2R4CREST",
-	noCurrencyText = L["TWWSeason3"],
-	expName = L["mWarWithinS3"],
-	category = "CATEGORY_TWW"
-})
-
 -- Ethereal Voidsplinter (TWW S3 Catalyst charges, max 8)
+-- Haven't been made irrelevant yet.
 L:CreateSimpleCurrencyPlugin({
 	currencyId = 3269,
 	titanId = "TITAN_TWWS3CATALYST",
@@ -56,16 +19,8 @@ L:CreateSimpleCurrencyPlugin({
 	forceMax = true
 })
 
--- Coffer Key Shard (TWW S3 version)
-L:CreateSimpleItemPlugin({
-	itemId = 245653,
-	titanId = "TITAN_CFFRKYM",
-	noCurrencyText = L["TWWSeason3"],
-	expName = L["mWarWithinS3"],
-	category = "CATEGORY_TWW"
-})
-
 -- Radiant Echo (TWW S3 version)
+-- These haven't been removed yet. Still relevant?
 L:CreateSimpleItemPlugin({
 	itemId = 246771,
 	titanId = "TITAN_RADECHO",
@@ -75,6 +30,7 @@ L:CreateSimpleItemPlugin({
 })
 
 -- Algari Token of Merit (TWW S3 version)
+-- Remove in a month or so, so people can realize they might have some and sell them for 500g
 L:CreateSimpleItemPlugin({
 	itemId = 248242,
 	titanId = "TITAN_ALGTOKENOFMERIT",
@@ -84,6 +40,7 @@ L:CreateSimpleItemPlugin({
 })
 
 -- Untainted Mana Crystals (S3 Delves)
+-- I think these are irrelevant now, but need to verify
 L:CreateSimpleCurrencyPlugin({
 	currencyId = 3356,
 	titanId = "TITAN_TWWS3UNTMANACRYS",
@@ -93,19 +50,8 @@ L:CreateSimpleCurrencyPlugin({
 	forceMax = true
 })
 
--- Ethereal Strands (S3 Cloak upgrade currency)
--- This is a "Warband Currency"
--- Thanks to Reselsnark on Github
-L:CreateNoAltCurrencyPlugin({
-	currencyId = 3278,
-	titanId = "TITAN_TWWS3ETHEREALSTRAND",
-	noCurrencyText = L["TWWSeason3"],
-	expName = L["mWarWithinS3"],
-	category = "CATEGORY_TWW",
-	forceMax = true,
-})
-
 -- Puzzling Cartel Chip (TWW S3 version)
+-- Haven't been removed from what I can tell.
 L:CreateSimpleItemPlugin({
 	itemId = 250741,
 	titanId = "TITAN_PUZZCARTCHIP",

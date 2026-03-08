@@ -26,12 +26,23 @@ L:CreateSimpleCurrencyPlugin({
 	category = "CATEGORY_MIDNIGHT"
 })
 
+-- Latent Arcana
+-- Eversong Woods Runestones events
+L:CreateSimpleItemPlugin({
+	itemId = 242241,
+	titanId = "TITAN_MIDNTLATARCANA",
+	noCurrencyText = L["NoMidnightCurrency"],
+	expName = L.Utils.MakeMenuText(L["Eversong Woods"]),
+	category = "CATEGORY_MIDNIGHT",
+	allowAccountTotal = true
+})
+
 -- Luminous Dust
 L:CreateSimpleCurrencyPlugin({
 	currencyId = 3385,
 	titanId = "TITAN_MIDNTLUMDUST",
 	noCurrencyText = L["NoMidnightCurrency"],
-	expName = L["mMidnight"],
+	expName = L.Utils.MakeMenuText(L["Harandar"]),
 	category = "CATEGORY_MIDNIGHT"
 })
 
@@ -42,6 +53,15 @@ L:CreateSimpleCurrencyPlugin({
 	noCurrencyText = L["NoMidnightCurrency"],
 	expName = L["mMidnight"],
 	category = "CATEGORY_MIDNIGHT"
+})
+
+-- Restored Coffer Keys
+L:CreateSimpleCurrencyPlugin({
+	currencyId = 3028,
+	titanId = "TITAN_RESTCOFFKEY",
+	noCurrencyText = L["NoMidnightCurrency"],
+	expName = L["mMidnight"],
+	category = "CATEGORY_MIDNIGHT",
 })
 
 -- Shard of Dundun
@@ -67,8 +87,19 @@ L:CreateSimpleCurrencyPlugin({
 	currencyId = 3400,
 	titanId = "TITAN_MIDNTUNCVOIDSMP",
 	noCurrencyText = L["NoMidnightCurrency"],
-	expName = L["mMidnight"],
+	expName = L.Utils.MakeMenuText(L["Voidstorm"]),
 	category = "CATEGORY_MIDNIGHT"
+})
+
+-- Vile Essence
+-- Currency for Hexed Vilefeather Eagle mount in Zul'Aman
+L:CreateSimpleItemPlugin({
+	itemId = 259361,
+	titanId = "TITAN_MIDNTVILEESS",
+	noCurrencyText = L["NoMidnightCurrency"],
+	expName = L.Utils.MakeMenuText(L["Zul'Aman"]),
+	category = "CATEGORY_MIDNIGHT",
+	allowAccountTotal = true
 })
 
 -- Voidlight Marl
