@@ -17,6 +17,18 @@ local _, L = ...;
 --  there's probably a relatively easy way to wait for this info to be populated, but I
 --  think it's overkill for this (for now anyway)
 
+-- Artisan's Moxie
+-- NOTE: From what I can tell, this isn't actually used for anything, but
+-- I'm leaving the code here in case it becomes relevant
+--L:CreateSimpleItemPlugin({
+--    itemId = 237505,
+--    titanId = "TITAN_MIDNTARTMOXIE",
+--    noCurrencyText = L["NoMidnightCurrency"],
+--    -- Prepend with a '*' so it goes at the top of the list
+--    expName = L.Utils.MakeMenuText("* " .. L["All Professions"]),
+--    category = "CATEGORY_MIDNIGHTPROFS"
+--})
+
 -- Artisan Alchemist's Moxie
 L:CreateSimpleCurrencyPlugin({
     currencyId = 3256,

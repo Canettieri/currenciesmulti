@@ -62,7 +62,6 @@ L:CreateSimpleItemPlugin({
 	category = "CATEGORY_MIDNIGHT"
 })
 
-
 -- Radiant Echo (Midnight S1 version)
 L:CreateSimpleItemPlugin({
 	itemId = 254275,
@@ -72,3 +71,11 @@ L:CreateSimpleItemPlugin({
 	category = "CATEGORY_MIDNIGHT"
 })
 
+-- Spark of Radiance (Midnight S1 crafting spark)
+L:CreateSimpleItemPlugin({
+	itemId = 232875,
+	titanId = "TITAN_MIDNTS1SPARK",
+	noCurrencyText = L["NoMidnightSeason1"],
+	expName = L["mMidnightS1"],
+	category = "CATEGORY_MIDNIGHT"
+})
