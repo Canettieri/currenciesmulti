@@ -37,6 +37,16 @@ L:CreateSimpleItemPlugin({
 	allowAccountTotal = true
 })
 
+-- Finery Funds
+L:CreateSimpleItemPlugin({
+	itemId = 264882,
+	titanId = "TITAN_MIDNTFINERYFUNDS",
+	noCurrencyText = L["NoMidnightCurrency"],
+	expName = L["mMidnight"],
+	category = "CATEGORY_MIDNIGHT",
+	allowAccountTotal = true
+})
+
 -- Luminous Dust
 L:CreateSimpleCurrencyPlugin({
 	currencyId = 3385,
