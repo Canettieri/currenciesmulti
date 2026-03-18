@@ -53,9 +53,19 @@ L:CreateSimpleCurrencyPlugin({
 	category = "CATEGORY_MIDNIGHT"
 })
 
+-- Dawnlight Manaflux (Midnight S1 Catalyst charges, max 8)
+L:CreateSimpleCurrencyPlugin({
+	currencyId = 3378,
+	titanId = "TITAN_MIDNTS1CATALYST",
+	noCurrencyText = L["NoMidnightSeason1"],
+	expName = L["mMidnightS1"],
+	category = "CATEGORY_MIDNIGHT",
+	forceMax = true
+})
+
 -- Coffer Key Shard (Midnight S1 version)
-L:CreateSimpleItemPlugin({
-	itemId = 252609,
+L:CreateSimpleCurrencyPlugin({
+	currencyId = 3310,
 	titanId = "TITAN_CFFRKYM",
 	noCurrencyText = L["NoMidnightSeason1"],
 	expName = L["mMidnightS1"],
@@ -78,4 +88,15 @@ L:CreateSimpleItemPlugin({
 	noCurrencyText = L["NoMidnightSeason1"],
 	expName = L["mMidnightS1"],
 	category = "CATEGORY_MIDNIGHT"
+})
+
+-- Untainted Mana-Crystals (Midnight S1 Delves)
+-- Reused ID from TWW S3
+L:CreateSimpleCurrencyPlugin({
+	currencyId = 3356,
+	titanId = "TITAN_TWWS3UNTMANACRYS",
+	noCurrencyText = L["NoMidnightSeason1"],
+	expName = L["mMidnightS1"],
+	category = "CATEGORY_MIDNIGHT",
+	forceMax = true
 })

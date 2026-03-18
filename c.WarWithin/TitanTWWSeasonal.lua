@@ -39,17 +39,6 @@ L:CreateSimpleItemPlugin({
 	category = "CATEGORY_TWW"
 })
 
--- Untainted Mana Crystals (S3 Delves)
--- I think these are irrelevant now, but need to verify
-L:CreateSimpleCurrencyPlugin({
-	currencyId = 3356,
-	titanId = "TITAN_TWWS3UNTMANACRYS",
-	noCurrencyText = L["TWWSeason3"],
-	expName = L["mWarWithinS3"],
-	category = "CATEGORY_TWW",
-	forceMax = true
-})
-
 -- Puzzling Cartel Chip (TWW S3 version)
 -- Haven't been removed from what I can tell.
 L:CreateSimpleItemPlugin({
