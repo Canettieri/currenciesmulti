@@ -13,6 +13,7 @@ if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
 			return
 		end
 		local removed = {
+			"TITAN_TWWS3CATALYST", -- TWW S3 Catalyst charges
 			"TITAN_TWWS2R1CREST", -- TWW S3 Weathered Ethereal Crests
 			"TITAN_TWWS2R2CREST", -- TWW S3 Carved Ethereal Crests
 			"TITAN_TWWS2R3CREST", -- TWW S3 Runed Ethereal Crests

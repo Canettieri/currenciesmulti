@@ -8,19 +8,8 @@ Special Thanks to Odysseas68 and Protuhj.
 
 local _, L = ...;
 
--- Ethereal Voidsplinter (TWW S3 Catalyst charges, max 8)
--- Haven't been made irrelevant yet.
-L:CreateSimpleCurrencyPlugin({
-	currencyId = 3269,
-	titanId = "TITAN_TWWS3CATALYST",
-	noCurrencyText = L["TWWSeason3"],
-	expName = L["mWarWithinS3"],
-	category = "CATEGORY_TWW",
-	forceMax = true
-})
-
 -- Radiant Echo (TWW S3 version)
--- These haven't been removed yet. Still relevant?
+-- These will probably remain in the game for the foreseeable future because of Achievements requiring them.
 L:CreateSimpleItemPlugin({
 	itemId = 246771,
 	titanId = "TITAN_RADECHO",
