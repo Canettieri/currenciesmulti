@@ -14,7 +14,8 @@ L:CreateSimpleCurrencyPlugin({
 	titanId = "TITAN_MIDNTADVENTURERCREST",
 	noCurrencyText = L["NoMidnightSeason1"],
 	expName = L["mMidnightS1"],
-	category = "CATEGORY_MIDNIGHT"
+	category = "CATEGORY_MIDNIGHT",
+	forceMax = true
 })
 
 -- Veteran Dawncrests
@@ -23,7 +24,8 @@ L:CreateSimpleCurrencyPlugin({
 	titanId = "TITAN_MIDNTVETERANCREST",
 	noCurrencyText = L["NoMidnightSeason1"],
 	expName = L["mMidnightS1"],
-	category = "CATEGORY_MIDNIGHT"
+	category = "CATEGORY_MIDNIGHT",
+	forceMax = true
 })
 
 -- Champion Dawncrests
@@ -32,7 +34,8 @@ L:CreateSimpleCurrencyPlugin({
 	titanId = "TITAN_MIDNTCHAMPIONCREST",
 	noCurrencyText = L["NoMidnightSeason1"],
 	expName = L["mMidnightS1"],
-	category = "CATEGORY_MIDNIGHT"
+	category = "CATEGORY_MIDNIGHT",
+	forceMax = true
 })
 
 -- Hero Dawncrests
@@ -41,7 +44,8 @@ L:CreateSimpleCurrencyPlugin({
 	titanId = "TITAN_MIDNTHEROCREST",
 	noCurrencyText = L["NoMidnightSeason1"],
 	expName = L["mMidnightS1"],
-	category = "CATEGORY_MIDNIGHT"
+	category = "CATEGORY_MIDNIGHT",
+	forceMax = true
 })
 
 -- Myth Dawncrests
@@ -50,7 +54,8 @@ L:CreateSimpleCurrencyPlugin({
 	titanId = "TITAN_MIDNTMYTHCREST",
 	noCurrencyText = L["NoMidnightSeason1"],
 	expName = L["mMidnightS1"],
-	category = "CATEGORY_MIDNIGHT"
+	category = "CATEGORY_MIDNIGHT",
+	forceMax = true
 })
 
 -- Dawnlight Manaflux (Midnight S1 Catalyst charges, max 8)
@@ -85,6 +90,15 @@ L:CreateSimpleItemPlugin({
 L:CreateSimpleItemPlugin({
 	itemId = 232875,
 	titanId = "TITAN_MIDNTS1SPARK",
+	noCurrencyText = L["NoMidnightSeason1"],
+	expName = L["mMidnightS1"],
+	category = "CATEGORY_MIDNIGHT"
+})
+
+-- Thalassian Token of Merit
+L:CreateSimpleItemPlugin({
+	itemId = 258556,
+	titanId = "TITAN_MIDNTS1TTOM",
 	noCurrencyText = L["NoMidnightSeason1"],
 	expName = L["mMidnightS1"],
 	category = "CATEGORY_MIDNIGHT"
