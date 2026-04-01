@@ -119,7 +119,8 @@ function L:CreateSimpleItemPlugin(params)
 		return currencyCountText .. barBalanceText
 	end
 
-	local function CreateTooltip()
+	local function CreateTooltip(self, tooltip)
+		local GameTooltip = tooltip or _G.GameTooltip
 		GameTooltip:ClearLines()
 		local link = itemMixin:GetItemLink()
 		if (link and TitanGetVar(params.titanId, "UseHyperlink")) then

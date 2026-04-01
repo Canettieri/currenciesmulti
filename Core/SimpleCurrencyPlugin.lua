@@ -204,7 +204,8 @@ function L:CreateSimpleCurrencyPlugin(params)
 		return currencyCountText .. maxBarText .. barBalanceText
 	end
 	-----------------------------------------------
-	local function CreateTooltip()
+	local function CreateTooltip(self, tooltip)
+		local GameTooltip = tooltip or _G.GameTooltip
 		GameTooltip:ClearLines()
 		local link = C_CurrencyInfo.GetCurrencyLink and C_CurrencyInfo.GetCurrencyLink(params.currencyId, currencyCount)
 		if (link and TitanGetVar(params.titanId, "UseHyperlink")) then
