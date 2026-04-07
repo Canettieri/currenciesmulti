@@ -37,6 +37,16 @@ L:CreateSimpleItemPlugin({
 	allowAccountTotal = true
 })
 
+-- Crystalized Resin Fragment
+L:CreateSimpleItemPlugin({
+	itemId = 260531,
+	titanId = "TITAN_MIDNTCRYSRESFRAG",
+	noCurrencyText = L["NoMidnightCurrency"],
+	expName = L.Utils.MakeMenuText(L["Harandar"]),
+	category = "CATEGORY_MIDNIGHT",
+	allowAccountTotal = true
+})
+
 -- Finery Funds
 L:CreateSimpleItemPlugin({
 	itemId = 264882,
@@ -54,6 +64,16 @@ L:CreateSimpleCurrencyPlugin({
 	noCurrencyText = L["NoMidnightCurrency"],
 	expName = L.Utils.MakeMenuText(L["Harandar"]),
 	category = "CATEGORY_MIDNIGHT"
+})
+
+-- Mysterious Skyshards
+L:CreateSimpleItemPlugin({
+	itemId = 255826,
+	titanId = "TITAN_MIDNTMYSSKYSHARDS",
+	noCurrencyText = L["NoMidnightCurrency"],
+	expName = L.Utils.MakeMenuText(L["Harandar"]),
+	category = "CATEGORY_MIDNIGHT",
+	allowAccountTotal = true
 })
 
 -- Remnant of Anguish
