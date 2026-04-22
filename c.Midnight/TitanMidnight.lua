@@ -47,6 +47,16 @@ L:CreateSimpleItemPlugin({
 	allowAccountTotal = true
 })
 
+-- 12.0.5
+-- Field Accolade
+L:CreateSimpleCurrencyPlugin({
+	currencyId = 3405,
+	titanId = "TITAN_MIDNTFLDACCOL",
+	noCurrencyText = L["NoMidnightCurrency"],
+	expName = L["mMidnight"],
+	category = "CATEGORY_MIDNIGHT"
+})
+
 -- Finery Funds
 L:CreateSimpleItemPlugin({
 	itemId = 264882,
@@ -55,6 +65,16 @@ L:CreateSimpleItemPlugin({
 	expName = L["mMidnight"],
 	category = "CATEGORY_MIDNIGHT",
 	allowAccountTotal = true
+})
+
+-- 12.0.5
+-- Illusionary Coin
+L:CreateSimpleCurrencyPlugin({
+	currencyId = 3393,
+	titanId = "TITAN_MIDNTILLCOIN",
+	noCurrencyText = L["NoMidnightCurrency"],
+	expName = L.Utils.MakeMenuText(L["Decor Duel"]),
+	category = "CATEGORY_MIDNIGHT"
 })
 
 -- Luminous Dust
