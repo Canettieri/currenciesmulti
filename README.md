@@ -16,7 +16,7 @@
 
 <h3><strong>FAQ:</strong></h3>
 
-<h2>1. The War Within integration</h2>
+<h2>1. Retail integration</h2>
 <p>It’s working perfectly. Please report any errors or bugs here.</p>
 
 <h2>2. Classic</h2>
@@ -185,7 +185,7 @@
 <ul>
   <li><strong>Bloody Coin</strong>,</li>
   <li><strong>Champion's Seal</strong>,</li>
-  <li><strong>Elder Charm of Good Fortune,</li>
+  <li><strong>Elder Charm of Good Fortune</strong>,</li>
   <li><strong>Epicurean's Award</strong>,</li>
   <li><strong>Ironpaw Token</strong>,</li>
   <li><strong>Lesser Charms of Good Fortune</strong>,</li>
