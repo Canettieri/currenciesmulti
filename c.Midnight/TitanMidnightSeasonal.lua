@@ -78,13 +78,14 @@ L:CreateSimpleCurrencyPlugin({
 })
 
 -- Radiant Echo (Midnight S1 version)
-L:CreateSimpleItemPlugin({
-	itemId = 254275,
-	titanId = "TITAN_MIDNTRADECHO",
-	noCurrencyText = L["NoMidnightSeason1"],
-	expName = L["mMidnightS1"],
-	category = "CATEGORY_MIDNIGHT"
-})
+-- Seems to be unused now
+-- L:CreateSimpleItemPlugin({
+-- 	itemId = 254275,
+-- 	titanId = "TITAN_MIDNTRADECHO",
+-- 	noCurrencyText = L["NoMidnightSeason1"],
+-- 	expName = L["mMidnightS1"],
+-- 	category = "CATEGORY_MIDNIGHT"
+-- })
 
 -- Spark of Radiance (Midnight S1 crafting spark)
 L:CreateSimpleItemPlugin({

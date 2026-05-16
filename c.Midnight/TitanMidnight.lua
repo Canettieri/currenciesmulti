@@ -67,6 +67,15 @@ L:CreateSimpleItemPlugin({
 	allowAccountTotal = true
 })
 
+-- Fused Vitality
+L:CreateSimpleItemPlugin({
+	itemId = 245345,
+	titanId = "TITAN_MIDNTFUSEDVIT",
+	noCurrencyText = L["NoMidnightCurrency"],
+	expName = L["mMidnight"],
+	category = "CATEGORY_MIDNIGHT"
+})
+
 -- 12.0.5
 -- Illusionary Coin
 L:CreateSimpleCurrencyPlugin({
