@@ -93,7 +93,7 @@
 
 <h3><strong>Classic Only (8)</strong></h3>
 <ul>
-  <li><strong>August Stone Fragment</strong>,</li>
+  <li><strong>August Stone Cluster</strong>,</li>
   <li><strong>Conquest Points</strong>,</li>
   <li><strong>Dalaran Jewelcrafter's Token</strong>,</li>
   <li><strong>Defiler's Scourgestone</strong>,</li>
