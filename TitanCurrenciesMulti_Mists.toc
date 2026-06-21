@@ -41,6 +41,7 @@ c.Legacy\MoP\TitanTimelessCoin.lua
 c.Legacy\MoP\TitanWarforgedSeal.lua
 c.Legacy\MoP\TitanAugustStoneFragment.lua
 c.Legacy\MoP\TitanAugustStoneShard.lua
+c.Legacy\MoP\TitanAugustStoneCluster.lua
 #c.Legacy\WotLK\TitanArenaPoints.lua
 #c.Legacy\WotLK\TitanBadgeofJustice.lua
 c.Legacy\WotLK\TitanChampionsSeal.lua
