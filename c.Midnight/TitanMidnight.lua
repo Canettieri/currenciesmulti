@@ -57,6 +57,15 @@ L:CreateSimpleCurrencyPlugin({
 	category = "CATEGORY_MIDNIGHT"
 })
 
+-- Dark Particle
+L:CreateSimpleItemPlugin({
+	itemId = 267051,
+	titanId = "TITAN_MIDNTDARKPART",
+	noCurrencyText = L["NoMidnightCurrency"],
+	expName = L["mMidnight"],
+	category = "CATEGORY_MIDNIGHT"
+})
+
 -- Finery Funds
 L:CreateSimpleItemPlugin({
 	itemId = 264882,
