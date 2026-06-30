@@ -61,6 +61,8 @@ L["NoCataCurrency06"] = "Earned from doing ranked arena\rmatches and rated battl
 L["NoCataCurrency07"] = "Available through Protocol Twilight\rHeroic Dungeons."
 --- August Stone Fragment
 L["NoMoPCurrency01"] = "Available through Celestial Dungeons."
+--- Platinum Coins
+L["NoMoPCurrency02"] = "Available through Challenge Mode runs."
 
 ------ Shadowlands pack
 --- Adventure Campaign Progress
