@@ -13,6 +13,12 @@ if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
 			return
 		end
 		local removed = {
+			"TITAN_BRONZECELTOKEN", -- WoW 20th Anniversary Bronze Celebration Token
+			"TITAN_RESIDMEMORIES", -- TWW prepatch Residual Memories
+			"TITAN_TTRUUM", -- BfA Titan Residuum
+			"TITAN_LLYCHM", -- Removed Lovely Charm item
+			"TITAN_MIDNTWIBLIN", -- Midnight prepatch Twilight's Blade Insignia
+			"DIABLO_HELLSHARD", -- Greedy Emissary Hellstone Shards
 			"TITAN_VALORSTONES", -- TWW Valorstones
 			"TITAN_TITANDISCSHARD", -- TWW Overcharged Delves Titan Disc Shards
 			"TITAN_PUZZCARTCHIP", -- TWW S3 Puzzling Cartel Chip

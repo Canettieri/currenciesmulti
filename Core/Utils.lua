@@ -71,10 +71,11 @@ function Utils.CreateToggle(id, text, var)
 	return info
 end
 
--- Adds the "Shift Right", "Shift Left", "Hide", and "Close" menus
 function Utils.AddCommonMenuItems(eddm, id)
+	eddm.UIDropDownMenu_AddButton(Utils.CreateTitle(id, T["barPosition"]));
+
 	eddm.UIDropDownMenu_AddButton({
-		text = ACE["TITAN_PANEL_SHIFT_RIGHT"],
+		text = T["moveRight"],
 		func = function()
 			TitanUtils_ShiftButtonOnBarRight(id)
 		end,
@@ -84,7 +85,7 @@ function Utils.AddCommonMenuItems(eddm, id)
 	});
 
 	eddm.UIDropDownMenu_AddButton({
-		text = ACE["TITAN_PANEL_SHIFT_LEFT"],
+		text = T["moveLeft"],
 		func = function()
 			TitanUtils_ShiftButtonOnBarLeft(id)
 		end,
@@ -93,7 +94,7 @@ function Utils.AddCommonMenuItems(eddm, id)
 		notCheckable = true
 	});
 
-	eddm.UIDropDownMenu_AddSpace();
+	eddm.UIDropDownMenu_AddSeparator();
 
 	eddm.UIDropDownMenu_AddButton({
 		notCheckable = true,
@@ -102,8 +103,6 @@ function Utils.AddCommonMenuItems(eddm, id)
 			TitanPanelRightClickMenu_Hide(id)
 		end
 	})
-
-	eddm.UIDropDownMenu_AddSeparator();
 
 	eddm.UIDropDownMenu_AddButton({
 		text = CLOSE,

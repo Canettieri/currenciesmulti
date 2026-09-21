@@ -6,7 +6,6 @@
 
 local _, L = ...;
 ------ Midnight pack
-L["NoTwilightBladeInsignia"] = "Obtainable during the Midnight prepatch event"
 L["NoMidnightCurrency"] = "Obtainable in Midnight."
 L["NoMidnightSeason2"] = "Obtainable in Midnight Season 2."
 L["NoMidnightProfCurrency"] = "Obtainable via the associated Midnight crafting profession."
@@ -30,7 +29,6 @@ L["Zul'Aman"] = "Zul'Aman"
 
 ------ The War Within pack (Please describe the currency for which this is used and follow the 'NoTWWCurrency' pattern.)
 L["NoTWWCurrency"] = "Obtainable in The War Within."
-L["NoTWWCurrency01"] = "Obtainable through The War Within\rPre-Patch Event."
 L["TWWSeason3"] = "Obtainable in The War Within Season 3."
 L["TWWUndermine"] = "Obtainable in The Undermine."
 L["TWWNFVisions"] = "Obtainable in Horrific Visions in the The War Within 11.1.5 Nightfall patch.\r"
@@ -86,6 +84,7 @@ L["SLShared02"] = "Acquired in Torghast."
 ------ BfA pack
 --- Artifact Power
 L["noheart"] = "|cFFFF2e2eNo Heart of Azeroth!"
+L["AzeriteLabel"] = "A. Power: "
 L["AzeriteLevel"] = "Heart of Azeroth Level:|cFFFFFFFF "
 L["AzeriteXP"] = "Current Power:|cFFFFFFFF "
 L["AzeritetoLvL"] = "Azerite to Up:|cFFFFFFFF "
@@ -184,8 +183,6 @@ L["NoMaxPet"] = "Available through Pet Battles in\rWarlords of Draenor and Legio
 L["NoBadge"] = "Enter in a dungeon queue\rwhen Timewalking event is\roccurring."
 --- Trader's Tender
 L["TradersTender"] = "Obtained from your capital's Trading Post."
---- Diablo Events
-L["GreedyEmissary"] = "Obtained during the Greedy Emissary Diablo Event."
 -- Delves
 L["NoUndercoin"] = "Obtained via Delving."
 
@@ -248,6 +245,9 @@ L["TotalAlt"] = "Currency Total:"
 L["AltChars"] = "|cFFFFFFFF[All Characters]|r"
 L["buttonText"] = "Bar Text"
 L["tooltip"] = "Tooltip"
+L["barPosition"] = "Bar Position"
+L["moveRight"] = "Move Right"
+L["moveLeft"] = "Move Left"
 L["showAllFactions"] = "Characters from Both Factions"
 L["useHyperlink"] = "Show tooltip as hyperlink"
 L["hideInfoWhenHyperlink"] = "Hide extra info when showing hyperlink"

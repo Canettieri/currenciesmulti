@@ -56,7 +56,6 @@ c.Legacy\BfA\TitanManapearl.lua
 c.Legacy\BfA\TitanSeafarersDubloon.lua
 c.Legacy\BfA\TitanSealofWartornFate.lua
 c.Legacy\BfA\TitanServiceMedal.lua
-c.Legacy\BfA\TitanTitanResiduum.lua
 c.Legacy\BfA\TitanWarResources.lua
 c.Legacy\Cataclysm\TitanMarkWorldTree.lua
 c.Legacy\Legion\TitanAncientMana.lua
@@ -88,11 +87,9 @@ c.Legacy\WoD\TitanTemperedFate.lua
 c.Legacy\WotLK\TitanChampionsSeal.lua
 c.Legacy\WotLK\TitanEpicureansAward.lua
 c.Midnight\TitanMidnight.lua
-c.Midnight\TitanMidnightPrepatch.lua
 c.Midnight\TitanMidnightProfessions.lua
 c.Midnight\TitanUndercoin.lua
 c.Midnight\TitanMidnightSeasonal.lua
-c.Misc\TitanAnniversary.lua
 c.Misc\TitanBrawlersGold.lua
 c.Misc\TitanBrewfestToken.lua
 c.Misc\TitanBurningBlossom.lua
@@ -100,10 +97,8 @@ c.Misc\TitanChildrensWeek.lua
 c.Misc\TitanCoinAncestry.lua
 c.Misc\TitanConquest.lua
 c.Misc\TitanDarkmoonTicket.lua
-c.Misc\TitanDiablo.lua
 c.Misc\TitanGold.lua
 c.Misc\TitanHonor.lua
-c.Misc\TitanLovelyCharm.lua
 c.Misc\TitanLoveToken.lua
 c.Misc\TitanMarkofHonor.lua
 c.Misc\TitanPolishedPetCharm.lua
@@ -142,7 +137,6 @@ c.WarWithin\TitanOddGlobOfWax.lua
 c.WarWithin\TitanRadiantRemnant.lua
 c.WarWithin\TitanResonanceCrystals.lua
 c.WarWithin\TitanSizzlingCinderpollen.lua
-c.WarWithin\TitanTWWPrepatch.lua
 c.WarWithin\TitanTWWSeasonal.lua
 c.WarWithin\TitanUndermine.lua
 c.WarWithin\TitanUntetheredCoin.lua
