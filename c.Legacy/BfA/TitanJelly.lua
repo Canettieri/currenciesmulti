@@ -148,6 +148,7 @@ function PrepareMenu(eddm, self, id)
 		checked = TitanGetVar(id, "DisplayOnRightSide"),
 		keepShownOnClick = true
 	});
+	eddm.UIDropDownMenu_AddSpace();
 
 	L.Utils.AddCommonMenuItems(eddm, id);
 end

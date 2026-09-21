@@ -31,6 +31,7 @@ function L.PrepareCurrenciesMenuBase(eddm, self, id, hasMax, isWarband)
 		checked = TitanGetVar(id, "DisplayOnRightSide"),
 		keepShownOnClick = true
 	});
+	eddm.UIDropDownMenu_AddSpace();
 
 	eddm.UIDropDownMenu_AddButton(L.Utils.CreateTitle(id, L["tooltip"]));
 	eddm.UIDropDownMenu_AddButton(L.Utils.CreateToggle(id, L["showAltText"], "ShowAltText"));
@@ -39,6 +40,7 @@ function L.PrepareCurrenciesMenuBase(eddm, self, id, hasMax, isWarband)
 	eddm.UIDropDownMenu_AddButton(L.Utils.CreateToggle(id, L["showAllFactions"], "ShowAllFactions"));
 	eddm.UIDropDownMenu_AddButton(L.Utils.CreateToggle(id, L["useHyperlink"], "UseHyperlink"));
 	eddm.UIDropDownMenu_AddButton(L.Utils.CreateToggle(id, L["hideInfoWhenHyperlink"], "HideInfoWhenHyperlink"));
+	eddm.UIDropDownMenu_AddSpace();
 
 	L.Utils.AddCommonMenuItems(eddm, id);
 end
