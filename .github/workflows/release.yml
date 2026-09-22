@@ -40,10 +40,12 @@ jobs:
         run: |
           version="${GITHUB_REF_NAME#v}"
           awk -v version="$version" '
-            $0 ~ "^# .* " version "$" { include = 1 }
-            include && ($0 ~ "^---$" || ($0 ~ "^# " && $0 !~ "^# .* " version "$")) { exit }
+            BEGIN { header = "## [" version "] - " }
+            index($0, header) == 1 { include = 1 }
+            include && index($0, "## [") == 1 && index($0, header) != 1 { exit }
+            include && index($0, "[") == 1 { exit }
             include { print }
-          ' CHANGELOG.txt > release-notes.md
+          ' CHANGELOG.md > release-notes.md
           test -s release-notes.md
 
       - name: Package and release
