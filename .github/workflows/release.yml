@@ -14,6 +14,9 @@ jobs:
     # we can run our steps on pretty much anything, but the "ubuntu-latest" image is a safe bet
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write
+
     # specify the environment variables used by the packager, matching the secrets from the project on GitHub
     env:
       CF_API_KEY: ${{ secrets.CF_API_KEY }}
@@ -32,5 +35,21 @@ jobs:
         with:
           args: --no-color -o 011
 
+      - name: Prepare release notes
+        shell: bash
+        run: |
+          version="${GITHUB_REF_NAME#v}"
+          awk -v version="$version" '
+            $0 ~ "^# .* " version "$" { include = 1 }
+            include && ($0 ~ "^---$" || ($0 ~ "^# " && $0 !~ "^# .* " version "$")) { exit }
+            include { print }
+          ' CHANGELOG.txt > release-notes.md
+          test -s release-notes.md
+
       - name: Package and release
         uses: BigWigsMods/packager@v2
+
+      - name: Publish release notes
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release edit "$GITHUB_REF_NAME" --notes-file release-notes.md
