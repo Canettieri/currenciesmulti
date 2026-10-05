@@ -2,13 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
-## [Unreleased]
+## [11.13.0] - 2026-10-05
 
 ### Changed
 
 - Added visual spacing after the **Bar Text** and **Tooltip** options in currency plugin menus, including the Artifact Power and Jelly menus; the separator remains after **Bar Position**.
 - Updated the release workflow to publish notes for the tagged version only.
 - Adopted the Keep a Changelog structure and configured packaged releases to use `CHANGELOG.md`.
+
+### Fixed
+
+- Updating for Titan Panel v9.9.3 which changed Titan_Global to Titan_G, which broke some button text rendering.
 
 ## [11.12.0] - 2026-09-21
 
