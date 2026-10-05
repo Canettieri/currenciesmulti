@@ -9,6 +9,7 @@ local ADDON_NAME, L = ...;
 L.Elib = LibStub("Elib-4.0").Register
 local GetAddOnMetadata = C_AddOns and C_AddOns.GetAddOnMetadata or GetAddOnMetadata
 local version = GetAddOnMetadata(ADDON_NAME, "Version")
+local Titan_Global = Titan_Global or Titan_G
 
 function L:CreateNoAltCurrencyPlugin(params)
 	local currencyCount = 0.0
