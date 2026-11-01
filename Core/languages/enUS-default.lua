@@ -5,6 +5,9 @@
 --]]
 
 local _, L = ...;
+L["forever"] = "Currencies [Forever]"
+L["foreverCurrencyUnavailable"] = "Currency data currently unavailable."
+L["foreverWeeklyProgress"] = "Weekly progress"
 ------ Midnight pack
 L["NoMidnightCurrency"] = "Obtainable in Midnight."
 L["NoMidnightSeason2"] = "Obtainable in Midnight Season 2."

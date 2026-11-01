@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
+## [12.0.0] - 2026-11-01
+
+### Added
+
+- Added a dedicated Forever (Camelot, interface 16001) manifest with five player-facing currencies, Gold, and character-data management.
+- Added Forever trackers for Merchant's Favor, Tarnished Undermine Real, Darkmoon Prize Ticket, Honor Points, and Rank Points.
+- Added a separate Forever currency tracker that tolerates missing or delayed data, refreshes localized names and icons, reads caps from the client, and preserves session baselines across temporary data loss.
+- Added a Forever menu category, translations, compatibility notes, and mocked tests.
+
+### Fixed
+
+- Guard Gold's optional account-bank lookup when bank APIs or enum values are unavailable.
+
 ## [11.13.1] - 2026-10-13
 
 ### Fixed
@@ -58,7 +71,7 @@ All notable changes to this project will be documented in this file.
 - Removed the corresponding obsolete localization entries and `.toc` references.
 - Removed obsolete currencies from the README.
 
-[unreleased]: https://github.com/Canettieri/currenciesmulti/compare/v11.13.1...HEAD
+[12.0.0]: https://github.com/Canettieri/currenciesmulti/releases/tag/v12.0.0
 [11.13.1]: https://github.com/Canettieri/currenciesmulti/releases/tag/v11.13.1
 [11.13.0]: https://github.com/Canettieri/currenciesmulti/releases/tag/v11.13.0
 [11.12.0]: https://github.com/Canettieri/currenciesmulti/releases/tag/v11.12.0

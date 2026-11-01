@@ -8,6 +8,9 @@
 
 local _, L = ...;
 if GetLocale() == "frFR" then
+L["forever"] = "Monnaies [Forever]"
+L["foreverCurrencyUnavailable"] = "Les données de cette monnaie sont actuellement indisponibles."
+L["foreverWeeklyProgress"] = "Progression hebdomadaire"
 ------ Shadowlands pack
 --- Adventure Campaign Progress
 L["NoSLCurrency13"] = "Se récupère via la Table de Commandement."

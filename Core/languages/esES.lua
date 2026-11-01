@@ -8,6 +8,9 @@
 
 local _, L = ...;
 if GetLocale() == "esES" then
+L["forever"] = "Monedas [Forever]"
+L["foreverCurrencyUnavailable"] = "Los datos de esta moneda no están disponibles ahora."
+L["foreverWeeklyProgress"] = "Progreso semanal"
 ------ Draenor pack
 --- Dingy Iron Coins
 L["NoMaxCoin"] = "Disponible solo para Pícaro en Warlods of Draenor."

@@ -7,6 +7,9 @@
 
 local _, L = ...;
 if GetLocale() == "ptBR" then
+L["forever"] = "Moedas [Forever]"
+L["foreverCurrencyUnavailable"] = "Dados desta moeda indisponíveis no momento."
+L["foreverWeeklyProgress"] = "Progresso semanal"
 ------ Midnight pack
 L["NoMidnightCurrency"] = "Obtida em Midnight."
 L["NoMidnightSeason2"] = "Obtida na Temporada 2 de Midnight."

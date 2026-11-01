@@ -8,6 +8,9 @@
 
 local _, L = ...;
 if GetLocale() == "ruRU" then
+L["forever"] = "Валюта [Forever]"
+L["foreverCurrencyUnavailable"] = "Данные этой валюты сейчас недоступны."
+L["foreverWeeklyProgress"] = "Прогресс за неделю"
     L["AltChars"] = "|cFFFFFFFF[Все персонажи]|r"
     L["AzeriteDescription"] = "Сила артефакта, усиливающая Сердце Азерот"
     L["AzeriteLevel"] = "Сердце Азерот уровень:|cFFFFFFFF "

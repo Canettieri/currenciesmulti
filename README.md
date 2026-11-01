@@ -12,6 +12,7 @@ Titan Panel is required.
 
 - 172 currency and resource trackers on Retail, including Midnight, Housing, and older expansions.
 - 28 trackers tailored to Mists of Pandaria Classic.
+- 6 currency and money trackers tailored to WoW: Forever.
 - Individual Titan plugins, so only the currencies you choose are displayed on the bar.
 - Expansion and activity categories for easier navigation in the Titan menu.
 - Character, realm, faction, and account-wide totals when supported by the currency or item.
@@ -26,8 +27,13 @@ Titan Panel is required.
 | --- | ---: | --- |
 | Retail / Midnight | 172 | Midnight, Housing, The War Within, Dragonflight, Shadowlands, and legacy content |
 | Mists of Pandaria Classic | 28 | Mists of Pandaria, Cataclysm, Wrath of the Lich King, events, and general currencies |
+| WoW: Forever / Camelot | 6 | Merchant's Favor, Tarnished Undermine Real, Darkmoon Prize Ticket, Honor Points, Rank Points, and Gold |
 
 Each game client loads only the plugins listed in its corresponding `.toc` file.
+
+Forever uses `TitanCurrenciesMulti_Camelot.toc` (interface 16001) and its own currency implementation. Install a Forever-compatible Titan Panel. The **Forever** category contains its five currency plugins; **Miscellaneous** contains Gold and character-data management. Retail expansion currencies and account-currency transfer features are not loaded on Forever. In-game validation is still pending.
+
+Forever plugins display `--` when their currency data is unavailable, retry automatically, and obtain names, icons, balances, and limits from the running client. A temporary missing reading does not replace saved balances with zero or reset session progress. Other-character totals are saved observations from characters you have logged into, not a live account-wide balance. See [Forever currency notes](docs/forever-currencies.md) for IDs, sources, and validation scope.
 
 ## How to use
 

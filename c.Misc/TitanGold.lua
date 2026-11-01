@@ -94,10 +94,11 @@ local function GetTooltipText(self, id)
 
 	local charTable = L.Utils.GetCharTable(ID)
 
-	if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
+	if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE and C_Bank and type(C_Bank.FetchDepositedMoney) == "function"
+		and Enum and Enum.BankType and Enum.BankType.Account then
 		local success, value =  pcall(C_Bank.FetchDepositedMoney, Enum.BankType.Account)
 
-		if success and value > 0 then
+		if success and type(value) == "number" and not (issecretvalue and issecretvalue(value)) and value > 0 then
 			local newCharTable = {}
 			newCharTable[L["WarbandBank"]] = {}
 			newCharTable[L["WarbandBank"]].value = value

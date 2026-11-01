@@ -8,6 +8,9 @@
 
 local _, L = ...;
 if GetLocale() == "koKR" then
+L["forever"] = "화폐 [Forever]"
+L["foreverCurrencyUnavailable"] = "현재 이 화폐의 정보를 사용할 수 없습니다."
+L["foreverWeeklyProgress"] = "주간 진행 상황"
 ------ Draenor pack
 --- Garrison Resources
 L["NoMaxRes"] = "드레노어의 전쟁군주의 주둔지에서\r사용이 가능합니다."

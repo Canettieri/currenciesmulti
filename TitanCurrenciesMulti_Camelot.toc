@@ -1,0 +1,27 @@
+## Interface: 16001
+## Title: Titan Panel [|cff336699Currencies|r] Multi! |cff00aa00@project-version@ Forever|r
+## Notes: Track Forever currencies and gold on Titan Panel.
+## Notes-ptBR: Rastreie moedas do Forever e ouro no Titan Panel.
+## Author: Canettieri
+## Version: @project-version@
+## Dependencies: Titan
+## SavedVariables: TitanCurrenciesMultiDb
+## X-Curse-Project-ID: 94508
+## X-Wago-ID: xZKxeyGk
+Core\languages\enUS-default.lua
+Core\languages\deDE.lua
+Core\languages\esES.lua
+Core\languages\frFR.lua
+Core\languages\koKR.lua
+Core\languages\ptBR.lua
+Core\languages\ruRU.lua
+Core\ElioteDropDownMenu-1.0.lua
+Core\Elib-4.0.lua
+Core\Utils.lua
+Core\CurrenciesCore.lua
+Core\CurrenciesCorewMax.lua
+Core\Forever\Menus.lua
+Core\Forever\CurrencyPlugin.lua
+c.Forever\TitanForever.lua
+c.Misc\TitanGold.lua
+Core\CharacterListPlugin.lua

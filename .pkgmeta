@@ -2,6 +2,7 @@ package-as: TitanCurrenciesMulti
 
 ignore:
     - .gitignore
+    - tests
     
 manual-changelog:
     filename: CHANGELOG.md

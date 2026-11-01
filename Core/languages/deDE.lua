@@ -7,6 +7,9 @@
 
 local _, L = ...;
 if GetLocale() == "deDE" then
+L["forever"] = "Währungen [Forever]"
+L["foreverCurrencyUnavailable"] = "Währungsdaten sind derzeit nicht verfügbar."
+L["foreverWeeklyProgress"] = "Wöchentlicher Fortschritt"
 ------ Shadowlands pack
 ------ [tbd]
 
