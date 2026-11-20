@@ -3,7 +3,7 @@
 	Author: Eliote
 --]]
 
-local MAJOR, MINOR = "Elib-4.0", 13
+local MAJOR, MINOR = "Elib-4.0", 14
 local Elib = LibStub:NewLibrary(MAJOR, MINOR)
 if not Elib then return end
 
@@ -137,8 +137,7 @@ function Elib.Register(easyObject)
 					local info = {}
 					info.text = Titan_L["TITAN_CLOCK_MENU_DISPLAY_ON_RIGHT_SIDE"]
 					info.func = function()
-						TitanToggleVar(id, "DisplayOnRightSide");
-						TitanPanel_InitPanelButtons()
+						TitanUtils_SwapButtonSide(id)
 					end
 					info.checked = TitanGetVar(id, "DisplayOnRightSide")
 					EDDM.UIDropDownMenu_AddButton(info)
