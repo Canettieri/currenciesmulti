@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [12.1.0] - 2026-11-23
+
+### Fixed
+
+- Fixed the **Display on Right Side** option by using Titan Panel's button-side swap API.
+
 ## [12.0.0] - 2026-11-01
 
 ### Added
@@ -71,6 +77,7 @@ All notable changes to this project will be documented in this file.
 - Removed the corresponding obsolete localization entries and `.toc` references.
 - Removed obsolete currencies from the README.
 
+[12.1.0]: https://github.com/Canettieri/currenciesmulti/releases/tag/v12.1.0
 [12.0.0]: https://github.com/Canettieri/currenciesmulti/releases/tag/v12.0.0
 [11.13.1]: https://github.com/Canettieri/currenciesmulti/releases/tag/v11.13.1
 [11.13.0]: https://github.com/Canettieri/currenciesmulti/releases/tag/v11.13.0
