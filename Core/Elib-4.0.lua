@@ -83,6 +83,7 @@ local function initMenu(self, level, menuList, id)
 		elseif v.type == "space" then
 			EDDM.UIDropDownMenu_AddSpace(level)
 		elseif v.type == "button" then
+			info.keepShownOnClick = v.keepShown
 			EDDM.UIDropDownMenu_AddButton(info, level)
 		elseif v.type == "title" then
 			info.isTitle = true

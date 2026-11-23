@@ -184,7 +184,11 @@ L.Elib({
 		{ type = "toggle", text = L["showbb"], var = "ShowBarBalance", def = true, keepShown = true },
 		{ type = "toggle", text = L["showAllFactions"], var = "ShowAllFactions", def = false, keepShown = true },
 		{ type = "toggle", text = L["sortByAmount"], var = "AltTextSortByAmount", def = false, keepShown = true },
-		{ type = "rightSideToggle" }
+		{ type = "rightSideToggle" },
+		{ type = "space" },
+		{ type = "title", text = L["barPosition"] },
+		{ type = "button", text = L["moveRight"], keepShown = true, func = function() TitanUtils_ShiftButtonOnBarRight(ID) end },
+		{ type = "button", text = L["moveLeft"], keepShown = true, func = function() TitanUtils_ShiftButtonOnBarLeft(ID) end }
 	},
 	savedVariables = {
 		ShowIcon = 1,

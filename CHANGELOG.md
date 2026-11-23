@@ -4,9 +4,14 @@ All notable changes to this project will be documented in this file.
 
 ## [12.1.0] - 2026-11-23
 
+### Added
+
+- Added **Bar Position**, **Move Right**, and **Move Left** menu options to the Gold tracker.
+
 ### Fixed
 
 - Fixed the **Display on Right Side** option by using Titan Panel's button-side swap API.
+- Honored Elib's keepShown setting for menu buttons so the menu stays open while repositioning plugins.
 
 ## [12.0.0] - 2026-11-01
 
